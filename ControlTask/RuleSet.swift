@@ -10,20 +10,22 @@ import Foundation
 
 struct RuleSet {
     
-    var preceding: String = ""
-    var following: [String] = []
+    var preceding = [String]()
+    var following = [String]()
     
-    init(followingCount count: Int = 1) {
+    init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary) {
         
-        var charactersArray = fullVocabulary.characters.map({ String($0) })
-        preceding = charactersArray.randomItem()
+        precondition(vocabulary.characters.count > 1)
+        var charactersArray = vocabulary.characters.map() { String($0) }
         
-        charactersArray = charactersArray.filter() { $0 != preceding }
+        for _ in 0..<precedingCount {
+            preceding.append(charactersArray.randomItem())
+            charactersArray = charactersArray.filter() { !preceding.contains($0) }
+        }
         
-        following = []
-        
-        for _ in 0..<count {
+        for _ in 0..<followingCount {
             following.append(charactersArray.randomItem())
+            charactersArray = charactersArray.filter() { !following.contains($0) }
         }
     }
 }
