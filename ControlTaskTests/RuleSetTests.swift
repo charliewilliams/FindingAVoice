@@ -52,4 +52,86 @@ class RuleSetTests: XCTestCase {
         XCTAssertEqual(26, uniquesF.count)
         XCTAssertEqual(52, Set(testSet.preceding + testSet.following).count)
     }
+    
+    //
+    
+    func testValidString() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let validString = "XO"
+        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+    }
+    
+    func testInvalidString() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let invalidString = "XX"
+        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+    }
+    
+    func testValidStringWithMultipleOccurrences() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let validString = "XOABCDXO"
+        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+    }
+    
+    func testInvalidStringWithMultipleOccurrences() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let invalidString = "XOABCDXX"
+        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+    }
+    
+    func testValidStringWithMultiplePrecedents() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X", "Y"]
+        ruleSet.following = ["O"]
+        
+        let validString = "XOYO"
+        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+    }
+    
+    func testInvalidStringWithMultiplePrecedents() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X", "Y"]
+        ruleSet.following = ["O"]
+        
+        let invalidString = "XOOY"
+        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+    }
+    
+    func testValidStringWithMultipleFollows() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O", "P"]
+        
+        let validString = "XOXP"
+        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+    }
+    
+    func testInvalidStringWithMultipleFollows() {
+        
+        var ruleSet = RuleSet()
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O", "P"]
+        
+        let invalidString = "XOPX"
+        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+    }
 }
