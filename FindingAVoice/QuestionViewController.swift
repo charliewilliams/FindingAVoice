@@ -10,7 +10,13 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-    var ruleSet: RuleSet!
+    var ruleSet: RuleSet! {
+        didSet {
+            if isViewLoaded {
+                showNextQuestion()
+            }
+        }
+    }
     var length: Int!
     var currentQuestionIsValid: Bool = false
     
@@ -20,8 +26,15 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var ruleTextView: UITextView!
     @IBOutlet weak var mainStringLabel: UILabel!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if ruleSet != nil {
+            showNextQuestion()
+        }
+    }
+    
+    func showNextQuestion() {
         
         currentQuestionIsValid = arc4random_uniform(2) == 0
         
@@ -33,23 +46,23 @@ class QuestionViewController: UIViewController {
         var preceedingString = "\(preceding.popLast()!)"
         var followingString = "\(following.popLast()!)"
         
-//        for (index, character) in preceding {
-//            
-//            if index == preceding.count - 1 {
-//                preceedingString += " or \(character)"
-//            } else {
-//                preceedingString += ", \(character)"
-//            }
-//        }
-//        
-//        for (index, character) in following {
-//            
-//            if index == following.count - 1 {
-//                followingString += " or \(character)"
-//            } else {
-//                followingString += ", \(character)"
-//            }
-//        }
+        for (index, character) in preceding.enumerated() {
+            
+            if index == preceding.count - 1 {
+                preceedingString += " or \(character)"
+            } else {
+                preceedingString += ", \(character)"
+            }
+        }
+        
+        for (index, character) in following.enumerated() {
+            
+            if index == following.count - 1 {
+                followingString += " or \(character)"
+            } else {
+                followingString += ", \(character)"
+            }
+        }
         
         var text = "\(preceedingString) must be followed by \(followingString)"
         
@@ -69,6 +82,8 @@ class QuestionViewController: UIViewController {
         } else {
             print("Boo")
         }
+        
+        showNextQuestion()
     }
     
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
@@ -78,6 +93,8 @@ class QuestionViewController: UIViewController {
         } else {
             print("Hooray")
         }
+        
+        showNextQuestion()
     }
     
 }
