@@ -50,7 +50,9 @@ class SetupViewController: UIViewController {
         let preceding = Int(numPrecedentsLabel.text!)!
         let following = Int(numConsequentsLabel.text!)!
         let stride = Int(strideLengthLabel.text!)!
+        let length = Int(stringLengthLabel.text!)!
         
         destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, stride: stride)
+        destination.length = length
     }
 }

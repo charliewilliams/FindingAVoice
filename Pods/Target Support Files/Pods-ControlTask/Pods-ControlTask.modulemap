@@ -1,6 +1,0 @@
-framework module Pods_ControlTask {
-  umbrella header "Pods-ControlTask-umbrella.h"
-
-  export *
-  module * { export * }
-}
