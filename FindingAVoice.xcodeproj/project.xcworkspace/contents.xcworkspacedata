@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ControlTask.xcodeproj">
+      location = "self:/Users/cw/Developer/Client/FindVoice/ControlTask/FindingAVoice.xcodeproj">
    </FileRef>
 </Workspace>

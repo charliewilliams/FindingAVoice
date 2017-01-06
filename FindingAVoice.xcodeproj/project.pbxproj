@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0AA1D391E1E8A42005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D381E1E8A42005A7AA1 /* AppDelegate.swift */; };
-		C0AA1D3B1E1E8A42005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D3A1E1E8A42005A7AA1 /* QuestionViewController.swift */; };
-		C0AA1D3E1E1E8A42005A7AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D3C1E1E8A42005A7AA1 /* Main.storyboard */; };
-		C0AA1D401E1E8A42005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D3F1E1E8A42005A7AA1 /* Assets.xcassets */; };
-		C0AA1D431E1E8A42005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D411E1E8A42005A7AA1 /* LaunchScreen.storyboard */; };
 		C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */; };
-		C0AA1D671E1E8A6B005A7AA1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D661E1E8A6B005A7AA1 /* Node.swift */; };
-		C0AA1D701E1E8D85005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D6F1E1E8D85005A7AA1 /* Array.swift */; };
-		C0AA1D721E1E8EE5005A7AA1 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D711E1E8EE5005A7AA1 /* RuleSet.swift */; };
-		C0AA1D741E1E8F06005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */; };
-		C0AA1D781E1E9832005A7AA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D771E1E9832005A7AA1 /* String.swift */; };
-		C0AA1D7C1E1FA81A005A7AA1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */; };
+		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
+		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
+		C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
+		C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D861E1FC3D4005A7AA1 /* Node.swift */; };
+		C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */; };
+		C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */; };
+		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
+		C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */; };
+		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
+		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
+		C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,24 +41,24 @@
 
 /* Begin PBXFileReference section */
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0AA1D381E1E8A42005A7AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0AA1D3A1E1E8A42005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		C0AA1D3D1E1E8A42005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0AA1D3F1E1E8A42005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C0AA1D421E1E8A42005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C0AA1D441E1E8A42005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTaskUITests.swift; sourceTree = "<group>"; };
 		C0AA1D5A1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0AA1D661E1E8A6B005A7AA1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		C0AA1D6F1E1E8D85005A7AA1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		C0AA1D711E1E8EE5005A7AA1 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSet.swift; sourceTree = "<group>"; };
-		C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
-		C0AA1D771E1E9832005A7AA1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = FindingAVoice/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D821E1FC3CA005A7AA1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = FindingAVoice/Array.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D831E1FC3CA005A7AA1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = FindingAVoice/String.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D861E1FC3D4005A7AA1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = FindingAVoice/Node.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vocabulary.swift; path = FindingAVoice/Vocabulary.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupViewController.swift; path = FindingAVoice/SetupViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
+		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		C0AA1D971E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +109,14 @@
 		C0AA1D371E1E8A42005A7AA1 /* ControlTask */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D381E1E8A42005A7AA1 /* AppDelegate.swift */,
+				C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */,
 				C0AA1D7D1E1FA82B005A7AA1 /* Categories */,
 				C0AA1D7E1E1FA83A005A7AA1 /* Model */,
 				C0AA1D7F1E1FA841005A7AA1 /* View Controllers */,
-				C0AA1D3C1E1E8A42005A7AA1 /* Main.storyboard */,
-				C0AA1D3F1E1E8A42005A7AA1 /* Assets.xcassets */,
-				C0AA1D411E1E8A42005A7AA1 /* LaunchScreen.storyboard */,
-				C0AA1D441E1E8A42005A7AA1 /* Info.plist */,
+				C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */,
+				C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */,
+				C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */,
+				C0AA1D921E1FC3EA005A7AA1 /* Info.plist */,
 			);
 			path = ControlTask;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 		C0AA1D7D1E1FA82B005A7AA1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D6F1E1E8D85005A7AA1 /* Array.swift */,
-				C0AA1D771E1E9832005A7AA1 /* String.swift */,
+				C0AA1D821E1FC3CA005A7AA1 /* Array.swift */,
+				C0AA1D831E1FC3CA005A7AA1 /* String.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 		C0AA1D7E1E1FA83A005A7AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D661E1E8A6B005A7AA1 /* Node.swift */,
-				C0AA1D711E1E8EE5005A7AA1 /* RuleSet.swift */,
-				C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */,
+				C0AA1D861E1FC3D4005A7AA1 /* Node.swift */,
+				C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */,
+				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,8 +161,8 @@
 		C0AA1D7F1E1FA841005A7AA1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D3A1E1E8A42005A7AA1 /* QuestionViewController.swift */,
-				C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */,
+				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
+				C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "ControlTask" */;
+			buildConfigurationList = C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "FindingAVoice" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,9 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AA1D431E1E8A42005A7AA1 /* LaunchScreen.storyboard in Resources */,
-				C0AA1D401E1E8A42005A7AA1 /* Assets.xcassets in Resources */,
-				C0AA1D3E1E1E8A42005A7AA1 /* Main.storyboard in Resources */,
+				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
+				C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */,
+				C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,14 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AA1D721E1E8EE5005A7AA1 /* RuleSet.swift in Sources */,
-				C0AA1D671E1E8A6B005A7AA1 /* Node.swift in Sources */,
-				C0AA1D701E1E8D85005A7AA1 /* Array.swift in Sources */,
-				C0AA1D3B1E1E8A42005A7AA1 /* QuestionViewController.swift in Sources */,
-				C0AA1D7C1E1FA81A005A7AA1 /* SetupViewController.swift in Sources */,
-				C0AA1D781E1E9832005A7AA1 /* String.swift in Sources */,
-				C0AA1D391E1E8A42005A7AA1 /* AppDelegate.swift in Sources */,
-				C0AA1D741E1E8F06005A7AA1 /* Vocabulary.swift in Sources */,
+				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
+				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
+				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
+				C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */,
+				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
+				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
+				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
+				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,20 +348,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C0AA1D3C1E1E8A42005A7AA1 /* Main.storyboard */ = {
+		C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C0AA1D3D1E1E8A42005A7AA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C0AA1D411E1E8A42005A7AA1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0AA1D421E1E8A42005A7AA1 /* Base */,
+				C0AA1D951E1FC40E005A7AA1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0AA1D971E1FC40E005A7AA1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -465,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
-				INFOPLIST_FILE = ControlTask/Info.plist;
+				INFOPLIST_FILE = FindingAVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,7 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
-				INFOPLIST_FILE = ControlTask/Info.plist;
+				INFOPLIST_FILE = FindingAVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "ControlTask" */ = {
+		C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "FindingAVoice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AA1D5B1E1E8A43005A7AA1 /* Debug */,
@@ -566,6 +566,7 @@
 				C0AA1D5F1E1E8A43005A7AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0AA1D601E1E8A43005A7AA1 /* Build configuration list for PBXNativeTarget "ControlTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +575,7 @@
 				C0AA1D621E1E8A43005A7AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0AA1D631E1E8A43005A7AA1 /* Build configuration list for PBXNativeTarget "ControlTaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +584,7 @@
 				C0AA1D651E1E8A43005A7AA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

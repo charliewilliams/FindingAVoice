@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C0AA1D341E1E8A42005A7AA1"
                BuildableName = "ControlTask.app"
                BlueprintName = "ControlTask"
-               ReferencedContainer = "container:ControlTask.xcodeproj">
+               ReferencedContainer = "container:FindingAVoice.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C0AA1D481E1E8A43005A7AA1"
                BuildableName = "ControlTaskTests.xctest"
                BlueprintName = "ControlTaskTests"
-               ReferencedContainer = "container:ControlTask.xcodeproj">
+               ReferencedContainer = "container:FindingAVoice.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "C0AA1D531E1E8A43005A7AA1"
                BuildableName = "ControlTaskUITests.xctest"
                BlueprintName = "ControlTaskUITests"
-               ReferencedContainer = "container:ControlTask.xcodeproj">
+               ReferencedContainer = "container:FindingAVoice.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "C0AA1D341E1E8A42005A7AA1"
             BuildableName = "ControlTask.app"
             BlueprintName = "ControlTask"
-            ReferencedContainer = "container:ControlTask.xcodeproj">
+            ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "C0AA1D341E1E8A42005A7AA1"
             BuildableName = "ControlTask.app"
             BlueprintName = "ControlTask"
-            ReferencedContainer = "container:ControlTask.xcodeproj">
+            ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "C0AA1D341E1E8A42005A7AA1"
             BuildableName = "ControlTask.app"
             BlueprintName = "ControlTask"
-            ReferencedContainer = "container:ControlTask.xcodeproj">
+            ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
