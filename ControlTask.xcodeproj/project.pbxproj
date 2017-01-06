@@ -19,6 +19,7 @@
 		C0AA1D741E1E8F06005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */; };
 		C0AA1D781E1E9832005A7AA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D771E1E9832005A7AA1 /* String.swift */; };
+		C0AA1D7C1E1FA81A005A7AA1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
 		C0AA1D771E1E9832005A7AA1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D381E1E8A42005A7AA1 /* AppDelegate.swift */,
-				C0AA1D6F1E1E8D85005A7AA1 /* Array.swift */,
-				C0AA1D661E1E8A6B005A7AA1 /* Node.swift */,
-				C0AA1D711E1E8EE5005A7AA1 /* RuleSet.swift */,
-				C0AA1D771E1E9832005A7AA1 /* String.swift */,
-				C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */,
-				C0AA1D3A1E1E8A42005A7AA1 /* QuestionViewController.swift */,
+				C0AA1D7D1E1FA82B005A7AA1 /* Categories */,
+				C0AA1D7E1E1FA83A005A7AA1 /* Model */,
+				C0AA1D7F1E1FA841005A7AA1 /* View Controllers */,
 				C0AA1D3C1E1E8A42005A7AA1 /* Main.storyboard */,
 				C0AA1D3F1E1E8A42005A7AA1 /* Assets.xcassets */,
 				C0AA1D411E1E8A42005A7AA1 /* LaunchScreen.storyboard */,
@@ -138,6 +137,34 @@
 				C0AA1D5A1E1E8A43005A7AA1 /* Info.plist */,
 			);
 			path = ControlTaskUITests;
+			sourceTree = "<group>";
+		};
+		C0AA1D7D1E1FA82B005A7AA1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA1D6F1E1E8D85005A7AA1 /* Array.swift */,
+				C0AA1D771E1E9832005A7AA1 /* String.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		C0AA1D7E1E1FA83A005A7AA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA1D661E1E8A6B005A7AA1 /* Node.swift */,
+				C0AA1D711E1E8EE5005A7AA1 /* RuleSet.swift */,
+				C0AA1D731E1E8F06005A7AA1 /* Vocabulary.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C0AA1D7F1E1FA841005A7AA1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0AA1D3A1E1E8A42005A7AA1 /* QuestionViewController.swift */,
+				C0AA1D7B1E1FA81A005A7AA1 /* SetupViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +309,7 @@
 				C0AA1D671E1E8A6B005A7AA1 /* Node.swift in Sources */,
 				C0AA1D701E1E8D85005A7AA1 /* Array.swift in Sources */,
 				C0AA1D3B1E1E8A42005A7AA1 /* QuestionViewController.swift in Sources */,
+				C0AA1D7C1E1FA81A005A7AA1 /* SetupViewController.swift in Sources */,
 				C0AA1D781E1E9832005A7AA1 /* String.swift in Sources */,
 				C0AA1D391E1E8A42005A7AA1 /* AppDelegate.swift in Sources */,
 				C0AA1D741E1E8F06005A7AA1 /* Vocabulary.swift in Sources */,
