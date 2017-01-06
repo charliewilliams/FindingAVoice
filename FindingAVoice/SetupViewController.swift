@@ -14,11 +14,11 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var numPrecedentsLabel: UILabel!
     @IBOutlet weak var numConsequentsLabel: UILabel!
     @IBOutlet weak var stringLengthLabel: UILabel!
+    @IBOutlet weak var strideLengthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func vocabSizeSliderChanged(_ sender: UISlider) {
@@ -36,6 +36,11 @@ class SetupViewController: UIViewController {
     @IBAction func stringLengthSliderChanged(_ sender: UISlider) {
         stringLengthLabel.text = "\(Int(sender.value))"
     }
+    
+    @IBAction func strideLengthSliderChanged(_ sender: UISlider) {
+        strideLengthLabel.text = "\(Int(sender.value))"
+    }
+    
 
     // MARK: - Navigation
 
@@ -44,7 +49,8 @@ class SetupViewController: UIViewController {
         let destination = segue.destination as! QuestionViewController
         let preceding = Int(numPrecedentsLabel.text!)!
         let following = Int(numConsequentsLabel.text!)!
+        let stride = Int(strideLengthLabel.text!)!
         
-        destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, stride: 1)
+        destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, stride: stride)
     }
 }
