@@ -134,4 +134,64 @@ class RuleSetTests: XCTestCase {
         let invalidString = "XOPX"
         XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
     }
+    
+    //
+    
+    func testStringHasRequestedLength() {
+        
+        let ruleSet = RuleSet()
+        
+        let testString = ruleSet.string(length: 10, shouldBeValid: true)
+        XCTAssertEqual(10, testString.characters.count)
+        
+        let testString2 = ruleSet.string(length: 4, shouldBeValid: false)
+        XCTAssertEqual(4, testString2.characters.count)
+    }
+    
+    func testCreatedStringIsValid() {
+        
+        let ruleSet = RuleSet()
+        
+        let testString = ruleSet.string(length: 10, shouldBeValid: true)
+        XCTAssertTrue(ruleSet.stringIsValid(string: testString))
+    }
+    
+    func testCreatedStringIsInvalid() {
+        
+        let ruleSet = RuleSet()
+        
+        let testString = ruleSet.string(length: 10, shouldBeValid: false)
+        XCTAssertFalse(ruleSet.stringIsValid(string: testString))
+    }
+    
+    func testForcedXOValidString() {
+        
+        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let testString = ruleSet.string(length: 2, shouldBeValid: true)
+        
+        XCTAssertEqual("XO", testString)
+    }
+    
+    func testForcedXOInvalidString() {
+        
+        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let testString = ruleSet.string(length: 2, shouldBeValid: false)
+        
+        XCTAssertNotEqual("XO", testString)
+    }
+    
+    //
+    
+    func testThrowsOnImpossibleDensity() {
+        
+        // ??
+    }
+    
+    
 }
