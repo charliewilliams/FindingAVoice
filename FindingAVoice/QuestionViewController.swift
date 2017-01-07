@@ -8,12 +8,14 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+typealias Completion = () -> ()
 
+class QuestionViewController: UIViewController {
+    
     var ruleSet: RuleSet! {
         didSet {
             if isViewLoaded {
-                showNextQuestion()
+                updateQuestionText()
             }
         }
     }
@@ -30,55 +32,14 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         if ruleSet != nil {
-            showNextQuestion()
+            updateQuestionText()
         }
     }
-    
-    func showNextQuestion() {
-        
-        currentQuestionIsValid = arc4random_uniform(2) == 0
-        
-        mainStringLabel.text = ruleSet.string(length: length, shouldBeValid: currentQuestionIsValid)
-        
-        var preceding = ruleSet.preceding
-        var following = ruleSet.following
-        
-        var preceedingString = "\(preceding.popLast()!)"
-        var followingString = "\(following.popLast()!)"
-        
-        for (index, character) in preceding.enumerated() {
-            
-            if index == preceding.count - 1 {
-                preceedingString += " or \(character)"
-            } else {
-                preceedingString += ", \(character)"
-            }
-        }
-        
-        for (index, character) in following.enumerated() {
-            
-            if index == following.count - 1 {
-                followingString += " or \(character)"
-            } else {
-                followingString += ", \(character)"
-            }
-        }
-        
-        var text = "\(preceedingString) must be followed by \(followingString)"
-        
-        if ruleSet.stride > 1 {
-            text += " \(ruleSet.stride) characters later"
-        }
-        
-        text += "."
-        
-        ruleTextView.text = text
-    }
-    
+
     @IBAction func validButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
-           print("Hooray")
+            print("Hooray")
         } else {
             print("Boo")
         }
@@ -96,6 +57,48 @@ class QuestionViewController: UIViewController {
         
         showNextQuestion()
     }
+}
+
+private extension QuestionViewController {
     
+    func showNextQuestion() {
+        
+        animateQuestionOffscreen() {
+            
+            self.updateQuestionText()
+            self.animateQuestionOnscreen()
+        }
+    }
+    
+    func animateQuestionOffscreen(completion: @escaping Completion) {
+        
+        UIView.animate(withDuration: 0.3, animations: { 
+            
+            self.mainStringLabel.center.x = -self.view.bounds.width
+            
+        }, completion: { finished in
+            
+            completion()
+        })
+    }
+    
+    func updateQuestionText() {
+        
+        currentQuestionIsValid = arc4random_uniform(2) == 0
+        
+        mainStringLabel.text = ruleSet.string(length: length, shouldBeValid: currentQuestionIsValid)
+        ruleTextView.text = ruleSet.userFacingDescription
+    }
+    
+    func animateQuestionOnscreen() {
+        
+        mainStringLabel.frame.origin.x = view.bounds.width
+        
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: [], animations: {
+            
+            self.mainStringLabel.center.x = self.view.center.x
+            
+        }, completion: nil)
+    }
 }
 

@@ -20,6 +20,43 @@ struct RuleSet {
     }
     var charactersArray: [Character]
     
+    var userFacingDescription: String {
+        
+        var preceding = self.preceding
+        var following = self.following
+        
+        var preceedingString = "\(preceding.popLast()!)"
+        var followingString = "\(following.popLast()!)"
+        
+        for (index, character) in preceding.enumerated() {
+            
+            if index == preceding.count - 1 {
+                preceedingString += " or \(character)"
+            } else {
+                preceedingString += ", \(character)"
+            }
+        }
+        
+        for (index, character) in following.enumerated() {
+            
+            if index == following.count - 1 {
+                followingString += " or \(character)"
+            } else {
+                followingString += ", \(character)"
+            }
+        }
+        
+        var text = "\(preceedingString) must be followed by \(followingString)"
+        
+        if stride > 1 {
+            text += " \(stride) characters later"
+        }
+        
+        text += "."
+        
+        return text
+    }
+    
     init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, stride: Int = 1) {
         
         precondition(vocabulary.characters.count > 1)
