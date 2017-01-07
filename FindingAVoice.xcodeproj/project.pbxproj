@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42DA036BB7006075D431C723 /* Pods_ControlTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */; };
+		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		5DEAA34EA3FA6B98803DAA9D /* Pods-ControlTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.release.xcconfig"; sourceTree = "<group>"; };
 		987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControlTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F28C58CBD2B866AC891787F /* Pods-ControlTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.debug.xcconfig"; sourceTree = "<group>"; };
+		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */,
+				C027E54E1E21A3B30057B7B9 /* Helpers.swift */,
 				C0AA1D7D1E1FA82B005A7AA1 /* Categories */,
 				C0AA1D7E1E1FA83A005A7AA1 /* Model */,
 				C0AA1D7F1E1FA841005A7AA1 /* View Controllers */,
@@ -398,6 +401,7 @@
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */,
+				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
 				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,

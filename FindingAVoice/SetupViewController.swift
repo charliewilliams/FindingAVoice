@@ -53,6 +53,6 @@ class SetupViewController: UIViewController {
         let length = Int(stringLengthLabel.text!)!
         
         destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, stride: stride)
-        destination.length = length
+        destination.stringLength = length
     }
 }

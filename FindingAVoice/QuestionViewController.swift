@@ -19,8 +19,11 @@ class QuestionViewController: UIViewController {
             }
         }
     }
-    var length: Int!
+    var stringLength: Int!
+    var numberOfQuestionsPerRound: Int = 3
+    var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
+    fileprivate var ruleTextViewYPosition: CGFloat = 0
     
     @IBOutlet weak var validButton: UIButton!
     @IBOutlet weak var invalidButton: UIButton!
@@ -63,10 +66,44 @@ private extension QuestionViewController {
     
     func showNextQuestion() {
         
-        animateQuestionOffscreen() {
+        currentQuestionNumber += 1
+        
+        if currentQuestionNumber >= numberOfQuestionsPerRound {
             
+            currentQuestionNumber = 0
+            showNextRound()
+            
+        } else {
+            
+            _showNextQuestion()
+        }
+        
+    }
+    
+    func _showNextQuestion() {
+        
+        animateQuestionOffscreen() {
             self.updateQuestionText()
             self.animateQuestionOnscreen()
+        }
+    }
+    
+    func showNextRound() {
+        
+        animateQuestionOffscreen() {
+            self.animateRuleSetOffscreen() {
+                
+                delay(0.75) {
+                    
+                    self.buildNewRuleSet()
+                    
+                    self.animateRuleSetOnscreen() {
+                        
+                        self.updateQuestionText()
+                        self.animateQuestionOnscreen()
+                    }
+                }
+            }
         }
     }
     
@@ -86,7 +123,7 @@ private extension QuestionViewController {
         
         currentQuestionIsValid = arc4random_uniform(2) == 0
         
-        mainStringLabel.text = ruleSet.string(length: length, shouldBeValid: currentQuestionIsValid)
+        mainStringLabel.text = ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
         ruleTextView.text = ruleSet.userFacingDescription
     }
     
@@ -99,6 +136,38 @@ private extension QuestionViewController {
             self.mainStringLabel.center.x = self.view.center.x
             
         }, completion: nil)
+    }
+    
+    func animateRuleSetOffscreen(completion: @escaping Completion) {
+        
+        ruleTextViewYPosition = self.ruleTextView.frame.origin.y
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.ruleTextView.frame.origin.y = -self.ruleTextView.frame.size.height
+            
+        }, completion: { _ in
+            
+            completion()
+        })
+    }
+    
+    func buildNewRuleSet() {
+        
+        ruleSet = RuleSet(precedingCount: ruleSet.preceding.count, followingCount: ruleSet.following.count, vocabulary: ruleSet.vocabulary, stride: ruleSet.stride)
+        ruleTextView.text = ruleSet.userFacingDescription
+    }
+    
+    func animateRuleSetOnscreen(completion: @escaping Completion) {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.ruleTextView.frame.origin.y = self.ruleTextViewYPosition
+            
+        }, completion: { _ in
+            
+            completion()
+        })
     }
 }
 
