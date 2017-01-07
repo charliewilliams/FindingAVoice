@@ -25,8 +25,8 @@ class QuestionViewController: UIViewController {
     var currentQuestionIsValid: Bool = false
     fileprivate var ruleTextViewYPosition: CGFloat = 0
     
-    @IBOutlet weak var validButton: UIButton!
-    @IBOutlet weak var invalidButton: UIButton!
+    @IBOutlet weak var validButton: AnswerButton!
+    @IBOutlet weak var invalidButton: AnswerButton!
     
     @IBOutlet weak var ruleTextView: UITextView!
     @IBOutlet weak var mainStringLabel: UILabel!
@@ -42,9 +42,9 @@ class QuestionViewController: UIViewController {
     @IBAction func validButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
-            print("Hooray")
+            validButton.sparkle()
         } else {
-            print("Boo")
+            validButton.shake()
         }
         
         showNextQuestion()
@@ -53,9 +53,9 @@ class QuestionViewController: UIViewController {
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
-            print("Boo")
+            invalidButton.shake()
         } else {
-            print("Hooray")
+            invalidButton.sparkle()
         }
         
         showNextQuestion()
