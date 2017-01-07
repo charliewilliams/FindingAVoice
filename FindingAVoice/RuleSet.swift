@@ -78,6 +78,7 @@ struct RuleSet {
         }
         
         let lastAllowablePrecedentIndex = length - stride
+        var hasFailed: Bool = false // only used if shouldBeValid == false
         
         // add as many "rule" occurrences as required
         // if `shouldBeValid`, add the `following` characters
@@ -90,18 +91,43 @@ struct RuleSet {
                 continue
             }
             
+            defer {
+                numberOfOccurrences -= 1
+            }
+            
+            // Put the preceding character in place
             let precedingIndex = string.index(string.startIndex, offsetBy: index)
             let precedingRange = precedingIndex..<string.index(string.startIndex, offsetBy: index + 1)
             string.replaceSubrange(precedingRange, with: String(preceding.randomItem()))
             
-            if shouldBeValid {
-                
-                let followingIndex = string.index(precedingIndex, offsetBy: stride)
-                let followingRange = followingIndex..<string.index(precedingIndex, offsetBy: stride + 1)
-                string.replaceSubrange(followingRange, with: String(following.randomItem()))
+            // Look for all the places we can put a following character if we're trying to make an invalid string
+            // These indices must not 1) replace an existing precedent character or 2) inadvertently make a valid pair with an existing precedent character
+            var fakeStrideIndices = [Int]()
+            for (index, character) in string.characters.enumerated() {
+                if passiveCharacters.contains(character) // Make sure we're not screwing up another pair
+                    && index - stride >= 0 // Make sure the next step isn't going to run off the back end of the string
+                    && passiveCharacters.contains(string[index - stride]) { // Make sure that the character we're replacing
+                    fakeStrideIndices.append(index)
+                }
             }
             
-            numberOfOccurrences -= 1
+            if !shouldBeValid && fakeStrideIndices.count == 0 {
+                continue // return?
+            }
+            
+            let thisIndex: Int
+                
+            if shouldBeValid {
+                thisIndex = index + stride
+            } else if hasFailed {
+                thisIndex = arc4random_uniform(2) == 0 ? index + stride : fakeStrideIndices.randomItem()
+            } else {
+                thisIndex = fakeStrideIndices.randomItem()
+                hasFailed = true
+            }
+            
+            let followingRange = string.index(string.startIndex, offsetBy: thisIndex)..<string.index(string.startIndex, offsetBy: thisIndex + 1)
+            string.replaceSubrange(followingRange, with: String(following.randomItem()))
         }
         
         

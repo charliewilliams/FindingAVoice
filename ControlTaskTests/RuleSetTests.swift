@@ -186,6 +186,41 @@ class RuleSetTests: XCTestCase {
         XCTAssertNotEqual("XO", testString)
     }
     
+    func testValidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
+        
+        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let testString = ruleSet.string(length: 10, density: 0.1, shouldBeValid: true)
+        
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
+    }
+    
+    func testInvalidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
+        
+        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let testString = ruleSet.string(length: 10, density: 0.1, shouldBeValid: false)
+        
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
+    }
+    
+    func testLongInvalidStringContainsSomeValidPairs() {
+        
+        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        ruleSet.preceding = ["X"]
+        ruleSet.following = ["O"]
+        
+        let testString = ruleSet.string(length: 1000, density: 0.5, shouldBeValid: false)
+        
+        XCTAssertTrue(testString.contains("XO"))
+    }
+    
     //
     
     func testThrowsOnImpossibleDensity() {
