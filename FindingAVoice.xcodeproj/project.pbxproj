@@ -12,6 +12,10 @@
 		C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
 		C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E55C1E21A50F0057B7B9 /* Sparkling.swift */; };
+		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
+		C04944411E28268D00A12E1B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944401E28268D00A12E1B /* Notification.swift */; };
+		C04944431E282B4400A12E1B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944421E282B4400A12E1B /* Date.swift */; };
+		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
 		C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
@@ -52,6 +56,10 @@
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
 		C027E55C1E21A50F0057B7B9 /* Sparkling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sparkling.swift; path = FindingAVoice/Sparkling.swift; sourceTree = SOURCE_ROOT; };
+		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
+		C04944401E28268D00A12E1B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = SOURCE_ROOT; };
+		C04944421E282B4400A12E1B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = SOURCE_ROOT; };
+		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 			children = (
 				C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */,
 				C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */,
+				C04944441E282E7700A12E1B /* DailyTimerTests.swift */,
 			);
 			path = ControlTaskTests;
 			sourceTree = "<group>";
@@ -197,6 +206,8 @@
 			children = (
 				C0AA1D821E1FC3CA005A7AA1 /* Array.swift */,
 				C0AA1D831E1FC3CA005A7AA1 /* String.swift */,
+				C04944401E28268D00A12E1B /* Notification.swift */,
+				C04944421E282B4400A12E1B /* Date.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 				C0AA1D861E1FC3D4005A7AA1 /* Node.swift */,
 				C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */,
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
+				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -424,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
+				C04944431E282B4400A12E1B /* Date.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */,
@@ -433,8 +446,10 @@
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
+				C04944411E28268D00A12E1B /* Notification.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
+				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */,
+				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +528,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -564,7 +580,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
