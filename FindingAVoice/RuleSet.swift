@@ -104,8 +104,11 @@ struct RuleSet {
         precondition(length > 1)
         precondition(density > 0 && density < 1)
         
+        print("Rule: \(userFacingDescription)")
+        
         var numberOfOccurrences = Int(Float(length) * density)
         if numberOfOccurrences == 0 { numberOfOccurrences = 1 }
+        print("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
         
         let passiveCharacters = charactersArray.filter() { !preceding.contains($0) }
         
@@ -115,6 +118,7 @@ struct RuleSet {
         for _ in 0..<length {
             string.append(passiveCharacters.randomItem())
         }
+        print(string)
         
         let lastAllowablePrecedentIndex = length - stride
         var hasFailed: Bool = false // only used if shouldBeValid == false
@@ -123,10 +127,11 @@ struct RuleSet {
         // if `shouldBeValid`, add the `following` characters
         while numberOfOccurrences > 0 {
             
-            let index = Int(arc4random_uniform(UInt32(lastAllowablePrecedentIndex)))
+            let firstIndex = Int(arc4random_uniform(UInt32(lastAllowablePrecedentIndex)))
             
             // If we'd screw up an existing occurrence, bail
-            if (preceding + following).contains(string[index]) {
+            if (preceding + following).contains(string[firstIndex]) {
+                print("Not replacing existing \(string[firstIndex])")
                 continue
             }
             
@@ -135,41 +140,46 @@ struct RuleSet {
             }
             
             // Put the preceding character in place
-            let precedingIndex = string.index(string.startIndex, offsetBy: index)
-            let precedingRange = precedingIndex..<string.index(string.startIndex, offsetBy: index + 1)
+            let precedingRange = string.index(string.startIndex, offsetBy: firstIndex)..<string.index(string.startIndex, offsetBy: firstIndex + 1)
             string.replaceSubrange(precedingRange, with: String(preceding.randomItem()))
             
             // Look for all the places we can put a following character if we're trying to make an invalid string
             // These indices must not 1) replace an existing precedent character or 2) inadvertently make a valid pair with an existing precedent character
-            var fakeStrideIndices = [Int]()
+            var allowableFakeStrideIndices = [Int]()
             for (index, character) in string.characters.enumerated() {
                 if passiveCharacters.contains(character) // Make sure we're not screwing up another pair
                     && index - stride >= 0 // Make sure the next step isn't going to run off the back end of the string
-                    && passiveCharacters.contains(string[index - stride]) { // Make sure that the character we're replacing
-                    fakeStrideIndices.append(index)
+                    && passiveCharacters.contains(string[index - stride]) { // Make sure that we're not inadvertently making a pair here
+                    allowableFakeStrideIndices.append(index)
                 }
             }
             
-            if !shouldBeValid && fakeStrideIndices.count == 0 {
+            if !shouldBeValid && allowableFakeStrideIndices.count == 0 {
+                print("Out of places to put another pair! Bailing…")
                 continue // return?
             }
             
-            let thisIndex: Int
+            let secondIndex: Int
                 
             if shouldBeValid {
-                thisIndex = index + stride
+                secondIndex = firstIndex + stride
             } else if hasFailed {
-                thisIndex = arc4random_uniform(2) == 0 ? index + stride : fakeStrideIndices.randomItem()
+                let thisPairIsValid = true //arc4random_uniform(2) == 0
+                secondIndex = thisPairIsValid ? firstIndex + stride : allowableFakeStrideIndices.randomItem()
+                print("Adding a\(thisPairIsValid ? " valid" : "n invalid") pair at \(secondIndex)")
             } else {
-                thisIndex = fakeStrideIndices.randomItem()
+                secondIndex = allowableFakeStrideIndices.randomItem()
                 hasFailed = true
+                print("First invalid pair must be invalid")
             }
             
-            let followingRange = string.index(string.startIndex, offsetBy: thisIndex)..<string.index(string.startIndex, offsetBy: thisIndex + 1)
+            let followingRange = string.index(string.startIndex, offsetBy: secondIndex)..<string.index(string.startIndex, offsetBy: secondIndex + 1)
             string.replaceSubrange(followingRange, with: String(following.randomItem()))
+            
+            print("Replaced \(firstIndex) & \(secondIndex): \(string)")
         }
         
-        
+        print("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
         return string
     }
 }

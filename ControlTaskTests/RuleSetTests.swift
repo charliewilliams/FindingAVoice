@@ -188,11 +188,11 @@ class RuleSetTests: XCTestCase {
     
     func testValidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.1)
         ruleSet.preceding = ["X"]
         ruleSet.following = ["O"]
         
-        let testString = ruleSet.string(length: 10, density: 0.1, shouldBeValid: true)
+        let testString = ruleSet.string(length: 10, shouldBeValid: true)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
@@ -200,11 +200,11 @@ class RuleSetTests: XCTestCase {
     
     func testInvalidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.1)
         ruleSet.preceding = ["X"]
         ruleSet.following = ["O"]
         
-        let testString = ruleSet.string(length: 10, density: 0.1, shouldBeValid: false)
+        let testString = ruleSet.string(length: 10, shouldBeValid: false)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
@@ -212,11 +212,11 @@ class RuleSetTests: XCTestCase {
     
     func testLongInvalidStringContainsSomeValidPairs() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet)
+        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.5)
         ruleSet.preceding = ["X"]
         ruleSet.following = ["O"]
         
-        let testString = ruleSet.string(length: 1000, density: 0.5, shouldBeValid: false)
+        let testString = ruleSet.string(length: 1000, shouldBeValid: false)
         
         XCTAssertTrue(testString.contains("XO"))
     }
