@@ -161,12 +161,8 @@ struct RuleSet {
             
             let secondIndex: Int
                 
-            if shouldBeValid {
+            if shouldBeValid || hasFailed { // Only put in one failure, to make things more interesting
                 secondIndex = firstIndex + stride
-            } else if hasFailed {
-                let thisPairIsValid = true //arc4random_uniform(2) == 0
-                secondIndex = thisPairIsValid ? firstIndex + stride : allowableFakeStrideIndices.randomItem()
-                print("Adding a\(thisPairIsValid ? " valid" : "n invalid") pair at \(secondIndex)")
             } else {
                 secondIndex = allowableFakeStrideIndices.randomItem()
                 hasFailed = true
