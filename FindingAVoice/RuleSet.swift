@@ -13,6 +13,7 @@ struct RuleSet {
     var preceding = [Character]()
     var following = [Character]()
     var stride: Int
+    var density: Float
     var vocabulary: String {
         didSet {
             charactersArray = vocabulary.characters.map() { $0 }
@@ -57,11 +58,12 @@ struct RuleSet {
         return text
     }
     
-    init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, stride: Int = 1) {
+    init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, density: Float = 0.2, stride: Int = 1) {
         
         precondition(vocabulary.characters.count > 1)
         self.stride = stride
         self.vocabulary = vocabulary
+        self.density = density
         charactersArray = vocabulary.characters.map() { $0 }
         
         for _ in 0..<precedingCount {
@@ -97,7 +99,7 @@ struct RuleSet {
         return true
     }
     
-    func string(length: Int, density: Float = 0.5, shouldBeValid: Bool) -> String {
+    func string(length: Int, shouldBeValid: Bool) -> String {
         
         precondition(length > 1)
         precondition(density > 0 && density < 1)

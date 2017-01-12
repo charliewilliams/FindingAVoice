@@ -15,6 +15,8 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var numConsequentsLabel: UILabel!
     @IBOutlet weak var stringLengthLabel: UILabel!
     @IBOutlet weak var strideLengthLabel: UILabel!
+    @IBOutlet weak var densityLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,10 @@ class SetupViewController: UIViewController {
         strideLengthLabel.text = "\(Int(sender.value))"
     }
     
+    @IBAction func densitySliderChanged(_ sender: UISlider) {
+        densityLabel.text = String(format: "%.3f", sender.value)
+    }
+    
 
     // MARK: - Navigation
 
@@ -51,8 +57,13 @@ class SetupViewController: UIViewController {
         let following = Int(numConsequentsLabel.text!)!
         let stride = Int(strideLengthLabel.text!)!
         let length = Int(stringLengthLabel.text!)!
+        let density = Float(densityLabel.text!)!
         
-        destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, stride: stride)
+        assert(stride > 0)
+        assert(density > 0 && density < 0.5)
+        assert(preceding > 0 && following > 0)
+        
+        destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, density: density, stride: stride)
         destination.stringLength = length
     }
 }
