@@ -18,24 +18,23 @@ class DailyTimer {
     private let maximumDailyPlayTime: TimeInterval = 10 * 60 // 10 min
     private var sessionTimer = Timer() // this is crap
     private let sessionStart = Date()
-    let store = UserDefaults.standard
+    var store = UserDefaults.standard
     let sessionsKey = "sessions"
     
     private var sessionPlayTime: TimeInterval {
         return NSDate().timeIntervalSince(sessionStart)
     }
-    private var previouslyStoredPlayTimeFromToday: TimeInterval {
+    
+    var previouslyStoredPlayTimeFromToday: TimeInterval {
         
         var runningTotal: TimeInterval = 0
         
-        for date in storedDates {
+        for dict in storedDates {
             
-            if date.key.isToday {
-                
-                runningTotal += date.value
-                
-            } else {
-                // remove it from user defaults
+            guard let interval = TimeInterval(dict.key) else { fatalError() }
+            let date = Date(timeIntervalSince1970: interval)
+            if date.isToday {
+                runningTotal += dict.value
             }
         }
         
@@ -46,8 +45,8 @@ class DailyTimer {
         return sessionPlayTime + previouslyStoredPlayTimeFromToday >= maximumDailyPlayTime
     }
     
-    private var storedDates: [Date: TimeInterval] {
-        return store.object(forKey: sessionsKey) as? [Date: TimeInterval] ?? [Date: TimeInterval]()
+    private var storedDates: [String: TimeInterval] {
+        return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
     }
     
     static let shared = DailyTimer()
@@ -64,7 +63,7 @@ class DailyTimer {
         var existingDict = storedDates
         
         // Key on this session's start time
-        existingDict[sessionStart] = sessionPlayTime
+        existingDict["\(sessionStart.timeIntervalSince1970)"] = sessionPlayTime
         store.set(existingDict, forKey: sessionsKey)
         
         if hasPlayedMaxTimeToday {
