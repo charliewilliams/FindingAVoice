@@ -47,7 +47,9 @@ class QuestionViewController: UIViewController {
             validButton.shake()
         }
         
-        showNextQuestion()
+        delay(5) {
+            self.showNextQuestion()
+        }
     }
     
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
@@ -58,7 +60,9 @@ class QuestionViewController: UIViewController {
             invalidButton.sparkle()
         }
         
-        showNextQuestion()
+        delay(5) {
+            self.showNextQuestion()
+        }
     }
 }
 
