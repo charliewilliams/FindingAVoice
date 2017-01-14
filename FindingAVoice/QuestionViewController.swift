@@ -10,7 +10,7 @@ import UIKit
 
 typealias Completion = () -> ()
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, QuestionTiming {
     
     var ruleSet: RuleSet! {
         didSet {
@@ -24,6 +24,7 @@ class QuestionViewController: UIViewController {
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
     fileprivate var ruleTextViewYPosition: CGFloat = 0
+    var perQuestionTimer = QuestionTimer.shared
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
@@ -31,12 +32,18 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var ruleTextView: UITextView!
     @IBOutlet weak var mainStringLabel: UILabel!
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if ruleSet != nil {
             updateQuestionText()
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
     }
 
     @IBAction func validButtonPressed(_ sender: UIButton) {
@@ -125,6 +132,8 @@ private extension QuestionViewController {
     
     func updateQuestionText() {
         
+        perQuestionTimer.reset()
+        
         currentQuestionIsValid = arc4random_uniform(2) == 0
         
         mainStringLabel.text = ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
@@ -172,6 +181,20 @@ private extension QuestionViewController {
             
             completion()
         })
+    }
+}
+
+// MARK: - Timeouts
+
+extension QuestionViewController {
+    
+    func questionDidTimeOut() {
+        
+    }
+    
+    func dailyPlayTimeExceeded() {
+        
+        
     }
 }
 
