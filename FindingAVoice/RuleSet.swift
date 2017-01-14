@@ -104,11 +104,11 @@ struct RuleSet {
         precondition(length > 1)
         precondition(density > 0 && density < 1)
         
-        print("Rule: \(userFacingDescription)")
+        dprint("Rule: \(userFacingDescription)")
         
         var numberOfOccurrences = Int(Float(length) * density)
         if numberOfOccurrences == 0 { numberOfOccurrences = 1 }
-        print("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
+        dprint("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
         
         let passiveCharacters = charactersArray.filter() { !preceding.contains($0) }
         
@@ -118,7 +118,7 @@ struct RuleSet {
         for _ in 0..<length {
             string.append(passiveCharacters.randomItem())
         }
-        print(string)
+        dprint(string)
         
         let lastAllowablePrecedentIndex = length - stride
         var hasFailed: Bool = false // only used if shouldBeValid == false
@@ -131,7 +131,7 @@ struct RuleSet {
             
             // If we'd screw up an existing occurrence, bail
             if (preceding + following).contains(string[firstIndex]) {
-                print("Not replacing existing \(string[firstIndex])")
+                dprint("Not replacing existing \(string[firstIndex])")
                 continue
             }
             
@@ -155,7 +155,7 @@ struct RuleSet {
             }
             
             if !shouldBeValid && allowableFakeStrideIndices.count == 0 {
-                print("Out of places to put another pair! Bailing…")
+                dprint("Out of places to put another pair! Bailing…")
                 continue // return?
             }
             
@@ -166,16 +166,16 @@ struct RuleSet {
             } else {
                 secondIndex = allowableFakeStrideIndices.randomItem()
                 hasFailed = true
-                print("First invalid pair must be invalid")
+                dprint("First invalid pair must be invalid")
             }
             
             let followingRange = string.index(string.startIndex, offsetBy: secondIndex)..<string.index(string.startIndex, offsetBy: secondIndex + 1)
             string.replaceSubrange(followingRange, with: String(following.randomItem()))
             
-            print("Replaced \(firstIndex) & \(secondIndex): \(string)")
+            dprint("Replaced \(firstIndex) & \(secondIndex): \(string)")
         }
         
-        print("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
+        dprint("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
         return string
     }
 }
