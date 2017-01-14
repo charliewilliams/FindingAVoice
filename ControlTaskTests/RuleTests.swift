@@ -1,5 +1,5 @@
 //
-//  RuleSetTests.swift
+//  RuleTests.swift
 //  ControlTask
 //
 //  Created by Charlie Williams on 05/01/2017.
@@ -11,17 +11,11 @@ import XCTest
 
 let testAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-class RuleSetTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-
-        
-    }
+class RuleTests: XCTestCase {
     
     func testUsesVocabulary() {
         
-        let testSet = RuleSet(vocabulary: "XO")
+        let testSet = Rule(vocabulary: "XO")
         
         XCTAssertTrue(testSet.preceding == ["O"] || testSet.following == ["O"])
         XCTAssertTrue(testSet.preceding == ["X"] || testSet.following == ["X"])
@@ -29,23 +23,23 @@ class RuleSetTests: XCTestCase {
     }
     
     func testReadsPrecedingCount() {
-        XCTAssertEqual(5, RuleSet(precedingCount: 5).preceding.count)
+        XCTAssertEqual(5, Rule(precedingCount: 5).preceding.count)
     }
     
     func testReadsFollowingCount() {
-        XCTAssertEqual(5, RuleSet(followingCount: 5).following.count)
+        XCTAssertEqual(5, Rule(followingCount: 5).following.count)
     }
     
     func testNoDuplicatesWithinPreceding() {
         
-        let testSet = RuleSet(precedingCount: 20, vocabulary: testAlphabet)
+        let testSet = Rule(precedingCount: 20, vocabulary: testAlphabet)
         let uniques = Set(testSet.preceding)
         XCTAssertEqual(20, uniques.count)
     }
     
     func testNoDuplicatesBetweenPrecedingAndFollowing() {
         
-        let testSet = RuleSet(precedingCount: 26, followingCount: 26, vocabulary: testAlphabet)
+        let testSet = Rule(precedingCount: 26, followingCount: 26, vocabulary: testAlphabet)
         let uniquesP = Set(testSet.preceding)
         let uniquesF = Set(testSet.following)
         XCTAssertEqual(26, uniquesP.count)
@@ -57,142 +51,142 @@ class RuleSetTests: XCTestCase {
     
     func testValidString() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
         let validString = "XO"
-        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(string: validString))
     }
     
     func testInvalidString() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
         let invalidString = "XX"
-        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(string: invalidString))
     }
     
     func testValidStringWithMultipleOccurrences() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
         let validString = "XOABCDXO"
-        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(string: validString))
     }
     
     func testInvalidStringWithMultipleOccurrences() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
         let invalidString = "XOABCDXX"
-        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(string: invalidString))
     }
     
     func testValidStringWithMultiplePrecedents() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X", "Y"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X", "Y"]
+        rule.following = ["O"]
         
         let validString = "XOYO"
-        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+        XCTAssertTrue(Rurulele.stringIsValid(string: validString))
     }
     
     func testInvalidStringWithMultiplePrecedents() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X", "Y"]
-        ruleSet.following = ["O"]
+        var rule = Rule()
+        rule.preceding = ["X", "Y"]
+        rule.following = ["O"]
         
         let invalidString = "XOOY"
-        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(string: invalidString))
     }
     
     func testValidStringWithMultipleFollows() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O", "P"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O", "P"]
         
         let validString = "XOXP"
-        XCTAssertTrue(ruleSet.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(string: validString))
     }
     
     func testInvalidStringWithMultipleFollows() {
         
-        var ruleSet = RuleSet()
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O", "P"]
+        var rule = Rule()
+        rule.preceding = ["X"]
+        rule.following = ["O", "P"]
         
         let invalidString = "XOPX"
-        XCTAssertFalse(ruleSet.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(string: invalidString))
     }
     
     //
     
     func testStringHasRequestedLength() {
         
-        let ruleSet = RuleSet()
+        let rule = Rule()
         
-        let testString = ruleSet.string(length: 10, shouldBeValid: true)
+        let testString = rule.string(length: 10, shouldBeValid: true)
         XCTAssertEqual(10, testString.characters.count)
         
-        let testString2 = ruleSet.string(length: 4, shouldBeValid: false)
+        let testString2 = rule.string(length: 4, shouldBeValid: false)
         XCTAssertEqual(4, testString2.characters.count)
     }
     
     func testCreatedStringIsValid() {
         
-        let ruleSet = RuleSet()
+        let rule = Rule()
         
-        let testString = ruleSet.string(length: 10, shouldBeValid: true)
-        XCTAssertTrue(ruleSet.stringIsValid(string: testString))
+        let testString = rule.string(length: 10, shouldBeValid: true)
+        XCTAssertTrue(rule.stringIsValid(string: testString))
     }
     
     func testCreatedStringIsInvalid() {
         
-        let ruleSet = RuleSet()
+        let rule = Rule()
         
-        let testString = ruleSet.string(length: 10, shouldBeValid: false)
-        XCTAssertFalse(ruleSet.stringIsValid(string: testString))
+        let testString = rule.string(length: 10, shouldBeValid: false)
+        XCTAssertFalse(rule.stringIsValid(string: testString))
     }
     
     func testForcedXOValidString() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet)
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule(vocabulary: testAlphabet)
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
-        let testString = ruleSet.string(length: 2, shouldBeValid: true)
+        let testString = rule.string(length: 2, shouldBeValid: true)
         
         XCTAssertEqual("XO", testString)
     }
     
     func testForcedXOInvalidString() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet)
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule(vocabulary: testAlphabet)
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
-        let testString = ruleSet.string(length: 2, shouldBeValid: false)
+        let testString = rule.string(length: 2, shouldBeValid: false)
         
         XCTAssertNotEqual("XO", testString)
     }
     
     func testValidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.1)
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule(vocabulary: testAlphabet, density: 0.1)
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
-        let testString = ruleSet.string(length: 10, shouldBeValid: true)
+        let testString = rule.string(length: 10, shouldBeValid: true)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count, testString)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count, testString)
@@ -200,11 +194,11 @@ class RuleSetTests: XCTestCase {
     
     func testInvalidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.1)
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule(vocabulary: testAlphabet, density: 0.1)
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
-        let testString = ruleSet.string(length: 10, shouldBeValid: false)
+        let testString = rule.string(length: 10, shouldBeValid: false)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
@@ -212,11 +206,11 @@ class RuleSetTests: XCTestCase {
     
     func testLongInvalidStringContainsSomeValidPairs() {
         
-        var ruleSet = RuleSet(vocabulary: testAlphabet, density: 0.5)
-        ruleSet.preceding = ["X"]
-        ruleSet.following = ["O"]
+        var rule = Rule(vocabulary: testAlphabet, density: 0.5)
+        rule.preceding = ["X"]
+        rule.following = ["O"]
         
-        let testString = ruleSet.string(length: 1000, shouldBeValid: false)
+        let testString = rule.string(length: 1000, shouldBeValid: false)
         
         XCTAssertTrue(testString.contains("XO"))
     }

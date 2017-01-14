@@ -13,17 +13,20 @@
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
 		C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E55C1E21A50F0057B7B9 /* Sparkling.swift */; };
 		C035CFA01E2A3EA200419532 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CF9F1E2A3EA200419532 /* DebugPrint.swift */; };
+		C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA31E2A420200419532 /* QuestionTimer.swift */; };
+		C035CFA71E2A421000419532 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA51E2A421000419532 /* Date.swift */; };
+		C035CFA81E2A421000419532 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA61E2A421000419532 /* Notification.swift */; };
+		C035CFAA1E2A433D00419532 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */; };
+		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
-		C04944411E28268D00A12E1B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944401E28268D00A12E1B /* Notification.swift */; };
-		C04944431E282B4400A12E1B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944421E282B4400A12E1B /* Date.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
 		C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */; };
-		C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */; };
+		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D861E1FC3D4005A7AA1 /* Node.swift */; };
-		C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */; };
+		C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */; };
 		C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */; };
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */; };
@@ -58,9 +61,12 @@
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
 		C027E55C1E21A50F0057B7B9 /* Sparkling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sparkling.swift; path = FindingAVoice/Sparkling.swift; sourceTree = SOURCE_ROOT; };
 		C035CF9F1E2A3EA200419532 /* DebugPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugPrint.swift; path = FindingAVoice/DebugPrint.swift; sourceTree = SOURCE_ROOT; };
+		C035CFA31E2A420200419532 /* QuestionTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTimer.swift; path = FindingAVoice/QuestionTimer.swift; sourceTree = SOURCE_ROOT; };
+		C035CFA51E2A421000419532 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = FindingAVoice/Date.swift; sourceTree = SOURCE_ROOT; };
+		C035CFA61E2A421000419532 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = FindingAVoice/Notification.swift; sourceTree = SOURCE_ROOT; };
+		C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
+		C035CFAB1E2A456200419532 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
-		C04944401E28268D00A12E1B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = SOURCE_ROOT; };
-		C04944421E282B4400A12E1B /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +74,12 @@
 		C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTaskUITests.swift; sourceTree = "<group>"; };
 		C0AA1D5A1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
+		C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 		C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = FindingAVoice/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D821E1FC3CA005A7AA1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = FindingAVoice/Array.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D831E1FC3CA005A7AA1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = FindingAVoice/String.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D861E1FC3D4005A7AA1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = FindingAVoice/Node.swift; sourceTree = SOURCE_ROOT; };
-		C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
+		C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = FindingAVoice/Rule.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vocabulary.swift; path = FindingAVoice/Vocabulary.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupViewController.swift; path = FindingAVoice/SetupViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -131,6 +137,7 @@
 			children = (
 				C027E5561E21A4910057B7B9 /* Shakeable.swift */,
 				C027E55C1E21A50F0057B7B9 /* Sparkling.swift */,
+				C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -188,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */,
-				C0AA1D751E1E913B005A7AA1 /* RuleSetTests.swift */,
+				C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */,
 				C04944441E282E7700A12E1B /* DailyTimerTests.swift */,
 			);
 			path = ControlTaskTests;
@@ -208,8 +215,8 @@
 			children = (
 				C0AA1D821E1FC3CA005A7AA1 /* Array.swift */,
 				C0AA1D831E1FC3CA005A7AA1 /* String.swift */,
-				C04944401E28268D00A12E1B /* Notification.swift */,
-				C04944421E282B4400A12E1B /* Date.swift */,
+				C035CFA51E2A421000419532 /* Date.swift */,
+				C035CFA61E2A421000419532 /* Notification.swift */,
 				C035CF9F1E2A3EA200419532 /* DebugPrint.swift */,
 			);
 			name = Categories;
@@ -219,9 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D861E1FC3D4005A7AA1 /* Node.swift */,
-				C0AA1D871E1FC3D4005A7AA1 /* RuleSet.swift */,
+				C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */,
+				C035CFAB1E2A456200419532 /* RuleSet.swift */,
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
 				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
+				C035CFA31E2A420200419532 /* QuestionTimer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,7 +324,6 @@
 						DevelopmentTeam = N2WM6EN8GQ;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
-						TestTargetID = C0AA1D341E1E8A42005A7AA1;
 					};
 					C0AA1D531E1E8A43005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -439,21 +447,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
-				C04944431E282B4400A12E1B /* Date.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
-				C0AA1D8A1E1FC3D4005A7AA1 /* RuleSet.swift in Sources */,
+				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
+				C035CFAA1E2A433D00419532 /* PopoverDisplaying.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
+				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
-				C04944411E28268D00A12E1B /* Notification.swift in Sources */,
+				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
 				C035CFA01E2A3EA200419532 /* DebugPrint.swift in Sources */,
+				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
+				C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AA1D761E1E913B005A7AA1 /* RuleSetTests.swift in Sources */,
+				C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */,
 				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +651,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				INFOPLIST_FILE = ControlTaskTests/Info.plist;
@@ -649,7 +659,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControlTask.app/ControlTask";
 			};
 			name = Debug;
 		};
@@ -657,7 +666,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				INFOPLIST_FILE = ControlTaskTests/Info.plist;
@@ -665,7 +673,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControlTask.app/ControlTask";
 			};
 			name = Release;
 		};

@@ -63,7 +63,10 @@ class SetupViewController: UIViewController {
         assert(density > 0 && density < 0.5)
         assert(preceding > 0 && following > 0)
         
-        destination.ruleSet = RuleSet(precedingCount: preceding, followingCount: following, density: density, stride: stride)
+        let rules = [Rule(precedingCount: preceding, followingCount: following, density: density, stride: stride)]        
+        let ruleSet = RuleSet(rules: rules)
+
+        destination.ruleSet = ruleSet
         destination.stringLength = length
     }
 }

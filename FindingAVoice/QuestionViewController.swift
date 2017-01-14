@@ -158,7 +158,7 @@ private extension QuestionViewController {
     
     func buildNewRuleSet() {
         
-        ruleSet = RuleSet(precedingCount: ruleSet.preceding.count, followingCount: ruleSet.following.count, vocabulary: ruleSet.vocabulary, stride: ruleSet.stride)
+        ruleSet = ruleSet.similarCopy()
         ruleTextView.text = ruleSet.userFacingDescription
     }
     
