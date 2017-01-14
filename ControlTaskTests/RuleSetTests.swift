@@ -194,8 +194,8 @@ class RuleSetTests: XCTestCase {
         
         let testString = ruleSet.string(length: 10, shouldBeValid: true)
         
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count, testString)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count, testString)
     }
     
     func testInvalidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
