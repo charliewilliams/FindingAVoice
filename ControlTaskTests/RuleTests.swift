@@ -96,7 +96,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let validString = "XOYO"
-        XCTAssertTrue(Rurulele.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(string: validString))
     }
     
     func testInvalidStringWithMultiplePrecedents() {

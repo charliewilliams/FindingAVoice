@@ -24,6 +24,9 @@ class QuestionTimer {
     
     func reset() {
         
+        if timer != nil {
+            timer.invalidate()
+        }
         timer = Timer.scheduledTimer(withTimeInterval: maximumPerQuestionTime, repeats: false) { [weak self] _ in
             self?.timerFired()
         }
