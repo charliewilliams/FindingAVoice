@@ -110,15 +110,9 @@ struct Rule {
         if numberOfOccurrences == 0 { numberOfOccurrences = 1 }
         dprint("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
         
-        let passiveCharacters = charactersArray.filter() { !preceding.contains($0) }
+        let passiveCharacters = charactersArray.filter() { !protectedCharacters.contains($0) }
         
-        // build a string of random items from the vocabulary
-        // but don't use anything from `preceding`
-        var string = ""
-        for _ in 0..<length {
-            string.append(passiveCharacters.randomItem())
-        }
-        dprint(string)
+        var string = existingString ?? randomString(fromCharacters: passiveCharacters, length: length)
         
         let lastAllowablePrecedentIndex = length - stride
         var hasFailed: Bool = false // only used if shouldBeValid == false
@@ -176,6 +170,18 @@ struct Rule {
         }
         
         dprint("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
+        return string
+    }
+    
+    func randomString(fromCharacters characters: [Character], length: Int) -> String {
+        
+        var string = ""
+        // build a string of random items from the vocabulary
+        // but don't use anything from `preceding`
+        for _ in 0..<length {
+            string.append(characters.randomItem())
+        }
+        dprint(string)
         return string
     }
 }
