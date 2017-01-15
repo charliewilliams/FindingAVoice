@@ -24,7 +24,8 @@ class QuestionViewController: UIViewController, QuestionTiming {
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
     fileprivate var ruleTextViewYPosition: CGFloat = 0
-    var perQuestionTimer = QuestionTimer.shared
+    let perQuestionTimer = QuestionTimer.shared
+    let dailyTimer = DailyTimer.shared
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
@@ -190,11 +191,12 @@ extension QuestionViewController {
     
     func questionDidTimeOut() {
         
+        view.backgroundColor = .red
     }
     
     func dailyPlayTimeExceeded() {
         
-        
+        view.backgroundColor = .orange
     }
 }
 
