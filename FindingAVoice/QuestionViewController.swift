@@ -40,6 +40,8 @@ class QuestionViewController: UIViewController, QuestionTiming {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        perQuestionTimer.delegate = self
+        
         if ruleSet != nil {
             updateQuestionText()
         }
