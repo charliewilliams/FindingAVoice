@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		42DA036BB7006075D431C723 /* Pods_ControlTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */; };
 		C002D4491E35440500FA2C15 /* QuestionViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */; };
+		C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */; };
+		C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
 		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
@@ -57,6 +59,8 @@
 		987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControlTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F28C58CBD2B866AC891787F /* Pods-ControlTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.debug.xcconfig"; sourceTree = "<group>"; };
 		C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerUITests.swift; sourceTree = "<group>"; };
+		C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimesUpLockViewController.swift; path = FindingAVoice/TimesUpLockViewController.swift; sourceTree = SOURCE_ROOT; };
+		C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimesUpLockViewController.xib; path = FindingAVoice/TimesUpLockViewController.xib; sourceTree = SOURCE_ROOT; };
 		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
@@ -240,6 +244,8 @@
 			children = (
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
 				C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */,
+				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
+				C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
+				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
 				C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */,
 				C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */,
 			);
@@ -463,6 +470,7 @@
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
 				C035CFA01E2A3EA200419532 /* DebugPrint.swift in Sources */,
+				C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */,
 				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
 				C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */,
 			);
