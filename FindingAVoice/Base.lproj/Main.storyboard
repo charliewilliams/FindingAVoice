@@ -205,7 +205,9 @@
                             <constraint firstItem="URU-It-THQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="2LW-Dt-Iy2"/>
                             <constraint firstItem="URU-It-THQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="KP2-Xu-WKl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NVv-vO-Jn0" secondAttribute="bottom" constant="20" id="WW5-0S-Qpm"/>
-                            <constraint firstItem="ana-we-8DX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Ydc-Nz-4Be"/>
+                            <constraint firstItem="ana-we-8DX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Ydc-Nz-4Be">
+                                <variation key="heightClass=compact" constant="50"/>
+                            </constraint>
                             <constraint firstItem="URU-It-THQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="btW-Tl-JeZ"/>
                             <constraint firstItem="ana-we-8DX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNK-eW-by3"/>
                             <constraint firstAttribute="trailing" secondItem="NVv-vO-Jn0" secondAttribute="trailing" constant="20" id="ksB-yf-fQX"/>
@@ -245,6 +247,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.01130111298" green="0.83972668859999999" blue="1" alpha="0.30207416370000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -264,6 +269,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,6 +293,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-ng-1lL">
                                                 <rect key="frame" x="227.5" y="0.0" width="97" height="115"/>
@@ -297,6 +308,9 @@
                                                         <state key="normal" title="Valid">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="heightClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="validButtonPressed:" destination="g0C-6F-wTD" eventType="touchUpInside" id="Cub-8Q-5bj"/>
                                                         </connections>
@@ -309,6 +323,9 @@
                                                         <state key="normal" title="Invalid">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="heightClass=compact">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="invalidButtonPressed:" destination="g0C-6F-wTD" eventType="touchUpInside" id="Rmb-Tv-tLf"/>
                                                         </connections>
@@ -320,6 +337,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                     </stackView>

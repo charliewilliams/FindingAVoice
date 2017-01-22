@@ -18,11 +18,6 @@ class SetupViewController: UIViewController {
     @IBOutlet weak var densityLabel: UILabel!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     @IBAction func vocabSizeSliderChanged(_ sender: UISlider) {
         vocabSizeLabel.text = "\(Int(sender.value))"
     }
