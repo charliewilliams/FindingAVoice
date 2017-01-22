@@ -10,7 +10,7 @@ import UIKit
 
 typealias Completion = () -> ()
 
-class QuestionViewController: UIViewController, QuestionTiming {
+class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying {
     
     var ruleSet: RuleSet! {
         didSet {
@@ -26,6 +26,7 @@ class QuestionViewController: UIViewController, QuestionTiming {
     fileprivate var ruleTextViewYPosition: CGFloat = 0
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
+    var timeExceededForToday: Bool = false
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
@@ -90,6 +91,12 @@ private extension QuestionViewController {
     }
     
     func showNextQuestionOrRound() {
+        
+        guard timeExceededForToday == false else {
+            
+            showTimeExceededLockScreen()
+            return
+        }
         
         currentQuestionNumber += 1
         
@@ -206,13 +213,11 @@ private extension QuestionViewController {
 extension QuestionViewController {
     
     func questionDidTimeOut() {
-        
-        view.backgroundColor = .red
+        showPopover(type: .perQuestionTimeout)
     }
     
     func dailyPlayTimeExceeded() {
-        
-        view.backgroundColor = .orange
+        timeExceededForToday = true
     }
 }
 

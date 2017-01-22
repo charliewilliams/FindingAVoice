@@ -19,5 +19,8 @@ protocol PopoverDisplaying: class {
 
 extension PopoverDisplaying where Self: UIViewController {
     
-    
+    func showPopover(type: PopoverType) {
+        
+        
+    }
 }

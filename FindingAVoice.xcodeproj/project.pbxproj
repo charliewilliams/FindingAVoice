@@ -11,6 +11,8 @@
 		C002D4491E35440500FA2C15 /* QuestionViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */; };
 		C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */; };
 		C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
+		C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
+		C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
 		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
@@ -19,7 +21,6 @@
 		C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA31E2A420200419532 /* QuestionTimer.swift */; };
 		C035CFA71E2A421000419532 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA51E2A421000419532 /* Date.swift */; };
 		C035CFA81E2A421000419532 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA61E2A421000419532 /* Notification.swift */; };
-		C035CFAA1E2A433D00419532 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */; };
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
@@ -61,6 +62,8 @@
 		C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerUITests.swift; sourceTree = "<group>"; };
 		C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimesUpLockViewController.swift; path = FindingAVoice/TimesUpLockViewController.swift; sourceTree = SOURCE_ROOT; };
 		C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimesUpLockViewController.xib; path = FindingAVoice/TimesUpLockViewController.xib; sourceTree = SOURCE_ROOT; };
+		C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockScreenDisplaying.swift; path = FindingAVoice/LockScreenDisplaying.swift; sourceTree = SOURCE_ROOT; };
+		C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverDisplaying.swift; path = FindingAVoice/PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
@@ -69,7 +72,6 @@
 		C035CFA31E2A420200419532 /* QuestionTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionTimer.swift; path = FindingAVoice/QuestionTimer.swift; sourceTree = SOURCE_ROOT; };
 		C035CFA51E2A421000419532 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = FindingAVoice/Date.swift; sourceTree = SOURCE_ROOT; };
 		C035CFA61E2A421000419532 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notification.swift; path = FindingAVoice/Notification.swift; sourceTree = SOURCE_ROOT; };
-		C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C035CFAB1E2A456200419532 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
@@ -141,7 +143,8 @@
 			children = (
 				C027E5561E21A4910057B7B9 /* Shakeable.swift */,
 				C027E55C1E21A50F0057B7B9 /* Sparkling.swift */,
-				C035CFA91E2A433D00419532 /* PopoverDisplaying.swift */,
+				C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */,
+				C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -455,10 +458,10 @@
 			files = (
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
+				C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */,
 				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
-				C035CFAA1E2A433D00419532 /* PopoverDisplaying.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
@@ -467,6 +470,7 @@
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
+				C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
 				C035CFA01E2A3EA200419532 /* DebugPrint.swift in Sources */,
