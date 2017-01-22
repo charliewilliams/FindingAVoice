@@ -21,6 +21,12 @@ extension PopoverDisplaying where Self: UIViewController {
     
     func showPopover(type: PopoverType) {
         
+        let popover = PopoverViewController(type: type)
         
+        popover.willMove(toParentViewController: self)
+        addChildViewController(popover)
+        popover.view.frame = view.bounds
+        view.addSubview(popover.view)
+        popover.didMove(toParentViewController: self)
     }
 }
