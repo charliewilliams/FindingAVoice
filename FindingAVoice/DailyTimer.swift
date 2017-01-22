@@ -16,8 +16,8 @@ import Foundation
 class DailyTimer {
     
     private let maximumDailyPlayTime: TimeInterval = 10 * 60 // 10 min
-    private var sessionTimer = Timer() // this is crap
-    private let sessionStart = Date()
+    private var sessionTimer = Timer() // this is crap, this timer gets thrown away but needs to be set in init
+    private var sessionStart = Date() // likewise
     var store = UserDefaults.standard
     let sessionsKey = "sessions"
     
@@ -52,9 +52,7 @@ class DailyTimer {
     static let shared = DailyTimer()
     private init() {
 
-        sessionTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            self.tick()
-        }
+        resume()
     }
     
     private func tick() {
@@ -68,6 +66,20 @@ class DailyTimer {
         
         if hasPlayedMaxTimeToday {
             sendMaxPlayTimeNotification()
+        }
+    }
+    
+    func pause() {
+        
+        sessionTimer.invalidate()
+    }
+    
+    func resume() {
+        
+        sessionStart = Date()
+        
+        sessionTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            self.tick()
         }
     }
     
