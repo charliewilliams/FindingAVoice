@@ -110,7 +110,8 @@ struct Rule {
         if numberOfOccurrences == 0 { numberOfOccurrences = 1 }
         dprint("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
         
-        let passiveCharacters = charactersArray.filter() { !protectedCharacters.contains($0) }
+        let activeCharacters = protectedCharacters + preceding + following
+        let passiveCharacters = charactersArray.filter() { !activeCharacters.contains($0) }
         
         var string = existingString ?? randomString(fromCharacters: passiveCharacters, length: length)
         
