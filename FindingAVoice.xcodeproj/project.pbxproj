@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42DA036BB7006075D431C723 /* Pods_ControlTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */; };
+		C002D4491E35440500FA2C15 /* QuestionViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */; };
 		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
@@ -20,7 +21,6 @@
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
-		C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -56,6 +56,7 @@
 		5DEAA34EA3FA6B98803DAA9D /* Pods-ControlTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.release.xcconfig"; sourceTree = "<group>"; };
 		987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControlTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F28C58CBD2B866AC891787F /* Pods-ControlTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.debug.xcconfig"; sourceTree = "<group>"; };
+		C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerUITests.swift; sourceTree = "<group>"; };
 		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
@@ -72,7 +73,6 @@
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTaskUITests.swift; sourceTree = "<group>"; };
 		C0AA1D5A1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTests.swift; sourceTree = "<group>"; };
 		C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = FindingAVoice/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -204,7 +204,7 @@
 		C0AA1D571E1E8A43005A7AA1 /* ControlTaskUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D581E1E8A43005A7AA1 /* ControlTaskUITests.swift */,
+				C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */,
 				C0AA1D5A1E1E8A43005A7AA1 /* Info.plist */,
 			);
 			path = ControlTaskUITests;
@@ -481,7 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AA1D591E1E8A43005A7AA1 /* ControlTaskUITests.swift in Sources */,
+				C002D4491E35440500FA2C15 /* QuestionViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

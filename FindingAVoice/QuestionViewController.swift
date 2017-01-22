@@ -57,9 +57,7 @@ class QuestionViewController: UIViewController, QuestionTiming {
             validButton.shake()
         }
         
-        delay(5) {
-            self.showNextQuestion()
-        }
+        handleAnyButtonPress()
     }
     
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
@@ -70,15 +68,28 @@ class QuestionViewController: UIViewController, QuestionTiming {
             invalidButton.sparkle()
         }
         
-        delay(5) {
-            self.showNextQuestion()
-        }
+        handleAnyButtonPress()
     }
 }
 
 private extension QuestionViewController {
     
-    func showNextQuestion() {
+    func handleAnyButtonPress() {
+        
+        setButtons(enabled: false)
+        
+        delay(5) {
+            self.showNextQuestionOrRound()
+        }
+    }
+    
+    func setButtons(enabled: Bool) {
+        
+        invalidButton.isUserInteractionEnabled = enabled
+        validButton.isUserInteractionEnabled = enabled
+    }
+    
+    func showNextQuestionOrRound() {
         
         currentQuestionNumber += 1
         
@@ -151,7 +162,10 @@ private extension QuestionViewController {
             
             self.mainStringLabel.center.x = self.view.center.x
             
-        }, completion: nil)
+        }, completion: { _ in
+        
+            self.setButtons(enabled: true)
+        })
     }
     
     func animateRuleSetOffscreen(completion: @escaping Completion) {
