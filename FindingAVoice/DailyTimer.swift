@@ -20,6 +20,7 @@ class DailyTimer {
     private var sessionStart = Date() // likewise
     var store = UserDefaults.standard
     let sessionsKey = "sessions"
+    var disabled: Bool = false
     
     private var sessionPlayTime: TimeInterval {
         return NSDate().timeIntervalSince(sessionStart)
@@ -75,6 +76,8 @@ class DailyTimer {
     }
     
     func resume() {
+        
+        guard disabled == false else { return }
         
         sessionStart = Date()
         

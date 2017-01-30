@@ -18,6 +18,8 @@ class TimesUpLockViewController: UIViewController {
     
     @IBAction func secretBypassGestureDetected(_ sender: UITapGestureRecognizer) {
         
+        DailyTimer.shared.disabled = true
+        DailyTimer.shared.pause()
         dismiss(animated: true, completion: nil)
     }
     
