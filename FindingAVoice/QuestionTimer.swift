@@ -22,6 +22,11 @@ class QuestionTimer {
     static let shared = QuestionTimer()
     private init() { }
     
+    func clear() {
+        
+        timer.invalidate()
+    }
+    
     func reset() {
         
         if timer != nil {

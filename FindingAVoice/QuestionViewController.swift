@@ -77,6 +77,7 @@ private extension QuestionViewController {
     
     func handleAnyButtonPress() {
         
+        perQuestionTimer.clear()
         setButtons(enabled: false)
         
         delay(5) {
