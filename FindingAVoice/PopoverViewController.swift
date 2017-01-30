@@ -10,6 +10,7 @@ import UIKit
 
 class PopoverViewController: UIViewController {
     
+    weak var delegate: PopoverDisplaying?
     @IBOutlet weak var popoverView: UIView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var popoverBottomToScreenBottomConstraint: NSLayoutConstraint!
@@ -20,7 +21,6 @@ class PopoverViewController: UIViewController {
             continueButton.isHidden = !requiresInteractionToDismiss
         }
     }
-    
     
     init(type: PopoverType) {
         
@@ -112,8 +112,10 @@ private extension PopoverViewController {
     
     func cleanUp() {
         
-        self.willMove(toParentViewController: nil)
-        self.removeFromParentViewController()
-        self.didMove(toParentViewController: nil)
+        delegate?.popoverWillDismiss()
+        willMove(toParentViewController: nil)
+        removeFromParentViewController()
+        view.removeFromSuperview()
+        didMove(toParentViewController: nil)
     }
 }

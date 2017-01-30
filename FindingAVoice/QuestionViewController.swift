@@ -71,6 +71,10 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         
         handleAnyButtonPress()
     }
+    
+    func popoverWillDismiss() {
+        showNextQuestionOrRound()
+    }
 }
 
 private extension QuestionViewController {

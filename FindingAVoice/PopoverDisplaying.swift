@@ -15,6 +15,7 @@ enum PopoverType {
 
 protocol PopoverDisplaying: class {
     func showPopover(type: PopoverType)
+    func popoverWillDismiss()
 }
 
 extension PopoverDisplaying where Self: UIViewController {
@@ -22,6 +23,7 @@ extension PopoverDisplaying where Self: UIViewController {
     func showPopover(type: PopoverType) {
         
         let popover = PopoverViewController(type: type)
+        popover.delegate = self
         
         popover.willMove(toParentViewController: self)
         addChildViewController(popover)
