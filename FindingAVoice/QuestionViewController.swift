@@ -21,6 +21,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     }
     var stringLength: Int!
     var numberOfQuestionsPerRound: Int = 3
+    var delayTimeBetweenQuestions: TimeInterval = 1
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
     fileprivate var ruleTextViewYPosition: CGFloat = 0
@@ -84,7 +85,7 @@ private extension QuestionViewController {
         perQuestionTimer.clear()
         setButtons(enabled: false)
         
-        delay(5) {
+        delay(delayTimeBetweenQuestions) {
             self.showNextQuestionOrRound()
         }
     }
