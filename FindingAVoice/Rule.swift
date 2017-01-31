@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum RuleCreationError: String, Error {
+    case impossibleDensity = "Impossibly high density"
+    case zeroDensity = "Cannot have zero density"
+    case zeroLength = "Cannot have zero string length"
+}
+
 struct Rule {
     
     var preceding = [Character]()
@@ -99,10 +105,17 @@ struct Rule {
         return true
     }
     
-    func string(length: Int, mutating existingString: String? = nil, protectedCharacters: [Character] = [], shouldBeValid: Bool) -> String {
+    func string(length: Int, mutating existingString: String? = nil, protectedCharacters: [Character] = [], shouldBeValid: Bool) throws -> String {
         
-        precondition(length > 1)
-        precondition(density > 0 && density < 1)
+        guard length > 1 else {
+            throw RuleCreationError.zeroLength
+        }
+        guard density > 0 else {
+            throw RuleCreationError.zeroDensity
+        }
+        guard density < 0.6 else {
+            throw RuleCreationError.impossibleDensity
+        }
         
         dprint("Rule: \(userFacingDescription)")
         

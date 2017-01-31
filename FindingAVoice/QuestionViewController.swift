@@ -164,8 +164,16 @@ private extension QuestionViewController {
         
         currentQuestionIsValid = arc4random_uniform(2) == 0
         
-        mainStringLabel.text = ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
-        ruleTextView.text = ruleSet.userFacingDescription
+        do {
+            
+            mainStringLabel.text = try ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
+            ruleTextView.text = ruleSet.userFacingDescription
+            
+        } catch let e {
+            
+            let alertController = UIAlertController(title: "Error", message: e.localizedDescription, preferredStyle: .alert)
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     func animateQuestionOnscreen() {

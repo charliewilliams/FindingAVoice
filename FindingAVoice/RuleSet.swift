@@ -16,16 +16,16 @@ struct RuleSet {
         return rules.map({ $0.userFacingDescription }).joined(separator: "\n")
     }
     
-    func string(length: Int, shouldBeValid: Bool) -> String {
+    func string(length: Int, shouldBeValid: Bool) throws -> String {
         
         var rules = self.rules
         let allActiveChars = rules.flatMap({ $0.preceding + $0.following })
         let first = rules.removeFirst()
         
-        var string = first.string(length: length, shouldBeValid: shouldBeValid)
+        var string = try first.string(length: length, shouldBeValid: shouldBeValid)
         
         for rule in rules {
-            string = rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
+            string = try rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
         }
         
         return string

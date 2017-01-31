@@ -135,10 +135,10 @@ class RuleTests: XCTestCase {
         
         let rule = Rule()
         
-        let testString = rule.string(length: 10, shouldBeValid: true)
+        let testString = try! rule.string(length: 10, shouldBeValid: true)
         XCTAssertEqual(10, testString.characters.count)
         
-        let testString2 = rule.string(length: 4, shouldBeValid: false)
+        let testString2 = try! rule.string(length: 4, shouldBeValid: false)
         XCTAssertEqual(4, testString2.characters.count)
     }
     
@@ -146,7 +146,7 @@ class RuleTests: XCTestCase {
         
         let rule = Rule()
         
-        let testString = rule.string(length: 10, shouldBeValid: true)
+        let testString = try! rule.string(length: 10, shouldBeValid: true)
         XCTAssertTrue(rule.stringIsValid(string: testString))
     }
     
@@ -154,7 +154,7 @@ class RuleTests: XCTestCase {
         
         let rule = Rule()
         
-        let testString = rule.string(length: 10, shouldBeValid: false)
+        let testString = try! rule.string(length: 10, shouldBeValid: false)
         XCTAssertFalse(rule.stringIsValid(string: testString))
     }
     
@@ -164,7 +164,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = rule.string(length: 2, shouldBeValid: true)
+        let testString = try! rule.string(length: 2, shouldBeValid: true)
         
         XCTAssertEqual("XO", testString)
     }
@@ -175,7 +175,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = rule.string(length: 2, shouldBeValid: false)
+        let testString = try! rule.string(length: 2, shouldBeValid: false)
         
         XCTAssertNotEqual("XO", testString)
     }
@@ -186,7 +186,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = rule.string(length: 10, shouldBeValid: true)
+        let testString = try! rule.string(length: 10, shouldBeValid: true)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count, testString)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count, testString)
@@ -198,7 +198,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = rule.string(length: 10, shouldBeValid: false)
+        let testString = try! rule.string(length: 10, shouldBeValid: false)
         
         XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
         XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
@@ -210,7 +210,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = rule.string(length: 1000, shouldBeValid: false)
+        let testString = try! rule.string(length: 1000, shouldBeValid: false)
         
         XCTAssertTrue(testString.contains("XO"))
     }
@@ -219,8 +219,25 @@ class RuleTests: XCTestCase {
     
     func testThrowsOnImpossibleDensity() {
         
-        // ??
+        let impossibleDensity: Float = 0.6
+        XCTAssertThrowsError(try Rule(vocabulary: testAlphabet, density: impossibleDensity).string(length: 2, shouldBeValid: true))
     }
     
+    func testThrowsOnZeroLength() {
+        
+        XCTAssertThrowsError(try Rule(vocabulary: testAlphabet, density: 0.25).string(length: 0, shouldBeValid: true))
+    }
     
+    func testPrecedingAlwaysAppearsInInvalidString() {
+        
+        // This is a bad test, sorry
+        for d in 1...1000 {
+            // densities random between 0 and 0.58
+            let density = Float(d) / 1700.0
+            var rule = Rule(vocabulary: testAlphabet, density: density)
+            rule.preceding = ["X"]
+            rule.following = ["O"]
+            XCTAssertTrue(try! rule.string(length: 20, shouldBeValid: false).contains("X"))
+        }
+    }
 }
