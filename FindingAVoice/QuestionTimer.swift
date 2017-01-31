@@ -17,19 +17,19 @@ class QuestionTimer {
     
     weak var delegate: QuestionTiming?
     private let maximumPerQuestionTime: TimeInterval = 10 // 10 sec
-    private var timer: Timer!
+    private var timer: Timer?
     
     static let shared = QuestionTimer()
     private init() { }
     
     func clear() {
         
-        timer.invalidate()
+        timer?.invalidate()
     }
     
     func reset() {
         
-        if timer != nil {
+        if let timer = timer {
             timer.invalidate()
         }
         timer = Timer.scheduledTimer(withTimeInterval: maximumPerQuestionTime, repeats: false) { [weak self] _ in
