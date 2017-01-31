@@ -58,6 +58,8 @@ class DailyTimer {
     
     private func tick() {
 
+        guard disabled == false else { return }
+        
         // Store this session duration in case the session ends
         var existingDict = storedDates
         

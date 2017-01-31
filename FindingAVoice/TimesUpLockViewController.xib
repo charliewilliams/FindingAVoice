@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -52,12 +52,22 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvD-KP-Qb8">
+                    <rect key="frame" x="467" y="276" width="81" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                    <state key="normal" title="DEBUG BYPASS"/>
+                    <connections>
+                        <action selector="debugBypassButtonPressed:" destination="-1" eventType="touchUpInside" id="tNw-8t-OEm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="bGC-3a-c3w" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LdU-G3-NRD"/>
+                <constraint firstAttribute="bottom" secondItem="HvD-KP-Qb8" secondAttribute="bottom" constant="20" id="fb9-03-jM1"/>
                 <constraint firstItem="bGC-3a-c3w" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ql9-zm-azj"/>
+                <constraint firstAttribute="trailing" secondItem="HvD-KP-Qb8" secondAttribute="trailing" constant="20" id="ybq-lU-CpD"/>
             </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="8u9-Lo-Xs2" appends="YES" id="svl-cE-mlc"/>

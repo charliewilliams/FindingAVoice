@@ -13,7 +13,7 @@ class TimesUpLockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO poll periodically to see if it's tomorrow yet
+        // TODO poll periodically to see if it's tomorrow yet, in which case we dismiss
     }
     
     @IBAction func secretBypassGestureDetected(_ sender: UITapGestureRecognizer) {
@@ -23,4 +23,11 @@ class TimesUpLockViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // TODO - remove this before release
+    @IBAction func debugBypassButtonPressed(_ sender: UIButton) {
+        
+        DailyTimer.shared.disabled = true
+        DailyTimer.shared.pause()
+        dismiss(animated: true, completion: nil)
+    }
 }
