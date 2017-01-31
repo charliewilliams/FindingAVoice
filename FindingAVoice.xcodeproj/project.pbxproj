@@ -30,7 +30,6 @@
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
-		C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D861E1FC3D4005A7AA1 /* Node.swift */; };
 		C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */; };
 		C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */; };
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
@@ -88,7 +87,6 @@
 		C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = FindingAVoice/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D821E1FC3CA005A7AA1 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = FindingAVoice/Array.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D831E1FC3CA005A7AA1 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = FindingAVoice/String.swift; sourceTree = SOURCE_ROOT; };
-		C0AA1D861E1FC3D4005A7AA1 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = FindingAVoice/Node.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = FindingAVoice/Rule.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vocabulary.swift; path = FindingAVoice/Vocabulary.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -236,7 +234,6 @@
 		C0AA1D7E1E1FA83A005A7AA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D861E1FC3D4005A7AA1 /* Node.swift */,
 				C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */,
 				C035CFAB1E2A456200419532 /* RuleSet.swift */,
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
@@ -466,7 +463,6 @@
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */,
-				C0AA1D891E1FC3D4005A7AA1 /* Node.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
