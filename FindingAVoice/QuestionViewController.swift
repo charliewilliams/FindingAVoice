@@ -162,8 +162,6 @@ private extension QuestionViewController {
     
     func updateQuestionText() {
         
-        perQuestionTimer.reset()
-        
         currentQuestionIsValid = arc4random_uniform(2) == 0
         
         mainStringLabel.text = ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
@@ -181,6 +179,7 @@ private extension QuestionViewController {
         }, completion: { _ in
         
             self.setButtons(enabled: true)
+            self.perQuestionTimer.reset()
         })
     }
     
@@ -222,6 +221,8 @@ private extension QuestionViewController {
 extension QuestionViewController {
     
     func questionDidTimeOut() {
+        
+        setButtons(enabled: false)
         showPopover(type: .perQuestionTimeout)
     }
     
