@@ -43,6 +43,7 @@ class DailyTimer {
     }
     
     var hasPlayedMaxTimeToday: Bool {
+        if disabled { return false }
         return sessionPlayTime + previouslyStoredPlayTimeFromToday >= maximumDailyPlayTime
     }
     
@@ -53,6 +54,15 @@ class DailyTimer {
     static let shared = DailyTimer()
     private init() {
 
+        /*
+         If we're launched into a test target, kill it off right away
+         */
+        
+        guard ProcessInfo.processInfo.arguments.contains("UITestingIgnoreDailyTimer") == false else {
+            disabled = true
+            return
+        }
+        
         resume()
     }
     

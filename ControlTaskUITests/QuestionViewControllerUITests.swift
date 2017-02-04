@@ -9,20 +9,29 @@
 import XCTest
 
 class QuestionViewControllerUITests: XCTestCase {
-        
+    
+    let app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
         
         continueAfterFailure = false
-        XCUIApplication().launch()
-    }
-    
-    func testTappingValidButtonDisablesBothButtons() {
+        
+        app.launchArguments = ["UITestingIgnoreDailyTimer"]
+        app.launch()
         
         XCUIDevice.shared().orientation = .landscapeRight
         
-        let app = XCUIApplication()
+        getToQuestionViewController()
+    }
+    
+    func getToQuestionViewController() {
+        
+        app.buttons["Let's get started!"].tap()
         app.buttons["Go!"].tap()
+    }
+    
+    func testTappingValidButtonDisablesBothButtons() {
         
         let button = app.buttons["Valid"]
         
@@ -35,11 +44,6 @@ class QuestionViewControllerUITests: XCTestCase {
     
     func testTappingInvalidButtonDisablesBothButtons() {
         
-        XCUIDevice.shared().orientation = .landscapeRight
-        
-        let app = XCUIApplication()
-        app.buttons["Go!"].tap()
-        
         let button = app.buttons["Invalid"]
         
         XCTAssertTrue(button.isEnabled)
@@ -50,11 +54,6 @@ class QuestionViewControllerUITests: XCTestCase {
     }
     
     func testAfterInvalidTapBothButtonsAreEnabledAfterDelay() {
-        
-        XCUIDevice.shared().orientation = .landscapeRight
-        
-        let app = XCUIApplication()
-        app.buttons["Go!"].tap()
         
         let button = app.buttons["Invalid"]
         
@@ -70,11 +69,6 @@ class QuestionViewControllerUITests: XCTestCase {
     
     func testAfterValidTapBothButtonsAreEnabledAfterDelay() {
         
-        XCUIDevice.shared().orientation = .landscapeRight
-        
-        let app = XCUIApplication()
-        app.buttons["Go!"].tap()
-        
         let button = app.buttons["Valid"]
         
         XCTAssertTrue(button.isEnabled)
@@ -89,9 +83,6 @@ class QuestionViewControllerUITests: XCTestCase {
     
     func testFirstQuestionTimesOutAndDoesntBreakSecondQuestion() {
         
-        let app = XCUIApplication()
-        app.buttons["Go!"].tap()
-        
         // Let the first question time out
         Thread.sleep(forTimeInterval: 11)
         
@@ -105,9 +96,6 @@ class QuestionViewControllerUITests: XCTestCase {
     }
     
     func testSecondQuestionTimesOutAndDoesntBreakThirdQuestion() {
-        
-        let app = XCUIApplication()
-        app.buttons["Go!"].tap()
         
         // Tap through the first question
         let validButton = app.buttons["Valid"]
