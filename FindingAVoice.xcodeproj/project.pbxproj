@@ -37,6 +37,11 @@
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
 		C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */; };
+		C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */; };
+		C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */; };
+		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
+		C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */; };
+		C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,11 @@
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		C0AA1D971E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = FindingAVoice/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = FindingAVoice/WelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RulesViewController.xib; path = FindingAVoice/RulesViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionViewController.xib; path = FindingAVoice/QuestionViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +257,12 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
+				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */,
+				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
+				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
+				C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */,
+				C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */,
 				C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */,
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
 				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
@@ -372,9 +387,12 @@
 			files = (
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
+				C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */,
 				C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */,
+				C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */,
 				C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */,
 				C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */,
+				C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +484,7 @@
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
+				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
@@ -473,6 +492,7 @@
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
+				C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */,
 				C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,

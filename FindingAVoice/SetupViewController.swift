@@ -42,12 +42,10 @@ class SetupViewController: UIViewController {
         densityLabel.text = String(format: "%.3f", sender.value)
     }
     
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func goButtonPressed(_ sender: UIButton) {
         
-        let destination = segue.destination as! QuestionViewController
+        let destination = QuestionViewController()
+        
         let preceding = Int(numPrecedentsLabel.text!)!
         let following = Int(numConsequentsLabel.text!)!
         let stride = Int(strideLengthLabel.text!)!
@@ -58,10 +56,12 @@ class SetupViewController: UIViewController {
         assert(density > 0 && density < 0.5)
         assert(preceding > 0 && following > 0)
         
-        let rules = [Rule(precedingCount: preceding, followingCount: following, density: density, stride: stride)]        
+        let rules = [Rule(precedingCount: preceding, followingCount: following, density: density, stride: stride)]
         let ruleSet = RuleSet(rules: rules)
-
+        
         destination.ruleSet = ruleSet
         destination.stringLength = length
+        
+        navigationController?.pushViewController(destination, animated: true)
     }
 }
