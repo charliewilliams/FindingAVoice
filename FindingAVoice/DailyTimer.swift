@@ -44,7 +44,7 @@ class DailyTimer {
     
     var hasPlayedMaxTimeToday: Bool {
         if disabled { return false }
-        return sessionPlayTime + previouslyStoredPlayTimeFromToday >= maximumDailyPlayTime
+        return previouslyStoredPlayTimeFromToday >= maximumDailyPlayTime
     }
     
     private var storedDates: [String: TimeInterval] {
@@ -57,7 +57,6 @@ class DailyTimer {
         /*
          If we're launched into a test target, kill it off right away
          */
-        
         guard ProcessInfo.processInfo.arguments.contains("UITestingIgnoreDailyTimer") == false else {
             disabled = true
             return
@@ -103,6 +102,6 @@ class DailyTimer {
         // Log analytics here
         NotificationCenter.default.post(name: Notification.Name(.dailySessionTimeExceeded), object: nil)
         
-        self.sessionTimer.invalidate() // this is ok, right?
+        sessionTimer.invalidate() // this is ok, right?
     }
 }
