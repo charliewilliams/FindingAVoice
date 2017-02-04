@@ -95,6 +95,9 @@
                                             <variation key="heightClass=compact">
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                             </variation>
+                                            <connections>
+                                                <action selector="validButtonPressed:" destination="-1" eventType="touchUpInside" id="F4m-F4-jmh"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-IH-PQv" customClass="AnswerButton" customModule="ControlTask" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="65" width="97" height="50"/>
@@ -107,6 +110,9 @@
                                             <variation key="heightClass=compact">
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                             </variation>
+                                            <connections>
+                                                <action selector="invalidButtonPressed:" destination="-1" eventType="touchUpInside" id="7Va-1m-U1K"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

@@ -1,14 +1,14 @@
 //
-//  SetupViewController.swift
-//  ControlTask
+//  SecretSetupViewController.swift
+//  FindingAVoice
 //
-//  Created by Charlie Williams on 06/01/2017.
+//  Created by Charlie Williams on 04/02/2017.
 //  Copyright © 2017 Charlie Williams. All rights reserved.
 //
 
 import UIKit
 
-class SetupViewController: UIViewController {
+class SecretSetupViewController: UIViewController {
 
     @IBOutlet weak var vocabSizeLabel: UILabel!
     @IBOutlet weak var numPrecedentsLabel: UILabel!
@@ -64,4 +64,5 @@ class SetupViewController: UIViewController {
         
         navigationController?.pushViewController(destination, animated: true)
     }
+
 }

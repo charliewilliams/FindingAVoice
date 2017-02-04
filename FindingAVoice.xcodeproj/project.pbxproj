@@ -33,15 +33,19 @@
 		C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */; };
 		C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */; };
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
-		C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
-		C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */; };
 		C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
 		C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */; };
 		C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
+		C0DFE9021E466C7C0011E7DA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */; };
+		C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */; };
+		C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */; };
+		C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
+		C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
+		C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,16 +99,20 @@
 		C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rule.swift; path = FindingAVoice/Rule.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vocabulary.swift; path = FindingAVoice/Vocabulary.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
-		C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetupViewController.swift; path = FindingAVoice/SetupViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		C0AA1D971E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = FindingAVoice/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = FindingAVoice/WelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RulesViewController.xib; path = FindingAVoice/RulesViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionViewController.xib; path = FindingAVoice/QuestionViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = FindingAVoice/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoViewController.xib; path = FindingAVoice/InfoViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecretSetupViewController.swift; path = FindingAVoice/SecretSetupViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecretSetupViewController.xib; path = FindingAVoice/SecretSetupViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ControlTask.storyboard; path = FindingAVoice/ControlTask.storyboard; sourceTree = SOURCE_ROOT; };
+		C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootNavigationController.swift; path = FindingAVoice/RootNavigationController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */,
+				C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */,
+				C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */,
 				C027E54E1E21A3B30057B7B9 /* Helpers.swift */,
 				C0AA1D7D1E1FA82B005A7AA1 /* Categories */,
 				C027E5501E21A4250057B7B9 /* Protocols */,
@@ -204,7 +214,6 @@
 				C0AA1D7F1E1FA841005A7AA1 /* View Controllers */,
 				C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */,
 				C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */,
-				C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */,
 				C0AA1D921E1FC3EA005A7AA1 /* Info.plist */,
 			);
 			path = ControlTask;
@@ -258,7 +267,6 @@
 			children = (
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
 				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
-				C0AA1D8D1E1FC3DB005A7AA1 /* SetupViewController.swift */,
 				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
 				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
 				C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */,
@@ -267,6 +275,10 @@
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
 				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
 				C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */,
+				C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */,
+				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
+				C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */,
+				C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -386,13 +398,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
+				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
 				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
 				C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */,
 				C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */,
 				C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */,
-				C0AA1D991E1FC40E005A7AA1 /* Main.storyboard in Resources */,
+				C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */,
 				C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */,
 				C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */,
+				C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,12 +495,13 @@
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */,
+				C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
+				C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
-				C0AA1D8F1E1FC3DB005A7AA1 /* SetupViewController.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
@@ -500,6 +515,7 @@
 				C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */,
 				C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */,
 				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
+				C0DFE9021E466C7C0011E7DA /* InfoViewController.swift in Sources */,
 				C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,14 +559,6 @@
 				C0AA1D951E1FC40E005A7AA1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		C0AA1D961E1FC40E005A7AA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0AA1D971E1FC40E005A7AA1 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
