@@ -86,4 +86,41 @@ class QuestionViewControllerUITests: XCTestCase {
         XCTAssertTrue(button.isEnabled)
         XCTAssertTrue(app.buttons["Invalid"].isEnabled)
     }
+    
+    func testFirstQuestionTimesOutAndDoesntBreakSecondQuestion() {
+        
+        let app = XCUIApplication()
+        app.buttons["Go!"].tap()
+        
+        // Let the first question time out
+        Thread.sleep(forTimeInterval: 11)
+        
+        app.buttons["Continue"].tap()
+        Thread.sleep(forTimeInterval: 3)
+        
+        // Make sure we can tap the next button
+        let validButton = app.buttons["Valid"]
+        XCTAssertTrue(validButton.isEnabled)
+        validButton.tap()
+    }
+    
+    func testSecondQuestionTimesOutAndDoesntBreakThirdQuestion() {
+        
+        let app = XCUIApplication()
+        app.buttons["Go!"].tap()
+        
+        // Tap through the first question
+        let validButton = app.buttons["Valid"]
+        validButton.tap()
+        
+        // Let the second question time out
+        Thread.sleep(forTimeInterval: 12)
+        
+        app.buttons["Continue"].tap()
+        Thread.sleep(forTimeInterval: 3)
+        
+        // Make sure we can tap the third button
+        XCTAssertTrue(validButton.isEnabled)
+        validButton.tap()
+    }
 }
