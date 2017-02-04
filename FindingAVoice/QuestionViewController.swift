@@ -47,6 +47,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         
         if ruleSet != nil {
             updateQuestionText()
+            perQuestionTimer.reset()
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
