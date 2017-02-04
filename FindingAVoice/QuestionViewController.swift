@@ -52,6 +52,12 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 
     @IBAction func validButtonPressed(_ sender: UIButton) {
         
