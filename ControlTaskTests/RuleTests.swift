@@ -144,18 +144,22 @@ class RuleTests: XCTestCase {
     
     func testCreatedStringIsValid() {
         
-        let rule = Rule()
-        
-        let testString = try! rule.string(length: 10, shouldBeValid: true)
-        XCTAssertTrue(rule.stringIsValid(string: testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.userFacingDescription)")
+        for _ in 0..<1000 {
+            let rule = Rule()
+            
+            let testString = try! rule.string(length: 10, shouldBeValid: true)
+            XCTAssertTrue(rule.stringIsValid(string: testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.userFacingDescription)")
+        }
     }
     
     func testCreatedStringIsInvalid() {
         
-        let rule = Rule()
-        
-        let testString = try! rule.string(length: 10, shouldBeValid: false)
-        XCTAssertFalse(rule.stringIsValid(string: testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.userFacingDescription)")
+        for _ in 0..<1000 {
+            let rule = Rule()
+            
+            let testString = try! rule.string(length: 10, shouldBeValid: false)
+            XCTAssertFalse(rule.stringIsValid(string: testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.userFacingDescription)")
+        }
     }
     
     func testForcedXOValidString() {
