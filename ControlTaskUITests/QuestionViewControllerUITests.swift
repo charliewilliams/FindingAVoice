@@ -83,10 +83,12 @@ class QuestionViewControllerUITests: XCTestCase {
     
     func testFirstQuestionTimesOutAndDoesntBreakSecondQuestion() {
         
+        let button = app.buttons["Continue"]
+        
         // Let the first question time out
         Thread.sleep(forTimeInterval: 11)
         
-        app.buttons["Continue"].tap()
+        button.tap()
         Thread.sleep(forTimeInterval: 3)
         
         // Make sure we can tap the next button
