@@ -48,13 +48,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ife-Lp-fel">
                     <rect key="frame" x="0.0" y="348" width="1024" height="220"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖👻🐶🐱🐭🐹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-7x-bR2">
-                            <rect key="frame" x="305" y="72" width="414" height="76.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖👻🐶🐱🐭🐹🤖👻🐶🐱🤖👻🐭🐹🤖👻🐶🐱🐭🐹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-7x-bR2">
+                            <rect key="frame" x="42" y="85" width="940" height="50.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=compact">
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             </variation>
                         </label>
                     </subviews>
