@@ -45,6 +45,9 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         
         perQuestionTimer.delegate = self
         
+        // Hide the question at the start so that you can read the rule first
+        mainStringLabel.alpha = 0
+        
         if ruleSet != nil {
             updateQuestionText()
             perQuestionTimer.reset()
@@ -57,6 +60,14 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.3, delay: delayTimeBeforeShowingQuestion, options: [], animations: { 
+            self.mainStringLabel.alpha = 1
+        }, completion: nil)
     }
 
     @IBAction func validButtonPressed(_ sender: UIButton) {
