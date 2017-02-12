@@ -15,4 +15,10 @@ extension Array {
         let index = Int(arc4random_uniform(UInt32(self.count)))
         return self[index]
     }
+    
+    mutating func popRandomItem() -> Element {
+        
+        let index = Int(arc4random_uniform(UInt32(self.count)))
+        return remove(at: index)
+    }
 }

@@ -26,6 +26,7 @@
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
+		C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -87,6 +88,7 @@
 		C035CFAB1E2A456200419532 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
+		C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugHistory.swift; path = FindingAVoice/DebugHistory.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
 				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
 				C035CFA31E2A420200419532 /* QuestionTimer.swift */,
+				C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
+				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
 				C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */,
 				C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */,

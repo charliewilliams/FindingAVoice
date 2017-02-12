@@ -63,6 +63,7 @@ struct Rule {
         
         return text
     }
+    var debugFullHistory = DebugHistory()
     
     init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, density: Float = 0.2, stride: Int = 1) {
         
@@ -81,6 +82,9 @@ struct Rule {
             following.append(charactersArray.randomItem())
             charactersArray = charactersArray.filter() { !following.contains($0) }
         }
+        
+        // Start out with userFacingDescription; append all the string mutations for debugging
+        debugFullHistory.append(userFacingDescription)
     }
     
     func stringIsValid(string: String) -> Bool {
@@ -117,74 +121,114 @@ struct Rule {
             throw RuleCreationError.impossibleDensity
         }
         
-        dprint("Rule: \(userFacingDescription)")
-        
-        var numberOfOccurrences = Int(Float(length) * density)
-        if numberOfOccurrences == 0 { numberOfOccurrences = 1 }
-        dprint("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrences) active pair(s)")
+        var numberOfOccurrencesRemaining = Int(Float(length) * density)
+        if numberOfOccurrencesRemaining == 0 { numberOfOccurrencesRemaining = 1 }
         
         let activeCharacters = protectedCharacters + preceding + following
         let passiveCharacters = charactersArray.filter() { !activeCharacters.contains($0) }
         
         var string = existingString ?? randomString(fromCharacters: passiveCharacters, length: length)
         
-        let lastAllowablePrecedentIndex = length - stride
+        debugFullHistory.append("Starting with: \(string).")
+        debugFullHistory.append("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrencesRemaining) active pair(s).")
+        
+        let lastAllowablePrecedentIndex = length - stride - 1
         var hasFailed: Bool = false // only used if shouldBeValid == false
         
         // add as many "rule" occurrences as required
         // if `shouldBeValid`, add the `following` characters
-        while numberOfOccurrences > 0 {
+        while numberOfOccurrencesRemaining > 0 {
             
-            let firstIndex = Int(arc4random_uniform(UInt32(lastAllowablePrecedentIndex)))
-            
-            // If we'd screw up an existing occurrence, bail
-            if (preceding + following).contains(string[firstIndex]) {
-                dprint("Not replacing existing \(string[firstIndex])")
-                continue
+            // All the indices that aren't currently part of a pair
+            var currentlyPassiveIndices = string.characters.enumerated().flatMap { c -> Int? in
+                if passiveCharacters.contains(c.element) {
+                    return c.offset
+                }
+                return nil
             }
             
+            // To make a valid string, we can only place our `preceding` character in a place where it can be followed by `following`
+            let possibleValidFirstIndices = currentlyPassiveIndices.filter { index -> Bool in
+                index + stride < length && passiveCharacters.contains(string[index + stride])
+            }
+            
+            // Safety
+            if possibleValidFirstIndices.count == 0 {
+                break
+            }
+            
+            // Only put in one failure, to make things more interesting
+            let validThisRound = shouldBeValid || hasFailed
+            
+            let firstIndex = validThisRound ? possibleValidFirstIndices.randomItem() : currentlyPassiveIndices.randomItem()
+            
+            currentlyPassiveIndices.remove(at: currentlyPassiveIndices.index(of: firstIndex)!)
+            debugFullHistory.append("Index of preceding: \(firstIndex)")
+            
             defer {
-                numberOfOccurrences -= 1
+                numberOfOccurrencesRemaining -= 1
             }
             
             // Put the preceding character in place
-            let precedingRange = string.index(string.startIndex, offsetBy: firstIndex)..<string.index(string.startIndex, offsetBy: firstIndex + 1)
-            string.replaceSubrange(precedingRange, with: String(preceding.randomItem()))
+            string.replace(atIndex: firstIndex, with: preceding.randomItem())
             
             // Look for all the places we can put a following character if we're trying to make an invalid string
             // These indices must not 1) replace an existing precedent character or 2) inadvertently make a valid pair with an existing precedent character
-            var allowableFakeStrideIndices = [Int]()
-            for (index, character) in string.characters.enumerated() {
-                if passiveCharacters.contains(character) // Make sure we're not screwing up another pair
-                    && index - stride >= 0 // Make sure the next step isn't going to run off the back end of the string
-                    && passiveCharacters.contains(string[index - stride]) { // Make sure that we're not inadvertently making a pair here
-                    allowableFakeStrideIndices.append(index)
-                }
-            }
+            let followingIndicesToMakeAnInvalidPair = followingIndicesWhichMakeAnInvalidPair(forString: string, passiveCharacters: passiveCharacters)
             
-            if !shouldBeValid && allowableFakeStrideIndices.count == 0 {
-                dprint("Out of places to put another pair! Bailing…")
-                continue // return?
+            if !validThisRound {
+                debugFullHistory.append("Indices we think we can replace: \(followingIndicesToMakeAnInvalidPair)")
+                
+                if followingIndicesToMakeAnInvalidPair.count == 0 {
+                    debugFullHistory.append("Out of places to put another pair! Bailing…")
+                    break
+                }
             }
             
             let secondIndex: Int
                 
-            if shouldBeValid || hasFailed { // Only put in one failure, to make things more interesting
+            if validThisRound {
                 secondIndex = firstIndex + stride
             } else {
-                secondIndex = allowableFakeStrideIndices.randomItem()
+                secondIndex = followingIndicesToMakeAnInvalidPair.randomItem()
                 hasFailed = true
-                dprint("First invalid pair must be invalid")
+                debugFullHistory.append("First invalid pair must be invalid")
             }
             
-            let followingRange = string.index(string.startIndex, offsetBy: secondIndex)..<string.index(string.startIndex, offsetBy: secondIndex + 1)
-            string.replaceSubrange(followingRange, with: String(following.randomItem()))
-            
-            dprint("Replaced \(firstIndex) & \(secondIndex): \(string)")
+            // Don't run off the end of the string
+            if secondIndex < length {
+                string.replace(atIndex: secondIndex, with: following.randomItem())
+                debugFullHistory.append("Replaced \(firstIndex) & \(secondIndex): \(string)")
+            } else {
+                // If we were set to run off the end, we shouldn't be trying to make a valid string.
+                assert(shouldBeValid == false)
+            }
         }
         
-        dprint("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
+        debugFullHistory.append("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
         return string
+    }
+    
+    func followingIndicesWhichMakeAnInvalidPair(forString string: String, passiveCharacters: [Character]) -> [Int] {
+        
+        // THIS IS FOR THE FOLLOWING HALF OF A PAIR ONLY
+        var followingIndicesMakingAnInvalidPair = [Int]()
+        
+        for (index, character) in string.characters.enumerated() {
+            
+            // Make sure we're not replacing an active character
+            guard passiveCharacters.contains(character) else {
+                continue
+            }
+            
+            // 1. If there's no way a preceding character could come 'stride' characters before this in the string, we're good
+            // 2. If a preceding character could, but it isn't, we're also good
+            if index - stride < 0 || !preceding.contains(string[index - stride]) {
+                followingIndicesMakingAnInvalidPair.append(index)
+            }
+        }
+        
+        return followingIndicesMakingAnInvalidPair
     }
     
     func randomString(fromCharacters characters: [Character], length: Int) -> String {

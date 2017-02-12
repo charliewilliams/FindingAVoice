@@ -30,8 +30,8 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
-                            <rect key="frame" x="257" y="53" width="303.5" height="55"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logic Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
+                            <rect key="frame" x="288" y="53" width="242" height="55"/>
                             <fontDescription key="fontDescription" type="system" pointSize="46"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -42,15 +42,15 @@
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4">
                                     <rect key="frame" x="0.0" y="0.0" width="331" height="338"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <mutableString key="text">Welcome to the Logic Game!In this game, the “rule giver” will be giving you a rule about what emojis (* &amp; @) are legally able to follow what other emojis. Then you will see an example that has a string of emojis all in a row like this ( @#$##^&amp;**) and your task is to judge whether the string is a Valid (follows the rule) or Invalid (does not follow the rule). For instance, the rule could be Lion must be followed by Bear somewhere later in the string. So if you see any Lion that ISN’T followed by a Bear, then the string is Invalid.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
                                     <rect key="frame" x="406" y="0.0" width="331" height="338"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <string key="text">Just to keep it fun, the rule will change after you see three strings. And warning, the rules will get a bit more challenging later on! For instance, you might see the rule “Lion must be followed by a Bear or a Goose.”.We ask you to play no more than 10 min per day; after 10 min, the game will say it needs a rest! And if you take more than 10 sec to answer anyquestion, the next string will just come up. We hope you enjoy the Logic Game!</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>

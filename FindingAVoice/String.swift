@@ -24,4 +24,10 @@ extension String {
         let lowerIndex = index(startIndex, offsetBy: max(0,range.lowerBound), limitedBy: endIndex) ?? endIndex
         return Character(self[lowerIndex..<(index(lowerIndex, offsetBy: range.upperBound - range.lowerBound + 1, limitedBy: endIndex) ?? endIndex)])
     }
+    
+    mutating func replace(atIndex index: Int, with newChar: Character) {
+        var chars = Array(characters)
+        chars[index] = newChar
+        self = String(chars)
+    }
 }

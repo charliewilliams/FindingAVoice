@@ -148,7 +148,7 @@ class RuleTests: XCTestCase {
             let rule = Rule()
             
             let testString = try! rule.string(length: 10, shouldBeValid: true)
-            XCTAssertTrue(rule.stringIsValid(string: testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.userFacingDescription)")
+            XCTAssertTrue(rule.stringIsValid(string: testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.debugFullHistory.print())")
         }
     }
     
@@ -158,7 +158,7 @@ class RuleTests: XCTestCase {
             let rule = Rule()
             
             let testString = try! rule.string(length: 10, shouldBeValid: false)
-            XCTAssertFalse(rule.stringIsValid(string: testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.userFacingDescription)")
+            XCTAssertFalse(rule.stringIsValid(string: testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.debugFullHistory.print())")
         }
     }
     
@@ -214,7 +214,7 @@ class RuleTests: XCTestCase {
         rule.preceding = ["X"]
         rule.following = ["O"]
         
-        let testString = try! rule.string(length: 1000, shouldBeValid: false)
+        let testString = try! rule.string(length: 100, shouldBeValid: false)
         
         XCTAssertTrue(testString.contains("XO"))
     }
@@ -234,7 +234,8 @@ class RuleTests: XCTestCase {
     
     func testPrecedingAlwaysAppearsInInvalidString() {
         
-        // This is a bad test, sorry
+        // Run tests including randomness a bunch of times
+        // This isn't totally ideal but works in practice since we're not Google
         for d in 1...1000 {
             // densities random between 0 and 0.58
             let density = Float(d) / 1700.0
@@ -243,5 +244,69 @@ class RuleTests: XCTestCase {
             rule.following = ["O"]
             XCTAssertTrue(try! rule.string(length: 20, shouldBeValid: false).contains("X"))
         }
+    }
+    
+    //
+    
+    func testIndicesMakingWhenEntireStringIsPassive() {
+        
+        let passive = "ABCDEFG"
+        let active = "HI"
+        
+        let testString = "ABCDEFG"
+        let expectedIndices = [0, 1, 2, 3, 4, 5, 6]
+        
+        let rule = Rule(vocabulary: passive + active)
+        let indices = rule.followingIndicesWhichMakeAnInvalidPair(forString: testString, passiveCharacters: ["A", "B", "C", "D", "E", "F", "G"])
+        
+        XCTAssertEqual(indices, expectedIndices)
+    }
+    
+    func testIndicesMakingWhenEntireStringIsActive() {
+        
+        let passive = "ABCDEFG"
+        let active = "HI"
+        
+        let testString = "HIHIHIHI"
+        let expectedIndices = [Int]()
+        
+        let rule = Rule(vocabulary: passive + active)
+        let indices = rule.followingIndicesWhichMakeAnInvalidPair(forString: testString, passiveCharacters: ["A", "B", "C", "D", "E", "F", "G"])
+        
+        XCTAssertEqual(indices, expectedIndices)
+    }
+    
+    func testIndicesMakingSpecificIndexIsPreceding() {
+        
+        let passive = "ABCDEFG"
+        let active = "HI"
+        
+        let testString = "ABCHEFG"
+        let expectedIndices = [0, 1, 2, 5, 6]
+        
+        var rule = Rule(vocabulary: passive + active)
+        rule.preceding = ["H"]
+        rule.following = ["I"]
+        
+        let indices = rule.followingIndicesWhichMakeAnInvalidPair(forString: testString, passiveCharacters: ["A", "B", "C", "D", "E", "F", "G"])
+        
+        XCTAssertEqual(indices, expectedIndices)
+    }
+    
+    func testIndicesMakingSpecificIndexIsFollowing() {
+        
+        let passive = "ABCDEFG"
+        let active = "HI"
+        
+        let testString = "ABCIEFG"
+        let expectedIndices = [0, 1, 2, 4, 5, 6]
+        
+        var rule = Rule(vocabulary: passive + active)
+        rule.preceding = ["H"]
+        rule.following = ["I"]
+        
+        let indices = rule.followingIndicesWhichMakeAnInvalidPair(forString: testString, passiveCharacters: ["A", "B", "C", "D", "E", "F", "G"])
+        
+        XCTAssertEqual(indices, expectedIndices)
     }
 }
