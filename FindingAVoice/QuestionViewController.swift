@@ -25,7 +25,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     var delayTimeBetweenQuestions: TimeInterval = 1
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
-    fileprivate var ruleTextViewYPosition: CGFloat = 0
+    fileprivate var ruleLabelYPosition: CGFloat = 0
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
     var timeExceededForToday: Bool = false
@@ -33,7 +33,9 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
     
-    @IBOutlet weak var ruleTextView: UITextView!
+    @IBOutlet weak var ruleLabel: UILabel!
+    @IBOutlet weak var ruleLabelContainerView: UIView!
+    
     @IBOutlet weak var mainStringLabel: UILabel!
     
     deinit {
@@ -185,7 +187,7 @@ private extension QuestionViewController {
         do {
             
             mainStringLabel.text = try ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
-            ruleTextView.text = ruleSet.userFacingDescription
+            ruleLabel.text = ruleSet.userFacingDescription
             
         } catch let e {
             
@@ -211,11 +213,11 @@ private extension QuestionViewController {
     
     func animateRuleSetOffscreen(completion: @escaping Completion) {
         
-        ruleTextViewYPosition = self.ruleTextView.frame.origin.y
+        ruleLabelYPosition = self.ruleLabelContainerView.frame.origin.y
         
         UIView.animate(withDuration: 0.3, animations: {
             
-            self.ruleTextView.frame.origin.y = -self.ruleTextView.frame.size.height
+            self.ruleLabelContainerView.frame.origin.y = -self.ruleLabelContainerView.frame.size.height
             
         }, completion: { _ in
             
@@ -226,14 +228,14 @@ private extension QuestionViewController {
     func buildNewRuleSet() {
         
         ruleSet = ruleSet.similarCopy()
-        ruleTextView.text = ruleSet.userFacingDescription
+        ruleLabel.text = ruleSet.userFacingDescription
     }
     
     func animateRuleSetOnscreen(completion: @escaping Completion) {
         
         UIView.animate(withDuration: 0.3, animations: {
             
-            self.ruleTextView.frame.origin.y = self.ruleTextViewYPosition
+            self.ruleLabelContainerView.frame.origin.y = self.ruleLabelYPosition
             
         }, completion: { _ in
             
