@@ -16,7 +16,7 @@ class SecretSetupViewController: UIViewController {
     @IBOutlet weak var stringLengthLabel: UILabel!
     @IBOutlet weak var strideLengthLabel: UILabel!
     @IBOutlet weak var densityLabel: UILabel!
-    
+    @IBOutlet weak var numberOfRulesLabel: UILabel!
     
     @IBAction func vocabSizeSliderChanged(_ sender: UISlider) {
         vocabSizeLabel.text = "\(Int(sender.value))"
@@ -42,6 +42,11 @@ class SecretSetupViewController: UIViewController {
         densityLabel.text = String(format: "%.3f", sender.value)
     }
     
+    @IBAction func numberOfRulesSliderChanged(_ sender: UISlider) {
+        numberOfRulesLabel.text = "\(Int(sender.value))"
+    }
+    
+    
     @IBAction func goButtonPressed(_ sender: UIButton) {
         
         let destination = QuestionViewController()
@@ -51,13 +56,13 @@ class SecretSetupViewController: UIViewController {
         let stride = Int(strideLengthLabel.text!)!
         let length = Int(stringLengthLabel.text!)!
         let density = Float(densityLabel.text!)!
+        let numberOfRules = Int(numberOfRulesLabel.text!)!
         
         assert(stride > 0)
         assert(density > 0 && density < 0.5)
         assert(preceding > 0 && following > 0)
-        
-        let rules = [Rule(precedingCount: preceding, followingCount: following, density: density, stride: stride)]
-        let ruleSet = RuleSet(rules: rules)
+
+        let ruleSet = RuleSet(count: numberOfRules, maxPrecedingCount: preceding, maxFollowingCount: following, density: density, maxStride: stride)
         
         destination.ruleSet = ruleSet
         destination.stringLength = length
