@@ -21,7 +21,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     }
     var stringLength: Int!
     var numberOfQuestionsPerRound: Int = 3
-    var delayTimeBeforeShowingQuestion: TimeInterval = 2
+    var delayTimeBeforeShowingQuestion: TimeInterval = 5
     var delayTimeBetweenQuestions: TimeInterval = 1
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false

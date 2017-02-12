@@ -16,7 +16,7 @@ protocol QuestionTiming: class {
 class QuestionTimer {
     
     weak var delegate: QuestionTiming?
-    private let maximumPerQuestionTime: TimeInterval = 10 // 10 sec
+    private let maximumPerQuestionTime: TimeInterval = 15 // sec
     private var timer: Timer?
     
     static let shared = QuestionTimer()
