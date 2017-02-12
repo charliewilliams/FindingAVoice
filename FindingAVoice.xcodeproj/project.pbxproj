@@ -47,6 +47,7 @@
 		C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
 		C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
 		C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
+		C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecretSetupViewController.xib; path = FindingAVoice/SecretSetupViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ControlTask.storyboard; path = FindingAVoice/ControlTask.storyboard; sourceTree = SOURCE_ROOT; };
 		C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootNavigationController.swift; path = FindingAVoice/RootNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */,
 				C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */,
+				C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */,
 				C04944441E282E7700A12E1B /* DailyTimerTests.swift */,
 			);
 			path = ControlTaskTests;
@@ -528,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */,
 				C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */,
 				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,
 			);

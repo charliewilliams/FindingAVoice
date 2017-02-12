@@ -10,10 +10,33 @@ import Foundation
 
 struct RuleSet {
     
-    var rules: [Rule]
+    private(set) var rules = [Rule]()
     
     var userFacingDescription: String {
         return rules.map({ $0.userFacingDescription }).joined(separator: "\n")
+    }
+    
+    init(count: Int, vocabulary: String = fullVocabulary, maxPrecedingCount: Int, maxFollowingCount: Int, density: Float, maxStride: Int) {
+        
+        self.vocabulary = vocabulary
+        self.maxPrecedingCount = maxPrecedingCount
+        self.maxFollowingCount = maxFollowingCount
+        self.maxStride = maxStride
+        
+        var activeCharacters = [Character]()
+        
+        for _ in 0..<count {
+            
+            let precedingCount = Int(arc4random_uniform(UInt32(maxPrecedingCount))) + 1
+            let followingCount = Int(arc4random_uniform(UInt32(maxFollowingCount))) + 1
+            let stride = Int(arc4random_uniform(UInt32(maxStride))) + 1
+            
+            let rule = Rule(precedingCount: precedingCount, followingCount: followingCount, vocabulary: vocabulary, density: density, stride: stride, protectedCharacters: activeCharacters)
+            
+            activeCharacters += rule.preceding + rule.following
+            
+            rules.append(rule)
+        }
     }
     
     func string(length: Int, shouldBeValid: Bool) throws -> String {
@@ -31,7 +54,14 @@ struct RuleSet {
         return string
     }
     
+    // Make another set using the same parameters
     func similarCopy() -> RuleSet {
-        return RuleSet(rules: rules.map({ $0.similarCopy() }))
+        return RuleSet(count: rules.count, vocabulary: vocabulary, maxPrecedingCount: maxPrecedingCount, maxFollowingCount: maxFollowingCount, density: rules.first!.density, maxStride: maxStride)
     }
+    
+    // Private for similarCopy() only
+    private let vocabulary: String
+    private let maxPrecedingCount: Int
+    private let maxFollowingCount: Int
+    private let maxStride: Int
 }
