@@ -90,7 +90,7 @@ struct Rule {
         debugFullHistory.append(userFacingDescription)
     }
     
-    func stringIsValid(string: String) -> Bool {
+    func stringIsValid(_ string: String) -> Bool {
         
         for (index, character) in string.characters.enumerated() {
             
@@ -117,9 +117,9 @@ struct Rule {
         guard length > 1 else {
             throw RuleCreationError.zeroLength
         }
-        guard density > 0 else {
-            throw RuleCreationError.zeroDensity
-        }
+//        guard density > 0 else {
+//            throw RuleCreationError.zeroDensity
+//        }
         guard density < 0.6 else {
             throw RuleCreationError.impossibleDensity
         }
@@ -208,7 +208,7 @@ struct Rule {
             }
         }
         
-        debugFullHistory.append("\(stringIsValid(string: string) ? "VALID" : "INVALID"): \(string)")
+        debugFullHistory.append("\(stringIsValid(string) ? "VALID" : "INVALID"): \(string)")
         return string
     }
     

@@ -56,7 +56,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let validString = "XO"
-        XCTAssertTrue(rule.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(validString))
     }
     
     func testInvalidString() {
@@ -66,7 +66,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let invalidString = "XX"
-        XCTAssertFalse(rule.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(invalidString))
     }
     
     func testValidStringWithMultipleOccurrences() {
@@ -76,7 +76,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let validString = "XOABCDXO"
-        XCTAssertTrue(rule.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(validString))
     }
     
     func testInvalidStringWithMultipleOccurrences() {
@@ -86,7 +86,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let invalidString = "XOABCDXX"
-        XCTAssertFalse(rule.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(invalidString))
     }
     
     func testValidStringWithMultiplePrecedents() {
@@ -96,7 +96,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let validString = "XOYO"
-        XCTAssertTrue(rule.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(validString))
     }
     
     func testInvalidStringWithMultiplePrecedents() {
@@ -106,7 +106,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O"]
         
         let invalidString = "XOOY"
-        XCTAssertFalse(rule.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(invalidString))
     }
     
     func testValidStringWithMultipleFollows() {
@@ -116,7 +116,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O", "P"]
         
         let validString = "XOXP"
-        XCTAssertTrue(rule.stringIsValid(string: validString))
+        XCTAssertTrue(rule.stringIsValid(validString))
     }
     
     func testInvalidStringWithMultipleFollows() {
@@ -126,7 +126,7 @@ class RuleTests: XCTestCase {
         rule.following = ["O", "P"]
         
         let invalidString = "XOPX"
-        XCTAssertFalse(rule.stringIsValid(string: invalidString))
+        XCTAssertFalse(rule.stringIsValid(invalidString))
     }
     
     //
@@ -148,7 +148,7 @@ class RuleTests: XCTestCase {
             let rule = Rule()
             
             let testString = try! rule.string(length: 10, shouldBeValid: true)
-            XCTAssertTrue(rule.stringIsValid(string: testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.debugFullHistory.print())")
+            XCTAssertTrue(rule.stringIsValid(testString), "\(testString) should be valid but apparently is invalid?? Rule is: \(rule.debugFullHistory.print())")
         }
     }
     
@@ -158,7 +158,7 @@ class RuleTests: XCTestCase {
             let rule = Rule()
             
             let testString = try! rule.string(length: 10, shouldBeValid: false)
-            XCTAssertFalse(rule.stringIsValid(string: testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.debugFullHistory.print())")
+            XCTAssertFalse(rule.stringIsValid(testString), "\(testString) should be invalid but apparently is valid?? Rule is: \(rule.debugFullHistory.print())")
         }
     }
     

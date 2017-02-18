@@ -16,6 +16,10 @@ struct RuleSet {
         return rules.map({ $0.userFacingDescription }).joined(separator: "\n")
     }
     
+    var debugFullHistory: String {
+        return rules.map({ $0.debugFullHistory.print() }).joined(separator: "\n—\n")
+    }
+    
     init(count: Int, vocabulary: String = fullVocabulary, maxPrecedingCount: Int, maxFollowingCount: Int, density: Float, maxStride: Int) {
         
         self.vocabulary = vocabulary
@@ -42,16 +46,27 @@ struct RuleSet {
     func string(length: Int, shouldBeValid: Bool) throws -> String {
         
         var rules = self.rules
-        let allActiveChars = rules.flatMap({ $0.preceding + $0.following })
+        let allActiveChars = rules.flatMap { $0.preceding + $0.following }
         let first = rules.removeFirst()
         
-        var string = try first.string(length: length, shouldBeValid: shouldBeValid)
+        var string = try first.string(length: length, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
         
         for rule in rules {
             string = try rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
         }
         
         return string
+    }
+    
+    func stringIsValid(_ string: String) -> Bool {
+        
+        for rule in rules {
+            if !rule.stringIsValid(string) {
+                return false
+            }
+        }
+        
+        return true
     }
     
     // Make another set using the same parameters
