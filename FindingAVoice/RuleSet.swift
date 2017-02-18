@@ -45,17 +45,16 @@ struct RuleSet {
     
     func string(length: Int, shouldBeValid: Bool) throws -> String {
         
-        var rules = self.rules
+        let indexOfFailingRule = Int(shouldBeValid ? UInt32.max : arc4random_uniform(UInt32(rules.count)))
         let allActiveChars = rules.flatMap { $0.preceding + $0.following }
-        let first = rules.removeFirst()
         
-        var string = try first.string(length: length, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
+        var string: String? = nil
         
-        for rule in rules {
-            string = try rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: shouldBeValid)
+        for (index, rule) in rules.enumerated() {
+            string = try rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: indexOfFailingRule != index)
         }
         
-        return string
+        return string!
     }
     
     func stringIsValid(_ string: String) -> Bool {

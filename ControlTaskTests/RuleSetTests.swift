@@ -69,4 +69,84 @@ class RuleSetTests: XCTestCase {
             XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
+    
+    func testValid4RuleStridingStringIsValid() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 4)
+        
+        for _ in 0..<100 {
+            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
+        }
+    }
+    
+    func testInvalid4RuleStridingStringIsInvalid() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 4)
+        
+        for _ in 0..<100 {
+            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
+        }
+    }
+    
+    func testValid4RulePolyStridingStringIsValid() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 4)
+        
+        for _ in 0..<100 {
+            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
+        }
+    }
+    
+    func testInvalid4RulePolyStridingStringIsInvalid() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 4)
+        
+        for _ in 0..<100 {
+            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
+        }
+    }
+    
+    func testInvalidStringOnlyFailsOneRule() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 1)
+        
+        for _ in 0..<100 {
+        
+            var numberOfFails = 0
+            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            
+            for rule in ruleSet.rules {
+                
+                if !rule.stringIsValid(string) {
+                    numberOfFails += 1
+                }
+            }
+            
+            XCTAssertEqual(numberOfFails, 1, "String failed \(numberOfFails) rules: \(ruleSet.debugFullHistory)")
+        }
+    }
+    
+    func testValidStringFailsNoRules() {
+        
+        let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 1)
+        
+        for _ in 0..<100 {
+            
+            var numberOfFails = 0
+            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            
+            for rule in ruleSet.rules {
+                
+                if !rule.stringIsValid(string) {
+                    numberOfFails += 1
+                }
+            }
+            
+            XCTAssertEqual(numberOfFails, 0, "String failed \(numberOfFails) rules: \(ruleSet.debugFullHistory)")
+        }
+    }
 }
