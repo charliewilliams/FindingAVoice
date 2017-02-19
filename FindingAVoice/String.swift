@@ -10,6 +10,21 @@ import Foundation
 
 extension String {
     
+    var isValidName: Bool {
+        return characters.count > 3 && containsOnlyLetters()
+    }
+    
+    func containsOnlyLetters() -> Bool {
+        
+        if self.trimmingCharacters(in: .letters).trimmingCharacters(in: .whitespaces) != "" {
+            return false
+        }
+        return true
+    }
+}
+
+extension String {
+    
     subscript(i: Int) -> Character {
         guard i >= 0 && i < characters.count else { return Character("") }
         return self[index(startIndex, offsetBy: i)]

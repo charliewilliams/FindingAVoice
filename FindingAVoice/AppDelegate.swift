@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Fabric.with([Crashlytics.self, Answers.self])
         
+        UserHandler.instance.handleSessionStart()
+        
+        FabricTester.runTestLogs()
+        
         DailyTimer.shared.resume()
         checkDailyTimeExceeded()
         

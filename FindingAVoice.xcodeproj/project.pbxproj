@@ -26,6 +26,10 @@
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
+		C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE41E59CDC900570149 /* FabricTester.swift */; };
+		C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
+		C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
+		C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
@@ -89,6 +93,10 @@
 		C035CFAB1E2A456200419532 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
+		C07B5AE41E59CDC900570149 /* FabricTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricTester.swift; path = FindingAVoice/FabricTester.swift; sourceTree = SOURCE_ROOT; };
+		C07B5AE61E59CF8E00570149 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHandler.swift; path = FindingAVoice/UserHandler.swift; sourceTree = SOURCE_ROOT; };
+		C07B5AE91E5A024900570149 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = FindingAVoice/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
+		C07B5AEA1E5A024900570149 /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupViewController.xib; path = FindingAVoice/SignupViewController.xib; sourceTree = SOURCE_ROOT; };
 		C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugHistory.swift; path = FindingAVoice/DebugHistory.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +190,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		C07B5AE81E59D13500570149 /* Data Gathering */ = {
+			isa = PBXGroup;
+			children = (
+				C07B5AE41E59CDC900570149 /* FabricTester.swift */,
+				C07B5AE61E59CF8E00570149 /* UserHandler.swift */,
+			);
+			name = "Data Gathering";
+			sourceTree = "<group>";
+		};
 		C0AA1D2C1E1E8A42005A7AA1 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */,
+				C07B5AE81E59D13500570149 /* Data Gathering */,
 				C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */,
 				C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */,
 				C027E54E1E21A3B30057B7B9 /* Helpers.swift */,
@@ -272,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
+				C07B5AE91E5A024900570149 /* SignupViewController.swift */,
+				C07B5AEA1E5A024900570149 /* SignupViewController.xib */,
 				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
 				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
@@ -403,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */,
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
 				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
@@ -507,9 +528,11 @@
 				C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
+				C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */,
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
+				C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,
@@ -523,6 +546,7 @@
 				C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */,
 				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
 				C0DFE9021E466C7C0011E7DA /* InfoViewController.swift in Sources */,
+				C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */,
 				C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
