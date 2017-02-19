@@ -256,10 +256,12 @@ class RuleTests: XCTestCase {
         let testString = "ABCDEFG"
         let expectedIndices = [0, 1, 2, 3, 4, 5, 6]
         
-        let rule = Rule(vocabulary: passive + active)
+        var rule = Rule(vocabulary: passive + active, protectedCharacters: ["H", "I"])
+        rule.preceding = ["H"]
+        rule.following = ["I"]
         let indices = rule.followingIndicesWhichMakeAnInvalidPair(forString: testString, passiveCharacters: ["A", "B", "C", "D", "E", "F", "G"])
         
-        XCTAssertEqual(indices, expectedIndices)
+        XCTAssertEqual(indices, expectedIndices, rule.debugFullHistory.print())
     }
     
     func testIndicesMakingWhenEntireStringIsActive() {

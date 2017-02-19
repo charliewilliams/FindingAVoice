@@ -68,7 +68,9 @@ struct Rule {
     init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, density: Float = 0.2, stride: Int = 1, protectedCharacters: [Character] = []) {
         
         precondition(vocabulary.characters.count > 1)
-        precondition(vocabulary.characters.count - protectedCharacters.count > precedingCount + followingCount, "Trying to make too complex of a ruleset with too small a vocabulary!")
+        precondition(precedingCount > 0)
+        precondition(followingCount > 0)
+        precondition(vocabulary.characters.count - protectedCharacters.count >= precedingCount + followingCount, "Trying to make too complex of a ruleset with too small a vocabulary!")
         self.stride = stride
         self.vocabulary = vocabulary
         self.density = density
