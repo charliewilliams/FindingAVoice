@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UserHandler.instance.handleSessionStart()
         
-        FabricTester.runTestLogs()
+//        FabricTester.runTestLogs()
         
         DailyTimer.shared.resume()
         checkDailyTimeExceeded()
