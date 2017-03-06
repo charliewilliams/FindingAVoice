@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias Completion = () -> ()
-
 class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying {
     
     var ruleSet: RuleSet! {

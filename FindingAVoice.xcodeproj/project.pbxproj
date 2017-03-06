@@ -32,7 +32,6 @@
 		C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
 		C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
-		C06A3DB31E6DC1B500B8AE3D /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
 		C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
 		C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA51E2A421000419532 /* Date.swift */; };
 		C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
@@ -41,9 +40,7 @@
 		C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA61E2A421000419532 /* Notification.swift */; };
 		C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
-		C06A3DBD1E6DC1B500B8AE3D /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
-		C06A3DBF1E6DC1B500B8AE3D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CF9F1E2A3EA200419532 /* DebugPrint.swift */; };
 		C06A3DC21E6DC1B500B8AE3D /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */; };
@@ -58,14 +55,16 @@
 		C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
 		C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
-		C06A3DD11E6DC1B500B8AE3D /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
-		C06A3DD41E6DC1B500B8AE3D /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
 		C06A3DE21E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */; };
 		C06A3DFA1E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */; };
+		C06A3E031E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3E011E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift */; };
+		C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06A3E021E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib */; };
+		C06A3E091E6DC79900B8AE3D /* InitialSongRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3E071E6DC79900B8AE3D /* InitialSongRecognitionViewController.swift */; };
+		C06A3E0A1E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06A3E081E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib */; };
 		C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE41E59CDC900570149 /* FabricTester.swift */; };
 		C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
 		C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
@@ -156,6 +155,10 @@
 		C06A3DF71E6DC5E300B8AE3D /* ExperimentalTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalTaskUITests.swift; sourceTree = "<group>"; };
 		C06A3DFB1E6DC5E300B8AE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06A3E011E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExperimentalWelcomeViewController.swift; path = FindingAVoice/ExperimentalWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		C06A3E021E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExperimentalWelcomeViewController.xib; path = FindingAVoice/ExperimentalWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
+		C06A3E071E6DC79900B8AE3D /* InitialSongRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialSongRecognitionViewController.swift; path = FindingAVoice/InitialSongRecognitionViewController.swift; sourceTree = SOURCE_ROOT; };
+		C06A3E081E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InitialSongRecognitionViewController.xib; path = FindingAVoice/InitialSongRecognitionViewController.xib; sourceTree = SOURCE_ROOT; };
 		C07B5AE41E59CDC900570149 /* FabricTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricTester.swift; path = FindingAVoice/FabricTester.swift; sourceTree = SOURCE_ROOT; };
 		C07B5AE61E59CF8E00570149 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHandler.swift; path = FindingAVoice/UserHandler.swift; sourceTree = SOURCE_ROOT; };
 		C07B5AE91E5A024900570149 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = FindingAVoice/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -293,6 +296,31 @@
 			path = ExperimentalTaskUITests;
 			sourceTree = "<group>";
 		};
+		C06A3E051E6DC72600B8AE3D /* View Controllers (Control) */ = {
+			isa = PBXGroup;
+			children = (
+				C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */,
+				C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */,
+				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
+				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
+				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
+				C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */,
+				C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */,
+			);
+			name = "View Controllers (Control)";
+			sourceTree = "<group>";
+		};
+		C06A3E061E6DC72F00B8AE3D /* View Controllers (Experimental) */ = {
+			isa = PBXGroup;
+			children = (
+				C06A3E011E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift */,
+				C06A3E021E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib */,
+				C06A3E071E6DC79900B8AE3D /* InitialSongRecognitionViewController.swift */,
+				C06A3E081E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib */,
+			);
+			name = "View Controllers (Experimental)";
+			sourceTree = "<group>";
+		};
 		C07B5AE81E59D13500570149 /* Data Gathering */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,7 +370,9 @@
 				C027E5501E21A4250057B7B9 /* Protocols */,
 				C0AA1D7E1E1FA83A005A7AA1 /* Model */,
 				C027E5531E21A4650057B7B9 /* Views */,
-				C0AA1D7F1E1FA841005A7AA1 /* View Controllers */,
+				C0AA1D7F1E1FA841005A7AA1 /* View Controllers (Shared) */,
+				C06A3E051E6DC72600B8AE3D /* View Controllers (Control) */,
+				C06A3E061E6DC72F00B8AE3D /* View Controllers (Experimental) */,
 				C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */,
 				C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */,
 				C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */,
@@ -396,27 +426,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		C0AA1D7F1E1FA841005A7AA1 /* View Controllers */ = {
+		C0AA1D7F1E1FA841005A7AA1 /* View Controllers (Shared) */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
 				C07B5AE91E5A024900570149 /* SignupViewController.swift */,
 				C07B5AEA1E5A024900570149 /* SignupViewController.xib */,
 				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
-				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
-				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
-				C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */,
-				C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */,
 				C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */,
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
 				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
 				C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */,
 				C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */,
 				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
-				C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */,
-				C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */,
 			);
-			name = "View Controllers";
+			name = "View Controllers (Shared)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,13 +634,13 @@
 				C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
 				C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */,
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
+				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
 				C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */,
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
 				C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
-				C06A3DD11E6DC1B500B8AE3D /* RulesViewController.xib in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
-				C06A3DD41E6DC1B500B8AE3D /* ControlWelcomeViewController.xib in Resources */,
+				C06A3E0A1E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,7 +824,6 @@
 				C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */,
 				C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */,
 				C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */,
-				C06A3DB31E6DC1B500B8AE3D /* RulesViewController.swift in Sources */,
 				C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */,
 				C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */,
 				C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */,
@@ -810,15 +832,15 @@
 				C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
-				C06A3DBD1E6DC1B500B8AE3D /* ControlWelcomeViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
-				C06A3DBF1E6DC1B500B8AE3D /* QuestionViewController.swift in Sources */,
 				C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */,
 				C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */,
 				C06A3DC21E6DC1B500B8AE3D /* PopoverViewController.swift in Sources */,
 				C06A3DC31E6DC1B500B8AE3D /* TimesUpLockViewController.swift in Sources */,
 				C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */,
+				C06A3E031E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift in Sources */,
 				C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */,
+				C06A3E091E6DC79900B8AE3D /* InitialSongRecognitionViewController.swift in Sources */,
 				C06A3DC61E6DC1B500B8AE3D /* SignupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
