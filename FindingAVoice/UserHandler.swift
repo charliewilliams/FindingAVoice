@@ -9,6 +9,7 @@
 import UIKit
 import Crashlytics
 import Fabric
+//import Firebase
 
 /*
  Check if we have a local user. 

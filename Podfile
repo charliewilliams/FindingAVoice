@@ -1,6 +1,7 @@
 use_frameworks!
 
-target 'ControlTask' do
+#target 'ControlTask' do
     pod 'Fabric'
     pod 'Crashlytics'
-end
+    pod 'Firebase'
+#end
