@@ -30,21 +30,18 @@
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
 		C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
-		C06A3DAF1E6DC1B500B8AE3D /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */; };
 		C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
-		C06A3DB11E6DC1B500B8AE3D /* SecretSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */; };
 		C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
 		C06A3DB31E6DC1B500B8AE3D /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
 		C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
 		C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA51E2A421000419532 /* Date.swift */; };
-		C06A3DB61E6DC1B500B8AE3D /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */; };
 		C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C06A3DB81E6DC1B500B8AE3D /* FabricTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE41E59CDC900570149 /* FabricTester.swift */; };
 		C06A3DB91E6DC1B500B8AE3D /* Sparkling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E55C1E21A50F0057B7B9 /* Sparkling.swift */; };
 		C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA61E2A421000419532 /* Notification.swift */; };
 		C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
-		C06A3DBD1E6DC1B500B8AE3D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */; };
+		C06A3DBD1E6DC1B500B8AE3D /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
 		C06A3DBF1E6DC1B500B8AE3D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
@@ -54,7 +51,6 @@
 		C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA31E2A420200419532 /* QuestionTimer.swift */; };
 		C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */; };
 		C06A3DC61E6DC1B500B8AE3D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
-		C06A3DC71E6DC1B500B8AE3D /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C06A3DC91E6DC1B500B8AE3D /* Pods_ControlTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987A260B3049F4DBF8C8D2C3 /* Pods_ControlTask.framework */; };
 		C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
@@ -63,12 +59,13 @@
 		C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C06A3DD11E6DC1B500B8AE3D /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */; };
-		C06A3DD21E6DC1B500B8AE3D /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
-		C06A3DD41E6DC1B500B8AE3D /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */; };
+		C06A3DD41E6DC1B500B8AE3D /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
 		C06A3DE21E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
+		C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */; };
+		C06A3DFA1E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */; };
 		C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE41E59CDC900570149 /* FabricTester.swift */; };
 		C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
 		C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
@@ -83,8 +80,8 @@
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
-		C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */; };
-		C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */; };
+		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
+		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
 		C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */; };
 		C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
@@ -98,6 +95,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C06A3DEE1E6DC5D400B8AE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0AA1D2D1E1E8A42005A7AA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C06A3DA81E6DC1B500B8AE3D;
+			remoteInfo = ExperimentalTask;
+		};
+		C06A3DFC1E6DC5E300B8AE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0AA1D2D1E1E8A42005A7AA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C06A3DA81E6DC1B500B8AE3D;
+			remoteInfo = ExperimentalTask;
+		};
 		C0AA1D4A1E1E8A43005A7AA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C0AA1D2D1E1E8A42005A7AA1 /* Project object */;
@@ -139,6 +150,12 @@
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
+		C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalTaskTests.swift; sourceTree = "<group>"; };
+		C06A3DED1E6DC5D400B8AE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06A3DF71E6DC5E300B8AE3D /* ExperimentalTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalTaskUITests.swift; sourceTree = "<group>"; };
+		C06A3DFB1E6DC5E300B8AE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C07B5AE41E59CDC900570149 /* FabricTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FabricTester.swift; path = FindingAVoice/FabricTester.swift; sourceTree = SOURCE_ROOT; };
 		C07B5AE61E59CF8E00570149 /* UserHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHandler.swift; path = FindingAVoice/UserHandler.swift; sourceTree = SOURCE_ROOT; };
 		C07B5AE91E5A024900570149 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = FindingAVoice/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -159,8 +176,8 @@
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = FindingAVoice/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WelcomeViewController.xib; path = FindingAVoice/WelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RulesViewController.xib; path = FindingAVoice/RulesViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionViewController.xib; path = FindingAVoice/QuestionViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -179,6 +196,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A3DC91E6DC1B500B8AE3D /* Pods_ControlTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DE61E6DC5D400B8AE3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DF41E6DC5E300B8AE3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +275,24 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		C06A3DEA1E6DC5D400B8AE3D /* ExperimentalTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */,
+				C06A3DED1E6DC5D400B8AE3D /* Info.plist */,
+			);
+			path = ExperimentalTaskTests;
+			sourceTree = "<group>";
+		};
+		C06A3DF81E6DC5E300B8AE3D /* ExperimentalTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */,
+				C06A3DFB1E6DC5E300B8AE3D /* Info.plist */,
+			);
+			path = ExperimentalTaskUITests;
+			sourceTree = "<group>";
+		};
 		C07B5AE81E59D13500570149 /* Data Gathering */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +308,8 @@
 				C0AA1D371E1E8A42005A7AA1 /* ControlTask */,
 				C0AA1D4C1E1E8A43005A7AA1 /* ControlTaskTests */,
 				C0AA1D571E1E8A43005A7AA1 /* ControlTaskUITests */,
+				C06A3DEA1E6DC5D400B8AE3D /* ExperimentalTaskTests */,
+				C06A3DF81E6DC5E300B8AE3D /* ExperimentalTaskUITests */,
 				C0AA1D361E1E8A42005A7AA1 /* Products */,
 				B79FACA90DC175E073C621AB /* Pods */,
 				1701DA6BC08018070227869D /* Frameworks */,
@@ -273,6 +324,8 @@
 				C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */,
 				C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */,
 				C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */,
+				C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */,
+				C06A3DF71E6DC5E300B8AE3D /* ExperimentalTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -352,8 +405,8 @@
 				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
 				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
-				C0DFE8F41E45DFC50011E7DA /* WelcomeViewController.swift */,
-				C0DFE8F51E45DFC50011E7DA /* WelcomeViewController.xib */,
+				C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */,
+				C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */,
 				C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */,
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
 				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
@@ -389,6 +442,42 @@
 			productName = ControlTask;
 			productReference = C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C06A3DE81E6DC5D400B8AE3D /* ExperimentalTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C06A3DF01E6DC5D400B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskTests" */;
+			buildPhases = (
+				C06A3DE51E6DC5D400B8AE3D /* Sources */,
+				C06A3DE61E6DC5D400B8AE3D /* Frameworks */,
+				C06A3DE71E6DC5D400B8AE3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C06A3DEF1E6DC5D400B8AE3D /* PBXTargetDependency */,
+			);
+			name = ExperimentalTaskTests;
+			productName = ExperimentalTaskTests;
+			productReference = C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C06A3DF61E6DC5E300B8AE3D /* ExperimentalTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C06A3DFE1E6DC5E300B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskUITests" */;
+			buildPhases = (
+				C06A3DF31E6DC5E300B8AE3D /* Sources */,
+				C06A3DF41E6DC5E300B8AE3D /* Frameworks */,
+				C06A3DF51E6DC5E300B8AE3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C06A3DFD1E6DC5E300B8AE3D /* PBXTargetDependency */,
+			);
+			name = ExperimentalTaskUITests;
+			productName = ExperimentalTaskUITests;
+			productReference = C06A3DF71E6DC5E300B8AE3D /* ExperimentalTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		C0AA1D341E1E8A42005A7AA1 /* ControlTask */ = {
 			isa = PBXNativeTarget;
@@ -460,6 +549,18 @@
 					C06A3DA81E6DC1B500B8AE3D = {
 						DevelopmentTeam = N2WM6EN8GQ;
 					};
+					C06A3DE81E6DC5D400B8AE3D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N2WM6EN8GQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C06A3DA81E6DC1B500B8AE3D;
+					};
+					C06A3DF61E6DC5E300B8AE3D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N2WM6EN8GQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C06A3DA81E6DC1B500B8AE3D;
+					};
 					C0AA1D341E1E8A42005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N2WM6EN8GQ;
@@ -496,6 +597,8 @@
 				C06A3DA81E6DC1B500B8AE3D /* ExperimentalTask */,
 				C0AA1D481E1E8A43005A7AA1 /* ControlTaskTests */,
 				C0AA1D531E1E8A43005A7AA1 /* ControlTaskUITests */,
+				C06A3DE81E6DC5D400B8AE3D /* ExperimentalTaskTests */,
+				C06A3DF61E6DC5E300B8AE3D /* ExperimentalTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,10 +616,23 @@
 				C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD11E6DC1B500B8AE3D /* RulesViewController.xib in Resources */,
-				C06A3DD21E6DC1B500B8AE3D /* SecretSetupViewController.xib in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
-				C06A3DD41E6DC1B500B8AE3D /* WelcomeViewController.xib in Resources */,
+				C06A3DD41E6DC1B500B8AE3D /* ControlWelcomeViewController.xib in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DE71E6DC5D400B8AE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DF51E6DC5E300B8AE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +650,7 @@
 				C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */,
 				C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */,
 				C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */,
-				C0DFE8F71E45DFC50011E7DA /* WelcomeViewController.xib in Resources */,
+				C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */,
 				C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,21 +799,18 @@
 				C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */,
 				C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */,
 				C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */,
-				C06A3DAF1E6DC1B500B8AE3D /* Rule.swift in Sources */,
 				C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */,
-				C06A3DB11E6DC1B500B8AE3D /* SecretSetupViewController.swift in Sources */,
 				C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */,
 				C06A3DB31E6DC1B500B8AE3D /* RulesViewController.swift in Sources */,
 				C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */,
 				C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */,
-				C06A3DB61E6DC1B500B8AE3D /* Vocabulary.swift in Sources */,
 				C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */,
 				C06A3DB81E6DC1B500B8AE3D /* FabricTester.swift in Sources */,
 				C06A3DB91E6DC1B500B8AE3D /* Sparkling.swift in Sources */,
 				C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
-				C06A3DBD1E6DC1B500B8AE3D /* WelcomeViewController.swift in Sources */,
+				C06A3DBD1E6DC1B500B8AE3D /* ControlWelcomeViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
 				C06A3DBF1E6DC1B500B8AE3D /* QuestionViewController.swift in Sources */,
 				C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */,
@@ -707,7 +820,22 @@
 				C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */,
 				C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */,
 				C06A3DC61E6DC1B500B8AE3D /* SignupViewController.swift in Sources */,
-				C06A3DC71E6DC1B500B8AE3D /* RuleSet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DE51E6DC5D400B8AE3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06A3DF31E6DC5E300B8AE3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C06A3DFA1E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +861,7 @@
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
-				C0DFE8F61E45DFC50011E7DA /* WelcomeViewController.swift in Sources */,
+				C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */,
 				C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
@@ -768,6 +896,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C06A3DEF1E6DC5D400B8AE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C06A3DA81E6DC1B500B8AE3D /* ExperimentalTask */;
+			targetProxy = C06A3DEE1E6DC5D400B8AE3D /* PBXContainerItemProxy */;
+		};
+		C06A3DFD1E6DC5E300B8AE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C06A3DA81E6DC1B500B8AE3D /* ExperimentalTask */;
+			targetProxy = C06A3DFC1E6DC5E300B8AE3D /* PBXContainerItemProxy */;
+		};
 		C0AA1D4B1E1E8A43005A7AA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C0AA1D341E1E8A42005A7AA1 /* ControlTask */;
@@ -823,6 +961,62 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C06A3DF11E6DC5D400B8AE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				INFOPLIST_FILE = ExperimentalTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExperimentalTask.app/ExperimentalTask";
+			};
+			name = Debug;
+		};
+		C06A3DF21E6DC5D400B8AE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				INFOPLIST_FILE = ExperimentalTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExperimentalTask.app/ExperimentalTask";
+			};
+			name = Release;
+		};
+		C06A3DFF1E6DC5E300B8AE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				INFOPLIST_FILE = ExperimentalTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ExperimentalTask;
+			};
+			name = Debug;
+		};
+		C06A3E001E6DC5E300B8AE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				INFOPLIST_FILE = ExperimentalTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ExperimentalTask;
 			};
 			name = Release;
 		};
@@ -1029,6 +1223,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C06A3DF01E6DC5D400B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C06A3DF11E6DC5D400B8AE3D /* Debug */,
+				C06A3DF21E6DC5D400B8AE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C06A3DFE1E6DC5E300B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C06A3DFF1E6DC5E300B8AE3D /* Debug */,
+				C06A3E001E6DC5E300B8AE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "FindingAVoice" */ = {
 			isa = XCConfigurationList;
