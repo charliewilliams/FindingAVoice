@@ -1,7 +1,17 @@
 use_frameworks!
 
-#target 'ControlTask' do
+def shared
+    
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Firebase'
-#end
+    
+end
+
+target 'ControlTask' do
+    shared
+end
+
+target 'ExperimentalTask' do
+    shared
+end

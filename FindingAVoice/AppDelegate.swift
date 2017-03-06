@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,10 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         Fabric.with([Crashlytics.self, Answers.self])
+        FIRApp.configure()
         
         UserHandler.instance.handleSessionStart()
-        
-//        FabricTester.runTestLogs()
         
         DailyTimer.shared.resume()
         checkDailyTimeExceeded()
