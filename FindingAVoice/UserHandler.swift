@@ -9,7 +9,7 @@
 import UIKit
 import Crashlytics
 import Fabric
-//import Firebase
+import Firebase
 
 /*
  Check if we have a local user. 
@@ -23,6 +23,8 @@ class UserHandler {
     
     static let instance = UserHandler()
     private init() { }
+    
+    var user: FIRUser?
     
     var hasLocalUser: Bool {
         return store.string(forKey: "userId") != nil
@@ -38,23 +40,10 @@ class UserHandler {
         set(newValue) { store.set(newValue, forKey: "userName") }
     }
     
-    private var store: UserDefaults {
-        return UserDefaults.standard
-    }
-    
-    private var logger: Crashlytics {
-        return Crashlytics.sharedInstance()
-    }
-    
     func handleSessionStart() {
         
-        if hasLocalUser {
-        
-            setUpStoredLocalUser()
-            
-        } else {
-            
-            showSignupScreen()
+        FIRAuth.auth()?.signInAnonymously() { (user, error) in
+            self.didLogIntoServer(user: user, error: error)
         }
     }
     
@@ -63,10 +52,39 @@ class UserHandler {
         userId = id
         userName = name
         
+        // save user info on user
+        
         Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["userId": id, "userName": name])
     }
+}
+
+private extension UserHandler {
     
-    private func setUpStoredLocalUser() {
+    var store: UserDefaults {
+        return UserDefaults.standard
+    }
+    
+    var logger: Crashlytics {
+        return Crashlytics.sharedInstance()
+    }
+    
+    func didLogIntoServer(user: FIRUser?, error: Error?) {
+        
+        self.user = user
+        
+        // TODO handle error 
+        
+        if hasLocalUser {
+            
+            setUpStoredLocalUser()
+            
+        } else {
+            
+            showSignupScreen()
+        }
+    }
+    
+    func setUpStoredLocalUser() {
         
         guard let userId = userId,
             let userName = userName else {
@@ -80,19 +98,19 @@ class UserHandler {
         Answers.logCustomEvent(withName: "SessionStart", customAttributes: ["userId":userId, "userName":userName])
     }
     
-    private func showSignupScreen() {
+    func showSignupScreen() {
         
         presentViewController(SignupViewController())
     }
     
-    private func bail() {
+    func bail() {
         
         let alert = UIAlertController(title: "Data error", message: "Something has gone wrong. Please delete and reinstall the app, or your data will not be recorded properly.", preferredStyle: .alert)
         
         presentViewController(alert)
     }
     
-    private func presentViewController(_ viewController: UIViewController) {
+    func presentViewController(_ viewController: UIViewController) {
         
         delay(1) {
             UIApplication.shared.keyWindow!.rootViewController!.present(viewController, animated: true, completion: nil)
