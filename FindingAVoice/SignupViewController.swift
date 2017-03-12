@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 let userIdLength = 5
 
@@ -32,7 +33,12 @@ class SignupViewController: UIViewController {
         }
         
         sender.isUserInteractionEnabled = false
-        UserHandler.instance.logUserSignup(name: userName, id: userId)
-        dismiss(animated: true, completion: nil)
+        
+        UserHandler.instance.createUser(name: userName, id: userId) {
+            
+            delay(0.5) {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

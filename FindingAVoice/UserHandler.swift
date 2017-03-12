@@ -40,19 +40,41 @@ class UserHandler {
         set(newValue) { store.set(newValue, forKey: "userName") }
     }
     
+    var password: String {
+        get {
+            if let stored = store.string(forKey: "password") {
+                return stored
+            } else {
+                let new = String.random(length: 32)
+                self.password = new
+                return new
+            }
+        }
+        set(newValue) { store.set(newValue, forKey: "password") }
+    }
+    
     func handleSessionStart() {
         
-        FIRAuth.auth()?.signInAnonymously() { (user, error) in
-            self.didLogIntoServer(user: user, error: error)
+        ServerCoordinator.shared.handleAppLaunch(username: userId, password: password) { (user, error) in
+            
+            if self.user == nil { // Don't overwrite if weird async stuff is happening
+                self.user = user
+            }
         }
     }
     
-    func logUserSignup(name: String, id: String) {
+    func createUser(name: String, id: String, completion: Completion) {
         
         userId = id
         userName = name
         
         // save user info on user
+        ServerCoordinator.shared.handleAppLaunch(username: name, password: password) { (user, error) in
+            
+            if self.user == nil { // Don't overwrite if weird async stuff is happening
+                self.user = user
+            }
+        }
         
         Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["userId": id, "userName": name])
     }
@@ -66,36 +88,6 @@ private extension UserHandler {
     
     var logger: Crashlytics {
         return Crashlytics.sharedInstance()
-    }
-    
-    func didLogIntoServer(user: FIRUser?, error: Error?) {
-        
-        self.user = user
-        
-        // TODO handle error 
-        
-        if hasLocalUser {
-            
-            setUpStoredLocalUser()
-            
-        } else {
-            
-            showSignupScreen()
-        }
-    }
-    
-    func setUpStoredLocalUser() {
-        
-        guard let userId = userId,
-            let userName = userName else {
-                
-                bail()
-                return
-        }
-        
-        logger.setUserIdentifier(userId)
-        logger.setUserName(userName)
-        Answers.logCustomEvent(withName: "SessionStart", customAttributes: ["userId":userId, "userName":userName])
     }
     
     func showSignupScreen() {
