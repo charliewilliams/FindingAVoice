@@ -18,3 +18,16 @@ func delay(_ delay: Double, closure: @escaping ()->()) {
         closure()
     }
 }
+
+enum App {
+    case control
+    case experimental
+    
+    static var current: App {
+        if let id = Bundle.main.bundleIdentifier, id.lowercased().contains("control") {
+            return .control
+        } else {
+            return .experimental
+        }
+    }
+}

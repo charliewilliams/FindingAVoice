@@ -1,15 +1,14 @@
 //
-//  ExperimentalTaskTests.swift
-//  ExperimentalTaskTests
+//  ControlTaskTests.swift
+//  FindingAVoice
 //
-//  Created by Charlie Williams on 06/03/2017.
+//  Created by Charlie Williams on 12/03/2017.
 //  Copyright © 2017 Charlie Williams. All rights reserved.
 //
 
 import XCTest
-@testable import 
 
-class ExperimentalTaskTests: XCTestCase {
+class ControlTaskTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,8 +20,10 @@ class ExperimentalTaskTests: XCTestCase {
         super.tearDown()
     }
     
-    func testIsExperimental() {
+    func testIsControl() {
         
-        XCTAssertEqual(App.current, App.experimental)
+        XCTAssertEqual(App.current, App.control)
     }
+}
+    
 }

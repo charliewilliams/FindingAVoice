@@ -82,6 +82,7 @@
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
+		C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
@@ -186,6 +187,7 @@
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTaskTests.swift; sourceTree = "<group>"; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -401,6 +403,7 @@
 				C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */,
 				C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */,
 				C04944441E282E7700A12E1B /* DailyTimerTests.swift */,
+				C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */,
 			);
 			path = ControlTaskTests;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */,
 				C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */,
 				C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */,
 				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,

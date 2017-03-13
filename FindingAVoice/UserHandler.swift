@@ -57,8 +57,10 @@ class UserHandler {
         
         ServerCoordinator.shared.handleAppLaunch(username: userId, password: password) { (user, error) in
             
-            if self.user == nil { // Don't overwrite if weird async stuff is happening
+            if let user = user, self.user == nil { // Don't overwrite if weird async stuff is happening
                 self.user = user
+            } else {
+                self.showSignupScreen()
             }
         }
     }
