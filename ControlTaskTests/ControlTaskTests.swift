@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import ControlTask
 
 class ControlTaskTests: XCTestCase {
     
@@ -26,4 +27,4 @@ class ControlTaskTests: XCTestCase {
     }
 }
     
-}
+
