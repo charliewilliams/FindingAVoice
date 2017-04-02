@@ -24,42 +24,66 @@ struct ServerCoordinator {
         auth = FIRAuth.auth()
     }
     
-    func handleAppLaunch(username: String? = nil, password: String? = nil, completion: @escaping LoginCompletion) {
+    func handleAppLaunch(email: String? = nil, password: String? = nil, completion: @escaping LoginCompletion) {
         
-        if let username = username, let password = password {
-            logIn(id: username, password: password, completion: completion)
+        if let email = email, let password = password {
+            logIn(email: email, password: password, completion: completion)
         } else {
             completion(nil, nil)
         }
     }
     
-    func createUser(id: String, name: String, password: String, completion: Completion) {
+    func createUser(email: String, password: String, completion: @escaping LoginCompletion) {
         
         SVProgressHUD.show(withStatus: "Signing up…")
         
-        auth.createUser(withEmail: id, password: password) { (user, error) in
+        auth.createUser(withEmail: email, password: password) { (user, error) in
             
             if let error = error {
-                SVProgressHUD.showError(withStatus: "Error creating user: \(error.localizedDescription)")
+                
+                // User exists already
+                if error._code == FIRAuthErrorCode.errorCodeEmailAlreadyInUse.rawValue {
+                    
+                    self.logIn(email: email, password: password, completion: completion)
+                    
+                } else {
+                    
+                    SVProgressHUD.showError(withStatus: "Error creating user: \(error.localizedDescription)")
+                    completion(user, error)
+                }
+                
             } else {
+                
                 SVProgressHUD.showSuccess(withStatus: "Success!")
+                completion(user, error)
             }
         }
     }
     
-    func logIn(id: String, password: String, completion: @escaping LoginCompletion) {
+    func logIn(email: String, password: String, completion: @escaping LoginCompletion) {
         
         SVProgressHUD.show(withStatus: "Logging in…")
         
-        auth.signIn(withEmail: id, password: password, completion: { (user, error) in
+        auth.signIn(withEmail: email, password: password) { (user, error) in
             
             if let error = error {
-                SVProgressHUD.showError(withStatus: "Error logging in: \(error.localizedDescription)")
+                
+                // User doesn't exist
+                if error._code == FIRAuthErrorCode.errorCodeUserNotFound.rawValue {
+                    
+                    self.createUser(email: email, password: password, completion: completion)
+                    
+                } else {
+                    
+                    SVProgressHUD.showError(withStatus: "Error logging in: \(error.localizedDescription)")
+                    completion(user, error)
+                }
+                
             } else {
+                
                 SVProgressHUD.showSuccess(withStatus: "Logged in!")
+                completion(user, error)
             }
-            
-            completion(user, error)
-        })
+        }
     }
 }

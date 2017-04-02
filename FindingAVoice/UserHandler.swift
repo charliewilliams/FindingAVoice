@@ -27,17 +27,12 @@ class UserHandler {
     var user: FIRUser?
     
     var hasLocalUser: Bool {
-        return store.string(forKey: "userId") != nil
+        return store.string(forKey: "email") != nil
     }
     
-    var userId: String? {
-        get { return store.string(forKey: "userId") }
-        set(newValue) { store.set(newValue, forKey: "userId") }
-    }
-    
-    var userName: String? {
-        get { return store.string(forKey: "userName") }
-        set(newValue) { store.set(newValue, forKey: "userName") }
+    var email: String? {
+        get { return store.string(forKey: "email") }
+        set(newValue) { store.set(newValue, forKey: "email") }
     }
     
     var password: String {
@@ -55,7 +50,7 @@ class UserHandler {
     
     func handleSessionStart() {
         
-        ServerCoordinator.shared.handleAppLaunch(username: userId, password: password) { (user, error) in
+        ServerCoordinator.shared.handleAppLaunch(email: email, password: password) { (user, error) in
             
             if let user = user, self.user == nil { // Don't overwrite if weird async stuff is happening
                 self.user = user
@@ -65,20 +60,20 @@ class UserHandler {
         }
     }
     
-    func createUser(name: String, id: String, completion: Completion) {
+    func createUser(email: String, completion: @escaping LoginCompletion) {
         
-        userId = id
-        userName = name
+        self.email = email
         
-        // save user info on user
-        ServerCoordinator.shared.handleAppLaunch(username: name, password: password) { (user, error) in
+        ServerCoordinator.shared.createUser(email: email, password: password) { (user, error) in
             
             if self.user == nil { // Don't overwrite if weird async stuff is happening
                 self.user = user
             }
+            
+            completion(user, error)
         }
         
-        Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["userId": id, "userName": name])
+        Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["email": email])
     }
 }
 
