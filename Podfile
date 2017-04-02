@@ -18,3 +18,13 @@ end
 target 'ExperimentalTask' do
     shared
 end
+
+target 'ControlTaskTests' do
+    inherit! :complete
+    pod 'Firebase'
+end
+
+target 'ExperimentalTaskTests' do
+    inherit! :complete
+    pod 'Firebase'
+end
