@@ -47,7 +47,7 @@ extension String { // Subscripting
     }
 }
 
-extension String {
+extension String { // Random
     
     static func random(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -61,4 +61,15 @@ extension String {
         
         return randomString
     } 
+}
+
+extension String {
+    
+    func toIntArray() -> [Int] {
+        return trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ",").flatMap { Int($0) }
+    }
+    
+    func toStringArray() -> [String] {
+        return trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ",")
+    }
 }

@@ -42,17 +42,18 @@ struct Song {
         
         self.title = json[Key.title.rawValue] as! String
         self.lyrics = json[Key.lyrics.rawValue] as! String
-        self.startPoints = json[Key.startPoints.rawValue] as! [Int]
         
-        let sp1s = json[Key.sp1Syllables.rawValue] as! [Int]
-        let sp3s = json[Key.sp3Syllables.rawValue] as! [Int]
-        let sp5s = json[Key.sp5Syllables.rawValue] as! [Int]
+        self.startPoints = (json[Key.startPoints.rawValue] as! String).toIntArray()
+        
+        let sp1s = (json[Key.sp1Syllables.rawValue] as! String).toIntArray()
+        let sp3s = (json[Key.sp3Syllables.rawValue] as! String).toIntArray()
+        let sp5s = (json[Key.sp5Syllables.rawValue] as! String).toIntArray()
         
         self.syllables = [sp1s, sp3s, sp5s]
         
-        let an1s = json[Key.sp1Answers.rawValue] as! [String]
-        let an3s = json[Key.sp3Answers.rawValue] as! [String]
-        let an5s = json[Key.sp5Answers.rawValue] as! [String]
+        let an1s = (json[Key.sp1Answers.rawValue] as! String).toStringArray()
+        let an3s = (json[Key.sp3Answers.rawValue] as! String).toStringArray()
+        let an5s = (json[Key.sp5Answers.rawValue] as! String).toStringArray()
         
         self.answers = [an1s, an3s, an5s]
         
