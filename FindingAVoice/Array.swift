@@ -10,15 +10,15 @@ import Foundation
 
 extension Array {
     
+    func randomIndex() -> Int {
+        return Int(arc4random_uniform(UInt32(self.count)))
+    }
+    
     func randomItem() -> Element {
-        
-        let index = Int(arc4random_uniform(UInt32(self.count)))
-        return self[index]
+        return self[randomIndex()]
     }
     
     mutating func popRandomItem() -> Element {
-        
-        let index = Int(arc4random_uniform(UInt32(self.count)))
-        return remove(at: index)
+        return remove(at: randomIndex())
     }
 }
