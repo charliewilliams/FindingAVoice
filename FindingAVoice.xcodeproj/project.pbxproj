@@ -83,6 +83,14 @@
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
+		C0B7800D1E9184310015D2C8 /* FROSTY.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780061E9184310015D2C8 /* FROSTY.mp3 */; };
+		C0B7800F1E9184A70015D2C8 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7800E1E9184A70015D2C8 /* AudioPlayer.swift */; };
+		C0B780161E9184BE0015D2C8 /* famABC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780101E9184BE0015D2C8 /* famABC.mp3 */; };
+		C0B780171E9184BE0015D2C8 /* famBattleHYM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780111E9184BE0015D2C8 /* famBattleHYM.mp3 */; };
+		C0B780181E9184BE0015D2C8 /* famPuff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780121E9184BE0015D2C8 /* famPuff.mp3 */; };
+		C0B780191E9184BE0015D2C8 /* famRainbow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780131E9184BE0015D2C8 /* famRainbow.mp3 */; };
+		C0B7801A1E9184BE0015D2C8 /* famRudolph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780141E9184BE0015D2C8 /* famRudolph.mp3 */; };
+		C0B7801B1E9184BE0015D2C8 /* famStarSpan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780151E9184BE0015D2C8 /* famStarSpan.mp3 */; };
 		C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
@@ -195,6 +203,14 @@
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		C0B780061E9184310015D2C8 /* FROSTY.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = FROSTY.mp3; sourceTree = SOURCE_ROOT; };
+		C0B7800E1E9184A70015D2C8 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = FindingAVoice/AudioPlayer.swift; sourceTree = SOURCE_ROOT; };
+		C0B780101E9184BE0015D2C8 /* famABC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famABC.mp3; path = mp3/famABC.mp3; sourceTree = SOURCE_ROOT; };
+		C0B780111E9184BE0015D2C8 /* famBattleHYM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famBattleHYM.mp3; path = mp3/famBattleHYM.mp3; sourceTree = SOURCE_ROOT; };
+		C0B780121E9184BE0015D2C8 /* famPuff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famPuff.mp3; path = mp3/famPuff.mp3; sourceTree = SOURCE_ROOT; };
+		C0B780131E9184BE0015D2C8 /* famRainbow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famRainbow.mp3; path = mp3/famRainbow.mp3; sourceTree = SOURCE_ROOT; };
+		C0B780141E9184BE0015D2C8 /* famRudolph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famRudolph.mp3; path = mp3/famRudolph.mp3; sourceTree = SOURCE_ROOT; };
+		C0B780151E9184BE0015D2C8 /* famStarSpan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = famStarSpan.mp3; path = mp3/famStarSpan.mp3; sourceTree = SOURCE_ROOT; };
 		C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTaskTests.swift; sourceTree = "<group>"; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -403,6 +419,7 @@
 				C0AA1D7F1E1FA841005A7AA1 /* View Controllers (Shared) */,
 				C06A3E051E6DC72600B8AE3D /* View Controllers (Control) */,
 				C06A3E061E6DC72F00B8AE3D /* View Controllers (Experimental) */,
+				C0B77FFF1E91841C0015D2C8 /* mp3s */,
 				C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */,
 				C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */,
 				C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */,
@@ -454,6 +471,7 @@
 				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
 				C035CFA31E2A420200419532 /* QuestionTimer.swift */,
 				C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */,
+				C0B7800E1E9184A70015D2C8 /* AudioPlayer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -472,6 +490,20 @@
 				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
 			);
 			name = "View Controllers (Shared)";
+			sourceTree = "<group>";
+		};
+		C0B77FFF1E91841C0015D2C8 /* mp3s */ = {
+			isa = PBXGroup;
+			children = (
+				C0B780101E9184BE0015D2C8 /* famABC.mp3 */,
+				C0B780111E9184BE0015D2C8 /* famBattleHYM.mp3 */,
+				C0B780121E9184BE0015D2C8 /* famPuff.mp3 */,
+				C0B780131E9184BE0015D2C8 /* famRainbow.mp3 */,
+				C0B780141E9184BE0015D2C8 /* famRudolph.mp3 */,
+				C0B780151E9184BE0015D2C8 /* famStarSpan.mp3 */,
+				C0B780061E9184310015D2C8 /* FROSTY.mp3 */,
+			);
+			name = mp3s;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -670,16 +702,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
+				C0B7800D1E9184310015D2C8 /* FROSTY.mp3 in Resources */,
 				C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */,
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
+				C0B7801B1E9184BE0015D2C8 /* famStarSpan.mp3 in Resources */,
 				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
 				C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */,
+				C0B780161E9184BE0015D2C8 /* famABC.mp3 in Resources */,
+				C0B780191E9184BE0015D2C8 /* famRainbow.mp3 in Resources */,
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
 				C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */,
+				C0B780171E9184BE0015D2C8 /* famBattleHYM.mp3 in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
+				C0B7801A1E9184BE0015D2C8 /* famRudolph.mp3 in Resources */,
 				C06A3E0A1E6DC79900B8AE3D /* InitialSongRecognitionViewController.xib in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */,
+				C0B780181E9184BE0015D2C8 /* famPuff.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +996,7 @@
 				C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */,
 				C06A3DB81E6DC1B500B8AE3D /* FabricTester.swift in Sources */,
 				C06A3DB91E6DC1B500B8AE3D /* Sparkling.swift in Sources */,
+				C0B7800F1E9184A70015D2C8 /* AudioPlayer.swift in Sources */,
 				C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
