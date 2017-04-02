@@ -13,6 +13,6 @@ class RootNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [WelcomeViewController()]
+        viewControllers = [WelcomeViewController(nibName: nil, bundle: nil)]
     }
 }

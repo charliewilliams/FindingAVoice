@@ -12,6 +12,14 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        
+        super.init(nibName: "ExperimentalWelcomeViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     @IBAction func infoButtonPressed(_ sender: UIButton) {
         
