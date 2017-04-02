@@ -45,15 +45,17 @@ struct Question {
     var answer: Answer
     
     init(song: Song, difficulty: Difficulty) {
+        self.init(song: song, info: difficulty.info.randomItem())
+    }
+    
+    init(song: Song, info: QuestionInfo) {
         
         self.song = song
         
-        let thisQuestionInfo = difficulty.info.randomItem()
+        let index = info.stepSizes.randomItem()
         
-        let index = thisQuestionInfo.stepSizes.randomIndex()
-        
-        firstHighlight = song.syllable(atIndex: thisQuestionInfo.startPoint)
-        secondHighlight = song.syllable(atIndex: thisQuestionInfo.stepSizes[index])
-        answer = Answer(rawValue: song.answers[thisQuestionInfo.startPoint][index])!
+        firstHighlight = song.syllable(atIndex: info.startPoint)
+        secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
+        answer = Answer(rawValue: song.answers[info.startPoint][index])!
     }
 }
