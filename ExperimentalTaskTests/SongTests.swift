@@ -16,7 +16,7 @@ class SongTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        songs = SongLoader.loadSongs()
+        songs = SongLoader.songs
     }
     
     func testLoadsSongs() {
