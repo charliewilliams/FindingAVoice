@@ -29,8 +29,13 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func getStartedButtonPressed(_ sender: UIButton) {
         
-        let musicPlayerVC = UIStoryboard(name: "SnippetPlayer", bundle: nil).instantiateInitialViewController()!
-        navigationController?.pushViewController(musicPlayerVC, animated: true)
+        // TODO logic around when to show the music player vs the questions
+        
+//        let musicPlayerVC = UIStoryboard(name: "SnippetPlayer", bundle: nil).instantiateInitialViewController()!
+//        navigationController?.pushViewController(musicPlayerVC, animated: true)
+        
+        let questionVC = ExperimentalQuestionViewController()
+        navigationController?.pushViewController(questionVC, animated: true)
     }
 
 }

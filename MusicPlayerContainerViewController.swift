@@ -20,7 +20,7 @@ class MusicPlayerContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        songs = SongLoader.loadSongs()
+        songs = SongLoader.songs
     }
     
     override func viewWillAppear(_ animated: Bool) {

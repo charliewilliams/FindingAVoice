@@ -19,6 +19,18 @@ class QuestionTests: XCTestCase {
         songs = SongLoader.loadSongs()
     }
     
+    func testFrostyTitle() {
+        
+        let frosty = songs.filter({ $0.id == "frosty" }).first!
+        XCTAssertEqual(frosty.title, "Frosty the Snowman")
+    }
+    
+    func testSpangledTitle() {
+        
+        let spangled = songs.filter({ $0.id == "spangled" }).first!
+        XCTAssertEqual(spangled.title, "The Star-Spangled Banner")
+    }
+    
     func testFrostyHighlightsFrostAndSnowWhenSpecified() {
         
         let frosty = songs.filter({ $0.id == "frosty" }).first!
@@ -50,5 +62,27 @@ class QuestionTests: XCTestCase {
         let question = Question(song: frosty, info: info)
         
         XCTAssertEqual(question.answer, Answer.higher)
+    }
+    
+    func testSpangledQuestion20IsLower() {
+        
+        let spangled = songs.filter({ $0.id == "spangled" }).first!
+        var info = Difficulty.hard.info.last!
+        info.stepSizes.removeLast()
+        
+        let question = Question(song: spangled, info: info)
+        
+        XCTAssertEqual(question.answer, Answer.higher)
+    }
+    
+    func testSpangledQuestion21IsLower() {
+        
+        let spangled = songs.filter({ $0.id == "spangled" }).first!
+        var info = Difficulty.hard.info.last!
+        info.stepSizes.removeFirst()
+        
+        let question = Question(song: spangled, info: info)
+        
+        XCTAssertEqual(question.answer, Answer.lower)
     }
 }

@@ -19,11 +19,11 @@ enum Difficulty {
     var info: [QuestionInfo] {
         switch self {
         case .easy:
-            return [(startPoint: 0, stepSizes: [0, 1]), (startPoint: 2, stepSizes: [0])]
+            return [(startPoint: 0, stepSizes: [0, 1]), (startPoint: 1, stepSizes: [0])]
         case .medium:
-            return [(startPoint: 0, stepSizes: [2, 3]), (startPoint: 2, stepSizes: [1])]
+            return [(startPoint: 0, stepSizes: [2, 3]), (startPoint: 1, stepSizes: [1])]
         case .hard:
-            return [(startPoint: 2, stepSizes: [2, 3]), (startPoint: 4, stepSizes: [0, 1])]
+            return [(startPoint: 1, stepSizes: [2, 3]), (startPoint: 2, stepSizes: [0, 1])]
         }
     }
 }

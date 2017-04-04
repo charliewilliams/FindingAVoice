@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperimentalQuestionViewController" customModule="ExperimentalTask" customModuleProvider="target">
+            <connections>
+                <outlet property="higherButton" destination="beq-dx-Xo3" id="E2w-70-XtP"/>
+                <outlet property="lowerButton" destination="kwW-eA-x5x" id="ouU-eC-aGK"/>
+                <outlet property="questionFirstHalfLabel" destination="pLX-n6-ySn" id="NYY-NF-1ED"/>
+                <outlet property="questionSecondHalfLabel" destination="i2W-0F-Afn" id="YEc-Tl-yG0"/>
+                <outlet property="sameButton" destination="ly2-jK-EjL" id="yvW-U6-VLS"/>
+                <outlet property="songLyricsLabel" destination="j63-Vl-ccS" id="taG-B9-dCo"/>
+                <outlet property="songTitleLabel" destination="1fm-I4-ErK" id="Tlj-xj-VNY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDY-pX-ezV">
+                    <rect key="frame" x="475.5" y="103" width="73.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the song &quot;Frosty the Snowman&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fm-I4-ErK">
+                    <rect key="frame" x="242" y="161" width="540.5" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Frost-y the snow-man was a jol-ly happy soul. With a corn-cob pipe and a but-ton nose and two eyes made out of coal.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j63-Vl-ccS">
+                    <rect key="frame" x="52.5" y="259.5" width="919.5" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="0z2-8p-bmu"/>
+                        <constraint firstAttribute="width" constant="919.5" id="rpM-AK-kV8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-8z-5BT">
+                    <rect key="frame" x="221" y="369" width="583.5" height="183.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-AA-WNY">
+                            <rect key="frame" x="20" y="20" width="543.5" height="143.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The syllable &quot;Snow&quot; is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-n6-ySn">
+                                    <rect key="frame" x="0.0" y="59.5" width="200" height="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="shadowOffset" width="-1" height="-1"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-4n-Rqz">
+                                    <rect key="frame" x="240" y="0.0" width="72" height="143.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beq-dx-Xo3" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="Higher"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="LUt-si-NM2"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-jK-EjL" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="41" width="72" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="Same"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ACF-3y-4VZ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-ar-R57">
+                                            <rect key="frame" x="0.0" y="82" width="72" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-eA-x5x" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="102.5" width="72" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <state key="normal" title="Lower"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="Nlq-Nx-nxT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="than the word &quot;Frost&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2W-0F-Afn">
+                                    <rect key="frame" x="352" y="59.5" width="191.5" height="25"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="shadowOffset" width="-1" height="1"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="e9E-AA-WNY" firstAttribute="leading" secondItem="vDl-8z-5BT" secondAttribute="leading" constant="20" id="GgW-SD-sab"/>
+                        <constraint firstAttribute="bottom" secondItem="e9E-AA-WNY" secondAttribute="bottom" constant="20" id="INT-ZU-F0b"/>
+                        <constraint firstItem="e9E-AA-WNY" firstAttribute="top" secondItem="vDl-8z-5BT" secondAttribute="top" constant="20" id="aIK-Ju-dgr"/>
+                        <constraint firstAttribute="trailing" secondItem="e9E-AA-WNY" secondAttribute="trailing" constant="20" id="gH1-5m-95T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1fm-I4-ErK" firstAttribute="top" secondItem="fDY-pX-ezV" secondAttribute="bottom" constant="37.5" id="3Yo-0N-hnZ"/>
+                <constraint firstItem="vDl-8z-5BT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Bv-lu-fAg"/>
+                <constraint firstItem="fDY-pX-ezV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="103" id="A5q-9N-C5L"/>
+                <constraint firstItem="fDY-pX-ezV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LXa-WP-e7U"/>
+                <constraint firstItem="j63-Vl-ccS" firstAttribute="top" secondItem="1fm-I4-ErK" secondAttribute="bottom" constant="55.5" id="YK7-RL-llo"/>
+                <constraint firstItem="vDl-8z-5BT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.2" id="dm6-As-0b5"/>
+                <constraint firstItem="1fm-I4-ErK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hG1-r0-WR1"/>
+                <constraint firstItem="j63-Vl-ccS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="itY-dc-OgX"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

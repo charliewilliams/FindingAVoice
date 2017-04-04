@@ -98,6 +98,9 @@
 		C0B7803C1E918CBF0015D2C8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7803B1E918CBF0015D2C8 /* Question.swift */; };
 		C0B7803E1E91971E0015D2C8 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7803D1E91971E0015D2C8 /* QuestionTests.swift */; };
 		C0B780401E91974D0015D2C8 /* SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7803F1E91974D0015D2C8 /* SongTests.swift */; };
+		C0C74C951E94248800190187 /* ExperimentalQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C74C931E94248800190187 /* ExperimentalQuestionViewController.swift */; };
+		C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C74C941E94248800190187 /* ExperimentalQuestionViewController.xib */; };
+		C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C74C971E9429A100190187 /* QuestionProvider.swift */; };
 		C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
@@ -225,6 +228,9 @@
 		C0B7803B1E918CBF0015D2C8 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Question.swift; path = FindingAVoice/Question.swift; sourceTree = SOURCE_ROOT; };
 		C0B7803D1E91971E0015D2C8 /* QuestionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		C0B7803F1E91974D0015D2C8 /* SongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTests.swift; sourceTree = "<group>"; };
+		C0C74C931E94248800190187 /* ExperimentalQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentalQuestionViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0C74C941E94248800190187 /* ExperimentalQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperimentalQuestionViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0C74C971E9429A100190187 /* QuestionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionProvider.swift; path = FindingAVoice/QuestionProvider.swift; sourceTree = SOURCE_ROOT; };
 		C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTaskTests.swift; sourceTree = "<group>"; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -380,6 +386,8 @@
 				C0B780321E918C930015D2C8 /* MusicPlayerContainerViewController.swift */,
 				C0B780341E918C930015D2C8 /* SongCollectionViewCell.swift */,
 				C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */,
+				C0C74C931E94248800190187 /* ExperimentalQuestionViewController.swift */,
+				C0C74C941E94248800190187 /* ExperimentalQuestionViewController.xib */,
 			);
 			name = "View Controllers (Experimental)";
 			sourceTree = "<group>";
@@ -547,6 +555,7 @@
 				C0B780331E918C930015D2C8 /* Song.swift */,
 				C0B780351E918C930015D2C8 /* SongLoader.swift */,
 				C0B7803B1E918CBF0015D2C8 /* Question.swift */,
+				C0C74C971E9429A100190187 /* QuestionProvider.swift */,
 			);
 			name = "Model (Experimental)";
 			sourceTree = "<group>";
@@ -746,6 +755,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */,
 				C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */,
 				C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
 				C0B7800D1E9184310015D2C8 /* frosty.mp3 in Resources */,
@@ -1042,6 +1052,7 @@
 				C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */,
 				C0B7803A1E918C930015D2C8 /* SongLoader.swift in Sources */,
 				C06A3DB71E6DC1B500B8AE3D /* AppDelegate.swift in Sources */,
+				C0C74C951E94248800190187 /* ExperimentalQuestionViewController.swift in Sources */,
 				C0B780381E918C930015D2C8 /* Song.swift in Sources */,
 				C06A3DB81E6DC1B500B8AE3D /* FabricTester.swift in Sources */,
 				C06A3DB91E6DC1B500B8AE3D /* Sparkling.swift in Sources */,
@@ -1050,6 +1061,7 @@
 				C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
+				C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */,
 				C0B780371E918C930015D2C8 /* MusicPlayerContainerViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
 				C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */,

@@ -10,7 +10,16 @@ import Foundation
 
 struct SongLoader {
     
-    static func loadSongs() -> [Song] {
+    private static var _songs: [Song]!
+    static var songs: [Song] {
+        
+        if _songs == nil {
+            _songs = loadSongs()
+        }
+        return _songs
+    }
+    
+    private static func loadSongs() -> [Song] {
         
         let jsonPath = Bundle.main.path(forResource: "SongInfo", ofType: "json")!
         let data = FileManager.default.contents(atPath: jsonPath)!
@@ -20,4 +29,5 @@ struct SongLoader {
         
         return dict.map { songDict -> Song in Song(json: songDict) }
     }
+    
 }
