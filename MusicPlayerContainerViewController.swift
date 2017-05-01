@@ -11,6 +11,14 @@ import AVFoundation
 
 class MusicPlayerContainerViewController: UIViewController {
 
+    fileprivate(set) static var userHasAnsweredAllSongs: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "userHasAnsweredAllSongs")
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: "userHasAnsweredAllSongs")
+        }
+    }
     @IBOutlet weak var yesWellButton: UIButton!
     @IBOutlet weak var yesHaveHeardButton: UIButton!
     @IBOutlet weak var noDontKnowButton: UIButton!
@@ -92,7 +100,11 @@ private extension MusicPlayerContainerViewController {
     
     func finish() {
         
+        // Mark down that we're done
+        MusicPlayerContainerViewController.userHasAnsweredAllSongs = true
+        
         // Move to next UI
+        navigationController?.popViewController(animated: true)
     }
     
     func setButtonsEnabled(_ enabled: Bool) {

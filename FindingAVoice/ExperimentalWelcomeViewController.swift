@@ -29,13 +29,24 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func getStartedButtonPressed(_ sender: UIButton) {
         
-        // TODO logic around when to show the music player vs the questions
-        
-//        let musicPlayerVC = UIStoryboard(name: "SnippetPlayer", bundle: nil).instantiateInitialViewController()!
-//        navigationController?.pushViewController(musicPlayerVC, animated: true)
+        guard let navigationController = navigationController else {
+            assertionFailure()
+            return
+        }
         
         let questionVC = ExperimentalQuestionViewController()
-        navigationController?.pushViewController(questionVC, animated: true)
+        
+        // When to show the music player vs the questions
+        if MusicPlayerContainerViewController.userHasAnsweredAllSongs {
+            
+            navigationController.pushViewController(questionVC, animated: true)
+            
+        } else {
+            
+            navigationController.pushViewController(questionVC, animated: false)
+            
+            let musicPlayerVC = UIStoryboard(name: "SnippetPlayer", bundle: nil).instantiateInitialViewController()!
+            navigationController.pushViewController(musicPlayerVC, animated: true)
+        }
     }
-
 }
