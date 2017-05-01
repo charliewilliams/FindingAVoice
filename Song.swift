@@ -25,7 +25,8 @@ enum Key: String {
 struct Song {
     
     enum KnowledgeLevel: Int {
-        case none = 0
+        case none = -1
+        case unknown = 0
         case some = 1
         case well = 2
     }

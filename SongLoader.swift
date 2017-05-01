@@ -30,4 +30,7 @@ struct SongLoader {
         return dict.flatMap { songDict -> Song? in Song(json: songDict) }
     }
     
+    static func reset() {
+        _songs = nil
+    }
 }

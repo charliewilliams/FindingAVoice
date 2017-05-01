@@ -103,6 +103,9 @@ private extension MusicPlayerContainerViewController {
         // Mark down that we're done
         MusicPlayerContainerViewController.userHasAnsweredAllSongs = true
         
+        // Reset so that the songloader loads songs afresh next time
+        SongLoader.reset()
+        
         // Move to next UI
         navigationController?.popViewController(animated: true)
     }
