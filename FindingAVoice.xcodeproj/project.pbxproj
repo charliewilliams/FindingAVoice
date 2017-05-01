@@ -28,6 +28,8 @@
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
+		C04B97AF1EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
+		C04B97B01EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
 		C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
@@ -55,7 +57,6 @@
 		C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
 		C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */; };
 		C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
-		C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */; };
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
 		C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
@@ -179,6 +180,7 @@
 		C035CFAB1E2A456200419532 /* RuleSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleSet.swift; path = FindingAVoice/RuleSet.swift; sourceTree = SOURCE_ROOT; };
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
+		C04B97AE1EB79CAD00666472 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = SOURCE_ROOT; };
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */,
 				C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */,
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
+				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
 				C0DFE8F91E45DFD90011E7DA /* RulesViewController.xib */,
 				C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */,
@@ -398,6 +401,7 @@
 				C07B5AE41E59CDC900570149 /* FabricTester.swift */,
 				C07B5AE61E59CF8E00570149 /* UserHandler.swift */,
 				C06A3E0D1E6E126100B8AE3D /* ServerCoordinator.swift */,
+				C04B97AE1EB79CAD00666472 /* Analytics.swift */,
 			);
 			name = "Data Gathering";
 			sourceTree = "<group>";
@@ -506,7 +510,6 @@
 			children = (
 				C07B5AE91E5A024900570149 /* SignupViewController.swift */,
 				C07B5AEA1E5A024900570149 /* SignupViewController.xib */,
-				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */,
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
 				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
@@ -768,7 +771,6 @@
 				C0B780161E9184BE0015D2C8 /* alphabet.mp3 in Resources */,
 				C0B780191E9184BE0015D2C8 /* rainbow.mp3 in Resources */,
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
-				C06A3DCF1E6DC1B500B8AE3D /* QuestionViewController.xib in Resources */,
 				C0B780171E9184BE0015D2C8 /* battle.mp3 in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
@@ -840,7 +842,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		15A1E141B3C952EFDCC2C892 /* [CP] Embed Pods Frameworks */ = {
@@ -945,7 +947,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C06A3DA91E6DC1B500B8AE3D /* [CP] Check Pods Manifest.lock */ = {
@@ -960,7 +962,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C06A3DD61E6DC1B500B8AE3D /* [CP] Embed Pods Frameworks */ = {
@@ -1031,7 +1033,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1067,6 +1069,7 @@
 				C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */,
 				C06A3E0F1E6E126100B8AE3D /* ServerCoordinator.swift in Sources */,
 				C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */,
+				C04B97B01EB79CAD00666472 /* Analytics.swift in Sources */,
 				C06A3DC21E6DC1B500B8AE3D /* PopoverViewController.swift in Sources */,
 				C06A3DC31E6DC1B500B8AE3D /* TimesUpLockViewController.swift in Sources */,
 				C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */,
@@ -1117,6 +1120,7 @@
 				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
 				C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */,
+				C04B97AF1EB79CAD00666472 /* Analytics.swift in Sources */,
 				C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */,
 				C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */,
 				C06A3E0E1E6E126100B8AE3D /* ServerCoordinator.swift in Sources */,
