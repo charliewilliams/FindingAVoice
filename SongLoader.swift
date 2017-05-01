@@ -27,7 +27,7 @@ struct SongLoader {
         
         let dict = json as! [[String: AnyObject]]
         
-        return dict.map { songDict -> Song in Song(json: songDict) }
+        return dict.flatMap { songDict -> Song? in Song(json: songDict) }
     }
     
 }

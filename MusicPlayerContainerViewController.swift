@@ -43,7 +43,13 @@ class MusicPlayerContainerViewController: UIViewController {
         setButtonsEnabled(false)
         
         // figure out which button and mark the song as unavailable if they've said no
-        // TODO also do analytics for these
+        guard var currentSong = currentSong,
+            let index = [noDontKnowButton, yesHaveHeardButton, yesWellButton].index(of: sender) else {
+                assertionFailure()
+                return
+        }
+        
+        currentSong.knowledgeLevel = Song.KnowledgeLevel(rawValue: index)
         
         playNextSongOrFinish()
     }

@@ -24,6 +24,12 @@ enum Key: String {
 
 struct Song {
     
+    enum KnowledgeLevel: Int {
+        case none = 0
+        case some = 1
+        case well = 2
+    }
+    
     let id: String
     let title: String
     let lyrics: String
@@ -32,13 +38,22 @@ struct Song {
     let answers: [[String]]
     let audioFilePath: String?
     var audioPlayer: AVAudioPlayer?
-    var response: Bool? {
-        didSet {
-            // TODO mark the song as skipped in userdefaults
+    var knowledgeLevel: KnowledgeLevel? {
+        
+        get {
+            return KnowledgeLevel(rawValue: UserDefaults.standard.integer(forKey: "\(title)-suppliedKnowledgeLevel"))
+        }
+        set(newValue) {
+            
+            UserDefaults.standard.set(newValue, forKey: "\(title)-suppliedKnowledgeLevel")
+            
+            if let newValue = newValue {
+                Analytics.song(self, markedAs: newValue)
+            }
         }
     }
     
-    init(json: [String: AnyObject]) {
+    init?(json: [String: AnyObject]) {
         
         self.title = json[Key.title.rawValue] as! String
         self.lyrics = json[Key.lyrics.rawValue] as! String
@@ -63,6 +78,11 @@ struct Song {
         
         if let path = audioFilePath, let data = FileManager.default.contents(atPath: path) {
             audioPlayer = try? AVAudioPlayer(data: data)
+        }
+        
+        // return nil if the user has marked this song as unknown
+        if let knowledgeLevel = knowledgeLevel, knowledgeLevel == .none {
+            return nil
         }
     }
         
