@@ -56,7 +56,8 @@ private extension AppDelegate {
         
         if DailyTimer.shared.hasPlayedMaxTimeToday {
             
-            // TODO analytics for relaunch after time is up
+            Analytics.userRelaunchedAfterTimeUp()
+            
             window?.rootViewController?.present(TimesUpLockViewController(), animated: false, completion: nil)
         }
     }
