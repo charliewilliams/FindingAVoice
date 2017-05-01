@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,12 +25,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvh-IA-7cP">
-                    <rect key="frame" x="0.0" y="48" width="1024" height="300"/>
+                    <rect key="frame" x="0.0" y="48" width="1024" height="350"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb2-ja-UDf" userLabel="Label Border View">
-                            <rect key="frame" x="229" y="100" width="566.5" height="100"/>
+                            <rect key="frame" x="229" y="125" width="566.5" height="100"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X must by followed by Y" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-rb-L7z">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X must by followed by Y" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f8Z-rb-L7z">
                                     <rect key="frame" x="20" y="20" width="526.5" height="60"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -52,15 +52,17 @@
                     <color key="backgroundColor" red="0.01130111298" green="0.83972668859999999" blue="1" alpha="0.30207416370000001" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="vb2-ja-UDf" firstAttribute="centerY" secondItem="qvh-IA-7cP" secondAttribute="centerY" id="SY4-XI-zuE"/>
-                        <constraint firstAttribute="height" constant="300" id="rYz-rp-tcM"/>
+                        <constraint firstItem="vb2-ja-UDf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qvh-IA-7cP" secondAttribute="leading" constant="20" id="ZSb-eg-VQO"/>
+                        <constraint firstItem="vb2-ja-UDf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qvh-IA-7cP" secondAttribute="top" constant="20" id="gK1-tC-x9M"/>
+                        <constraint firstAttribute="height" constant="350" id="rYz-rp-tcM"/>
                         <constraint firstItem="vb2-ja-UDf" firstAttribute="centerX" secondItem="qvh-IA-7cP" secondAttribute="centerX" id="xd1-gs-ARq"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ife-Lp-fel">
-                    <rect key="frame" x="0.0" y="348" width="1024" height="220"/>
+                    <rect key="frame" x="0.0" y="398" width="1024" height="170"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖👻🐶🐱🐭🐹🤖👻🐶🐱🤖👻🐭🐹🤖👻🐶🐱🐭🐹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-7x-bR2">
-                            <rect key="frame" x="42" y="85" width="940" height="50.5"/>
+                            <rect key="frame" x="42" y="60" width="940" height="50.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
