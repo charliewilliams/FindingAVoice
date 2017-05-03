@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,10 +50,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-8z-5BT">
-                    <rect key="frame" x="221" y="369" width="583.5" height="183.5"/>
+                    <rect key="frame" x="206" y="369" width="613.5" height="183.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-AA-WNY">
-                            <rect key="frame" x="20" y="20" width="543.5" height="143.5"/>
+                            <rect key="frame" x="20" y="20" width="573.5" height="143.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The syllable &quot;Snow&quot; is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-n6-ySn">
                                     <rect key="frame" x="0.0" y="59.5" width="200" height="25"/>
@@ -64,32 +64,32 @@
                                     <size key="shadowOffset" width="-1" height="-1"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-4n-Rqz">
-                                    <rect key="frame" x="240" y="0.0" width="72" height="143.5"/>
+                                    <rect key="frame" x="240" y="0.0" width="102" height="143.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beq-dx-Xo3" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="72" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <state key="normal" title="Higher"/>
+                                            <state key="normal" title="Higher,"/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="LUt-si-NM2"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-jK-EjL" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="41" width="72" height="41"/>
+                                            <rect key="frame" x="0.0" y="41" width="102" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <state key="normal" title="Same"/>
+                                            <state key="normal" title="the Same"/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ACF-3y-4VZ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-ar-R57">
-                                            <rect key="frame" x="0.0" y="82" width="72" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="82" width="102" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-eA-x5x" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="102.5" width="72" height="41"/>
+                                            <rect key="frame" x="0.0" y="102.5" width="102" height="41"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <state key="normal" title="Lower"/>
                                             <connections>
@@ -99,7 +99,7 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="than the word &quot;Frost&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2W-0F-Afn">
-                                    <rect key="frame" x="352" y="59.5" width="191.5" height="25"/>
+                                    <rect key="frame" x="382" y="59.5" width="191.5" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
