@@ -27,11 +27,17 @@ xcode-select --install
 <td width="33%"><code>sudo gem install fastlane -NV</code></td>
 </tr>
 </table>
+
 # Available Actions
 ## iOS
-### ios beta
+### ios exp
 ```
-fastlane ios beta
+fastlane ios exp
+```
+
+### ios control
+```
+fastlane ios control
 ```
 
 

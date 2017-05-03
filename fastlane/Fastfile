@@ -6,7 +6,36 @@ platform :ios do
   #
   # Learn more here: https://github.com/fastlane/setups/blob/master/samples-ios/distribute-beta-build.md 🚀
   #
-  lane :beta do |values|
+    lane :exp do |values|
+        # Fabric generated this lane for deployment to Crashlytics Beta
+        # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+        gym(scheme: values[:scheme] ? values[:scheme] : 'ExperimentalTask', export_method: 'ad-hoc')
+        increment_build_number
+
+        emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu']
+
+        notes = changelog_from_git_commits ? changelog_from_git_commits : ""
+
+        groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
+
+        crashlytics(api_token: '3bf576a7e0e1a634037b4c20ef79f63196a6eb0f',
+        build_secret: 'cdb8002da5b7da3cfd6f90faa82a27e0d488250d853761f7c834a9200ca71c52',
+        emails: emails,
+        groups: groups,
+        notes: notes,
+        notifications: false) # Should this distribution notify your testers via email?
+
+        # for all available options run `fastlane action crashlytics`
+
+        # You can notify your team in chat that a beta build has been uploaded
+        slack(
+        slack_url: "https://hooks.slack.com/services/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",
+        channel: "general",
+        message: "New beta version at https://fabric.io/_/beta \n\n" + notes
+        )
+    end
+
+  lane :control do |values|
     # Fabric generated this lane for deployment to Crashlytics Beta
     # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
     gym(scheme: values[:scheme] ? values[:scheme] : 'ControlTask', export_method: 'ad-hoc')
