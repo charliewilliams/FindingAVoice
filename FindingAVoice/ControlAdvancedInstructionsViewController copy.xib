@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,18 +30,17 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logic Game – Intermediate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
-                            <rect key="frame" x="139" y="53" width="540.5" height="55"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logic Game – Advanced" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
+                            <rect key="frame" x="162.5" y="53" width="492" height="55"/>
                             <fontDescription key="fontDescription" type="system" pointSize="46"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntermediateRule1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-zQ-mh8">
-                            <rect key="frame" x="139.5" y="183" width="540" height="75"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HardRule1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-zQ-mh8">
+                            <rect key="frame" x="139.5" y="183" width="540" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="540" id="NTI-4d-eAT"/>
-                                <constraint firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="36:5" id="aAY-nE-w1J"/>
-                                <constraint firstAttribute="height" constant="75" id="nvQ-NO-n5J"/>
+                                <constraint firstAttribute="height" constant="100" id="nvQ-NO-n5J"/>
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYp-Jq-0sZ" userLabel="You will be presented">
@@ -53,41 +51,41 @@
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="558" id="NSE-cw-Jj9"/>
                                 <constraint firstAttribute="height" constant="50" id="Yv9-uv-QoL"/>
                             </constraints>
-                            <string key="text">The rule is about the get a bit more involved. For one, there may be a two possible emojis that can follow the primary animal. For example:</string>
+                            <string key="text">The rule is about get even more challenging, yet again. Now, there may be a three possible emojis that can follow the primary animal. For example:</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90t-GE-4SR" userLabel="From here, you will">
-                            <rect key="frame" x="131" y="258" width="558" height="75"/>
+                            <rect key="frame" x="131" y="283" width="558" height="75"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="558" id="86P-8D-yHt"/>
                                 <constraint firstAttribute="height" constant="75" id="iTA-h2-ggm"/>
                             </constraints>
-                            <string key="text">In this case, anywhere there is a “pig” emoji, either a “chicken” emoji or a “cow” emoji is now allowed to follow. 
+                            <string key="text">In this case, anywhere there is a “pig” emoji, either a “tiger” emoji or a “unicorn” emoji or a “penguin” emoji is now allowed to follow. 
 
-Another change to the rule is in the spacing on the characters. The rule may say:</string>
+The spacing on the characters is going to change again too. The rule may say:</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntermediateRule2" translatesAutoresizingMaskIntoConstraints="NO" id="2P2-tV-IAA">
-                            <rect key="frame" x="139.5" y="355" width="540" height="112.5"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HardRule2" translatesAutoresizingMaskIntoConstraints="NO" id="2P2-tV-IAA">
+                            <rect key="frame" x="139.5" y="380" width="540" height="120"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="540" id="qCP-8R-Dqt"/>
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4" userLabel="An invalid string">
-                            <rect key="frame" x="131" y="467.5" width="558" height="125"/>
+                            <rect key="frame" x="131" y="500" width="558" height="125"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="558" id="jiw-mN-cI7"/>
                                 <constraint firstAttribute="height" constant="125" id="m0C-rJ-4Dg"/>
                             </constraints>
-                            <string key="text">“2 characters later” means that you should skip over the emoji immediately following the “pig” emoji and then check that second slot to see if it is either a “chicken” or a “cow” emoji. (See example)
+                            <string key="text">“3 characters later” means that you should skip over the two emojis immediately following the “pig” emoji and then check that third slot to see if it is either a “tiger” or a “unicorn” or a “penguin” emoji. (See example)
 
-Note: the rule must be Valid in all places in which the first emoji of the rule is present.</string>
+Note: again, the rule must be Valid in all places in which the first emoji of the rule is present.</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -124,7 +122,7 @@ Note: the rule must be Valid in all places in which the first emoji of the rule 
                         <constraint firstItem="4on-QP-6uc" firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="8" id="Dor-8o-j5x"/>
                         <constraint firstAttribute="bottom" secondItem="aNh-ud-cla" secondAttribute="bottom" constant="25" id="MaM-aQ-jfo"/>
                         <constraint firstItem="zYp-Jq-0sZ" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="OO8-rA-8UG"/>
-                        <constraint firstItem="2P2-tV-IAA" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="1.5" id="RVn-2V-Ojv"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="1.2" id="RVn-2V-Ojv"/>
                         <constraint firstItem="2P2-tV-IAA" firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="width" id="Vpq-5X-bDP"/>
                         <constraint firstItem="cAC-aL-jer" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" constant="-1" id="YZ1-Dl-wEe"/>
                         <constraint firstAttribute="trailing" secondItem="aNh-ud-cla" secondAttribute="trailing" constant="25" id="dYS-UL-hPc"/>
@@ -147,7 +145,7 @@ Note: the rule must be Valid in all places in which the first emoji of the rule 
         </view>
     </objects>
     <resources>
-        <image name="IntermediateRule1" width="576" height="77"/>
-        <image name="IntermediateRule2" width="573" height="111"/>
+        <image name="HardRule1" width="585" height="91"/>
+        <image name="HardRule2" width="584" height="106"/>
     </resources>
 </document>
