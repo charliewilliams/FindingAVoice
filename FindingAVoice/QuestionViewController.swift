@@ -17,7 +17,14 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
             }
         }
     }
-    var stringLength: Int!
+    var difficulty = DifficultyProvider.currentDifficulty
+    var stringLength: Int! {
+        switch difficulty {
+        case .easy: return 10
+        case .medium: return 15
+        case .hard: return 20
+        }
+    }
     var numberOfQuestionsPerRound: Int = 3
     var delayTimeBeforeShowingQuestion: TimeInterval = 5
     var delayTimeBetweenQuestions: TimeInterval = 1

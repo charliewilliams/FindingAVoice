@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum RuleCreationError: String, Error {
-    case impossibleDensity = "Impossibly high density"
-    case zeroDensity = "Cannot have zero density"
-    case zeroLength = "Cannot have zero string length"
-}
-
 struct Rule {
+    
+    enum CreationError: String, Error {
+        case impossibleDensity = "Impossibly high density"
+        case zeroDensity = "Cannot have zero density"
+        case zeroLength = "Cannot have zero string length"
+    }
     
     var preceding = [Character]()
     var following = [Character]()
@@ -64,6 +64,26 @@ struct Rule {
         return text
     }
     var debugFullHistory = DebugHistory()
+    
+    init(difficulty d: Difficulty, protectedCharacters: [Character] = []) {
+        
+        switch d {
+        case .easy:
+            
+            let vocab = Array(fullVocabulary.characters.prefix(30)).map({ String($0) }).joined()
+            self.init(precedingCount: 1, followingCount: 1, vocabulary: vocab, density: 0.05, stride: 1, protectedCharacters: protectedCharacters)
+            
+        case .medium:
+            
+            let vocab = Array(fullVocabulary.characters.prefix(35)).map({ String($0) }).joined()
+            self.init(precedingCount: 1, followingCount: 2, vocabulary: vocab, density: 0.14, stride: 2, protectedCharacters: protectedCharacters)
+            
+        case .hard:
+            
+            let vocab = Array(fullVocabulary.characters.prefix(40)).map({ String($0) }).joined()
+            self.init(precedingCount: 1, followingCount: 3, vocabulary: vocab, density: 0.2, stride: 3, protectedCharacters: protectedCharacters)
+        }
+    }
     
     init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, density: Float = 0.2, stride: Int = 1, protectedCharacters: [Character] = []) {
         
@@ -117,13 +137,13 @@ struct Rule {
     func string(length: Int, mutating existingString: String? = nil, protectedCharacters: [Character] = [], shouldBeValid: Bool) throws -> String {
         
         guard length > 1 else {
-            throw RuleCreationError.zeroLength
+            throw CreationError.zeroLength
         }
 //        guard density > 0 else {
 //            throw RuleCreationError.zeroDensity
 //        }
         guard density < 0.6 else {
-            throw RuleCreationError.impossibleDensity
+            throw CreationError.impossibleDensity
         }
         
         var numberOfOccurrencesRemaining = Int(Float(length) * density)

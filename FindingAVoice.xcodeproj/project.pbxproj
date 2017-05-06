@@ -33,6 +33,8 @@
 		C04B97B01EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
 		C04D29D11EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */; };
 		C04D29D31EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04D29D21EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib */; };
+		C04D29D51EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
+		C04D29D61EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
 		C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
@@ -186,6 +188,7 @@
 		C04B97AE1EB79CAD00666472 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = SOURCE_ROOT; };
 		C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlIntermediateInstructionsViewController.xib; path = FindingAVoice/ControlIntermediateInstructionsViewController.xib; sourceTree = SOURCE_ROOT; };
 		C04D29D21EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ControlAdvancedInstructionsViewController copy.xib"; path = "FindingAVoice/ControlAdvancedInstructionsViewController copy.xib"; sourceTree = SOURCE_ROOT; };
+		C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyProvider.swift; sourceTree = SOURCE_ROOT; };
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
@@ -555,6 +558,7 @@
 				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
 				C035CFA31E2A420200419532 /* QuestionTimer.swift */,
 				C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */,
+				C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */,
 			);
 			name = "Model (Shared)";
 			sourceTree = "<group>";
@@ -1053,6 +1057,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */,
+				C04D29D61EBDD84900C37F48 /* DifficultyProvider.swift in Sources */,
 				C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */,
 				C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */,
 				C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */,
@@ -1112,6 +1117,7 @@
 			files = (
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
+				C04D29D51EBDD84900C37F48 /* DifficultyProvider.swift in Sources */,
 				C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */,
 				C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */,
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,

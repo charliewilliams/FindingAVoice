@@ -54,7 +54,7 @@ class SecretSetupViewController: UIViewController {
         let preceding = Int(numPrecedentsLabel.text!)!
         let following = Int(numConsequentsLabel.text!)!
         let stride = Int(strideLengthLabel.text!)!
-        let length = Int(stringLengthLabel.text!)!
+//        let length = Int(stringLengthLabel.text!)!
         let density = Float(densityLabel.text!)!
         let numberOfRules = Int(numberOfRulesLabel.text!)!
         
@@ -65,7 +65,7 @@ class SecretSetupViewController: UIViewController {
         let ruleSet = RuleSet(count: numberOfRules, maxPrecedingCount: preceding, maxFollowingCount: following, density: density, maxStride: stride)
         
         destination.ruleSet = ruleSet
-        destination.stringLength = length
+        destination.difficulty = DifficultyProvider.currentDifficulty
         
         navigationController?.pushViewController(destination, animated: true)
     }
