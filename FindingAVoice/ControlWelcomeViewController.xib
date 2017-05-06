@@ -114,7 +114,7 @@ Here are some examples:</mutableString>
                                 <action selector="infoButtonPressed:" destination="-1" eventType="touchUpInside" id="jEU-SV-e1J"/>
                             </connections>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Another “Invalid” string:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-S7-tJ4" userLabel="Another invalid string">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Another “Invalid” string:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-S7-tJ4" userLabel="Another invalid string">
                             <rect key="frame" x="131" y="564" width="558" height="22"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -161,6 +161,7 @@ Here are some examples:</mutableString>
                         <constraint firstItem="ojP-oP-yfs" firstAttribute="leading" secondItem="H8b-fO-sop" secondAttribute="leading" constant="24" id="pfl-vy-y9b"/>
                         <constraint firstItem="2KA-Ux-VJD" firstAttribute="width" secondItem="tjO-ng-Uzi" secondAttribute="width" id="s0g-aL-uCc"/>
                         <constraint firstItem="4on-QP-6uc" firstAttribute="centerX" secondItem="cAC-aL-jer" secondAttribute="centerX" id="sTl-3o-nqL"/>
+                        <constraint firstItem="gx1-S7-tJ4" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="tzv-s3-3kg"/>
                         <constraint firstItem="2KA-Ux-VJD" firstAttribute="top" secondItem="B2G-47-6o4" secondAttribute="bottom" id="uTT-vY-KqS"/>
                         <constraint firstItem="2P2-tV-IAA" firstAttribute="top" secondItem="M54-yC-lQ9" secondAttribute="bottom" id="uiu-LY-ILq"/>
                     </constraints>
