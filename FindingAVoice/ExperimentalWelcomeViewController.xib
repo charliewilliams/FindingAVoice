@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,25 +30,29 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internal Ear Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
-                            <rect key="frame" x="230.5" y="53" width="357.5" height="55"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Songs in my Head" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
+                            <rect key="frame" x="225.5" y="53" width="367.5" height="55"/>
                             <fontDescription key="fontDescription" type="system" pointSize="46"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-tO-YTH">
-                            <rect key="frame" x="41" y="138" width="737" height="338"/>
+                            <rect key="frame" x="41" y="123" width="737" height="399"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text goes here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4">
-                                    <rect key="frame" x="0.0" y="0.0" width="331" height="338"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4">
+                                    <rect key="frame" x="0.0" y="0.0" width="331" height="399"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <mutableString key="text">Welcome to the Songs In My Head game. In this game, you will be trying compare two notes in familiar songs… but the songs will only be playing in your head! The idea is to “hear” the melody, and we will give you two lyrics, or a syllable of a lyric (if the word is more than one syllable).   Your job is to say whether the second lyric has a note that is higher, lower or is the same as the first lyric. So for instance, think of the first phrase of God Save the Queen: 
+God save our gracious Queen,
+Long live our noble Queen…  Now... is SAVE higher, lower, or the same in pitch than GOD? Don’t sing it out loud, just think ...SAVE is in fact the same pitch as GOD.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="And here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
-                                    <rect key="frame" x="406" y="0.0" width="331" height="338"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
+                                    <rect key="frame" x="406" y="0.0" width="331" height="399"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <mutableString key="text">Now how about OUR compared to GOD?...  OUR is higher in pitch than GOD.  If you didn’t get these answers, just think about the song again.  That’s all there is to it! We will be asking you about the first phrases of familiar songs (but you can let us know if there is a song on the list you don’t know). We’d like you to press the button that says Higher, Lower, or Same as quickly as you can, without making a mistake (time out language).   At first the questions will be sort of easy.  But as you get better at this, it will get a little harder. The first lyric might not be the first lyric of the tune, and the second lyric might be farther into the tune, like comparing NOble to GRAcious.</mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
@@ -79,14 +83,14 @@
                         <constraint firstItem="4on-QP-6uc" firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="8" id="Dor-8o-j5x"/>
                         <constraint firstItem="VVb-tO-YTH" firstAttribute="width" secondItem="H8b-fO-sop" secondAttribute="width" multiplier="0.9" id="Ly6-nc-uA8"/>
                         <constraint firstAttribute="bottom" secondItem="aNh-ud-cla" secondAttribute="bottom" constant="25" id="MaM-aQ-jfo"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="centerY" secondItem="H8b-fO-sop" secondAttribute="centerY" id="QTN-bL-Ryp"/>
+                        <constraint firstItem="VVb-tO-YTH" firstAttribute="centerY" secondItem="H8b-fO-sop" secondAttribute="centerY" multiplier="1.05" id="QTN-bL-Ryp"/>
                         <constraint firstItem="cAC-aL-jer" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" constant="-1" id="YZ1-Dl-wEe"/>
                         <constraint firstAttribute="trailing" secondItem="aNh-ud-cla" secondAttribute="trailing" constant="25" id="dYS-UL-hPc"/>
                         <constraint firstItem="VVb-tO-YTH" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="jJK-Yb-9yx"/>
                         <constraint firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="-45" id="nT2-ig-W6I"/>
                         <constraint firstItem="ojP-oP-yfs" firstAttribute="leading" secondItem="H8b-fO-sop" secondAttribute="leading" constant="24" id="pfl-vy-y9b"/>
                         <constraint firstItem="4on-QP-6uc" firstAttribute="centerX" secondItem="cAC-aL-jer" secondAttribute="centerX" id="sTl-3o-nqL"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="height" secondItem="H8b-fO-sop" secondAttribute="height" multiplier="0.55" id="wL4-ZA-A6n"/>
+                        <constraint firstItem="VVb-tO-YTH" firstAttribute="height" secondItem="H8b-fO-sop" secondAttribute="height" multiplier="0.65" id="wL4-ZA-A6n"/>
                     </constraints>
                 </view>
             </subviews>
