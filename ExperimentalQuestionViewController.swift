@@ -41,7 +41,7 @@ class ExperimentalQuestionViewController: UIViewController {
         NSBackgroundColorAttributeName: UIColor.yellow,
         NSForegroundColorAttributeName: UIColor.blue,
         NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 18)
+        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 24)
     ]
     
 //    let regularAttributes: [String: Any] = [
