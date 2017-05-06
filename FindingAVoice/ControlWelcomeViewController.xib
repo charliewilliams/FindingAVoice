@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-fO-sop" userLabel="Frame View">
-                    <rect key="frame" x="102.5" y="77" width="819" height="614"/>
+                    <rect key="frame" x="102.5" y="38.5" width="819" height="691"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-aL-jer">
                             <rect key="frame" x="340" y="8" width="137" height="37"/>
@@ -36,27 +37,67 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-tO-YTH">
-                            <rect key="frame" x="41" y="138" width="737" height="338"/>
-                            <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4">
-                                    <rect key="frame" x="0.0" y="0.0" width="331" height="338"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text">Welcome to the Logic Game!In this game, the “rule giver” will be giving you a rule about what emojis (* &amp; @) are legally able to follow what other emojis. Then you will see an example that has a string of emojis all in a row like this ( @#$##^&amp;**) and your task is to judge whether the string is a Valid (follows the rule) or Invalid (does not follow the rule). For instance, the rule could be Lion must be followed by Bear somewhere later in the string. So if you see any Lion that ISN’T followed by a Bear, then the string is Invalid.</mutableString>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
-                                    <rect key="frame" x="406" y="0.0" width="331" height="338"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Just to keep it fun, the rule will change after you see three strings. And warning, the rules will get a bit more challenging later on! For instance, you might see the rule “Lion must be followed by a Bear or a Goose.”.We ask you to play no more than 10 min per day; after 10 min, the game will say it needs a rest! And if you take more than 10 sec to answer anyquestion, the next string will just come up. We hope you enjoy the Logic Game!</string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                            </subviews>
-                        </stackView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rule" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-zQ-mh8">
+                            <rect key="frame" x="139.5" y="155" width="540" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="36:5" id="aAY-nE-w1J"/>
+                                <constraint firstAttribute="height" constant="75" id="nvQ-NO-n5J"/>
+                            </constraints>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You will be presented with a “rule” that looks as follows:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYp-Jq-0sZ" userLabel="You will be presented">
+                            <rect key="frame" x="130" y="133" width="558" height="22"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Yv9-uv-QoL"/>
+                            </constraints>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90t-GE-4SR" userLabel="From here, you will">
+                            <rect key="frame" x="131" y="230" width="558" height="140"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="140" id="iTA-h2-ggm"/>
+                            </constraints>
+                            <mutableString key="text">From here, you will examine a string of emojis and determine if this rule is Valid- if the criterion is met- for every occurrence of that first emoji in the string (in this case the “Duck” emoji). Be warned, you only have 10 seconds to examine the rule, examine the string, and decide if it is Valid or Invalid before your time is up for that round. Also note, when we say that one emoji must be “followed by” another, we mean immediately following, from left to right. So in the case above, the “Dog” emoji must be right next to (on the right-hand side) the “Duck” emoji in all cases of the “Duck” emoji, otherwise the entire string is ruled Invalid. 
+
+Here are some examples:</mutableString>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="A “Valid” string:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M54-yC-lQ9" userLabel="A valid string">
+                            <rect key="frame" x="130.5" y="370" width="558" height="22"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="bUr-ff-B1N"/>
+                            </constraints>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Valid" translatesAutoresizingMaskIntoConstraints="NO" id="2P2-tV-IAA">
+                            <rect key="frame" x="139.5" y="392" width="540" height="75"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="An “Invalid” string:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4" userLabel="An invalid string">
+                            <rect key="frame" x="131" y="467" width="558" height="22"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="m0C-rJ-4Dg"/>
+                            </constraints>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Invalid1" translatesAutoresizingMaskIntoConstraints="NO" id="2KA-Ux-VJD">
+                            <rect key="frame" x="130.5" y="489" width="558" height="75"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Invalid2" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-ng-Uzi">
+                            <rect key="frame" x="130" y="586" width="558" height="75"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-ud-cla">
-                            <rect key="frame" x="579" y="540" width="215" height="49"/>
+                            <rect key="frame" x="579" y="617" width="215" height="49"/>
                             <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -68,37 +109,76 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-oP-yfs">
-                            <rect key="frame" x="24" y="567" width="22" height="22"/>
+                            <rect key="frame" x="24" y="644" width="22" height="22"/>
                             <connections>
                                 <action selector="infoButtonPressed:" destination="-1" eventType="touchUpInside" id="jEU-SV-e1J"/>
                             </connections>
                         </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Another “Invalid” string:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-S7-tJ4" userLabel="Another invalid string">
+                            <rect key="frame" x="131" y="564" width="558" height="22"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="4tx-PJ-p4q"/>
+                            </constraints>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="IEH-zQ-mh8" firstAttribute="top" secondItem="zYp-Jq-0sZ" secondAttribute="bottom" id="0pd-Im-0bH"/>
+                        <constraint firstItem="90t-GE-4SR" firstAttribute="top" secondItem="IEH-zQ-mh8" secondAttribute="bottom" id="3GS-U6-KsC"/>
+                        <constraint firstItem="2KA-Ux-VJD" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="44v-5n-v2R"/>
                         <constraint firstAttribute="bottom" secondItem="ojP-oP-yfs" secondAttribute="bottom" constant="25" id="4d6-dj-meD"/>
+                        <constraint firstItem="M54-yC-lQ9" firstAttribute="top" secondItem="90t-GE-4SR" secondAttribute="bottom" id="5Am-Wb-5u0"/>
+                        <constraint firstItem="B2G-47-6o4" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="5re-Xq-cxk"/>
+                        <constraint firstItem="B2G-47-6o4" firstAttribute="top" secondItem="2P2-tV-IAA" secondAttribute="bottom" id="9Jj-e4-bWD"/>
+                        <constraint firstItem="90t-GE-4SR" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="A2a-sw-XXx"/>
                         <constraint firstItem="cAC-aL-jer" firstAttribute="top" secondItem="H8b-fO-sop" secondAttribute="top" constant="8" id="AgW-x4-hEB"/>
                         <constraint firstItem="4on-QP-6uc" firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="8" id="Dor-8o-j5x"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="width" secondItem="H8b-fO-sop" secondAttribute="width" multiplier="0.9" id="Ly6-nc-uA8"/>
                         <constraint firstAttribute="bottom" secondItem="aNh-ud-cla" secondAttribute="bottom" constant="25" id="MaM-aQ-jfo"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="centerY" secondItem="H8b-fO-sop" secondAttribute="centerY" id="QTN-bL-Ryp"/>
+                        <constraint firstItem="tjO-ng-Uzi" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="Mco-bo-XLe"/>
+                        <constraint firstItem="zYp-Jq-0sZ" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="OO8-rA-8UG"/>
+                        <constraint firstItem="2KA-Ux-VJD" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" id="OeY-oK-6aU"/>
+                        <constraint firstItem="tjO-ng-Uzi" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" id="Pbg-Bf-htu"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" id="RVn-2V-Ojv"/>
+                        <constraint firstItem="B2G-47-6o4" firstAttribute="width" secondItem="tjO-ng-Uzi" secondAttribute="width" id="TL4-3R-NQ1"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="width" id="Vpq-5X-bDP"/>
                         <constraint firstItem="cAC-aL-jer" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" constant="-1" id="YZ1-Dl-wEe"/>
+                        <constraint firstItem="tjO-ng-Uzi" firstAttribute="top" secondItem="gx1-S7-tJ4" secondAttribute="bottom" id="Yqm-gn-Lvq"/>
+                        <constraint firstItem="M54-yC-lQ9" firstAttribute="width" secondItem="90t-GE-4SR" secondAttribute="width" id="aAY-jR-iXj"/>
+                        <constraint firstItem="M54-yC-lQ9" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="ayU-r8-iiC"/>
+                        <constraint firstItem="gx1-S7-tJ4" firstAttribute="width" secondItem="B2G-47-6o4" secondAttribute="width" id="crl-8b-CUW"/>
                         <constraint firstAttribute="trailing" secondItem="aNh-ud-cla" secondAttribute="trailing" constant="25" id="dYS-UL-hPc"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="jJK-Yb-9yx"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="ezF-dp-dJs"/>
+                        <constraint firstItem="IEH-zQ-mh8" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="gUS-ST-Cqe"/>
+                        <constraint firstItem="gx1-S7-tJ4" firstAttribute="top" secondItem="2KA-Ux-VJD" secondAttribute="bottom" id="hgl-v3-9Nc"/>
+                        <constraint firstItem="90t-GE-4SR" firstAttribute="width" secondItem="tjO-ng-Uzi" secondAttribute="width" id="k7p-Jj-XUk"/>
+                        <constraint firstItem="zYp-Jq-0sZ" firstAttribute="width" secondItem="tjO-ng-Uzi" secondAttribute="width" id="n4r-tv-E1R"/>
                         <constraint firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="-45" id="nT2-ig-W6I"/>
+                        <constraint firstItem="zYp-Jq-0sZ" firstAttribute="top" secondItem="4on-QP-6uc" secondAttribute="bottom" constant="25" id="pFQ-sI-ORi"/>
                         <constraint firstItem="ojP-oP-yfs" firstAttribute="leading" secondItem="H8b-fO-sop" secondAttribute="leading" constant="24" id="pfl-vy-y9b"/>
+                        <constraint firstItem="2KA-Ux-VJD" firstAttribute="width" secondItem="tjO-ng-Uzi" secondAttribute="width" id="s0g-aL-uCc"/>
                         <constraint firstItem="4on-QP-6uc" firstAttribute="centerX" secondItem="cAC-aL-jer" secondAttribute="centerX" id="sTl-3o-nqL"/>
-                        <constraint firstItem="VVb-tO-YTH" firstAttribute="height" secondItem="H8b-fO-sop" secondAttribute="height" multiplier="0.55" id="wL4-ZA-A6n"/>
+                        <constraint firstItem="2KA-Ux-VJD" firstAttribute="top" secondItem="B2G-47-6o4" secondAttribute="bottom" id="uTT-vY-KqS"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="top" secondItem="M54-yC-lQ9" secondAttribute="bottom" id="uiu-LY-ILq"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="H8b-fO-sop" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SaP-Zh-yFK"/>
-                <constraint firstItem="H8b-fO-sop" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="UTU-Ki-tDe"/>
+                <constraint firstItem="H8b-fO-sop" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.9" id="UTU-Ki-tDe"/>
                 <constraint firstItem="H8b-fO-sop" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="iiK-AB-LL5"/>
                 <constraint firstItem="H8b-fO-sop" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mtX-Ww-Kop"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="Invalid1" width="556" height="134"/>
+        <image name="Invalid2" width="558" height="134"/>
+        <image name="Rule" width="576" height="80"/>
+        <image name="Valid" width="556" height="134"/>
+    </resources>
 </document>
