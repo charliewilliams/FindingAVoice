@@ -60,7 +60,7 @@ class ExperimentalQuestionViewController: UIViewController {
     
     var secondText: NSAttributedString {
         
-        let mutable = NSMutableAttributedString(string: "than \(question.firstHighlight)?")
+        let mutable = NSMutableAttributedString(string: "than \(question.firstHighlight) ?")
         mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 5, length: question.firstHighlight.characters.count))
         
         return mutable
