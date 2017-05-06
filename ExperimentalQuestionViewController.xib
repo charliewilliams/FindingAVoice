@@ -50,56 +50,72 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDl-8z-5BT">
-                    <rect key="frame" x="206" y="369" width="613.5" height="183.5"/>
+                    <rect key="frame" x="197" y="339" width="631.5" height="243.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-AA-WNY">
-                            <rect key="frame" x="20" y="20" width="573.5" height="143.5"/>
+                            <rect key="frame" x="20" y="20" width="591.5" height="203.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The syllable &quot;Snow&quot; is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLX-n6-ySn">
-                                    <rect key="frame" x="0.0" y="59.5" width="200" height="25"/>
+                                    <rect key="frame" x="0.0" y="89.5" width="200" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="shadowOffset" width="-1" height="-1"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-4n-Rqz">
-                                    <rect key="frame" x="240" y="0.0" width="102" height="143.5"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-4n-Rqz">
+                                    <rect key="frame" x="240" y="0.0" width="120" height="203.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beq-dx-Xo3" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="102" height="41"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="41"/>
+                                            <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="60f-19-06b"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <state key="normal" title="Higher,"/>
+                                            <state key="normal" title="Higher,">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="LUt-si-NM2"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-jK-EjL" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="41" width="102" height="41"/>
+                                            <rect key="frame" x="0.0" y="61" width="120" height="41"/>
+                                            <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <state key="normal" title="the Same"/>
+                                            <state key="normal" title="the Same">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="ACF-3y-4VZ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcG-ar-R57">
-                                            <rect key="frame" x="0.0" y="82" width="102" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="122" width="120" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-eA-x5x" customClass="AnswerButton" customModule="ExperimentalTask" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="102.5" width="102" height="41"/>
+                                            <rect key="frame" x="0.0" y="162.5" width="120" height="41"/>
+                                            <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <state key="normal" title="Lower"/>
+                                            <state key="normal" title="Lower">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="Nlq-Nx-nxT"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ly2-jK-EjL" firstAttribute="width" secondItem="beq-dx-Xo3" secondAttribute="width" id="YaI-fP-81H"/>
+                                        <constraint firstItem="kwW-eA-x5x" firstAttribute="width" secondItem="beq-dx-Xo3" secondAttribute="width" id="lQd-h2-yq6"/>
+                                    </constraints>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="than the word &quot;Frost&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2W-0F-Afn">
-                                    <rect key="frame" x="382" y="59.5" width="191.5" height="25"/>
+                                    <rect key="frame" x="400" y="89.5" width="191.5" height="25"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
