@@ -83,8 +83,7 @@ class ExperimentalQuestionViewController: UIViewController {
         songTitleLabel.text = "In the song \"\(question.song.title)\""
         
         //question.song.lyrics.replacingOccurrences(of: "-", with: "")
-        let displayLyrics = "(\"\(question.song.lyrics)\")"
-        let mutable = NSMutableAttributedString(string: displayLyrics)
+        let mutable = NSMutableAttributedString(string: question.song.lyrics)
         
         // Find the highlighted bit AS A WHOLE SYLLABLE
         let range1a = (displayLyrics as NSString).range(of: question.firstHighlight + " ")
