@@ -31,6 +31,7 @@
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
 		C04B97AF1EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
 		C04B97B01EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
+		C04D29D11EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */; };
 		C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
@@ -182,6 +183,7 @@
 		C04944301E2822EB00A12E1B /* DailyTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyTimer.swift; path = FindingAVoice/DailyTimer.swift; sourceTree = SOURCE_ROOT; };
 		C04944441E282E7700A12E1B /* DailyTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTimerTests.swift; sourceTree = "<group>"; };
 		C04B97AE1EB79CAD00666472 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = SOURCE_ROOT; };
+		C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlIntermediateInstructionsViewController.xib; path = FindingAVoice/ControlIntermediateInstructionsViewController.xib; sourceTree = SOURCE_ROOT; };
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			children = (
 				C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */,
 				C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */,
+				C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */,
 				C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */,
 				C0DFE8FD1E45E0000011E7DA /* QuestionViewController.xib */,
 				C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */,
@@ -804,6 +807,7 @@
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
 				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
+				C04D29D11EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib in Resources */,
 				C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */,
 				C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */,
 				C0DFE8FB1E45DFD90011E7DA /* RulesViewController.xib in Resources */,

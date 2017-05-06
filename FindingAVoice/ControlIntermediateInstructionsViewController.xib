@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="ControlTask" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeLabel" destination="cAC-aL-jer" id="zEH-Iv-CNf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8b-fO-sop" userLabel="Frame View">
+                    <rect key="frame" x="102.5" y="38.5" width="819" height="691"/>
+                    <subviews>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-aL-jer">
+                            <rect key="frame" x="340" y="8" width="137" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logic Game – Intermediate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
+                            <rect key="frame" x="139" y="53" width="540.5" height="55"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntermediateRule1" translatesAutoresizingMaskIntoConstraints="NO" id="IEH-zQ-mh8">
+                            <rect key="frame" x="139.5" y="183" width="540" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="540" id="NTI-4d-eAT"/>
+                                <constraint firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="36:5" id="aAY-nE-w1J"/>
+                                <constraint firstAttribute="height" constant="75" id="nvQ-NO-n5J"/>
+                            </constraints>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYp-Jq-0sZ" userLabel="You will be presented">
+                            <rect key="frame" x="130" y="133" width="558" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="558" id="Fxq-gA-2Lv"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="558" id="NSE-cw-Jj9"/>
+                                <constraint firstAttribute="height" constant="50" id="Yv9-uv-QoL"/>
+                            </constraints>
+                            <string key="text">The rule is about the get a bit more involved. For one, there may be a two possible emojis that can follow the primary animal. For example:</string>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90t-GE-4SR" userLabel="From here, you will">
+                            <rect key="frame" x="131" y="258" width="558" height="75"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="558" id="86P-8D-yHt"/>
+                                <constraint firstAttribute="height" constant="75" id="iTA-h2-ggm"/>
+                            </constraints>
+                            <string key="text">In this case, anywhere there is a “pig” emoji, either a “chicken” emoji or a “cow” emoji is now allowed to follow. 
+
+Another change to the rule is in the spacing on the characters. The rule may say:</string>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntermediateRule2" translatesAutoresizingMaskIntoConstraints="NO" id="2P2-tV-IAA">
+                            <rect key="frame" x="139.5" y="355" width="540" height="112.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="540" id="qCP-8R-Dqt"/>
+                            </constraints>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4" userLabel="An invalid string">
+                            <rect key="frame" x="131" y="467.5" width="558" height="125"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="558" id="jiw-mN-cI7"/>
+                                <constraint firstAttribute="height" constant="125" id="m0C-rJ-4Dg"/>
+                            </constraints>
+                            <string key="text">“2 characters later” means that you should skip over the emoji immediately following the “pig” emoji and then check that second slot to see if it is either a “chicken” or a “cow” emoji. (See example)
+
+Note: the rule must be Valid in all places in which the first emoji of the rule is present.</string>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-ud-cla">
+                            <rect key="frame" x="579" y="617" width="215" height="49"/>
+                            <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" title="Let's get started!">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="getStartedButtonPressed:" destination="-1" eventType="touchUpInside" id="fcT-xo-CWk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-oP-yfs">
+                            <rect key="frame" x="24" y="644" width="22" height="22"/>
+                            <connections>
+                                <action selector="infoButtonPressed:" destination="-1" eventType="touchUpInside" id="jEU-SV-e1J"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="IEH-zQ-mh8" firstAttribute="top" secondItem="zYp-Jq-0sZ" secondAttribute="bottom" id="0pd-Im-0bH"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="top" secondItem="90t-GE-4SR" secondAttribute="bottom" constant="22" id="1eg-f9-y1c"/>
+                        <constraint firstItem="90t-GE-4SR" firstAttribute="top" secondItem="IEH-zQ-mh8" secondAttribute="bottom" id="3GS-U6-KsC"/>
+                        <constraint firstAttribute="bottom" secondItem="ojP-oP-yfs" secondAttribute="bottom" constant="25" id="4d6-dj-meD"/>
+                        <constraint firstItem="B2G-47-6o4" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="5re-Xq-cxk"/>
+                        <constraint firstItem="B2G-47-6o4" firstAttribute="top" secondItem="2P2-tV-IAA" secondAttribute="bottom" id="9Jj-e4-bWD"/>
+                        <constraint firstItem="90t-GE-4SR" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="A2a-sw-XXx"/>
+                        <constraint firstItem="cAC-aL-jer" firstAttribute="top" secondItem="H8b-fO-sop" secondAttribute="top" constant="8" id="AgW-x4-hEB"/>
+                        <constraint firstItem="4on-QP-6uc" firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="8" id="Dor-8o-j5x"/>
+                        <constraint firstAttribute="bottom" secondItem="aNh-ud-cla" secondAttribute="bottom" constant="25" id="MaM-aQ-jfo"/>
+                        <constraint firstItem="zYp-Jq-0sZ" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="OO8-rA-8UG"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="height" secondItem="IEH-zQ-mh8" secondAttribute="height" multiplier="1.5" id="RVn-2V-Ojv"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="width" secondItem="IEH-zQ-mh8" secondAttribute="width" id="Vpq-5X-bDP"/>
+                        <constraint firstItem="cAC-aL-jer" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" constant="-1" id="YZ1-Dl-wEe"/>
+                        <constraint firstAttribute="trailing" secondItem="aNh-ud-cla" secondAttribute="trailing" constant="25" id="dYS-UL-hPc"/>
+                        <constraint firstItem="2P2-tV-IAA" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="ezF-dp-dJs"/>
+                        <constraint firstItem="IEH-zQ-mh8" firstAttribute="centerX" secondItem="H8b-fO-sop" secondAttribute="centerX" id="gUS-ST-Cqe"/>
+                        <constraint firstAttribute="top" secondItem="cAC-aL-jer" secondAttribute="bottom" constant="-45" id="nT2-ig-W6I"/>
+                        <constraint firstItem="zYp-Jq-0sZ" firstAttribute="top" secondItem="4on-QP-6uc" secondAttribute="bottom" constant="25" id="pFQ-sI-ORi"/>
+                        <constraint firstItem="ojP-oP-yfs" firstAttribute="leading" secondItem="H8b-fO-sop" secondAttribute="leading" constant="24" id="pfl-vy-y9b"/>
+                        <constraint firstItem="4on-QP-6uc" firstAttribute="centerX" secondItem="cAC-aL-jer" secondAttribute="centerX" id="sTl-3o-nqL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="H8b-fO-sop" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SaP-Zh-yFK"/>
+                <constraint firstItem="H8b-fO-sop" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.9" id="UTU-Ki-tDe"/>
+                <constraint firstItem="H8b-fO-sop" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="iiK-AB-LL5"/>
+                <constraint firstItem="H8b-fO-sop" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mtX-Ww-Kop"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="IntermediateRule1" width="1152" height="154"/>
+        <image name="IntermediateRule2" width="1146" height="222"/>
+    </resources>
+</document>
