@@ -84,6 +84,7 @@ class ExperimentalQuestionViewController: UIViewController {
         
         //question.song.lyrics.replacingOccurrences(of: "-", with: "")
         let mutable = NSMutableAttributedString(string: question.song.lyrics)
+        let displayLyrics = question.song.lyrics
         
         // Find the highlighted bit AS A WHOLE SYLLABLE
         let range1a = (displayLyrics as NSString).range(of: question.firstHighlight + " ")

@@ -119,6 +119,7 @@
 		C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
 		C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
 		C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
+		C0E4B5801EE6C7CF00273C00 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
 		C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */; };
 		C1D8A5BB1AD07E2999FEAE6C /* Pods_ControlTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7971A35C0D9C54D1C6B374 /* Pods_ControlTaskTests.framework */; };
 /* End PBXBuildFile section */
@@ -253,6 +254,7 @@
 		C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecretSetupViewController.xib; path = FindingAVoice/SecretSetupViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ControlTask.storyboard; path = FindingAVoice/ControlTask.storyboard; sourceTree = SOURCE_ROOT; };
 		C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootNavigationController.swift; path = FindingAVoice/RootNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = SOURCE_ROOT; };
 		C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -511,6 +513,7 @@
 				C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */,
 				C035CFAB1E2A456200419532 /* RuleSet.swift */,
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
+				C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */,
 			);
 			name = "Model (Control)";
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
+				C0E4B5801EE6C7CF00273C00 /* Difficulty.swift in Sources */,
 				C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,

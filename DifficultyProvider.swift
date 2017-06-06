@@ -8,12 +8,6 @@
 
 import Foundation
 
-enum Difficulty {
-    case easy
-    case medium
-    case hard
-}
-
 struct DifficultyProvider {
     
     static var currentDifficulty: Difficulty {
