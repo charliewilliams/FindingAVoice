@@ -30,13 +30,19 @@ class SingingDetectorViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(gotNotification(note:)), name: NSNotification.Name(rawValue: SingingState.pitchChanged.rawValue), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotNotification(note:)), name: NSNotification.Name(rawValue: SingingState.stopped.rawValue), object: nil)
         
-        detectionLabel.isHidden = true
+        
+        overlayView.alpha = 0
+        bottomToBottomSpacingConstraint.constant = -detectionView.bounds.height
+        view.layoutIfNeeded()
+        view.isUserInteractionEnabled = false
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         plotSubview.frame = audioInputPlot.bounds
+        bottomToBottomSpacingConstraint.constant = -self.detectionView.bounds.height
+        view.layoutIfNeeded()
     }
     
     func gotNotification(note: Notification) {
