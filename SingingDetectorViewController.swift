@@ -18,6 +18,8 @@ class SingingDetectorViewController: UIViewController {
     var plotSubview: AKNodeOutputPlot!
     
     @IBOutlet weak var detectionView: UIView!
+    @IBOutlet weak var overlayView: UIView!
+    @IBOutlet weak var bottomToBottomSpacingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +45,27 @@ class SingingDetectorViewController: UIViewController {
             state == .started {
             
             // Show the view
-            detectionView.isHidden = false
+            animateDetectionView(hidden: false)
         }
+    }
+    
+    @IBAction func okButtonPressed(_ sender: UIButton) {
+        
+        animateDetectionView(hidden: true)
+    }
+    
+    private func animateDetectionView(hidden: Bool) {
+        
+        UIView.animate(withDuration: 0.5, animations: { 
+            
+            self.overlayView.alpha = hidden ? 1 : 0
+            self.bottomToBottomSpacingConstraint.constant = hidden ? -self.detectionView.bounds.height : 0
+            self.view.layoutIfNeeded()
+            
+        }, completion: { _ in
+            
+            self.view.isUserInteractionEnabled = !hidden
+        })
     }
 }
 
