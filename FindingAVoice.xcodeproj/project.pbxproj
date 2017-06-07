@@ -111,6 +111,7 @@
 		C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */; };
 		C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */; };
 		C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */; };
+		C0D7BD161EE826DB001BF3AB /* SingingDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD151EE826DB001BF3AB /* SingingDetectable.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
@@ -249,6 +250,7 @@
 		C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingingDetector.storyboard; sourceTree = SOURCE_ROOT; };
 		C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetector.swift; sourceTree = SOURCE_ROOT; };
 		C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetectorViewController.swift; sourceTree = SOURCE_ROOT; };
+		C0D7BD151EE826DB001BF3AB /* SingingDetectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingingDetectable.swift; path = FindingAVoice/SingingDetectable.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -590,6 +592,7 @@
 				C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */,
 				C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */,
 				C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */,
+				C0D7BD151EE826DB001BF3AB /* SingingDetectable.swift */,
 			);
 			name = "Singing Detection";
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */,
 				C0B780371E918C930015D2C8 /* MusicPlayerContainerViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
+				C0D7BD161EE826DB001BF3AB /* SingingDetectable.swift in Sources */,
 				C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */,
 				C06A3E0F1E6E126100B8AE3D /* ServerCoordinator.swift in Sources */,
 				C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */,

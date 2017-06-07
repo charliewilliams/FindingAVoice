@@ -11,15 +11,13 @@ import AudioKit
 
 class SingingDetectorViewController: UIViewController {
     
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var noteNameLabel: UILabel!
     @IBOutlet weak var detectionLabel: UILabel!
     
     let detector = SingingDetector.shared
     @IBOutlet var audioInputPlot: EZAudioPlot!
     var plotSubview: AKNodeOutputPlot!
     
-    @IBOutlet weak var leftDetectionView: UIView!
+    @IBOutlet weak var detectionView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,30 +37,13 @@ class SingingDetectorViewController: UIViewController {
         plotSubview.frame = audioInputPlot.bounds
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        statusLabel.text = "Status: Running"
-    }
-    
     func gotNotification(note: Notification) {
         
-        let state = SingingState(rawValue: note.name.rawValue)!
-        
-        switch state {
+        if let state = SingingState(rawValue: note.name.rawValue),
+            state == .started {
             
-        case .started:
-            leftDetectionView.isHidden = false
-            fallthrough
-            
-        case .pitchChanged:
-            if let noteName = note.userInfo?["noteName"] as? String {
-                noteNameLabel.text = noteName
-            }
-            
-        case .stopped:
-            noteNameLabel.text = nil
-            leftDetectionView.isHidden = true
+            // Show the view
+            detectionView.isHidden = false
         }
     }
 }

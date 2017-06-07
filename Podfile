@@ -2,6 +2,7 @@ use_frameworks!
 
 def shared
     
+    pod 'AudioKit'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Firebase'

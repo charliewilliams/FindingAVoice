@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ExperimentalQuestionViewController: UIViewController {
-
+class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songLyricsLabel: UILabel!
@@ -21,6 +20,7 @@ class ExperimentalQuestionViewController: UIViewController {
     var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
     }
+    var childSingingDetectorViewController: SingingDetectorViewController!
     
     var question: Question! {
         didSet {
@@ -70,7 +70,14 @@ class ExperimentalQuestionViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         loadViewIfNeeded()
-        self.question = QuestionProvider.shared.nextQuestion()
+        
+        childSingingDetectorViewController = UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController
+        childSingingDetectorViewController.willMove(toParentViewController: self)
+        addChildViewController(childSingingDetectorViewController)
+        view.addSubview(childSingingDetectorViewController.view)
+        childSingingDetectorViewController.didMove(toParentViewController: self)
+        
+        question = QuestionProvider.shared.nextQuestion()
         setup(withQuestion: question)
     }
     
@@ -134,5 +141,4 @@ class ExperimentalQuestionViewController: UIViewController {
             self.question = QuestionProvider.shared.nextQuestion()
         }
     }
-    
 }

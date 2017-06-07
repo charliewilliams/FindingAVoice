@@ -1,4 +1,5 @@
 PODS:
+  - AudioKit (3.7)
   - Crashlytics (3.8.4):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
@@ -41,6 +42,7 @@ PODS:
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
+  - AudioKit
   - Crashlytics
   - Fabric
   - Firebase
@@ -49,6 +51,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC CHECKSUMS:
+  AudioKit: 73c43705575e483623bf3cf306f823a8677aebdd
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
@@ -61,6 +64,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e758f3da171f8fdf9edc16ad1b23b294e2321bb4
+PODFILE CHECKSUM: 4dbc7a00e2c15728f7c35c7fed8e6448c064ff0c
 
 COCOAPODS: 1.2.1
