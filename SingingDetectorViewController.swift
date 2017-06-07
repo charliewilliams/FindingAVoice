@@ -34,15 +34,12 @@ class SingingDetectorViewController: UIViewController {
         overlayView.alpha = 0
         bottomToBottomSpacingConstraint.constant = -detectionView.bounds.height
         view.layoutIfNeeded()
-        view.isUserInteractionEnabled = false
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        plotSubview.frame = audioInputPlot.bounds
-        bottomToBottomSpacingConstraint.constant = -self.detectionView.bounds.height
-        view.layoutIfNeeded()
+        plotSubview.frame = audioInputPlot.bounds   
     }
     
     func gotNotification(note: Notification) {
@@ -64,7 +61,7 @@ class SingingDetectorViewController: UIViewController {
         
         UIView.animate(withDuration: 0.5, animations: { 
             
-            self.overlayView.alpha = hidden ? 1 : 0
+            self.overlayView.alpha = hidden ? 0 : 1
             self.bottomToBottomSpacingConstraint.constant = hidden ? -self.detectionView.bounds.height : 0
             self.view.layoutIfNeeded()
             

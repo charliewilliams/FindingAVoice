@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="537.5"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.43736245600000001" colorSpace="calibratedWhite"/>
                             </view>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Die-Gc-sa2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Die-Gc-sa2">
                                 <rect key="frame" x="0.0" y="537.5" width="1024" height="230.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singing Detected!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-di-GI4">
@@ -56,7 +56,7 @@
                                             <action selector="okButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQJ-FL-Dxl"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please remember, only head the notes in your head. Do not hum or sing aloud!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg3-Pn-69C">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please remember, only hear the notes in your head. Do not hum or sing aloud!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg3-Pn-69C">
                                         <rect key="frame" x="559" y="20" width="421" height="103"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="421" id="Mfd-GD-8kL"/>
@@ -66,7 +66,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.72336632013320923" green="0.043116663940128891" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.87724466834749493" green="0.13432760144012887" blue="0.12056361607142857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="5A1-di-GI4" firstAttribute="leading" secondItem="Die-Gc-sa2" secondAttribute="leading" constant="50" id="1OE-DP-zFn"/>
                                     <constraint firstItem="tg3-Pn-69C" firstAttribute="top" secondItem="5A1-di-GI4" secondAttribute="top" id="CGk-d1-EKh"/>

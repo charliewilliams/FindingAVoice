@@ -118,9 +118,8 @@ private extension SingingDetector {
             
             userInfo = ["noteName": pitch,
                         "freq": "\(frequency)"]
+            NotificationCenter.default.post(name: Notification.Name(rawValue: state.rawValue), object: nil, userInfo: userInfo)
         }
-        
-        NotificationCenter.default.post(name: Notification.Name(rawValue: state.rawValue), object: nil, userInfo: userInfo)
     }
 }
 
