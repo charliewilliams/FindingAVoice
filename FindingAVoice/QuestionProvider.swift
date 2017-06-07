@@ -10,7 +10,7 @@ import Foundation
 
 class QuestionProvider {
     
-    static let shared: QuestionProvider = QuestionProvider()
+    static let shared = QuestionProvider()
     
     private var currentQuestion: Question?
     

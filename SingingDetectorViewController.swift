@@ -34,6 +34,8 @@ class SingingDetectorViewController: UIViewController {
         overlayView.alpha = 0
         bottomToBottomSpacingConstraint.constant = -detectionView.bounds.height
         view.layoutIfNeeded()
+        
+        view.isUserInteractionEnabled = false
     }
     
     override func viewDidLayoutSubviews() {
