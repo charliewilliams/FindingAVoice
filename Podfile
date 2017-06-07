@@ -1,8 +1,8 @@
 use_frameworks!
+platform :ios, '10.0'
 
 def shared
     
-    pod 'AudioKit'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Firebase'
@@ -18,6 +18,7 @@ end
 
 target 'ExperimentalTask' do
     shared
+    pod 'AudioKit'
 end
 
 target 'ControlTaskTests' do

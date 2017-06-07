@@ -14,14 +14,14 @@ struct ServerCoordinator {
     
     static let shared = ServerCoordinator()
     
-    private var auth: FIRAuth!
+    private var auth: Auth!
     private let url = "https://finding-a-voice.firebaseio.com/"
 //    private var ref: FIRDatabaseReference! = FIRDatabase.database().reference()
     
     private init() {
         
-        FIRApp.configure()
-        auth = FIRAuth.auth()
+        FirebaseApp.configure()
+        auth = Auth.auth()
     }
     
     func handleAppLaunch(email: String? = nil, password: String? = nil, completion: @escaping LoginCompletion) {
@@ -42,7 +42,7 @@ struct ServerCoordinator {
             if let error = error {
                 
                 // User exists already
-                if error._code == FIRAuthErrorCode.errorCodeEmailAlreadyInUse.rawValue {
+                if error._code == AuthErrorCode.emailAlreadyInUse.rawValue {
                     
                     self.logIn(email: email, password: password, completion: completion)
                     
@@ -69,7 +69,7 @@ struct ServerCoordinator {
             if let error = error {
                 
                 // User doesn't exist
-                if error._code == FIRAuthErrorCode.errorCodeUserNotFound.rawValue {
+                if error._code == AuthErrorCode.userNotFound.rawValue {
                     
                     self.createUser(email: email, password: password, completion: completion)
                     

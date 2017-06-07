@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 typealias Completion = () -> ()
-typealias LoginCompletion = (FIRUser?, Error?) -> ()
+typealias LoginCompletion = (User?, Error?) -> ()
 
 func delay(_ delay: Double, closure: @escaping ()->()) {
     

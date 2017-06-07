@@ -24,7 +24,7 @@ class UserHandler {
     static let instance = UserHandler()
     private init() { }
     
-    var user: FIRUser?
+    var user: User?
     
     var hasLocalUser: Bool {
         return store.string(forKey: "email") != nil
@@ -52,11 +52,13 @@ class UserHandler {
         
         ServerCoordinator.shared.handleAppLaunch(email: email, password: password) { (user, error) in
             
-            if let user = user, self.user == nil { // Don't overwrite if weird async stuff is happening
-                self.user = user
-            } else {
-                self.showSignupScreen()
-            }
+            return
+            
+//            if let user = user, self.user == nil { // Don't overwrite if weird async stuff is happening
+//                self.user = user
+//            } else {
+//                self.showSignupScreen()
+//            }
         }
     }
     
