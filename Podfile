@@ -29,4 +29,5 @@ end
 target 'ExperimentalTaskTests' do
     inherit! :complete
     pod 'Firebase'
+    pod 'AudioKit'
 end
