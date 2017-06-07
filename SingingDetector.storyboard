@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SingingDetectionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Singing Detector" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBz-L6-bXu">
+                                <rect key="frame" x="419.5" y="94" width="185.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Status: Launching" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzY-MJ-mik">
+                                <rect key="frame" x="431" y="124" width="162" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-8J-YhZ">
+                                <rect key="frame" x="499.5" y="158" width="25" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eR1-gY-VaW" customClass="EZAudioPlot">
+                                <rect key="frame" x="262" y="409.5" width="500" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="BGm-tt-RFE"/>
+                                    <constraint firstAttribute="width" constant="500" id="ksF-Re-MMI"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Die-Gc-sa2">
+                                <rect key="frame" x="0.0" y="537.5" width="1024" height="230.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singing Detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-di-GI4">
+                                        <rect key="frame" x="322" y="86.5" width="380.5" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72336632013320923" green="0.043116663940128891" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5A1-di-GI4" firstAttribute="centerY" secondItem="Die-Gc-sa2" secondAttribute="centerY" id="Qt0-vc-byE"/>
+                                    <constraint firstItem="5A1-di-GI4" firstAttribute="centerX" secondItem="Die-Gc-sa2" secondAttribute="centerX" id="dbK-ux-zUr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Die-Gc-sa2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="3jz-FT-D6j"/>
+                            <constraint firstItem="BBz-L6-bXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="5hw-Ua-93e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Die-Gc-sa2" secondAttribute="bottom" id="9ip-sL-9Ub"/>
+                            <constraint firstItem="Fbb-8J-YhZ" firstAttribute="top" secondItem="hzY-MJ-mik" secondAttribute="bottom" constant="10" id="MNr-B2-CCy"/>
+                            <constraint firstItem="BBz-L6-bXu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQX-EG-36l"/>
+                            <constraint firstItem="eR1-gY-VaW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eRB-HB-j9z"/>
+                            <constraint firstItem="Die-Gc-sa2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gme-t6-lv1"/>
+                            <constraint firstItem="Fbb-8J-YhZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jcF-Ai-0s3"/>
+                            <constraint firstItem="Die-Gc-sa2" firstAttribute="top" secondItem="eR1-gY-VaW" secondAttribute="bottom" id="jyR-ob-84U"/>
+                            <constraint firstAttribute="trailing" secondItem="Die-Gc-sa2" secondAttribute="trailing" id="khO-i1-8oK"/>
+                            <constraint firstItem="hzY-MJ-mik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mZT-B2-VsM"/>
+                            <constraint firstItem="hzY-MJ-mik" firstAttribute="top" secondItem="BBz-L6-bXu" secondAttribute="bottom" id="wns-Ml-gkZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oe4-ju-6k2"/>
+                    <connections>
+                        <outlet property="audioInputPlot" destination="eR1-gY-VaW" id="NXy-cN-aMh"/>
+                        <outlet property="detectionLabel" destination="5A1-di-GI4" id="AH6-lr-pKD"/>
+                        <outlet property="leftDetectionView" destination="Die-Gc-sa2" id="wi6-ki-bf8"/>
+                        <outlet property="noteNameLabel" destination="Fbb-8J-YhZ" id="XWN-E5-wWX"/>
+                        <outlet property="statusLabel" destination="hzY-MJ-mik" id="pTo-uh-6Ob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.7578125" y="161.71875"/>
+        </scene>
+    </scenes>
+</document>

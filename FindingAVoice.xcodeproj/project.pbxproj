@@ -64,7 +64,7 @@
 		C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
-		C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
+		C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* Main.storyboard */; };
 		C06A3DE21E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */; };
@@ -108,6 +108,9 @@
 		C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C74C941E94248800190187 /* ExperimentalQuestionViewController.xib */; };
 		C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C74C971E9429A100190187 /* QuestionProvider.swift */; };
 		C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */; };
+		C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */; };
+		C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */; };
+		C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
@@ -117,7 +120,7 @@
 		C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */; };
 		C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */; };
 		C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
-		C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */; };
+		C0DFE9091E466ED20011E7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* Main.storyboard */; };
 		C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
 		C0E4B5801EE6C7CF00273C00 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
 		C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */; };
@@ -243,6 +246,9 @@
 		C0C74C941E94248800190187 /* ExperimentalQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperimentalQuestionViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0C74C971E9429A100190187 /* QuestionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionProvider.swift; path = FindingAVoice/QuestionProvider.swift; sourceTree = SOURCE_ROOT; };
 		C0CD0BF91E7596A70002643E /* ControlTaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTaskTests.swift; sourceTree = "<group>"; };
+		C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingingDetector.storyboard; sourceTree = SOURCE_ROOT; };
+		C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetector.swift; sourceTree = SOURCE_ROOT; };
+		C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetectorViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -252,7 +258,7 @@
 		C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoViewController.xib; path = FindingAVoice/InfoViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE9041E466DE80011E7DA /* SecretSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecretSetupViewController.swift; path = FindingAVoice/SecretSetupViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecretSetupViewController.xib; path = FindingAVoice/SecretSetupViewController.xib; sourceTree = SOURCE_ROOT; };
-		C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ControlTask.storyboard; path = FindingAVoice/ControlTask.storyboard; sourceTree = SOURCE_ROOT; };
+		C0DFE9081E466ED20011E7DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = FindingAVoice/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootNavigationController.swift; path = FindingAVoice/RootNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = SOURCE_ROOT; };
 		C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleSetTests.swift; sourceTree = "<group>"; };
@@ -451,7 +457,8 @@
 			children = (
 				C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */,
 				C07B5AE81E59D13500570149 /* Data Gathering */,
-				C0DFE9081E466ED20011E7DA /* ControlTask.storyboard */,
+				C0D7BD0E1EE825D9001BF3AB /* Singing Detection */,
+				C0DFE9081E466ED20011E7DA /* Main.storyboard */,
 				C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */,
 				C027E54E1E21A3B30057B7B9 /* Helpers.swift */,
 				C0AA1D7D1E1FA82B005A7AA1 /* Categories */,
@@ -575,6 +582,16 @@
 				C0C74C971E9429A100190187 /* QuestionProvider.swift */,
 			);
 			name = "Model (Experimental)";
+			sourceTree = "<group>";
+		};
+		C0D7BD0E1EE825D9001BF3AB /* Singing Detection */ = {
+			isa = PBXGroup;
+			children = (
+				C0D7BD0F1EE825E8001BF3AB /* SingingDetector.storyboard */,
+				C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */,
+				C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */,
+			);
+			name = "Singing Detection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -789,7 +806,8 @@
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
 				C0B7801A1E9184BE0015D2C8 /* rudolph.mp3 in Resources */,
-				C06A3DD51E6DC1B500B8AE3D /* ControlTask.storyboard in Resources */,
+				C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */,
+				C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */,
 				C0B780181E9184BE0015D2C8 /* puff.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,7 +843,7 @@
 				C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */,
 				C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */,
 				C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */,
-				C0DFE9091E466ED20011E7DA /* ControlTask.storyboard in Resources */,
+				C0DFE9091E466ED20011E7DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1098,8 @@
 				C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
+				C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */,
+				C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */,
 				C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */,
 				C0B780371E918C930015D2C8 /* MusicPlayerContainerViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
