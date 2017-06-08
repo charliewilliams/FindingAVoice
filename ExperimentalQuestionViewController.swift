@@ -17,6 +17,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     @IBOutlet weak var higherButton: AnswerButton!
     @IBOutlet weak var sameButton: AnswerButton!
     @IBOutlet weak var lowerButton: AnswerButton!
+    @IBOutlet weak var containerViewCenterXConstraint: NSLayoutConstraint!
     var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
     }
@@ -87,6 +88,11 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     
     private func setup(withQuestion question: Question) {
         
+        UIView.performWithoutAnimation {
+            containerViewCenterXConstraint.constant = view.bounds.width
+            view.layoutIfNeeded()   
+        }
+        
         songTitleLabel.text = "In the song \"\(question.song.title)\""
         
         //question.song.lyrics.replacingOccurrences(of: "-", with: "")
@@ -111,9 +117,17 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         questionFirstHalfLabel.attributedText = firstText
         questionSecondHalfLabel.attributedText = secondText
         
-        delay(1) {
-            self.buttons.forEach { $0.isEnabled = true }
-        }
+        UIView.animate(withDuration: 0.3, animations: { 
+            
+            self.containerViewCenterXConstraint.constant = 0
+            self.view.layoutIfNeeded()
+            
+        }, completion: { _ in
+        
+            delay(1) {
+                self.buttons.forEach { $0.isEnabled = true }
+            }
+        })
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -137,8 +151,19 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
             button.shake()
         }
         
-        delay(2) {
-            self.question = QuestionProvider.shared.nextQuestion()
+        delay(1.5) {
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                
+                self.containerViewCenterXConstraint.constant = -self.view.bounds.width
+                self.view.layoutIfNeeded()
+                
+            }, completion: { _ in
+                
+                delay(0.5) {
+                    self.question = QuestionProvider.shared.nextQuestion()
+                }
+            })
         }
     }
 }
