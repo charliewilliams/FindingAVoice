@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-Yr-dBC">
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFf-Yr-dBC">
                                 <rect key="frame" x="237.5" y="180" width="550" height="384"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="550" id="wsf-hP-xVK"/>
@@ -137,7 +137,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-wA-ZtN">
-                                            <rect key="frame" x="8" y="8" width="529" height="359"/>
+                                            <rect key="frame" x="8" y="8" width="529" height="281"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="WLn-7H-7Lg">
                                             <rect key="frame" x="13" y="289" width="519" height="78"/>
@@ -149,12 +149,12 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="sO7-wA-ZtN" firstAttribute="leading" secondItem="BUf-DE-fVA" secondAttribute="leadingMargin" id="4Tm-sT-69d"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="sO7-wA-ZtN" secondAttribute="bottom" id="Gvf-AT-0e3"/>
                                     <constraint firstItem="WLn-7H-7Lg" firstAttribute="leading" secondItem="BUf-DE-fVA" secondAttribute="leadingMargin" constant="5" id="Hnb-Lw-nZP"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="WLn-7H-7Lg" secondAttribute="trailing" constant="5" id="KKk-ah-kl6"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="sO7-wA-ZtN" secondAttribute="trailing" id="c3S-yu-4yE"/>
                                     <constraint firstItem="sO7-wA-ZtN" firstAttribute="top" secondItem="BUf-DE-fVA" secondAttribute="topMargin" id="jKU-Ee-aQG"/>
                                     <constraint firstItem="WLn-7H-7Lg" firstAttribute="centerY" secondItem="BUf-DE-fVA" secondAttribute="centerY" multiplier="1.75" id="leU-0x-eRE"/>
+                                    <constraint firstItem="WLn-7H-7Lg" firstAttribute="top" secondItem="sO7-wA-ZtN" secondAttribute="bottom" id="wYR-PJ-VeQ"/>
                                     <constraint firstItem="WLn-7H-7Lg" firstAttribute="centerX" secondItem="BUf-DE-fVA" secondAttribute="centerX" id="xz4-1M-hnE"/>
                                 </constraints>
                                 <connections>
