@@ -1,0 +1,9 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+language: swift
+osx_image: xcode8.3
+xcode_workspace: FindingAVoice.xcworkspace
+xcode_scheme: [ControlTaskTests, ExperimentalTaskTests]
+xcode_sdk: iphonesimulator10.3
