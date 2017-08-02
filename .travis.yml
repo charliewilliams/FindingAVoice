@@ -5,5 +5,9 @@
 language: swift
 osx_image: xcode8.3
 xcode_workspace: FindingAVoice.xcworkspace
-xcode_scheme: ControlTaskTests
+xcode_scheme: 
+  - ControlTask
+  - ExperimentalTask
+  - ControlTaskTests
+  - ExperimentalTaskTests
 xcode_sdk: iphonesimulator10.3
