@@ -34,7 +34,9 @@ class WelcomeViewController: UIViewController {
             return
         }
         
-        let questionVC = ExperimentalQuestionViewController()
+        // Todo figure out when to set isPractice to false
+        
+        let questionVC = ExperimentalQuestionViewController(forPractice: true)
         
         // When to show the music player vs the questions
         if MusicPlayerContainerViewController.userHasAnsweredAllSongs {

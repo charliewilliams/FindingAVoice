@@ -18,6 +18,10 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     @IBOutlet weak var sameButton: AnswerButton!
     @IBOutlet weak var lowerButton: AnswerButton!
     @IBOutlet weak var containerViewCenterXConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var answersSectionStackView: UIStackView!
+    @IBOutlet weak var practiceHelperWordsStackView: UIStackView!
+    
     var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
     }
@@ -31,11 +35,19 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         }
     }
     
+    var isPractice: Bool = false {
+        didSet {
+            if !isPractice {
+                answersSectionStackView.removeArrangedSubview(practiceHelperWordsStackView)
+            }
+        }
+    }
+    
     let highlightedAttributesBig: [String: Any] = [
-        NSBackgroundColorAttributeName: UIColor.yellow,
-        NSForegroundColorAttributeName: UIColor.blue,
-        NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 36)
+        NSBackgroundColorAttributeName: UIColor.clear,
+        NSForegroundColorAttributeName: UIColor.red,
+//        NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
+        NSFontAttributeName: UIFont.systemFont(ofSize: 36)
     ]
     
     let highlightedAttributesSmall: [String: Any] = [
@@ -53,7 +65,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     
     var firstText: NSAttributedString {
         
-        let mutable = NSMutableAttributedString(string: "Is the syllable \(question.secondHighlight)")
+        let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
+        let mutable = NSMutableAttributedString(string: string)
         mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 16, length: question.secondHighlight.characters.count))
         
         return mutable
@@ -61,16 +74,19 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
     
     var secondText: NSAttributedString {
         
-        let mutable = NSMutableAttributedString(string: "than \(question.firstHighlight) ?")
+        let string = isPractice ? "than \(question.firstHighlight) ?" : question.firstHighlight
+        let mutable = NSMutableAttributedString(string: string)
         mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 5, length: question.firstHighlight.characters.count))
         
         return mutable
     }
     
-    init() {
+    init(forPractice isPractice: Bool) {
         super.init(nibName: nil, bundle: nil)
         
         loadViewIfNeeded()
+        
+        self.isPractice = isPractice
         
         childSingingDetectorViewController = UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController
         childSingingDetectorViewController.willMove(toParentViewController: self)
@@ -86,6 +102,15 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for button in buttons {
+            button.layer.borderColor = UIColor.blue.cgColor
+            button.layer.borderWidth = 2
+        }
+    }
+    
     private func setup(withQuestion question: Question) {
         
         UIView.performWithoutAnimation {
@@ -93,7 +118,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
             view.layoutIfNeeded()   
         }
         
-        songTitleLabel.text = "In the song \"\(question.song.title)\""
+        songTitleLabel.text = question.song.title
         
         //question.song.lyrics.replacingOccurrences(of: "-", with: "")
         let mutable = NSMutableAttributedString(string: question.song.lyrics)

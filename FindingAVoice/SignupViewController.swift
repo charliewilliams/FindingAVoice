@@ -13,6 +13,7 @@ class SignupViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     
+    
     @IBAction func textFieldDidEndEditing(_ sender: UITextField) {
 
     }
