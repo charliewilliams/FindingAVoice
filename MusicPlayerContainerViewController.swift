@@ -61,6 +61,15 @@ class MusicPlayerContainerViewController: UIViewController {
         
         playNextSongOrFinish()
     }
+    
+    @IBAction func debugSkipButtonPressed(_ sender: Any) {
+        
+        for var song in songs {
+            song.knowledgeLevel = Song.KnowledgeLevel.some
+        }
+        finish()
+    }
+    
 }
 
 private extension MusicPlayerContainerViewController {
