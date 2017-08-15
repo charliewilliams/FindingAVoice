@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MusicPlayerContainerViewController: UIViewController {
+class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
 
     fileprivate(set) static var userHasAnsweredAllSongs: Bool {
         get {
@@ -42,6 +42,8 @@ class MusicPlayerContainerViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        didViewScreen()
+        
         // play the first one
         playNextSong()
     }
@@ -58,6 +60,7 @@ class MusicPlayerContainerViewController: UIViewController {
         }
         
         currentSong.knowledgeLevel = Song.KnowledgeLevel(rawValue: index)
+        Analytics.songKnowledgeLevelMarked(currentSong, duration: resetTimer())
         
         playNextSongOrFinish()
     }
@@ -70,6 +73,15 @@ class MusicPlayerContainerViewController: UIViewController {
         finish()
     }
     
+    var lastTime: TimeInterval = NSDate().timeIntervalSince1970
+    func resetTimer() -> TimeInterval {
+        
+        let now = NSDate().timeIntervalSince1970
+        let elapsed = now - lastTime
+        lastTime = now
+        
+        return elapsed
+    }
 }
 
 private extension MusicPlayerContainerViewController {

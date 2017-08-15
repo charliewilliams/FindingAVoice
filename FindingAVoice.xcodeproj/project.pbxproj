@@ -17,6 +17,8 @@
 		C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
 		C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */; };
 		C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
+		C0212D7A1F4348D300D65AAA /* ScreenReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0212D791F4348D300D65AAA /* ScreenReporting.swift */; };
+		C0212D7B1F4348D300D65AAA /* ScreenReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0212D791F4348D300D65AAA /* ScreenReporting.swift */; };
 		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
 		C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5561E21A4910057B7B9 /* Shakeable.swift */; };
 		C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E5581E21A4980057B7B9 /* AnswerButton.swift */; };
@@ -178,6 +180,7 @@
 		C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverDisplaying.swift; path = FindingAVoice/PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverViewController.swift; path = FindingAVoice/PopoverViewController.swift; sourceTree = SOURCE_ROOT; };
 		C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopoverViewController.xib; path = FindingAVoice/PopoverViewController.xib; sourceTree = SOURCE_ROOT; };
+		C0212D791F4348D300D65AAA /* ScreenReporting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenReporting.swift; path = FindingAVoice/ScreenReporting.swift; sourceTree = SOURCE_ROOT; };
 		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
 		C027E5581E21A4980057B7B9 /* AnswerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnswerButton.swift; path = FindingAVoice/AnswerButton.swift; sourceTree = SOURCE_ROOT; };
@@ -420,6 +423,7 @@
 				C07B5AE61E59CF8E00570149 /* UserHandler.swift */,
 				C06A3E0D1E6E126100B8AE3D /* ServerCoordinator.swift */,
 				C04B97AE1EB79CAD00666472 /* Analytics.swift */,
+				C0212D791F4348D300D65AAA /* ScreenReporting.swift */,
 			);
 			name = "Data Gathering";
 			sourceTree = "<group>";
@@ -1086,6 +1090,7 @@
 				C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */,
 				C0B780391E918C930015D2C8 /* SongCollectionViewCell.swift in Sources */,
 				C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */,
+				C0212D7B1F4348D300D65AAA /* ScreenReporting.swift in Sources */,
 				C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */,
 				C06A3DB51E6DC1B500B8AE3D /* Date.swift in Sources */,
 				C0B7803A1E918C930015D2C8 /* SongLoader.swift in Sources */,
@@ -1148,6 +1153,7 @@
 				C0AA1D8A1E1FC3D4005A7AA1 /* Rule.swift in Sources */,
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
 				C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */,
+				C0212D7A1F4348D300D65AAA /* ScreenReporting.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
 				C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */,

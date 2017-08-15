@@ -45,12 +45,7 @@ struct Song {
             return KnowledgeLevel(rawValue: UserDefaults.standard.integer(forKey: "\(id)-suppliedKnowledgeLevel"))
         }
         set(newValue) {
-            
             UserDefaults.standard.set(newValue?.rawValue, forKey: "\(id)-suppliedKnowledgeLevel")
-            
-            if let newValue = newValue {
-                Analytics.song(self, markedAs: newValue)
-            }
         }
     }
     

@@ -36,3 +36,12 @@ class SignupViewController: UIViewController {
         }
     }
 }
+
+extension SignupViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

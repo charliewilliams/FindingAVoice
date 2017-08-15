@@ -71,3 +71,12 @@ class SecretSetupViewController: UIViewController {
     }
 
 }
+
+extension SecretSetupViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

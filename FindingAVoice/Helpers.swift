@@ -19,7 +19,7 @@ func delay(_ delay: Double, closure: @escaping ()->()) {
     }
 }
 
-enum App {
+enum App: String {
     case control
     case experimental
     

@@ -119,3 +119,12 @@ private extension PopoverViewController {
         didMove(toParentViewController: nil)
     }
 }
+
+extension PopoverViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

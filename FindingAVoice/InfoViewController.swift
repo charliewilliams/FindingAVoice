@@ -15,3 +15,12 @@ class InfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+
+extension InfoViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

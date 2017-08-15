@@ -52,3 +52,12 @@ class WelcomeViewController: UIViewController {
         }
     }
 }
+
+extension WelcomeViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

@@ -31,3 +31,12 @@ class TimesUpLockViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+
+extension TimesUpLockViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

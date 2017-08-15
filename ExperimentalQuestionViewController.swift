@@ -192,3 +192,13 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         }
     }
 }
+
+
+extension ExperimentalQuestionViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}

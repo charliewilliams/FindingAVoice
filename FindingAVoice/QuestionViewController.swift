@@ -264,3 +264,12 @@ extension QuestionViewController {
     }
 }
 
+extension QuestionViewController: ScreenReporting {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        didViewScreen()
+    }
+}
+
