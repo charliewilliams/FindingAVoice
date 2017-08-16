@@ -182,6 +182,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             let rawAnswer = sender.titleLabel?.text?.characters.first,
             let givenAnswer = Answer(rawValue: "\(rawAnswer)") else {
                 assert(false, "Something went wrong")
+                return
         }
         
         setButtons(enabled: false)

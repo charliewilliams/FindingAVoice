@@ -166,6 +166,6 @@ private extension MusicPlayerContainerViewController {
                 return child
             }
         }
-        assert(false)
+        fatalError()
     }
 }
