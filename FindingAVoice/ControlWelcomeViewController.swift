@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        assert(false, "init(coder:) has not been implemented")
+        fatalError("init(coder:) has not been implemented")
     }
 
     @IBAction func infoButtonPressed(_ sender: UIButton) {

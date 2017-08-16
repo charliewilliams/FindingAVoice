@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying {
+class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying, ScreenReporting {
     
     var ruleSet: RuleSet! {
         didSet {
@@ -74,6 +74,8 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        didViewScreen()
+        
         UIView.animate(withDuration: 0.3, delay: delayTimeBeforeShowingQuestion, options: [], animations: { 
             self.mainStringLabel.alpha = 1
         }, completion: nil)
@@ -107,7 +109,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     
     private func log(correct: Bool, wasValid: Bool) {
         
-        Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: wasValid ? "valid" : "invalid", wasCorrect: correct, measurement: "timeElapsed", duration: perQuestionTimer.secondsElapsed, data: [
+        Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: wasValid ? "valid" : "invalid", wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
             "ruleSet": ruleSet.userFacingDescription,
             "ruleSetHistory": ruleSet.debugFullHistory])
     }
@@ -274,15 +276,6 @@ extension QuestionViewController {
     
     func dailyPlayTimeExceeded() {
         timeExceededForToday = true
-    }
-}
-
-extension QuestionViewController: ScreenReporting {
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        didViewScreen()
     }
 }
 
