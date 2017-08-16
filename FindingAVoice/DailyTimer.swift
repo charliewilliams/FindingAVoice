@@ -32,7 +32,11 @@ class DailyTimer {
         
         for dict in storedDates {
             
-            guard let interval = TimeInterval(dict.key) else { assert(false); return }
+            guard let interval = TimeInterval(dict.key) else {
+                assert(false)
+                return 0
+            }
+            
             let date = Date(timeIntervalSince1970: interval)
             if date.isToday {
                 runningTotal += dict.value
