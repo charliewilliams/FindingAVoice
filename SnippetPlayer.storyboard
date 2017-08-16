@@ -88,9 +88,11 @@
                                     <constraint firstItem="JgH-YP-hJx" firstAttribute="top" secondItem="65m-9M-FTt" secondAttribute="top" constant="22" id="k6K-93-ng3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOx-Uc-RId">
-                                <rect key="frame" x="926" y="506" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOx-Uc-RId">
+                                <rect key="frame" x="852" y="506" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="5uJ-Hb-3aI"/>
+                                </constraints>
                                 <state key="normal" title="debug skip"/>
                                 <connections>
                                     <action selector="debugSkipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rft-3O-0Ol"/>
@@ -101,12 +103,14 @@
                         <constraints>
                             <constraint firstItem="IxR-Bc-tUS" firstAttribute="top" secondItem="DFf-Yr-dBC" secondAttribute="bottom" constant="15" id="9aQ-4L-HIn"/>
                             <constraint firstItem="IxR-Bc-tUS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BaZ-Kt-Cze"/>
+                            <constraint firstItem="IxR-Bc-tUS" firstAttribute="top" secondItem="uOx-Uc-RId" secondAttribute="bottom" constant="43" id="C7x-fh-0rE"/>
                             <constraint firstItem="65m-9M-FTt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="EBb-06-bwP"/>
                             <constraint firstItem="DFf-Yr-dBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kcg-DG-GSa"/>
                             <constraint firstItem="IxR-Bc-tUS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.22" id="LWK-Rm-Shm"/>
                             <constraint firstItem="65m-9M-FTt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dk1-01-oRf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IxR-Bc-tUS" secondAttribute="bottom" constant="20" id="jda-sA-4fh"/>
                             <constraint firstItem="DFf-Yr-dBC" firstAttribute="top" secondItem="65m-9M-FTt" secondAttribute="bottom" constant="15" id="k7r-Dg-RX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uOx-Uc-RId" secondAttribute="trailing" constant="32" id="n6E-ul-MCO"/>
                             <constraint firstItem="65m-9M-FTt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ng1-IG-9nd"/>
                             <constraint firstItem="DFf-Yr-dBC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="od7-HO-WgD"/>
                             <constraint firstItem="IxR-Bc-tUS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uvw-H2-0uL"/>

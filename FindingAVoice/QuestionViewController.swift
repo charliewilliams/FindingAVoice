@@ -108,8 +108,8 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     private func log(correct: Bool, wasValid: Bool) {
         
         Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: wasValid ? "valid" : "invalid", wasCorrect: correct, measurement: "timeElapsed", duration: perQuestionTimer.secondsElapsed, data: [
-            "ruleSet":ruleSet.userFacingDescription,
-            "ruleSetHistory":ruleSet.debugFullHistory])
+            "ruleSet": ruleSet.userFacingDescription,
+            "ruleSetHistory": ruleSet.debugFullHistory])
     }
     
     func popoverWillDismiss() {
