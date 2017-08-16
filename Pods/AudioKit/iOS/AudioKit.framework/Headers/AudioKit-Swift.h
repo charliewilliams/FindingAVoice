@@ -155,6 +155,7 @@ SWIFT_CLASS("_TtC8AudioKit6AKNode")
 @property (nonatomic, strong) AVAudioNode * _Nonnull avAudioNode;
 /// Create the node
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Initialize the node
 - (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach OBJC_DESIGNATED_INITIALIZER;
 /// Connect this node to another
 - (void)addConnectionPoint:(AKNode * _Nonnull)node bus:(NSInteger)bus;
@@ -207,20 +208,34 @@ SWIFT_CLASS("_TtC8AudioKit10AKADSRView")
 /// Function to call when the values of the ADSR changes
 @property (nonatomic, copy) void (^ _Nullable callback)(double, double, double, double);
 /// / Color Declarations
+/// Color in the attack portion of the UI element
 @property (nonatomic, strong) UIColor * _Nonnull attackColor;
+/// Color in the decay portion of the UI element
 @property (nonatomic, strong) UIColor * _Nonnull decayColor;
+/// Color in the sustain portion of the UI element
 @property (nonatomic, strong) UIColor * _Nonnull sustainColor;
+/// Color in the release portion of the UI element
 @property (nonatomic, strong) UIColor * _Nonnull releaseColor;
+/// Width of the envelope curve
 @property (nonatomic) CGFloat curveStrokeWidth;
+/// Color of the envelope curve
 @property (nonatomic, strong) UIColor * _Nonnull curveColor;
+/// Initialize the view, usually with a callback
 - (nonnull instancetype)initWithCallback:(void (^ _Nullable)(double, double, double, double))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialization of the view from within interface builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Perform necessary operation to allow the view to be rendered in interface builder
 - (void)prepareForInterfaceBuilder;
+/// Size of the view
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
+/// Requeire a constraint based layout with interface builder
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstraintBasedLayout;)
 + (BOOL)requiresConstraintBasedLayout SWIFT_WARN_UNUSED_RESULT;
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle moving touches
 - (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Draw the view
 - (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -229,6 +244,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstra
 /// Triggerable classic ADSR envelope
 SWIFT_CLASS("_TtC8AudioKit19AKAmplitudeEnvelope")
 @interface AKAmplitudeEnvelope : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -268,6 +284,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// signal. The output signal looks similar to that of a classic VU meter.
 SWIFT_CLASS("_TtC8AudioKit18AKAmplitudeTracker")
 @interface AKAmplitudeTracker : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -414,6 +431,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger completedA
 /// Not so simple audio playback class
 SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 @interface AKAudioPlayer : AKNode
+/// Buffer to be palyed
 @property (nonatomic, strong) AVAudioPCMBuffer * _Nullable audioFileBuffer;
 /// Will be triggered when AKAudioPlayer has finished to play.
 /// (will not as long as loop is on)
@@ -422,11 +440,13 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 @property (nonatomic) BOOL looping;
 /// Boolean indicating to play the buffer in reverse
 @property (nonatomic) BOOL reversed;
-/// Set the fade in time
+/// Fade in duration
 @property (nonatomic) double fadeInTime;
+/// Fade out duration
 @property (nonatomic) double fadeOutTime;
-/// return the current played AKAudioFile
+/// The current played AKAudioFile
 @property (nonatomic, readonly, strong) AKAudioFile * _Nonnull audioFile;
+/// Path to the currently loaded AKAudioFile
 @property (nonatomic, readonly, copy) NSString * _Nonnull path;
 /// Total duration of one loop through of the file
 @property (nonatomic, readonly) double duration;
@@ -449,6 +469,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 /// Sets the time in the future when playback will commence. Recommend using play(from:to:avTime) instead.
 /// this will be deprecated
 @property (nonatomic) double scheduledTime;
+/// Sheduled time
 @property (nonatomic, strong) AVAudioTime * _Nullable scheduledAVTime;
 /// Initialize the audio player
 /// Notice that completionCallBack will be triggered from a
@@ -476,6 +497,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 - (void)stop;
 /// Pause playback
 - (void)pause;
+/// Restart playback from current position
 - (void)resume;
 /// resets in and out times for playing
 - (BOOL)reloadFileAndReturnError:(NSError * _Nullable * _Nullable)error;
@@ -507,7 +529,9 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 /// important that this value be the same for all of them as a reference point.
 ///
 - (void)playFrom:(double)time to:(double)endTime avTime:(AVAudioTime * _Nullable)avTime;
+/// Convert to AVAudioTime
 + (AVAudioTime * _Nonnull)secondsToAVAudioTimeWithHostTime:(uint64_t)hostTime time:(double)time SWIFT_WARN_UNUSED_RESULT;
+/// Stop playback after next loop completes
 - (void)stopAtNextLoopEnd;
 - (void)disconnect;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -518,6 +542,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 /// An automatic wah effect, ported from Guitarix via Faust.
 SWIFT_CLASS("_TtC8AudioKit9AKAutoWah")
 @interface AKAutoWah : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -557,6 +582,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// altered in any other respect.
 SWIFT_CLASS("_TtC8AudioKit10AKBalancer")
 @interface AKBalancer : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -580,6 +606,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit27AKBandPassButterworthFilter")
 @interface AKBandPassButterworthFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -611,6 +638,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit29AKBandRejectButterworthFilter")
 @interface AKBandRejectButterworthFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -641,6 +669,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This will digitally degrade a signal.
 SWIFT_CLASS("_TtC8AudioKit12AKBitCrusher")
 @interface AKBitCrusher : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -668,8 +697,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// A button that will pull up a Bluetooth MIDI menu
 SWIFT_CLASS("_TtC8AudioKit21AKBluetoothMIDIButton")
 @interface AKBluetoothMIDIButton : UIButton
+/// Handle touches
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -679,6 +710,7 @@ SWIFT_CLASS("_TtC8AudioKit21AKBluetoothMIDIButton")
 /// Stereo Booster
 SWIFT_CLASS("_TtC8AudioKit9AKBooster")
 @interface AKBooster : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -693,7 +725,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @property (nonatomic) double dB;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
-/// Initialize this gainner node
+/// Initialize this booster node
 /// \param input AKNode whose output will be amplified
 ///
 /// \param gain Amplification factor (Default: 1, Minimum: 0)
@@ -711,6 +743,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Faust-based pink noise generator
 SWIFT_CLASS("_TtC8AudioKit15AKBrownianNoise")
 @interface AKBrownianNoise : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -732,13 +765,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// A button, mainly used for playgrounds, but could be useful in your own projects
 SWIFT_CLASS("_TtC8AudioKit8AKButton")
 @interface AKButton : UIView
+/// Text to display on the button
 @property (nonatomic, copy) NSString * _Nonnull title;
+/// Background color of the button
 @property (nonatomic, strong) UIColor * _Nonnull color;
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Initialize the button
 - (nonnull instancetype)initWithTitle:(NSString * _Nonnull)title color:(UIColor * _Nonnull)color frame:(CGRect)frame callback:(NSString * _Nonnull (^ _Nonnull)(void))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialize the button within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Draw the button
 - (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -748,6 +788,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKButton")
 /// primarily used for playgrounds, but potentially useful in your own code.
 SWIFT_CLASS("_TtC8AudioKit14AKBypassButton")
 @interface AKBypassButton : UIView
+/// Hanldes new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 /// Required initializer
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -761,6 +802,7 @@ SWIFT_CLASS("_TtC8AudioKit14AKBypassButton")
 /// Bare bones implementation of AKPolyphonic protocol
 SWIFT_CLASS("_TtC8AudioKit16AKPolyphonicNode")
 @interface AKPolyphonicNode : AKNode
+/// Global tuning table used by AKPolyphonicNode (AKNode classes adopting AKPolyphonic protocol)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTuningTable * _Nonnull tuningTable;)
 + (AKTuningTable * _Nonnull)tuningTable SWIFT_WARN_UNUSED_RESULT;
 + (void)setTuningTable:(AKTuningTable * _Nonnull)value;
@@ -870,6 +912,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKCallbackInstrument")
 /// decorrelation delay lines in parallel at the output.
 SWIFT_CLASS("_TtC8AudioKit16AKChowningReverb")
 @interface AKChowningReverb : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -890,6 +933,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// STK Clarinet
 SWIFT_CLASS("_TtC8AudioKit10AKClarinet")
 @interface AKClarinet : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -931,6 +975,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// methods.
 SWIFT_CLASS("_TtC8AudioKit9AKClipper")
 @interface AKClipper : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -961,6 +1006,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Output from a comb filter will appear only after loopDuration seconds.
 SWIFT_CLASS("_TtC8AudioKit18AKCombFilterReverb")
 @interface AKCombFilterReverb : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -991,6 +1037,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit Compressor based on Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit12AKCompressor")
 @interface AKCompressor : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Threshold (dB) ranges from -40 to 20 (Default: -20)
@@ -1042,6 +1089,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// audio file as an impulse response.
 SWIFT_CLASS("_TtC8AudioKit13AKConvolution")
 @interface AKConvolution : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -1069,6 +1117,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// characteristic impedance.
 SWIFT_CLASS("_TtC8AudioKit16AKCostelloReverb")
 @interface AKCostelloReverb : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1110,13 +1159,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 
 @class AKSporthStack;
 
+/// Custom Sporth Unit Generator (Ugen)
 SWIFT_CLASS("_TtC8AudioKit12AKCustomUgen")
 @interface AKCustomUgen : NSObject
+/// Name of the Ugen
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
+/// String describing the arugments: f for float / s for string, e.g. “fsf”
 @property (nonatomic, readonly, copy) NSString * _Nonnull argTypes;
+/// Custom object that may be passed in
 @property (nonatomic) id _Nullable userData;
+/// The sporth stack
 @property (nonatomic, strong) AKSporthStack * _Nonnull stack;
+/// Duplicate the Ugen
 - (AKCustomUgen * _Nonnull)duplicate SWIFT_WARN_UNUSED_RESULT;
+/// Executre the compute function
 @property (nonatomic, readonly) void (* _Nonnull callComputeFunction)(AKCustomUgen * _Nonnull);
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
@@ -1126,6 +1182,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKCustomUgen")
 /// Based on work by Perry Cook.
 SWIFT_CLASS("_TtC8AudioKit9AKDCBlock")
 @interface AKDCBlock : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -1146,6 +1203,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s Decimator from the Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit11AKDecimator")
 @interface AKDecimator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)
@@ -1245,6 +1303,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKDevice")
 /// AudioKit version of Apple’s Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit12AKDistortion")
 @interface AKDistortion : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Delay (Milliseconds) ranges from 0.1 to 500 (Default: 0.1)
@@ -1340,6 +1399,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// produce a droplet of water.
 SWIFT_CLASS("_TtC8AudioKit6AKDrip")
 @interface AKDrip : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1412,6 +1472,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKDryWetMixer")
 /// Dynamic range compressor from Faust
 SWIFT_CLASS("_TtC8AudioKit24AKDynamicRangeCompressor")
 @interface AKDynamicRangeCompressor : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1450,6 +1511,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit19AKDynamicsProcessor")
 @interface AKDynamicsProcessor : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Threshold (dB) ranges from -40 to 20 (Default: -20)
@@ -1517,6 +1579,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// is less than 1, a notch is formed around the center frequency.
 SWIFT_CLASS("_TtC8AudioKit17AKEqualizerFilter")
 @interface AKEqualizerFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1551,6 +1614,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit Expander based on Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit10AKExpander")
 @interface AKExpander : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)
@@ -1617,6 +1681,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKFFTTap")
 /// Classic FM Synthesis audio generation.
 SWIFT_CLASS("_TtC8AudioKit14AKFMOscillator")
 @interface AKFMOscillator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1660,6 +1725,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Frequency Modulation Polyphonic Oscillator
 SWIFT_CLASS("_TtC8AudioKit18AKFMOscillatorBank")
 @interface AKFMOscillatorBank : AKPolyphonicNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1698,6 +1764,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// appear immediately.
 SWIFT_CLASS("_TtC8AudioKit29AKFlatFrequencyResponseReverb")
 @interface AKFlatFrequencyResponseReverb : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1728,6 +1795,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// STK Flutee
 SWIFT_CLASS("_TtC8AudioKit7AKFlute")
 @interface AKFlute : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1770,6 +1838,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// limit on the number of overlaps.
 SWIFT_CLASS("_TtC8AudioKit15AKFormantFilter")
 @interface AKFormantFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1802,6 +1871,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This is based on an algorithm originally created by Miller Puckette.
 SWIFT_CLASS("_TtC8AudioKit18AKFrequencyTracker")
 @interface AKFrequencyTracker : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -1831,6 +1901,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit27AKHighPassButterworthFilter")
 @interface AKHighPassButterworthFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1857,6 +1928,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s HighPassFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit16AKHighPassFilter")
 @interface AKHighPassFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Cutoff Frequency (Hz) ranges from 10 to 22050 (Default: 6900)
@@ -1889,6 +1961,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s HighShelfFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit17AKHighShelfFilter")
 @interface AKHighShelfFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Cut Off Frequency (Hz) ranges from 10000 to 22050 (Default: 10000)
@@ -1921,6 +1994,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit36AKHighShelfParametricEqualizerFilter")
 @interface AKHighShelfParametricEqualizerFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -1955,25 +2029,44 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Clickable keyboard mainly used for AudioKit playgrounds
 SWIFT_CLASS("_TtC8AudioKit14AKKeyboardView")
 @interface AKKeyboardView : UIView
+/// Number of octaves displayed at once
 @property (nonatomic) NSInteger octaveCount;
+/// Lowest octave dispayed
 @property (nonatomic) NSInteger firstOctave;
+/// Relative measure of the height of the black keys
 @property (nonatomic) CGFloat topKeyHeightRatio;
+/// Color of the polyphonic toggle button
 @property (nonatomic, strong) UIColor * _Nonnull polyphonicButton;
+/// White key color
 @property (nonatomic, strong) UIColor * _Nonnull whiteKeyOff;
+/// Black key color
 @property (nonatomic, strong) UIColor * _Nonnull blackKeyOff;
+/// Activated key color
 @property (nonatomic, strong) UIColor * _Nonnull keyOnColor;
+/// Allows multiple notes to play concurrently
 @property (nonatomic) BOOL polyphonicMode;
+/// Initialize the keyboard with default info
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// Initialize the keyboard
 - (nonnull instancetype)initWithWidth:(NSInteger)width height:(NSInteger)height firstOctave:(NSInteger)firstOctave octaveCount:(NSInteger)octaveCount polyphonic:(BOOL)polyphonic OBJC_DESIGNATED_INITIALIZER;
+/// Initialization within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Set up the view for rendering in Interface Builder
 - (void)prepareForInterfaceBuilder;
+/// Keyboard view size
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
+/// Require constraints
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstraintBasedLayout;)
 + (BOOL)requiresConstraintBasedLayout SWIFT_WARN_UNUSED_RESULT;
+/// Draw the view
 - (void)drawRect:(CGRect)rect;
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle touches completed
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle moved touches
 - (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle stopped touches
 - (void)touchesCancelled:(NSSet<UITouch *> * _Nullable)touches withEvent:(UIEvent * _Nullable)event;
 @end
 
@@ -1981,6 +2074,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstra
 /// Analog model of the Korg 35 Lowpass Filter
 SWIFT_CLASS("_TtC8AudioKit19AKKorgLowPassFilter")
 @interface AKKorgLowPassFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2016,6 +2110,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit26AKLowPassButterworthFilter")
 @interface AKLowPassButterworthFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2042,6 +2137,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s LowPassFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit15AKLowPassFilter")
 @interface AKLowPassFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Cutoff Frequency (Hz) ranges from 10 to 22050 (Default: 6900)
@@ -2074,6 +2170,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s LowShelfFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit16AKLowShelfFilter")
 @interface AKLowShelfFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Cutoff Frequency (Hz) ranges from 10 to 200 (Default: 80)
@@ -2106,6 +2203,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit35AKLowShelfParametricEqualizerFilter")
 @interface AKLowShelfParametricEqualizerFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2277,6 +2375,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKMIDISampler")
 - (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
 /// Stop a note
 - (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
+/// Discard all virtual ports
 - (void)destroyEndpoint;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2285,6 +2384,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKMIDISampler")
 /// Physical model of a 4 course mandolin
 SWIFT_CLASS("_TtC8AudioKit10AKMandolin")
 @interface AKMandolin : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2353,6 +2453,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Metal Bar Physical Model
 SWIFT_CLASS("_TtC8AudioKit10AKMetalBar")
 @interface AKMetalBar : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2401,6 +2502,58 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 - (void)stop;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
+@end
+
+
+/// Operation-based generator
+SWIFT_CLASS("_TtC8AudioKit20AKOperationGenerator")
+@interface AKOperationGenerator : AKNode
+/// Four letter unique description of the node
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
++ (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
+/// Tells whether the node is processing (ie. started, playing, or active)
+@property (nonatomic, readonly) BOOL isStarted;
+/// Sporth language snippet
+@property (nonatomic, copy) NSString * _Nonnull sporth;
+/// Parameters for changing internal operations
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull parameters;
+/// Initialize this generator node with a generic sporth stack and a triggering flag
+/// \param sporth String of valid Sporth code
+///
+- (nonnull instancetype)initWithSporth:(NSString * _Nonnull)sporth customUgens:(NSArray<AKCustomUgen *> * _Nonnull)customUgens OBJC_DESIGNATED_INITIALIZER;
+/// Trigger the sound with current parameters
+- (void)trigger:(NSInteger)triggerNumber;
+/// Function to start, play, or activate the node, all do the same thing
+- (void)start;
+/// Function to stop or bypass the node, both are equivalent
+- (void)stop;
+/// Restart from scratch
+- (void)restart;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
+@end
+
+
+/// Useful metronome class that you can utilize for your own projects
+SWIFT_CLASS("_TtC8AudioKit11AKMetronome")
+@interface AKMetronome : AKOperationGenerator
+/// BPM
+@property (nonatomic) double tempo;
+/// Number of clicks in one measure
+@property (nonatomic) NSInteger subdivision;
+/// First click sound frequency
+@property (nonatomic) double frequency1;
+/// Non-first click sound frequency
+@property (nonatomic) double frequency2;
+/// The value of the current beat
+@property (nonatomic) NSInteger currentBeat;
+/// Function to perform on every tick
+@property (nonatomic, copy) void (^ _Nonnull callback)(void);
+/// Initialize the metronome
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Reset the metronome
+- (void)reset;
+- (nonnull instancetype)initWithSporth:(NSString * _Nonnull)sporth customUgens:(NSArray<AKCustomUgen *> * _Nonnull)customUgens SWIFT_UNAVAILABLE;
 @end
 
 
@@ -2455,6 +2608,7 @@ SWIFT_CLASS("_TtC8AudioKit7AKMixer")
 /// filters.
 SWIFT_CLASS("_TtC8AudioKit22AKModalResonanceFilter")
 @interface AKModalResonanceFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2489,6 +2643,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// representation of the original analogue filter.
 SWIFT_CLASS("_TtC8AudioKit12AKMoogLadder")
 @interface AKMoogLadder : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2533,6 +2688,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// between an arbitrary number of wavetables.
 SWIFT_CLASS("_TtC8AudioKit20AKMorphingOscillator")
 @interface AKMorphingOscillator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2563,6 +2719,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// between an arbitrary number of wavetables.
 SWIFT_CLASS("_TtC8AudioKit24AKMorphingOscillatorBank")
 @interface AKMorphingOscillatorBank : AKPolyphonicNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2648,6 +2805,7 @@ SWIFT_CLASS("_TtC8AudioKit14AKNodeRecorder")
 @interface AKNodeRecorder : NSObject
 /// True if we are recording.
 @property (nonatomic, readonly) BOOL isRecording;
+/// An optional duration for the recording to auto-stop when reached
 @property (nonatomic) double durationToRecord;
 /// Duration of recording
 @property (nonatomic, readonly) double recordedDuration;
@@ -2674,6 +2832,7 @@ SWIFT_CLASS("_TtC8AudioKit14AKNodeRecorder")
 /// Operation-based effect
 SWIFT_CLASS("_TtC8AudioKit17AKOperationEffect")
 @interface AKOperationEffect : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -2695,38 +2854,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
-/// Operation-based generator
-SWIFT_CLASS("_TtC8AudioKit20AKOperationGenerator")
-@interface AKOperationGenerator : AKNode
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
-+ (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
-/// Tells whether the node is processing (ie. started, playing, or active)
-@property (nonatomic, readonly) BOOL isStarted;
-/// Sporth language snippet
-@property (nonatomic, copy) NSString * _Nonnull sporth;
-/// Parameters for changing internal operations
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull parameters;
-/// Initialize this generator node with a generic sporth stack and a triggering flag
-/// \param sporth String of valid Sporth code
-///
-- (nonnull instancetype)initWithSporth:(NSString * _Nonnull)sporth customUgens:(NSArray<AKCustomUgen *> * _Nonnull)customUgens OBJC_DESIGNATED_INITIALIZER;
-/// Trigger the sound with current parameters
-- (void)trigger:(NSInteger)triggerNumber;
-/// Function to start, play, or activate the node, all do the same thing
-- (void)start;
-/// Function to stop or bypass the node, both are equivalent
-- (void)stop;
-/// Restart from scratch
-- (void)restart;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
-@end
-
 
 /// Reads from the table sequentially and repeatedly at given frequency. Linear
 /// interpolation is applied for table look up from internal phase values.
 SWIFT_CLASS("_TtC8AudioKit12AKOscillator")
 @interface AKOscillator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2755,6 +2888,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// interpolation is applied for table look up from internal phase values.
 SWIFT_CLASS("_TtC8AudioKit16AKOscillatorBank")
 @interface AKOscillatorBank : AKPolyphonicNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2809,6 +2943,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKOutputWaveformPlot")
 /// Pulse-Width Modulating Oscillator
 SWIFT_CLASS("_TtC8AudioKit15AKPWMOscillator")
 @interface AKPWMOscillator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2852,6 +2987,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Pulse-Width Modulating Oscillator Bank
 SWIFT_CLASS("_TtC8AudioKit19AKPWMOscillatorBank")
 @interface AKPWMOscillatorBank : AKPolyphonicNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2900,6 +3036,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Stereo Panner
 SWIFT_CLASS("_TtC8AudioKit8AKPanner")
 @interface AKPanner : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2926,6 +3063,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s PeakLimiter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit13AKPeakLimiter")
 @interface AKPeakLimiter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Attack Time (Secs) ranges from 0.001 to 0.03 (Default: 0.012)
@@ -2962,6 +3100,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit34AKPeakingParametricEqualizerFilter")
 @interface AKPeakingParametricEqualizerFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -2993,6 +3132,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// A class to periodically perform a callback
 SWIFT_CLASS("_TtC8AudioKit18AKPeriodicFunction")
 @interface AKPeriodicFunction : AKOperationGenerator
 /// Repeat this loop at a given period with a code block
@@ -3014,6 +3154,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKPeriodicFunction")
 /// Phase Distortion Oscillator
 SWIFT_CLASS("_TtC8AudioKit27AKPhaseDistortionOscillator")
 @interface AKPhaseDistortionOscillator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3043,6 +3184,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Phase Distortion Oscillator Bank
 SWIFT_CLASS("_TtC8AudioKit31AKPhaseDistortionOscillatorBank")
 @interface AKPhaseDistortionOscillatorBank : AKPolyphonicNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3075,6 +3217,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// mincer allows time and pitch to be controlled separately.
 SWIFT_CLASS("_TtC8AudioKit20AKPhaseLockedVocoder")
 @interface AKPhaseLockedVocoder : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3110,6 +3253,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// from the Guitarix project.
 SWIFT_CLASS("_TtC8AudioKit8AKPhaser")
 @interface AKPhaser : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3168,6 +3312,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Faust-based pink noise generator
 SWIFT_CLASS("_TtC8AudioKit11AKPinkNoise")
 @interface AKPinkNoise : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3192,6 +3337,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Faust-based pitch shfiter
 SWIFT_CLASS("_TtC8AudioKit14AKPitchShifter")
 @interface AKPitchShifter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3243,17 +3389,28 @@ SWIFT_CLASS("_TtC8AudioKit16AKPlaygroundLoop")
 
 @class UILabel;
 
+/// UIView for playgrounds allowing live views to be generated easily
 SWIFT_CLASS("_TtC8AudioKit16AKPlaygroundView")
 @interface AKPlaygroundView : UIView
+/// Default standard element height (buttons, text)
 @property (nonatomic) CGFloat elementHeight;
+/// Current Y position
 @property (nonatomic) NSInteger yPosition;
+/// Spacing height between elements
 @property (nonatomic) NSInteger spacing;
+/// Initialize the playground view
 - (nonnull instancetype)initWithFrame:(CGRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+/// Initialize with default size
 - (nonnull instancetype)init;
+/// Override this function in subclasses
 - (void)setup;
+/// Add a title to the playground view
 - (UILabel * _Nonnull)addTitle:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+/// Add label text
 - (UILabel * _Nonnull)addLabel:(NSString * _Nonnull)text SWIFT_WARN_UNUSED_RESULT;
+/// Add the subview, and move the Y Position down
 - (void)addSubview:(UIView * _Nullable)potentialView;
+/// Initialization within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -3261,6 +3418,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKPlaygroundView")
 /// Karplus-Strong plucked string instrument.
 SWIFT_CLASS("_TtC8AudioKit15AKPluckedString")
 @interface AKPluckedString : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3301,16 +3459,31 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+@class UIFont;
 
+/// Preset view scoller
 SWIFT_CLASS("_TtC8AudioKit18AKPresetLoaderView")
 @interface AKPresetLoaderView : UIView
+/// Text to display as a label
 @property (nonatomic, copy) NSString * _Nonnull label;
+/// The presets to scroll through
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull presets;
+/// Function to call when the preset is changed
 @property (nonatomic, copy) void (^ _Nonnull callback)(NSString * _Nonnull);
-- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (nonnull instancetype)initWithPresets:(NSArray<NSString *> * _Nonnull)presets frame:(CGRect)frame callback:(void (^ _Nonnull)(NSString * _Nonnull))callback OBJC_DESIGNATED_INITIALIZER;
+/// Font size
+@property (nonatomic) CGFloat fontSize;
+/// Font
+@property (nonatomic, strong) UIFont * _Nonnull font;
+/// Initialize the preset loader view
+- (nonnull instancetype)initWithPresets:(NSArray<NSString *> * _Nonnull)presets frame:(CGRect)frame font:(UIFont * _Nonnull)font fontSize:(CGFloat)fontSize initialIndex:(NSInteger)initialIndex callback:(void (^ _Nonnull)(NSString * _Nonnull))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialize in Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Draw the preset loader
 - (void)drawRect:(CGRect)rect;
+/// Handle new touches
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle moved touches
+- (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -3320,25 +3493,42 @@ SWIFT_CLASS("_TtC8AudioKit16AKPropertySlider")
 @interface AKPropertySlider : UIView
 /// Current value of the slider
 @property (nonatomic) double value;
+/// Minimum, left-most value
 @property (nonatomic) double minimum;
+/// Maximum, right-most value
 @property (nonatomic) double maximum;
+/// Text shown on the slider
 @property (nonatomic, copy) NSString * _Nonnull property;
+/// Format for the number shown on the slider
 @property (nonatomic, copy) NSString * _Nonnull format;
+/// Background color
 @property (nonatomic, strong) UIColor * _Nonnull bgColor;
+/// Slider overlay color
 @property (nonatomic, strong) UIColor * _Nonnull sliderColor;
+/// Text color
 @property (nonatomic, strong) UIColor * _Nonnull textColor;
+/// Font size
 @property (nonatomic) CGFloat fontSize;
+/// Function to call when value changes
 @property (nonatomic, copy) void (^ _Nullable callback)(double);
-@property (nonatomic) CGPoint lastTouch;
+/// Initialize the slider
 - (nonnull instancetype)initWithProperty:(NSString * _Nonnull)property format:(NSString * _Nonnull)format value:(double)value minimum:(double)minimum maximum:(double)maximum color:(UIColor * _Nonnull)color frame:(CGRect)frame callback:(void (^ _Nonnull)(double))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialization with no details
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+/// Initialization within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+/// Actions to perform to make sure the view is renderable in Interface Builder
 - (void)prepareForInterfaceBuilder;
+/// Require constraint-based layout
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstraintBasedLayout;)
 + (BOOL)requiresConstraintBasedLayout SWIFT_WARN_UNUSED_RESULT;
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle moved touches
 - (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Give the slider a random value
 - (double)randomize SWIFT_WARN_UNUSED_RESULT;
+/// Draw the slider
 - (void)drawRect:(CGRect)rect;
 @end
 
@@ -3347,6 +3537,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstra
 /// module.
 SWIFT_CLASS("_TtC8AudioKit16AKResonantFilter")
 @interface AKResonantFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3374,10 +3565,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// View to choose from audio files to use in playgrounds
 SWIFT_CLASS("_TtC8AudioKit30AKResourcesAudioFileLoaderView")
 @interface AKResourcesAudioFileLoaderView : UIView
+/// Handle touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Initialize the resource loader
 - (nonnull instancetype)initWithPlayer:(AKAudioPlayer * _Nonnull)player filenames:(NSArray<NSString *> * _Nonnull)filenames frame:(CGRect)frame;
+/// Draw the resource loader
 - (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -3457,6 +3652,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKReverb2")
 /// STK RhodesPiano
 SWIFT_CLASS("_TtC8AudioKit13AKRhodesPiano")
 @interface AKRhodesPiano : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3493,6 +3689,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// AudioKit version of Apple’s Ring Modulator from the Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit15AKRingModulator")
 @interface AKRingModulator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Frequency1 (Hertz) ranges from 0.5 to 8000 (Default: 100)
@@ -3531,6 +3728,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Emulation of the Roland TB-303 filter
 SWIFT_CLASS("_TtC8AudioKit19AKRolandTB303Filter")
 @interface AKRolandTB303Filter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3597,8 +3795,10 @@ SWIFT_CLASS("_TtC8AudioKit19AKRollingOutputPlot")
 @end
 
 
+/// Audio player that loads a sample into memory
 SWIFT_CLASS("_TtC8AudioKit14AKSamplePlayer")
 @interface AKSamplePlayer : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3615,8 +3815,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Loop Enabled - if enabled, the sample will loop back to the startpoint when the endpoint is reached.
 /// When disabled, the sample will play through once from startPoint to endPoint
 @property (nonatomic) BOOL loopEnabled;
+/// Number of sample in the audio stored in memory
 @property (nonatomic, readonly) uint32_t size;
+/// Position in the audio file from 0 - 1
 @property (nonatomic, readonly) double normalizedPosition;
+/// Position in the audio in samples, but represented as a double since
+/// you could conceivably be at a non-integer sample
 @property (nonatomic, readonly) double position;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
@@ -3628,8 +3832,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 - (void)stop;
 /// Play from a certain sample
 - (void)playFrom:(uint32_t)from;
+/// Play from a certain sample for a certain number of samples
 - (void)playFrom:(uint32_t)from length:(uint32_t)length;
+/// Play from a certain sample to an end sample
 - (void)playFrom:(uint32_t)from to:(uint32_t)to;
+/// Load a new audio file into memory
 - (void)loadSoundWithFile:(AVAudioFile * _Nonnull)file;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
@@ -3697,6 +3904,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL defaultToSpeaker;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL useBluetooth;)
 + (BOOL)useBluetooth SWIFT_WARN_UNUSED_RESULT;
 + (void)setUseBluetooth:(BOOL)value;
+/// Additional control over the options to use for bluetooth
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) AVAudioSessionCategoryOptions bluetoothOptions;)
 + (AVAudioSessionCategoryOptions)bluetoothOptions SWIFT_WARN_UNUSED_RESULT;
 + (void)setBluetoothOptions:(AVAudioSessionCategoryOptions)value;
@@ -3731,6 +3939,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL fixTruncatedRecordings;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL disableAVAudioSessionCategoryManagement;)
 + (BOOL)disableAVAudioSessionCategoryManagement SWIFT_WARN_UNUSED_RESULT;
 + (void)setDisableAVAudioSessionCategoryManagement:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableRouteChangeHandling;)
++ (BOOL)enableRouteChangeHandling SWIFT_WARN_UNUSED_RESULT;
++ (void)setEnableRouteChangeHandling:(BOOL)value;
 /// Turn off AudioKit logging
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogging;)
 + (BOOL)enableLogging SWIFT_WARN_UNUSED_RESULT;
@@ -3742,13 +3953,21 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL enableLogging;)
 /// from Shortest: 2 power 5 samples (32 samples = 0.7 ms @ 44100 kz)
 /// to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)
 typedef SWIFT_ENUM(NSInteger, BufferLength) {
+/// Shortest
   BufferLengthShortest = 5,
+/// Very Short
   BufferLengthVeryShort = 6,
+/// Short
   BufferLengthShort = 7,
+/// Medium
   BufferLengthMedium = 8,
+/// Long
   BufferLengthLong = 9,
+/// Very Long
   BufferLengthVeryLong = 10,
+/// Huge
   BufferLengthHuge = 11,
+/// Longest
   BufferLengthLongest = 12,
 };
 
@@ -3782,6 +4001,7 @@ typedef SWIFT_ENUM(NSInteger, SessionCategory) {
 /// Audio is not silenced by silent switch and screen lock - audio is non mixable.
 /// To allow mixing see AVAudioSessionCategoryOptionMixWithOthers.
   SessionCategoryPlayAndRecord = 4,
+/// Disables playback and recording
   SessionCategoryAudioProcessing = 5,
 /// Use to multi-route audio. May be used on input, output, or both.
   SessionCategoryMultiRoute = 6,
@@ -3791,6 +4011,7 @@ typedef SWIFT_ENUM(NSInteger, SessionCategory) {
 /// STK Shaker
 SWIFT_CLASS("_TtC8AudioKit8AKShaker")
 @interface AKShaker : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3816,14 +4037,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// Incrementor view, normally used for MIDI presets, but could be useful elsehwere
 SWIFT_CLASS("_TtC8AudioKit9AKStepper")
 @interface AKStepper : UIView
+/// Text / label to display
 @property (nonatomic, copy) NSString * _Nonnull text;
+/// Current value
 @property (nonatomic) uint8_t value;
+/// Function to call on change
 @property (nonatomic, copy) void (^ _Nonnull callback)(uint8_t);
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Initialize the stepper view
 - (nonnull instancetype)initWithText:(NSString * _Nonnull)text value:(uint8_t)value frame:(CGRect)frame callback:(void (^ _Nonnull)(uint8_t))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialize within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Draw the stepper
 - (void)drawRect:(CGRect)rect;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -3832,6 +4061,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKStepper")
 /// Stereo Field Limiter
 SWIFT_CLASS("_TtC8AudioKit20AKStereoFieldLimiter")
 @interface AKStereoFieldLimiter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3880,6 +4110,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKStereoInput")
 /// resonances to an input signal.
 SWIFT_CLASS("_TtC8AudioKit17AKStringResonator")
 @interface AKStringResonator : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3940,6 +4171,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKSynthSnare")
 /// Distortion using a modified hyperbolic tangent function.
 SWIFT_CLASS("_TtC8AudioKit16AKTanhDistortion")
 @interface AKTanhDistortion : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -3978,12 +4210,19 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// This is primarily for the telephone page in the Synthesis playground
 SWIFT_CLASS("_TtC8AudioKit15AKTelephoneView")
 @interface AKTelephoneView : UIView
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Handle new touches
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+/// Initialize the telephone view
 - (nonnull instancetype)initWithFrame:(CGRect)frame callback:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))callback OBJC_DESIGNATED_INITIALIZER;
+/// Initialize within Interface Builder
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Draw the telephone view
 - (void)drawRect:(CGRect)rect;
+/// Draw one key
 + (void)drawKeyWithText:(NSString * _Nonnull)text numeral:(NSString * _Nonnull)numeral isPressed:(BOOL)isPressed;
+/// Draw one key
 + (void)drawCenteredKeyWithNumeral:(NSString * _Nonnull)numeral isPressed:(BOOL)isPressed;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -3992,6 +4231,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKTelephoneView")
 /// Testing node
 SWIFT_CLASS("_TtC8AudioKit8AKTester")
 @interface AKTester : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Calculate the MD5
@@ -4016,6 +4256,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// 3-pole (18 db/oct slope) Low-Pass filter with resonance and tanh distortion.
 SWIFT_CLASS("_TtC8AudioKit24AKThreePoleLowpassFilter")
 @interface AKThreePoleLowpassFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4086,6 +4327,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKTimePitch")
 /// A complement to the AKLowPassFilter.
 SWIFT_CLASS("_TtC8AudioKit22AKToneComplementFilter")
 @interface AKToneComplementFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4112,6 +4354,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// A first-order recursive low-pass filter with variable frequency response.
 SWIFT_CLASS("_TtC8AudioKit12AKToneFilter")
 @interface AKToneFilter : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4138,6 +4381,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// Table-lookup tremolo with linear interpolation
 SWIFT_CLASS("_TtC8AudioKit9AKTremolo")
 @interface AKTremolo : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4160,6 +4404,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// STK TubularBells
 SWIFT_CLASS("_TtC8AudioKit14AKTubularBells")
 @interface AKTubularBells : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4205,6 +4450,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger midiNoteCo
 + (NSInteger)midiNoteCount SWIFT_WARN_UNUSED_RESULT;
 /// Note number for standard reference note
 @property (nonatomic) uint8_t middleCNoteNumber;
+/// Frequency of standard reference note
+/// equivalent to noteToHz: return 440. * exp2((60 - 69)/12.)
 @property (nonatomic) double middleCFrequency;
 /// Octave number for standard reference note.  Can be negative
 /// …, -2, -1, 0, 1, 2, …
@@ -4223,13 +4470,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger midiNoteCo
 
 
 @interface AKTuningTable (SWIFT_EXTENSION(AudioKit))
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (void)presetRecurrenceRelation01;
-@end
-
-
-@interface AKTuningTable (SWIFT_EXTENSION(AudioKit))
-- (NSInteger)presetHighlandBagPipes SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)presetDiaphonicTetrachord SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -4250,10 +4492,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger midiNoteCo
 
 
 @interface AKTuningTable (SWIFT_EXTENSION(AudioKit))
-/// Use a Scala file to write the tuning table
-- (void)scalaFile:(NSString * _Nonnull)filePath;
-/// Get frequencies from a Scala string
-- (NSArray<NSNumber *> * _Nullable)frequenciesFromScalaString:(NSString * _Nullable)rawStr SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
+- (NSInteger)presetHighlandBagPipes SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
+- (NSInteger)presetDiaphonicTetrachord SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -4275,6 +4517,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger midiNoteCo
 
 
 @interface AKTuningTable (SWIFT_EXTENSION(AudioKit))
+/// Use a Scala file to write the tuning table
+- (void)scalaFile:(NSString * _Nonnull)filePath;
+/// Get frequencies from a Scala string
+- (NSArray<NSNumber *> * _Nullable)frequenciesFromScalaString:(NSString * _Nullable)rawStr SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@interface AKTuningTable (SWIFT_EXTENSION(AudioKit))
+/// Default tuning table is 12ET.
 - (void)defaultTuning;
 /// Create 12-tone equal temperament
 - (void)twelveToneEqualTemperament;
@@ -4294,30 +4545,55 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger midiNoteCo
 - (NSInteger)khiasmos22Indian SWIFT_WARN_UNUSED_RESULT;
 /// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian00_17 SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian01Kalyan SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian02Bilawal SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian03Khamaj SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian04KafiOld SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian05Kafi SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian06Asawari SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian07Bhairavi SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian08Marwa SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian09Purvi SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian10Lalit2 SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian11Todi SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian12Lalit SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian13NoName;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian14AnandBhairav SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian15Bhairav SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian16JogiyaTodi SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian17Madhubanti SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian18NatBhairav SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian19AhirBhairav SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian20ChandraKanada SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian21BasantMukhari SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian22Champakali SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian23Patdeep SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian24MohanKauns SWIFT_WARN_UNUSED_RESULT;
+/// From Erv Wilson.  See http://anaphoria.com/genus.pdf
 - (NSInteger)presetPersian17NorthIndian25Parameswari SWIFT_WARN_UNUSED_RESULT;
 @end
 
@@ -4347,6 +4623,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKVariSpeed")
 /// A delay line with cubic interpolation.
 SWIFT_CLASS("_TtC8AudioKit15AKVariableDelay")
 @interface AKVariableDelay : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4376,9 +4653,64 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 @end
 
 
+/// Based on the Pink Trombone algorithm by Neil Thapen, this implements a
+/// physical model of the vocal tract glottal pulse wave. The tract model is
+/// based on the classic Kelly-Lochbaum segmented cylindrical 1d waveguide
+/// model, and the glottal pulse wave is a LF glottal pulse model.
+/// \param frequency Glottal frequency.
+///
+/// \param tonguePosition Tongue position (0-1)
+///
+/// \param tongueDiameter Tongue diameter (0-1)
+///
+/// \param tenseness Vocal tenseness. 0 = all breath. 1=fully saturated.
+///
+/// \param nasality Sets the velum size. Larger values of this creates more nasally sounds.
+///
+SWIFT_CLASS("_TtC8AudioKit12AKVocalTract")
+@interface AKVocalTract : AKNode
+/// Four letter unique description of the node
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
++ (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
+/// Ramp Time represents the speed at which parameters are allowed to change
+@property (nonatomic) double rampTime;
+/// Glottal frequency.
+@property (nonatomic) double frequency;
+/// Tongue position (0-1)
+@property (nonatomic) double tonguePosition;
+/// Tongue diameter (0-1)
+@property (nonatomic) double tongueDiameter;
+/// Vocal tenseness. 0 = all breath. 1=fully saturated.
+@property (nonatomic) double tenseness;
+/// Sets the velum size. Larger values of this creates more nasally sounds.
+@property (nonatomic) double nasality;
+/// Tells whether the node is processing (ie. started, playing, or active)
+@property (nonatomic, readonly) BOOL isStarted;
+/// Initialize this vocal tract node
+/// \param frequency Glottal frequency.
+///
+/// \param tonguePosition Tongue position (0-1)
+///
+/// \param tongueDiameter Tongue diameter (0-1)
+///
+/// \param tenseness Vocal tenseness. 0 = all breath. 1=fully saturated.
+///
+/// \param nasality Sets the velum size. Larger values of this creates more nasally sounds.
+///
+- (nonnull instancetype)initWithFrequency:(double)frequency tonguePosition:(double)tonguePosition tongueDiameter:(double)tongueDiameter tenseness:(double)tenseness nasality:(double)nasality OBJC_DESIGNATED_INITIALIZER;
+/// Function to start, play, or activate the node, all do the same thing
+- (void)start;
+/// Function to stop or bypass the node, both are equivalent
+- (void)stop;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
+@end
+
+
 /// White noise generator
 SWIFT_CLASS("_TtC8AudioKit12AKWhiteNoise")
 @interface AKWhiteNoise : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4403,6 +4735,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescri
 /// 8 FDN stereo zitareverb algorithm, imported from Faust.
 SWIFT_CLASS("_TtC8AudioKit12AKZitaReverb")
 @interface AKZitaReverb : AKNode
+/// Four letter unique description of the node
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) AudioComponentDescription ComponentDescription;)
 + (AudioComponentDescription)ComponentDescription SWIFT_WARN_UNUSED_RESULT;
 /// Ramp Time represents the speed at which parameters are allowed to change
@@ -4573,6 +4906,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTester * _Nullable t
 /// \param duration Number of seconds to test (accurate to the sample)
 ///
 + (void)auditionTestWithNode:(AKNode * _Nonnull)node duration:(double)duration;
+/// Disconnect all inputs
 + (void)disconnectAllInputs;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -4591,9 +4925,13 @@ SWIFT_CLASS("_TtC8AudioKit27MultitouchGestureRecognizer")
 /// The currently tracked collection of touches. May contain touches after they have ended,
 /// if <code>sustain</code> is set to <code>true</code>.
 @property (nonatomic, readonly, copy) NSArray<UITouch *> * _Nonnull touches;
+/// Handle new touches
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nonnull)event;
+/// Handle moved touches
 - (void)touchesMoved:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nonnull)event;
+/// Handle cancelled touches
 - (void)touchesCancelled:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nonnull)event;
+/// Handle ended touches
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nonnull)event;
 - (nonnull instancetype)initWithTarget:(id _Nullable)target action:(SEL _Nullable)action OBJC_DESIGNATED_INITIALIZER;
 @end
