@@ -59,7 +59,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         NSBackgroundColorAttributeName: UIColor.yellow,
         NSForegroundColorAttributeName: UIColor.blue,
         NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 24)
+        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 36)
     ]
     
 //    let regularAttributes: [String: Any] = [
