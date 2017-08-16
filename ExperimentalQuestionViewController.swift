@@ -72,7 +72,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
-        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 3, length: question.secondHighlight.characters.count))
+        let location = isPractice ? 3 : 0
+        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: location, length: question.secondHighlight.characters.count))
         
         return mutable
     }
@@ -81,7 +82,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         let string = isPractice ? "than \(question.firstHighlight) ?" : question.firstHighlight
         let mutable = NSMutableAttributedString(string: string)
-        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 5, length: question.firstHighlight.characters.count))
+        let location = isPractice ? 5 : 0
+        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: location, length: question.firstHighlight.characters.count))
         
         return mutable
     }
