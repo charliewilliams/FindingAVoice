@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
+class ExperimentalQuestionViewController: UIViewController, SingingDetectable, QuestionTiming, PopoverDisplaying, LockScreenDisplaying {
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songLyricsLabel: UILabel!
@@ -26,6 +26,11 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         return [higherButton, sameButton, lowerButton]
     }
     var childSingingDetectorViewController: SingingDetectorViewController!
+    
+    // Protocol conformance
+    let perQuestionTimer = QuestionTimer.shared
+    let dailyTimer = DailyTimer.shared
+    var timeExceededForToday = false
     
     var question: Question! {
         didSet {
@@ -111,6 +116,11 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         }
     }
     
+    func setButtons(enabled: Bool) {
+        
+        self.buttons.forEach { $0.isEnabled = enabled }
+    }
+    
     private func setup(withQuestion question: Question) {
         
         UIView.performWithoutAnimation {
@@ -150,7 +160,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         }, completion: { _ in
         
             delay(1) {
-                self.buttons.forEach { $0.isEnabled = true }
+                self.setButtons(enabled: true)
             }
         })
     }
@@ -160,36 +170,85 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable {
         guard let button = sender as? AnswerButton,
             let rawAnswer = sender.titleLabel?.text?.characters.first,
             let givenAnswer = Answer(rawValue: "\(rawAnswer)") else {
-                fatalError("Something went wrong")
+                assert(false, "Something went wrong")
         }
         
-        self.buttons.forEach { $0.isEnabled = false }
+        setButtons(enabled: false)
         
         if givenAnswer == question.answer {
             
             print("Hooray")
+            log(correct: true, answer: givenAnswer.rawValue)
             button.sparkle()
             
         } else {
             
             print("Boo")
+            log(correct: false, answer: question.answer.rawValue, correctAnswer: givenAnswer.rawValue)
             button.shake()
         }
         
-        delay(1.5) {
+        delay(1.5) { [weak self] in
             
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.containerViewCenterXConstraint.constant = -self.view.bounds.width
-                self.view.layoutIfNeeded()
-                
-            }, completion: { _ in
-                
-                delay(0.5) {
-                    self.question = QuestionProvider.shared.nextQuestion()
-                }
-            })
+            self?.showNextQuestionOrRound()
         }
+    }
+    
+    private func showNextQuestionOrRound() {
+        
+        guard timeExceededForToday == false else {
+            
+            showTimeExceededLockScreen()
+            return
+        }
+        
+        _showNextQuestion()
+    }
+    
+    private func _showNextQuestion() {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.containerViewCenterXConstraint.constant = -self.view.bounds.width
+            self.view.layoutIfNeeded()
+            
+        }, completion: { _ in
+            
+            delay(0.5) {
+                self.question = QuestionProvider.shared.nextQuestion()
+            }
+        })
+    }
+    
+    private func log(correct: Bool, answer: String, correctAnswer: String? = nil) {
+        
+        let knowledgeLevel = "\(question.song.knowledgeLevel!.rawValue)"
+        
+        Analytics.log(eventName: "response", eventValue: question.song.title, responseName: "response", responseValue: answer, wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
+            "first": question.firstHighlight,
+            "second": question.secondHighlight,
+            "knowledgeLevel": knowledgeLevel,
+            "difficulty": question.difficulty.rawValue
+            ])
+    }
+    
+    func popoverWillDismiss() {
+        showNextQuestionOrRound()
+    }
+}
+
+// MARK: - Timeouts
+
+extension ExperimentalQuestionViewController {
+    
+    func questionDidTimeOut() {
+        
+        setButtons(enabled: false)
+        showPopover(type: .perQuestionTimeout)
+    }
+    
+    func dailyPlayTimeExceeded() {
+        timeExceededForToday = true
     }
 }
 
