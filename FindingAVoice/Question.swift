@@ -10,7 +10,7 @@ import Foundation
 
 typealias QuestionInfo = (startPoint: Int, stepSizes: [Int])
 
-enum Difficulty {
+enum Difficulty: String {
     
     case easy
     case medium
@@ -38,6 +38,7 @@ enum Answer: String {
 struct Question {
 
     var song: Song
+    var difficulty: Difficulty
     
     var firstHighlight: String
     var secondHighlight: String
@@ -45,13 +46,11 @@ struct Question {
     var answer: Answer
     
     init(song: Song, difficulty: Difficulty) {
-        self.init(song: song, info: difficulty.info.randomItem())
-    }
-    
-    init(song: Song, info: QuestionInfo) {
         
         self.song = song
+        self.difficulty = difficulty
         
+        let info = difficulty.info.randomItem()
         let index = info.stepSizes.randomItem()
         
         firstHighlight = song.syllable(atIndex: info.startPoint)

@@ -31,9 +31,11 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     var currentQuestionNumber: Int = 0
     var currentQuestionIsValid: Bool = false
     fileprivate var ruleLabelYPosition: CGFloat = 0
+    
+    // Protocol conformance
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
-    var timeExceededForToday: Bool = false
+    var timeExceededForToday = false
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
@@ -80,8 +82,10 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBAction func validButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
+            log(correct: true, wasValid: true)
             validButton.sparkle()
         } else {
+            log(correct: false, wasValid: false)
             validButton.shake()
         }
         
@@ -91,12 +95,21 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
+            log(correct: false, wasValid: true)
             invalidButton.shake()
         } else {
+            log(correct: true, wasValid: false)
             invalidButton.sparkle()
         }
         
         handleAnyButtonPress()
+    }
+    
+    private func log(correct: Bool, wasValid: Bool) {
+        
+        Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: wasValid ? "valid" : "invalid", wasCorrect: correct, measurement: "timeElapsed", duration: perQuestionTimer.secondsElapsed, data: [
+            "ruleSet":ruleSet.userFacingDescription,
+            "ruleSetHistory":ruleSet.debugFullHistory])
     }
     
     func popoverWillDismiss() {
