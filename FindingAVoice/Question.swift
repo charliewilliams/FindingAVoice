@@ -45,6 +45,19 @@ struct Question {
     
     var answer: Answer
     
+    // Testability
+    init(song: Song, info: QuestionInfo) {
+        
+        self.song = song
+        self.difficulty = .easy
+        
+        let index = info.stepSizes.randomItem()
+        
+        firstHighlight = song.syllable(atIndex: info.startPoint)
+        secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
+        answer = Answer(rawValue: song.answers[info.startPoint][index])!
+    }
+    
     init(song: Song, difficulty: Difficulty) {
         
         self.song = song
