@@ -51,7 +51,7 @@ struct Analytics {
         ]
         
         guard let db = db else {
-            assertionFailure()
+            print("No user, can't store data")
             return
         }
         

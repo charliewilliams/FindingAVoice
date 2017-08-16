@@ -72,6 +72,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
+        let location = min(mutable.characters.count, question.secondHighlight.characters.count)
         mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: 16, length: question.secondHighlight.characters.count))
         
         return mutable
@@ -224,11 +225,12 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         let knowledgeLevel = "\(question.song.knowledgeLevel!.rawValue)"
         
-        Analytics.log(eventName: "response", eventValue: question.song.title, responseName: "response", responseValue: answer, wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
+        Analytics.log(eventName: "response", eventValue: question.song.id, responseName: "response", responseValue: answer, wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
             "first": question.firstHighlight,
             "second": question.secondHighlight,
             "knowledgeLevel": knowledgeLevel,
-            "difficulty": question.difficulty.rawValue
+            "difficulty": question.difficulty.rawValue,
+            "answer": question.answer.rawValue
             ])
     }
     

@@ -52,6 +52,9 @@ class UserHandler {
         
         ServerCoordinator.shared.handleAppLaunch(email: email, password: password) { (user, error) in
             
+            if let user = user {
+                Analytics.configure(withUser: user)
+            }
             return
             
 //            if let user = user, self.user == nil { // Don't overwrite if weird async stuff is happening
