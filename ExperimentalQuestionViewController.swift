@@ -86,6 +86,10 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         return mutable
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     init(forPractice isPractice: Bool) {
         super.init(nibName: nil, bundle: nil)
         
@@ -110,10 +114,15 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        perQuestionTimer.delegate = self
+        perQuestionTimer.reset()
+        
         for button in buttons {
             button.layer.borderColor = UIColor.blue.cgColor
             button.layer.borderWidth = 2
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
     }
     
     func setButtons(enabled: Bool) {
@@ -216,6 +225,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             
             delay(0.5) {
                 self.question = QuestionProvider.shared.nextQuestion()
+                self.perQuestionTimer.reset()
             }
         })
     }
