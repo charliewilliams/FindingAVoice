@@ -16,7 +16,7 @@ protocol ScreenReporting {
 extension ScreenReporting where Self: UIViewController {
     
     var screenName: String {
-        return String(describing: self)
+        return String(describing: type(of: self))
     }
     
     func didViewScreen() {

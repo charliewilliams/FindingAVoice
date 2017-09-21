@@ -32,6 +32,12 @@ class SignupViewController: UIViewController {
                 delay(0.5) {
                     self.dismiss(animated: true, completion: nil)
                 }
+            } else {
+
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
+
+                self.present(alert, animated: true)
             }
         }
     }

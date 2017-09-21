@@ -68,6 +68,8 @@ struct Question {
         
         firstHighlight = song.syllable(atIndex: info.startPoint)
         secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
-        answer = Answer(rawValue: song.answers[info.startPoint][index])!
+
+        let raw = song.answers[info.startPoint][index].components(separatedBy: .whitespacesAndNewlines).joined()
+        answer = Answer(rawValue: raw)!
     }
 }
