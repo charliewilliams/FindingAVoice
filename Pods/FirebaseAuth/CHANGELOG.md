@@ -1,3 +1,9 @@
+# v4.2.0
+- Adds new phone number verification API which makes use of an intelligent reCAPTCHA to verify the application.
+
+# v4.1.1
+- Improves some method documentation in headers.
+
 # v4.1.0
 - Allows the app to handle continue URL natively, e.g., from password reset
   email.

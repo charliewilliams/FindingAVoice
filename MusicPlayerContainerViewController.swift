@@ -11,7 +11,7 @@ import AVFoundation
 
 class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
 
-    fileprivate(set) static var userHasAnsweredAllSongs: Bool {
+    @objc fileprivate(set) static var userHasAnsweredAllSongs: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "userHasAnsweredAllSongs")
         }
@@ -73,8 +73,8 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         finish()
     }
     
-    var lastTime: TimeInterval = NSDate().timeIntervalSince1970
-    func resetTimer() -> TimeInterval {
+    @objc var lastTime: TimeInterval = NSDate().timeIntervalSince1970
+    @objc func resetTimer() -> TimeInterval {
         
         let now = NSDate().timeIntervalSince1970
         let elapsed = now - lastTime

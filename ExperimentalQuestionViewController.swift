@@ -22,15 +22,15 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     @IBOutlet weak var answersSectionStackView: UIStackView!
     @IBOutlet weak var practiceHelperWordsStackView: UIStackView!
     
-    var buttons: [AnswerButton] {
+    @objc var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
     }
-    var childSingingDetectorViewController: SingingDetectorViewController!
+    @objc var childSingingDetectorViewController: SingingDetectorViewController!
     
     // Protocol conformance
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
-    var timeExceededForToday = false
+    @objc var timeExceededForToday = false
     
     var question: Question! {
         didSet {
@@ -40,7 +40,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
     }
     
-    var isPractice: Bool = false {
+    @objc var isPractice: Bool = false {
         didSet {
             if !isPractice {
                 answersSectionStackView.removeArrangedSubview(practiceHelperWordsStackView)
@@ -48,18 +48,18 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
     }
     
-    let highlightedAttributesBig: [String: Any] = [
-        NSBackgroundColorAttributeName: UIColor.clear,
-        NSForegroundColorAttributeName: UIColor.red,
+    @objc let highlightedAttributesBig: [NSAttributedStringKey: Any] = [
+        .backgroundColor: UIColor.clear,
+        .foregroundColor: UIColor.red,
 //        NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-        NSFontAttributeName: UIFont.systemFont(ofSize: 36)
+        .font: UIFont.systemFont(ofSize: 36)
     ]
     
-    let highlightedAttributesSmall: [String: Any] = [
-        NSBackgroundColorAttributeName: UIColor.yellow,
-        NSForegroundColorAttributeName: UIColor.blue,
-        NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
-        NSFontAttributeName: UIFont.italicSystemFont(ofSize: 36)
+    @objc let highlightedAttributesSmall: [NSAttributedStringKey: Any] = [
+        .backgroundColor: UIColor.yellow,
+        .foregroundColor: UIColor.blue,
+        .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
+        .font: UIFont.italicSystemFont(ofSize: 36)
     ]
     
 //    let regularAttributes: [String: Any] = [
@@ -68,7 +68,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
 //        NSFontAttributeName: UIFont.systemFont(ofSize: 30)
 //    ]
     
-    var firstText: NSAttributedString {
+    @objc var firstText: NSAttributedString {
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
@@ -78,7 +78,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         return mutable
     }
     
-    var secondText: NSAttributedString {
+    @objc var secondText: NSAttributedString {
         
         let string = isPractice ? "than \(question.firstHighlight) ?" : question.firstHighlight
         let mutable = NSMutableAttributedString(string: string)
@@ -92,7 +92,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         NotificationCenter.default.removeObserver(self)
     }
     
-    init(forPractice isPractice: Bool) {
+    @objc init(forPractice isPractice: Bool) {
         super.init(nibName: nil, bundle: nil)
         
         loadViewIfNeeded()
@@ -127,7 +127,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
     }
     
-    func setButtons(enabled: Bool) {
+    @objc func setButtons(enabled: Bool) {
         
         self.buttons.forEach { $0.isEnabled = enabled }
     }
@@ -246,7 +246,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             ])
     }
     
-    func popoverWillDismiss() {
+    @objc func popoverWillDismiss() {
         showNextQuestionOrRound()
     }
 }
@@ -255,13 +255,13 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
 
 extension ExperimentalQuestionViewController {
     
-    func questionDidTimeOut() {
+    @objc func questionDidTimeOut() {
         
         setButtons(enabled: false)
         showPopover(type: .perQuestionTimeout)
     }
     
-    func dailyPlayTimeExceeded() {
+    @objc func dailyPlayTimeExceeded() {
         timeExceededForToday = true
     }
 }

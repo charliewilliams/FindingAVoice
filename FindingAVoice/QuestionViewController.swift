@@ -25,17 +25,17 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         case .hard: return 20
         }
     }
-    var numberOfQuestionsPerRound: Int = 3
-    var delayTimeBeforeShowingQuestion: TimeInterval = 5
-    var delayTimeBetweenQuestions: TimeInterval = 1
-    var currentQuestionNumber: Int = 0
-    var currentQuestionIsValid: Bool = false
+    @objc var numberOfQuestionsPerRound: Int = 3
+    @objc var delayTimeBeforeShowingQuestion: TimeInterval = 5
+    @objc var delayTimeBetweenQuestions: TimeInterval = 1
+    @objc var currentQuestionNumber: Int = 0
+    @objc var currentQuestionIsValid: Bool = false
     fileprivate var ruleLabelYPosition: CGFloat = 0
     
     // Protocol conformance
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
-    var timeExceededForToday = false
+    @objc var timeExceededForToday = false
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!
@@ -114,7 +114,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
             "ruleSetHistory": ruleSet.debugFullHistory])
     }
     
-    func popoverWillDismiss() {
+    @objc func popoverWillDismiss() {
         showNextQuestionOrRound()
     }
 }
@@ -268,13 +268,13 @@ private extension QuestionViewController {
 
 extension QuestionViewController {
     
-    func questionDidTimeOut() {
+    @objc func questionDidTimeOut() {
         
         setButtons(enabled: false)
         showPopover(type: .perQuestionTimeout)
     }
     
-    func dailyPlayTimeExceeded() {
+    @objc func dailyPlayTimeExceeded() {
         timeExceededForToday = true
     }
 }

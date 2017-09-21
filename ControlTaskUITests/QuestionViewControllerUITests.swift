@@ -20,7 +20,7 @@ class QuestionViewControllerUITests: XCTestCase {
         app.launchArguments = ["UITestingIgnoreDailyTimer"]
         app.launch()
         
-        XCUIDevice.shared().orientation = .landscapeRight
+        XCUIDevice.shared.orientation = .landscapeRight
         
         getToQuestionViewController()
     }

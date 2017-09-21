@@ -16,7 +16,7 @@ class PopoverViewController: UIViewController {
     @IBOutlet weak var popoverBottomToScreenBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var continueButton: UIButton!
     
-    var requiresInteractionToDismiss: Bool = true {
+    @objc var requiresInteractionToDismiss: Bool = true {
         didSet {
             continueButton.isHidden = !requiresInteractionToDismiss
         }

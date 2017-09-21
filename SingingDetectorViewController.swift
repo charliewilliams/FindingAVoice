@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioKit
+import AudioKitUI
 
 class SingingDetectorViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class SingingDetectorViewController: UIViewController {
     
     let detector = SingingDetector.shared
     @IBOutlet var audioInputPlot: EZAudioPlot!
-    var plotSubview: AKNodeOutputPlot!
+    @objc var plotSubview: AKNodeOutputPlot!
     
     @IBOutlet weak var detectionView: UIView!
     @IBOutlet weak var overlayView: UIView!
@@ -44,7 +45,7 @@ class SingingDetectorViewController: UIViewController {
         plotSubview.frame = audioInputPlot.bounds   
     }
     
-    func gotNotification(note: Notification) {
+    @objc func gotNotification(note: Notification) {
         
         if let state = SingingState(rawValue: note.name.rawValue),
             state == .started {
