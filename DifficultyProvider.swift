@@ -48,7 +48,6 @@ struct DifficultyProvider {
 
 private extension DifficultyProvider {
 
-    static let daysActiveInStudy = 12
     static let daysPerDifficulty = 4
     static var store: UserDefaults {
         return UserDefaults.standard

@@ -48,42 +48,36 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
     }
     
-    @objc let highlightedAttributesBig: [NSAttributedStringKey: Any] = [
+    @objc let highlightedAttributesBigRed: [NSAttributedStringKey: Any] = [
         .backgroundColor: UIColor.clear,
         .foregroundColor: UIColor.red,
-//        NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue,
         .font: UIFont.systemFont(ofSize: 36)
     ]
-    
+
     @objc let highlightedAttributesSmall: [NSAttributedStringKey: Any] = [
         .backgroundColor: UIColor.yellow,
         .foregroundColor: UIColor.blue,
         .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
         .font: UIFont.italicSystemFont(ofSize: 36)
     ]
-    
-//    let regularAttributes: [String: Any] = [
-//        NSBackgroundColorAttributeName: UIColor.white,
-//        NSForegroundColorAttributeName: UIColor.darkGray,
-//        NSFontAttributeName: UIFont.systemFont(ofSize: 30)
-//    ]
-    
+
     @objc var firstText: NSAttributedString {
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
         let location = isPractice ? 3 : 0
-        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: location, length: question.secondHighlight.characters.count))
+        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.characters.count))
+        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: location, length: question.secondHighlight.characters.count))
         
         return mutable
     }
     
     @objc var secondText: NSAttributedString {
         
-        let string = isPractice ? "than \(question.firstHighlight) ?" : question.firstHighlight
+        let string = isPractice ? "\(question.firstHighlight) ?" : question.firstHighlight
         let mutable = NSMutableAttributedString(string: string)
-        let location = isPractice ? 5 : 0
-        mutable.addAttributes(highlightedAttributesBig, range: NSRange(location: location, length: question.firstHighlight.characters.count))
+        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.characters.count))
+        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: 0, length: question.firstHighlight.characters.count))
         
         return mutable
     }
