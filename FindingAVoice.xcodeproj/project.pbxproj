@@ -489,8 +489,7 @@
 				C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */,
 				C0AA1D921E1FC3EA005A7AA1 /* Info.plist */,
 			);
-			name = FindingAVoice;
-			path = ControlTask;
+			path = FindingAVoice;
 			sourceTree = "<group>";
 		};
 		C0AA1D4C1E1E8A43005A7AA1 /* ControlTaskTests */ = {
