@@ -79,7 +79,6 @@
 		C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74281F79399000112B53 /* GoogleService-Info.plist */; };
-		C08129611F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
 		C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
 		C08129631F794BE80018A9EA /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
@@ -538,7 +537,6 @@
 				C0AA1D871E1FC3D4005A7AA1 /* Rule.swift */,
 				C035CFAB1E2A456200419532 /* RuleSet.swift */,
 				C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */,
-				C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */,
 			);
 			name = "Model (Control)";
 			sourceTree = "<group>";
@@ -601,6 +599,7 @@
 				C04944301E2822EB00A12E1B /* DailyTimer.swift */,
 				C035CFA31E2A420200419532 /* QuestionTimer.swift */,
 				C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */,
+				C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */,
 				C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */,
 			);
 			name = "Model (Shared)";
@@ -1270,7 +1269,6 @@
 			files = (
 				C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */,
 				C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */,
-				C08129611F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */,
 				C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */,
 				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,
 			);

@@ -26,6 +26,24 @@ struct DifficultyProvider {
         }
         return .hard
     }
+
+    static var currentDay: Int {
+
+        var datesPlayed = [Date]()
+
+        for timeIntervalString in DailyTimer.shared.storedDates.keys {
+
+            guard let timeInterval = TimeInterval(timeIntervalString) else { continue }
+            let date = Date(timeIntervalSince1970: timeInterval)
+            let dateWithoutTime = date.strippingTimeComponents()
+
+            if !datesPlayed.contains(dateWithoutTime) {
+                datesPlayed.append(dateWithoutTime)
+            }
+        }
+
+        return datesPlayed.count
+    }
 }
 
 private extension DifficultyProvider {
@@ -34,8 +52,5 @@ private extension DifficultyProvider {
     static let daysPerDifficulty = 4
     static var store: UserDefaults {
         return UserDefaults.standard
-    }
-    static var currentDay: Int {
-        return DailyTimer.shared.storedDates.count
     }
 }
