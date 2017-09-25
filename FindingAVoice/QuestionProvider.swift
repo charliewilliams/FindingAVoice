@@ -27,7 +27,7 @@ class QuestionProvider {
             songs = songs.filter { $0.id != current.song.id }
         }
         
-        currentQuestion = Question(song: songs.randomItem(), difficulty: .easy)
+        currentQuestion = Question(song: songs.randomItem(), difficulty: DifficultyProvider.currentDifficulty)
         
         return currentQuestion
     }

@@ -18,7 +18,7 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         }
     }
     var difficulty = DifficultyProvider.currentDifficulty
-    var stringLength: Int! {
+    var stringLength: Int {
         switch difficulty {
         case .easy: return 10
         case .medium: return 15

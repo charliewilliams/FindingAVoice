@@ -14,7 +14,7 @@ import Foundation
 struct DifficultyProvider {
 
     static var currentDifficulty: Difficulty {
-        return .medium
+        return [.easy, .medium, .hard].randomItem()
     }
 
     // Calculating which day we're on
