@@ -81,6 +81,10 @@
 		C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74281F79399000112B53 /* GoogleService-Info.plist */; };
 		C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
 		C08129631F794BE80018A9EA /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
+		C08129691F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */; };
+		C081296A1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */; };
+		C081296B1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
+		C081296C1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -233,6 +237,8 @@
 		C07B5AEA1E5A024900570149 /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupViewController.xib; path = FindingAVoice/SignupViewController.xib; sourceTree = SOURCE_ROOT; };
 		C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugHistory.swift; path = FindingAVoice/DebugHistory.swift; sourceTree = SOURCE_ROOT; };
 		C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyProviderTests.swift; sourceTree = "<group>"; };
+		C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDebugOverlayTableViewController.swift; sourceTree = "<group>"; };
+		C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsDebugOverlayTableViewController.xib; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -552,6 +558,8 @@
 				C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */,
 				C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */,
 				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
+				C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */,
+				C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */,
 			);
 			name = "View Controllers (Shared)";
 			sourceTree = "<group>";
@@ -838,6 +846,7 @@
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
+				C081296C1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */,
 				C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */,
 			);
@@ -864,6 +873,7 @@
 				C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */,
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
+				C081296B1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */,
 				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
 				C04D29D31EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib in Resources */,
 				C04D29D11EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib in Resources */,
@@ -1185,6 +1195,7 @@
 				C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */,
 				C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */,
 				C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */,
+				C081296A1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */,
 				C0B780371E918C930015D2C8 /* MusicPlayerContainerViewController.swift in Sources */,
 				C06A3DBE1E6DC1B500B8AE3D /* PopoverDisplaying.swift in Sources */,
 				C0D7BD161EE826DB001BF3AB /* SingingDetectable.swift in Sources */,
@@ -1234,6 +1245,7 @@
 				C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */,
 				C0DFE9061E466DE80011E7DA /* SecretSetupViewController.swift in Sources */,
 				C0212D7A1F4348D300D65AAA /* ScreenReporting.swift in Sources */,
+				C08129691F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
 				C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */,
