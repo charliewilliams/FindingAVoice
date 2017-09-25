@@ -88,7 +88,7 @@ struct Song {
         let syllables = lyrics.components(separatedBy: separatorSet)
         
         guard index < syllables.count else {
-            assert(false)
+            assertionFailure("Index \(index) out of bounds for syllable count \(syllables.count) in \(title) (\(lyrics))")
             return ""
         }
         
