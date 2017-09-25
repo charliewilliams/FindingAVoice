@@ -31,7 +31,7 @@ struct DifficultyProvider {
 
         var datesPlayed = [Date]()
 
-        for timeIntervalString in DailyTimer.shared.storedDates.keys {
+        for timeIntervalString in DailyTimer.shared.pastSessionPlayTimes.keys {
 
             guard let timeInterval = TimeInterval(timeIntervalString) else { continue }
             let date = Date(timeIntervalSince1970: timeInterval)

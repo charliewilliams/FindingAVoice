@@ -22,11 +22,15 @@ class DailyTimer {
     private var sessionTimer = Timer() // this is crap, this timer gets thrown away but needs to be set in init
     private var sessionStart = Date() // likewise
 
+    var pastSessionPlayTimes: [String: TimeInterval] {
+        return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
+    }
+
     var previouslyStoredPlayTimeFromToday: TimeInterval {
         
         var runningTotal: TimeInterval = 0
         
-        for dict in storedDates {
+        for dict in pastSessionPlayTimes {
             
             guard let interval = TimeInterval(dict.key) else {
                 assert(false)
@@ -40,10 +44,6 @@ class DailyTimer {
         }
         
         return runningTotal
-    }
-
-    var storedDates: [String: TimeInterval] {
-        return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
     }
 
     var hasPlayedMaxTimeToday: Bool {
@@ -94,7 +94,7 @@ private extension DailyTimer {
         guard disabled == false else { return }
 
         // Store this session duration in case the session ends
-        var existingDict = storedDates
+        var existingDict = pastSessionPlayTimes
 
         // Key on this session's start time
         existingDict["\(sessionStart.timeIntervalSince1970)"] = sessionPlayTime
