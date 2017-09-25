@@ -88,13 +88,6 @@
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
-		C0B7800D1E9184310015D2C8 /* frosty.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780061E9184310015D2C8 /* frosty.mp3 */; };
-		C0B780161E9184BE0015D2C8 /* alphabet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780101E9184BE0015D2C8 /* alphabet.mp3 */; };
-		C0B780171E9184BE0015D2C8 /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780111E9184BE0015D2C8 /* battle.mp3 */; };
-		C0B780181E9184BE0015D2C8 /* puff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780121E9184BE0015D2C8 /* puff.mp3 */; };
-		C0B780191E9184BE0015D2C8 /* rainbow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780131E9184BE0015D2C8 /* rainbow.mp3 */; };
-		C0B7801A1E9184BE0015D2C8 /* rudolph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780141E9184BE0015D2C8 /* rudolph.mp3 */; };
-		C0B7801B1E9184BE0015D2C8 /* spangled.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C0B780151E9184BE0015D2C8 /* spangled.mp3 */; };
 		C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = C0B7802B1E918A500015D2C8 /* SongInfo.json */; };
 		C0B780301E918C840015D2C8 /* SnippetPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */; };
 		C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B780311E918C930015D2C8 /* MusicPlayerCollectionViewController.swift */; };
@@ -196,6 +189,28 @@
 		C04D29D01EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlIntermediateInstructionsViewController.xib; path = FindingAVoice/ControlIntermediateInstructionsViewController.xib; sourceTree = SOURCE_ROOT; };
 		C04D29D21EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ControlAdvancedInstructionsViewController copy.xib"; path = "FindingAVoice/ControlAdvancedInstructionsViewController copy.xib"; sourceTree = SOURCE_ROOT; };
 		C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyProvider.swift; sourceTree = SOURCE_ROOT; };
+		C04F74111F7935FB00112B53 /* help.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = help.mp3; path = mp3/help.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74121F7935FB00112B53 /* horses.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = horses.mp3; path = mp3/horses.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74131F7935FB00112B53 /* sixtyfour.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sixtyfour.mp3; path = mp3/sixtyfour.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74141F7935FB00112B53 /* favourite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = favourite.mp3; path = mp3/favourite.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74151F7935FB00112B53 /* rainbow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rainbow.mp3; path = mp3/rainbow.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74161F7935FB00112B53 /* dream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dream.mp3; path = mp3/dream.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74171F7935FC00112B53 /* rudolph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rudolph.mp3; path = mp3/rudolph.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74181F7935FC00112B53 /* greensleeves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = greensleeves.mp3; path = mp3/greensleeves.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74191F7935FC00112B53 /* wish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wish.mp3; path = mp3/wish.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741A1F7935FC00112B53 /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = battle.mp3; path = mp3/battle.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741B1F7935FC00112B53 /* hark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hark.mp3; path = mp3/hark.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741C1F7935FC00112B53 /* alphabet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alphabet.mp3; path = mp3/alphabet.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741D1F7935FC00112B53 /* frosty.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = frosty.mp3; path = mp3/frosty.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741E1F7935FC00112B53 /* puff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = puff.mp3; path = mp3/puff.mp3; sourceTree = SOURCE_ROOT; };
+		C04F741F1F7935FC00112B53 /* landOfHope.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = landOfHope.mp3; path = mp3/landOfHope.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74201F7935FC00112B53 /* sixpence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sixpence.mp3; path = mp3/sixpence.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74211F7935FC00112B53 /* spangled.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spangled.mp3; path = mp3/spangled.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74221F7935FC00112B53 /* wouldntItBeLoverly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wouldntItBeLoverly.mp3; path = mp3/wouldntItBeLoverly.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74231F7935FC00112B53 /* raindrops.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = raindrops.mp3; path = mp3/raindrops.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74241F7935FD00112B53 /* withHelpFromFriends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = withHelpFromFriends.mp3; path = mp3/withHelpFromFriends.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74251F7935FD00112B53 /* land.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = land.mp3; path = mp3/land.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74261F7935FD00112B53 /* loverly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = loverly.mp3; path = mp3/loverly.mp3; sourceTree = SOURCE_ROOT; };
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
@@ -228,13 +243,6 @@
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		C0B780061E9184310015D2C8 /* frosty.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frosty.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780101E9184BE0015D2C8 /* alphabet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alphabet.mp3; path = mp3/alphabet.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780111E9184BE0015D2C8 /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = battle.mp3; path = mp3/battle.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780121E9184BE0015D2C8 /* puff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = puff.mp3; path = mp3/puff.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780131E9184BE0015D2C8 /* rainbow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rainbow.mp3; path = mp3/rainbow.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780141E9184BE0015D2C8 /* rudolph.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rudolph.mp3; path = mp3/rudolph.mp3; sourceTree = SOURCE_ROOT; };
-		C0B780151E9184BE0015D2C8 /* spangled.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spangled.mp3; path = mp3/spangled.mp3; sourceTree = SOURCE_ROOT; };
 		C0B7802B1E918A500015D2C8 /* SongInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongInfo.json; path = FindingAVoice/SongInfo.json; sourceTree = SOURCE_ROOT; };
 		C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnippetPlayer.storyboard; sourceTree = SOURCE_ROOT; };
 		C0B780311E918C930015D2C8 /* MusicPlayerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -547,13 +555,28 @@
 		C0B77FFF1E91841C0015D2C8 /* mp3s */ = {
 			isa = PBXGroup;
 			children = (
-				C0B780101E9184BE0015D2C8 /* alphabet.mp3 */,
-				C0B780111E9184BE0015D2C8 /* battle.mp3 */,
-				C0B780121E9184BE0015D2C8 /* puff.mp3 */,
-				C0B780131E9184BE0015D2C8 /* rainbow.mp3 */,
-				C0B780141E9184BE0015D2C8 /* rudolph.mp3 */,
-				C0B780151E9184BE0015D2C8 /* spangled.mp3 */,
-				C0B780061E9184310015D2C8 /* frosty.mp3 */,
+				C04F741C1F7935FC00112B53 /* alphabet.mp3 */,
+				C04F741A1F7935FC00112B53 /* battle.mp3 */,
+				C04F74161F7935FB00112B53 /* dream.mp3 */,
+				C04F74141F7935FB00112B53 /* favourite.mp3 */,
+				C04F741D1F7935FC00112B53 /* frosty.mp3 */,
+				C04F74181F7935FC00112B53 /* greensleeves.mp3 */,
+				C04F741B1F7935FC00112B53 /* hark.mp3 */,
+				C04F74111F7935FB00112B53 /* help.mp3 */,
+				C04F74121F7935FB00112B53 /* horses.mp3 */,
+				C04F74251F7935FD00112B53 /* land.mp3 */,
+				C04F741F1F7935FC00112B53 /* landOfHope.mp3 */,
+				C04F74261F7935FD00112B53 /* loverly.mp3 */,
+				C04F741E1F7935FC00112B53 /* puff.mp3 */,
+				C04F74151F7935FB00112B53 /* rainbow.mp3 */,
+				C04F74231F7935FC00112B53 /* raindrops.mp3 */,
+				C04F74171F7935FC00112B53 /* rudolph.mp3 */,
+				C04F74201F7935FC00112B53 /* sixpence.mp3 */,
+				C04F74131F7935FB00112B53 /* sixtyfour.mp3 */,
+				C04F74211F7935FC00112B53 /* spangled.mp3 */,
+				C04F74191F7935FC00112B53 /* wish.mp3 */,
+				C04F74241F7935FD00112B53 /* withHelpFromFriends.mp3 */,
+				C04F74221F7935FC00112B53 /* wouldntItBeLoverly.mp3 */,
 			);
 			name = mp3s;
 			sourceTree = "<group>";
@@ -802,23 +825,16 @@
 				C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */,
 				C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */,
 				C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
-				C0B7800D1E9184310015D2C8 /* frosty.mp3 in Resources */,
 				C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */,
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
-				C0B7801B1E9184BE0015D2C8 /* spangled.mp3 in Resources */,
 				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
 				C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */,
 				C0B780301E918C840015D2C8 /* SnippetPlayer.storyboard in Resources */,
-				C0B780161E9184BE0015D2C8 /* alphabet.mp3 in Resources */,
-				C0B780191E9184BE0015D2C8 /* rainbow.mp3 in Resources */,
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
-				C0B780171E9184BE0015D2C8 /* battle.mp3 in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
-				C0B7801A1E9184BE0015D2C8 /* rudolph.mp3 in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */,
 				C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */,
-				C0B780181E9184BE0015D2C8 /* puff.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
