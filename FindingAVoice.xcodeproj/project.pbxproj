@@ -37,6 +37,7 @@
 		C04D29D31EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04D29D21EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib */; };
 		C04D29D51EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
 		C04D29D61EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
+		C04F742C1F793AA900112B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74291F79399900112B53 /* GoogleService-Info.plist */; };
 		C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
@@ -66,8 +67,6 @@
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
 		C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* Main.storyboard */; };
-		C06A3DE21E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
-		C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */; };
 		C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */; };
 		C06A3DFA1E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3DF91E6DC5E300B8AE3D /* ExperimentalTaskUITests.swift */; };
 		C06A3E031E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3E011E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift */; };
@@ -79,6 +78,7 @@
 		C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
 		C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
+		C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74281F79399000112B53 /* GoogleService-Info.plist */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -211,9 +211,11 @@
 		C04F74241F7935FD00112B53 /* withHelpFromFriends.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = withHelpFromFriends.mp3; path = mp3/withHelpFromFriends.mp3; sourceTree = SOURCE_ROOT; };
 		C04F74251F7935FD00112B53 /* land.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = land.mp3; path = mp3/land.mp3; sourceTree = SOURCE_ROOT; };
 		C04F74261F7935FD00112B53 /* loverly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = loverly.mp3; path = mp3/loverly.mp3; sourceTree = SOURCE_ROOT; };
+		C04F74281F79399000112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataControlTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C04F74291F79399900112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataExperimentalTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C04F742A1F7939AB00112B53 /* ControlTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControlTask-Info.plist"; sourceTree = "<group>"; };
 		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "FindingAVoice/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExperimentalTask-Info.plist"; path = "FindingAVoice/ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
+		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
 		C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalTaskTests.swift; sourceTree = "<group>"; };
 		C06A3DED1E6DC5D400B8AE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,7 +243,6 @@
 		C0AA1D881E1FC3D4005A7AA1 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vocabulary.swift; path = FindingAVoice/Vocabulary.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		C0AA1D921E1FC3EA005A7AA1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FindingAVoice/Info.plist; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		C0B7802B1E918A500015D2C8 /* SongInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongInfo.json; path = FindingAVoice/SongInfo.json; sourceTree = SOURCE_ROOT; };
 		C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnippetPlayer.storyboard; sourceTree = SOURCE_ROOT; };
@@ -447,7 +448,6 @@
 				C0AA1D361E1E8A42005A7AA1 /* Products */,
 				B79FACA90DC175E073C621AB /* Pods */,
 				1701DA6BC08018070227869D /* Frameworks */,
-				C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -486,8 +486,10 @@
 				C0B77FFF1E91841C0015D2C8 /* mp3s */,
 				C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */,
 				C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */,
-				C06A3DE11E6DC49100B8AE3D /* GoogleService-Info.plist */,
-				C0AA1D921E1FC3EA005A7AA1 /* Info.plist */,
+				C04F74281F79399000112B53 /* GoogleService-Info.plist */,
+				C04F74291F79399900112B53 /* GoogleService-Info.plist */,
+				C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */,
+				C04F742A1F7939AB00112B53 /* ControlTask-Info.plist */,
 			);
 			path = FindingAVoice;
 			sourceTree = "<group>";
@@ -821,9 +823,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04F742C1F793AA900112B53 /* GoogleService-Info.plist in Resources */,
 				C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */,
 				C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */,
-				C06A3DE31E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
 				C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */,
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
 				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
@@ -855,7 +857,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06A3DE21E6DC49100B8AE3D /* GoogleService-Info.plist in Resources */,
 				C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */,
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
@@ -869,6 +870,7 @@
 				C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */,
 				C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */,
 				C0DFE9091E466ED20011E7DA /* Main.storyboard in Resources */,
+				C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1522,7 +1524,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = FindingAVoice/Info.plist;
+				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
@@ -1540,7 +1542,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = FindingAVoice/Info.plist;
+				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
