@@ -8,7 +8,6 @@
 
 import XCTest
 @testable import ExperimentalTask
-@testable import ControlTask
 
 class DifficultyProviderTests: XCTestCase {
     

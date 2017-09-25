@@ -81,6 +81,7 @@
 		C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74281F79399000112B53 /* GoogleService-Info.plist */; };
 		C08129611F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
 		C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
+		C08129631F794BE80018A9EA /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -1198,6 +1199,7 @@
 				C06A3E031E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift in Sources */,
 				C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */,
 				C06A3DC61E6DC1B500B8AE3D /* SignupViewController.swift in Sources */,
+				C08129631F794BE80018A9EA /* Difficulty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
