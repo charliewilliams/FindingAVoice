@@ -79,6 +79,8 @@
 		C07B5AEC1E5A024900570149 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */; };
 		C08129561F793C410018A9EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74281F79399000112B53 /* GoogleService-Info.plist */; };
+		C08129611F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
+		C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -230,6 +232,7 @@
 		C07B5AE91E5A024900570149 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = FindingAVoice/SignupViewController.swift; sourceTree = SOURCE_ROOT; };
 		C07B5AEA1E5A024900570149 /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignupViewController.xib; path = FindingAVoice/SignupViewController.xib; sourceTree = SOURCE_ROOT; };
 		C07EDB1E1E4F51AA00790561 /* DebugHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugHistory.swift; path = FindingAVoice/DebugHistory.swift; sourceTree = SOURCE_ROOT; };
+		C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyProviderTests.swift; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */,
+				C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */,
 				C0B7803D1E91971E0015D2C8 /* QuestionTests.swift */,
 				C0B7803F1E91974D0015D2C8 /* SongTests.swift */,
 				C06A3DED1E6DC5D400B8AE3D /* Info.plist */,
@@ -1202,6 +1206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */,
+				C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */,
 				C0B780401E91974D0015D2C8 /* SongTests.swift in Sources */,
 				C0B7803E1E91971E0015D2C8 /* QuestionTests.swift in Sources */,
 			);
@@ -1263,6 +1268,7 @@
 			files = (
 				C0CD0BFA1E7596A70002643E /* ControlTaskTests.swift in Sources */,
 				C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */,
+				C08129611F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */,
 				C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */,
 				C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */,
 			);

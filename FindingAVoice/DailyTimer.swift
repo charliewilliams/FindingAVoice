@@ -14,18 +14,14 @@ import Foundation
 // 4. Return true for hasPlayedMaxTimeToday if we've passed the max
 
 class DailyTimer {
-    
+
+    let sessionsKey = "sessions"
+    var disabled: Bool = false
+    var store = UserDefaults.standard
     private let maximumDailyPlayTime: TimeInterval = 10 * 60 // 10 min
     private var sessionTimer = Timer() // this is crap, this timer gets thrown away but needs to be set in init
     private var sessionStart = Date() // likewise
-    var store = UserDefaults.standard
-    let sessionsKey = "sessions"
-    var disabled: Bool = false
-    
-    private var sessionPlayTime: TimeInterval {
-        return NSDate().timeIntervalSince(sessionStart)
-    }
-    
+
     var previouslyStoredPlayTimeFromToday: TimeInterval {
         
         var runningTotal: TimeInterval = 0
@@ -45,17 +41,18 @@ class DailyTimer {
         
         return runningTotal
     }
-    
+
+    var storedDates: [String: TimeInterval] {
+        return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
+    }
+
     var hasPlayedMaxTimeToday: Bool {
         if disabled { return false }
         return previouslyStoredPlayTimeFromToday >= maximumDailyPlayTime
     }
-    
-    private var storedDates: [String: TimeInterval] {
-        return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
-    }
-    
+
     static let shared = DailyTimer()
+
     private init() {
 
         /*
@@ -65,26 +62,10 @@ class DailyTimer {
             disabled = true
             return
         }
-        
+
         resume()
     }
-    
-    private func tick() {
 
-        guard disabled == false else { return }
-        
-        // Store this session duration in case the session ends
-        var existingDict = storedDates
-        
-        // Key on this session's start time
-        existingDict["\(sessionStart.timeIntervalSince1970)"] = sessionPlayTime
-        store.set(existingDict, forKey: sessionsKey)
-        
-        if hasPlayedMaxTimeToday {
-            sendMaxPlayTimeNotification()
-        }
-    }
-    
     func pause() {
         
         sessionTimer.invalidate()
@@ -100,8 +81,31 @@ class DailyTimer {
             self.tick()
         }
     }
-    
-    private func sendMaxPlayTimeNotification() {
+}
+
+private extension DailyTimer {
+
+    var sessionPlayTime: TimeInterval {
+        return NSDate().timeIntervalSince(sessionStart)
+    }
+
+    func tick() {
+
+        guard disabled == false else { return }
+
+        // Store this session duration in case the session ends
+        var existingDict = storedDates
+
+        // Key on this session's start time
+        existingDict["\(sessionStart.timeIntervalSince1970)"] = sessionPlayTime
+        store.set(existingDict, forKey: sessionsKey)
+
+        if hasPlayedMaxTimeToday {
+            sendMaxPlayTimeNotification()
+        }
+    }
+
+    func sendMaxPlayTimeNotification() {
         
         // Log analytics here
         NotificationCenter.default.post(name: Notification.Name(.dailySessionTimeExceeded), object: nil)

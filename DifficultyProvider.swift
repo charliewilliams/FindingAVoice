@@ -14,39 +14,28 @@ import Foundation
 struct DifficultyProvider {
 
     static var currentDifficulty: Difficulty {
-        return [.easy, .medium, .hard].randomItem()
+        return difficulty(forDayNumber: currentDay)
     }
 
-    // Calculating which day we're on
+    static func difficulty(forDayNumber dayNumber: Int) -> Difficulty {
 
-    static private var daysInStudy = 14
-    static private var secondsPerDay: TimeInterval = 60*60*24
+        let index = dayNumber / daysPerDifficulty
 
-    private enum Keys: String {
-        case firstDayOfStudy
-    }
-
-    static private var currentDay: Int {
-
-        guard let firstDayOfStudy = firstDayOfStudy else {
-            studyBegan()
-            return 0
+        if index < Difficulty.count {
+            return [.easy, .medium, .hard][index]
         }
-
-        let secondsSinceStartOfStudy = Date().timeIntervalSince(firstDayOfStudy)
-
-        return Int(secondsSinceStartOfStudy / secondsPerDay)
+        return .hard
     }
+}
 
-    static private var firstDayOfStudy: Date? {
-        return store.value(forKey: Keys.firstDayOfStudy.rawValue) as? Date
-    }
+private extension DifficultyProvider {
 
-    static private func studyBegan() {
-        store.setValue(Date(), forKey: Keys.firstDayOfStudy.rawValue)
-    }
-
-    static private var store: UserDefaults {
+    static let daysActiveInStudy = 12
+    static let daysPerDifficulty = 4
+    static var store: UserDefaults {
         return UserDefaults.standard
+    }
+    static var currentDay: Int {
+        return DailyTimer.shared.storedDates.count
     }
 }
