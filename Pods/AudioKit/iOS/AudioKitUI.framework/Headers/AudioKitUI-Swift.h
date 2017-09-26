@@ -313,6 +313,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL requiresConstra
 - (void)touchesCancelled:(NSSet<UITouch *> * _Nullable)touches withEvent:(UIEvent * _Nullable)event;
 @end
 
+@class NSBundle;
+
+SWIFT_CLASS("_TtC10AudioKitUI20AKLiveViewController")
+@interface AKLiveViewController : UIViewController
+- (void)loadView;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class EZAudioFFT;
 
 /// Plot the FFT output from any node in an signal processing graph

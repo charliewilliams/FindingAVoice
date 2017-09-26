@@ -160,12 +160,10 @@ _OBJC_IVAR_$_EZAudioDisplayLink._stopped
 /Users/megastep/src/ak/AudioKit/AudioKit/Common/Internals/EZAudio/EZAudioDisplayLink.h
 _swift_rt_swift_retain
 _swift_rt_swift_release
-__T0So16AVAudioPCMBufferCSo0A4TimeCIxxx_AbDIyByy_TR
-__T010AudioKitUI19AKRollingOutputPlotC9reconnectyyFTo
-__T010AudioKitUI19AKRollingOutputPlotCfDTo
-_swift_rt_swift_getInitializedObjCClass
-__T010AudioKitUI19AKRollingOutputPlotCACSC6CGRectV5frame_tcfcTo
-__T010AudioKitUI19AKRollingOutputPlotCACSgSo7NSCoderC5coder_tcfcTo
+__T010AudioKitUI20AKLiveViewControllerC04loadE0yyFTo
+__T010AudioKitUI20AKLiveViewControllerCfETo
+__T010AudioKitUI20AKLiveViewControllerCACSSSg7nibName_So6BundleCSg6bundletcfcTo
+__T010AudioKitUI20AKLiveViewControllerCACSgSo7NSCoderC5coder_tcfcTo
 _globalinit_33_38DE0F0703F180A23AAE87C1570600FA_func0
 __T0SC11RunLoopModeVs21_ObjectiveCBridgeable10FoundationsACP09_bridgeToD1C01_D5CTypeQzyFTW
 __T0SC11RunLoopModeVs21_ObjectiveCBridgeable10FoundationsACP016_forceBridgeFromD1Cy01_D5CTypeQz_xSgz6resulttFZTW
@@ -200,14 +198,13 @@ __T0SC12UIRectCornerVs10SetAlgebra5UIKitsACP8subtractyxFTW
 __T0SC12UIRectCornerVs16RawRepresentable5UIKitsACPxSg0C5ValueQz03rawF0_tcfCTW
 __T0SC12UIRectCornerVs16RawRepresentable5UIKitsACP8rawValue0cG0QzfgTW
 __T0SC12UIRectCornerVs9OptionSet5UIKitsACPx8RawValueQz03rawG0_tcfCTW
-__T0Sis10ComparablessAAP2geoiSbx_xtFZTW
 __T0SSs9EquatablessAAP2eeoiSbx_xtFZTW
-__T0Sis35_ExpressibleByBuiltinIntegerLiteralssAAPxBi2048_08_builtindE0_tcfCTW
 __T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_nSC21NSAttributedStringKeyV_Tg5
 __T0SSs21_ObjectiveCBridgeable10FoundationsAAP016_forceBridgeFromA1Cy01_A5CTypeQz_xSgz6resulttFZTW
 __T0SSs8HashablessAAP9hashValueSifgTW
-__T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_Tf4gng_n
-__T010AudioKitUI19AKRollingOutputPlotCACSgSo7NSCoderC5coder_tcfcTf4gn_n
+__T010AudioKitUI9AKStylistC9fontColorSo7UIColorCfgTf4n_g
+_swift_rt_swift_getInitializedObjCClass
+__T010AudioKitUI20AKLiveViewControllerC03addE0ySo6UIViewCFTf4gn_n
 __T0SC11RunLoopModeVwXX
 __T0SC11RunLoopModeVwCP
 ___swift_noop_self_return
@@ -229,12 +226,6 @@ __T0SC12UIRectCornerVMa
 _swift_rt_swift_slowAlloc
 _swift_rt_swift_slowDealloc
 __T0s10SetAlgebraPssAARz7ElementQz012ArrayLiteralC0RtzlExSayAFG05arrayE0d_tcfCSC12UIRectCornerV_Tg5Tf4gd_n
-_swift_rt_swift_deallocObject
-_swift_rt_swift_allocObject
-__T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_TA
-_block_copy_helper
-_block_destroy_helper
-_swift_rt_swift_getExistentialTypeMetadata
 __swift_dead_method_stub
 __T0SC21NSAttributedStringKeyVs16RawRepresentable10FoundationsACP8rawValue0dH0QzfgTW
 __T0So14NSNotificationC4NameVs16RawRepresentable10FoundationsAEP8rawValue0cG0QzfgTW
@@ -276,7 +267,7 @@ __T0So14NSNotificationC4NameVs16RawRepresentable10FoundationsAEPxSg0C5ValueQz03r
 __T0SC21NSAttributedStringKeyVwCc
 __T0So14NSNotificationC4NameVwCc
 _globalinit_33_38DE0F0703F180A23AAE87C1570600FA_token0
-__T010AudioKitUI19AKRollingOutputPlotC10bufferSizes6UInt32VvWvd
+__T010AudioKitUI20AKLiveViewControllerC05stackE0SQySo07UIStackE0CGvWvd
 __T0SC11RunLoopModeVs16RawRepresentable10FoundationWP
 __T0SC11RunLoopModeVWV
 __T0SC11RunLoopModeVMn
@@ -313,9 +304,9 @@ __T0SC12UIRectCornerVs25ExpressibleByArrayLiteral5UIKitWP
 __T0SC12UIRectCornerVs10SetAlgebra5UIKitWP
 __T0SC12UIRectCornerVs16RawRepresentable5UIKitWP
 __T0SC12UIRectCornerVs9OptionSet5UIKitWP
-__T010AudioKitUI19AKRollingOutputPlotCML
-__T010AudioKitUI19AKRollingOutputPlotCMf
-__T010AudioKitUI19AKRollingOutputPlotCMF
+__T010AudioKitUI20AKLiveViewControllerCML
+__T010AudioKitUI20AKLiveViewControllerCMf
+__T010AudioKitUI20AKLiveViewControllerCMF
 __swift_FORCE_LOAD_$_swiftFoundation_$_AudioKitUI
 __swift_FORCE_LOAD_$_swiftObjectiveC_$_AudioKitUI
 __swift_FORCE_LOAD_$_swiftDarwin_$_AudioKitUI
@@ -333,9 +324,8 @@ __swift_FORCE_LOAD_$_swiftCoreAudio_$_AudioKitUI
 __swift_FORCE_LOAD_$_swiftCoreMedia_$_AudioKitUI
 __swift_FORCE_LOAD_$_swiftGLKit_$_AudioKitUI
 __swift_FORCE_LOAD_$_swiftModelIO_$_AudioKitUI
-_block_descriptor
-__T0s23_ContiguousArrayStorageCyypGML
-__T0ypML
+__T0SQySo11UIStackViewCGML
+__T0So11UIStackViewCML
 __T0SC11RunLoopModeVs16RawRepresentable10FoundationMA
 __T0SC11RunLoopModeVs21_ObjectiveCBridgeable10FoundationMA
 __T0SC21NSAttributedStringKeyVs16RawRepresentable10FoundationMA
@@ -348,21 +338,17 @@ __T0SC12UIRectCornerVs10SetAlgebra5UIKitMA
 __T0SC12UIRectCornerVs16RawRepresentable5UIKitMA
 __T0SC12UIRectCornerVs9OptionSet5UIKitMA
 ___swift_reflection_version
+__T0So11UIStackViewCMF
 __T0So8NSStringCMF
 __T0SC12UIRectCornerVMB
 _objc_classes
--emit-bc "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKRollingOutputPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKOutputWaveformPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertyControl.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKRotaryKnob.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTableView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKButton.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKSlider.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKStepper.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPlaygroundLoop.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/MultitouchGestureRecognizer.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKNodeFFTPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPresetLoaderView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPlaygroundView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKNodeOutputPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKResourceAudioFileLoaderView.swift" -target armv7-apple-ios9.0 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk -I /Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos -F /Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos -g -import-underlying-module -swift-version 4 -serialize-debugging-options -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/swift-overrides.hmap" -Xcc -iquote -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-generated-files.hmap" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-own-target-headers.hmap" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-all-non-framework-target-headers.hmap" -Xcc -ivfsoverlay -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/all-product-headers.yaml" -Xcc -iquote -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-project-headers.hmap" -Xcc -I/Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos/include -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/DerivedSources/armv7" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/DerivedSources" -Xcc -ivfsoverlay -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/unextended-module-overlay.yaml" -Xcc -working-directory/Users/megastep/src/ak/AudioKit/AudioKit/iOS -emit-module-doc-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI.swiftdoc" -serialize-diagnostics-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRollingOutputPlot.dia" -O -module-name AudioKitUI -emit-module-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI.swiftmodule" -emit-objc-header-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI-Swift.h" -emit-dependencies-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRollingOutputPlot.d" -num-threads 4 -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRollingOutputPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKOutputWaveformPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPropertyControl.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRotaryKnob.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKTableView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKButton.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKTelephoneView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKSlider.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKStepper.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKADSRView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPlaygroundLoop.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/MultitouchGestureRecognizer.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKNodeFFTPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPresetLoaderView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPlaygroundView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKNodeOutputPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKKeyboardView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKResourceAudioFileLoaderView.bc" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift
+-emit-bc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKLiveViewController.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKRollingOutputPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKOutputWaveformPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertyControl.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKRotaryKnob.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTableView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKButton.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKSlider.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKStepper.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPlaygroundLoop.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/MultitouchGestureRecognizer.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKNodeFFTPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPresetLoaderView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPlaygroundView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKNodeOutputPlot.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift" "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKResourceAudioFileLoaderView.swift" -target armv7-apple-ios9.0 -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk -I /Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos -F /Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos -g -import-underlying-module -swift-version 4 -serialize-debugging-options -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/swift-overrides.hmap" -Xcc -iquote -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-generated-files.hmap" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-own-target-headers.hmap" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-all-non-framework-target-headers.hmap" -Xcc -ivfsoverlay -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/all-product-headers.yaml" -Xcc -iquote -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/AudioKitUI-project-headers.hmap" -Xcc -I/Users/megastep/src/ak/AudioKit/Frameworks/build/Release-iphoneos/include -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/DerivedSources/armv7" -Xcc "-I/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/DerivedSources" -Xcc -ivfsoverlay -Xcc "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/unextended-module-overlay.yaml" -Xcc -working-directory/Users/megastep/src/ak/AudioKit/AudioKit/iOS -emit-module-doc-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI.swiftdoc" -serialize-diagnostics-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKLiveViewController.dia" -O -module-name AudioKitUI -emit-module-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI.swiftmodule" -emit-objc-header-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AudioKitUI-Swift.h" -emit-dependencies-path "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKLiveViewController.d" -num-threads 4 -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKLiveViewController.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRollingOutputPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKOutputWaveformPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPropertyControl.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKRotaryKnob.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKTableView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKButton.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKTelephoneView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKSlider.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKStepper.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKADSRView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPlaygroundLoop.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/MultitouchGestureRecognizer.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKNodeFFTPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPresetLoaderView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKPlaygroundView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKNodeOutputPlot.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKKeyboardView.bc" -o "/Users/megastep/src/ak/AudioKit/AudioKit/iOS/build/AudioKit For iOS.build/Release-iphoneos/AudioKitUI.build/Objects-normal/armv7/AKResourceAudioFileLoaderView.bc" -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift
 <swift-imported-modules>
 Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)
-/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKRollingOutputPlot.swift
-block_destroy_helper
-AKRollingOutputPlot.swift
-/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface
-block_copy_helper
-_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_TA
-_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_
-objectdestroy
+/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKLiveViewController.swift
 init
+AKLiveViewController.swift
+/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface
 _T0s16IndexingIteratorVyxGs0B8Protocolss14_IndexableBaseRzlsADP4next7ElementQzSgyFTWSaySC12UIRectCornerVG_Tg5
 next
 _T0Sis9EquatablessAAP2eeoiSbx_xtFZTW
@@ -377,7 +363,9 @@ _T0Sa11_getElementxSi_Sb20wasNativeTypeCheckeds16_DependenceTokenV22matchingSubs
 _T0SayxGs14_IndexableBaseslsABP8endIndex0D0QzfgTWSC12UIRectCornerV_Tg5
 _T0Sa8endIndexSifgSC12UIRectCornerV_Tg5
 _T0Sa9_getCountSiyFSC12UIRectCornerV_Tg5
-get_field_types_AKRollingOutputPlot
+get_field_types_AKLiveViewController
+_T0SQySo11UIStackViewCGMa
+_T0So11UIStackViewCMa
 _T0SC12UIRectCornerVMa
 get_field_types_UIRectCorner
 get_field_types_UITouchPhase
@@ -403,21 +391,15 @@ __swift_noop_void_return
 __swift_noop_self_return
 _T0SC11RunLoopModeVwCP
 _T0SC11RunLoopModeVwXX
-setupReconnection
-_T010AudioKitUI19AKRollingOutputPlotCMa
-_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_Tf4gng_n
-bufferSize.get
-AKLog
-_T0s23_ContiguousArrayStorageCyypGMa
-_T0ypMa
+_T010AudioKitUI20AKLiveViewControllerCMa
+addView
+stackView.get
 _T0SSs8HashablessAAP9hashValueSifgTW
 _T0SSs21_ObjectiveCBridgeable10FoundationsAAP016_forceBridgeFromA1Cy01_A5CTypeQz_xSgz6resulttFZTW
 _T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_nSC21NSAttributedStringKeyV_Tg5
 _T0SSs9EquatablessAAP2eeoiSbx_xtFZTW
 rawValue.get
 _forceBridgeFromObjectiveC_bridgeable
-_T0Sis35_ExpressibleByBuiltinIntegerLiteralssAAPxBi2048_08_builtindE0_tcfCTW
-_T0Sis10ComparablessAAP2geoiSbx_xtFZTW
 subtract
 formIntersection
 _T0Sus13BinaryIntegerssAAP1aoixx_xtFZTW
@@ -447,13 +429,13 @@ _T0SSs21_ObjectiveCBridgeable10FoundationsAAP024_conditionallyBridgeFromA1CSb01_
 _forceBridgeFromObjectiveC
 _T010AudioKitUI011AKResourcesA14FileLoaderViewCAC0aB013AKAudioPlayerC6player_SaySSG9filenamesSC6CGRectV5frametcfcfA1_
 AKResourceAudioFileLoaderView.swift
-/Users/megastep/src/ak/AudioKit/AudioKit/iOS/AudioKit/User Interface
 _T010AudioKitUI14AKKeyboardViewCACSi5width_Si6heightSi11firstOctaveSi11octaveCountSb10polyphonictcfcfA3_
 AKKeyboardView.swift
 _T010AudioKitUI14AKKeyboardViewCACSi5width_Si6heightSi11firstOctaveSi11octaveCountSb10polyphonictcfcfA2_
 _T010AudioKitUI14AKKeyboardViewCACSi5width_Si6heightSi11firstOctaveSi11octaveCountSb10polyphonictcfcfA1_
 _T010AudioKitUI16AKNodeOutputPlotCAC0aB00D0CSg_SC6CGRectV5frameSi10bufferSizetcfcfA1_
 AKNodeOutputPlot.swift
+/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface
 _T010AudioKitUI18AKPresetLoaderViewCACSaySSG7presets_SC6CGRectV5frameSo6UIFontC4font12CoreGraphics7CGFloatV0K4SizeSi12initialIndexySSc8callbacktcfcfA3_
 AKPresetLoaderView.swift
 _T010AudioKitUI18AKPresetLoaderViewCACSaySSG7presets_SC6CGRectV5frameSo6UIFontC4font12CoreGraphics7CGFloatV0K4SizeSi12initialIndexySSc8callbacktcfcfA2_
@@ -515,10 +497,54 @@ _T010AudioKitUI20AKOutputWaveformPlotC10createViewSo6UIViewC12CoreGraphics7CGFlo
 AKOutputWaveformPlot.swift
 _T010AudioKitUI20AKOutputWaveformPlotC10createViewSo6UIViewC12CoreGraphics7CGFloatV5width_AI6heighttFZfA_
 _T010AudioKitUI20AKOutputWaveformPlotC11isConnectedSbvfi
-createView
 _T010AudioKitUI19AKRollingOutputPlotC10createViewSo6UIViewC12CoreGraphics7CGFloatV5width_AI6heighttFZfA0_
+AKRollingOutputPlot.swift
 _T010AudioKitUI19AKRollingOutputPlotC10createViewSo6UIViewC12CoreGraphics7CGFloatV5width_AI6heighttFZfA_
 deinit
+addLabel
+fontColor.get
+addTitle
+loadView
+stackView.set
+__T0So16AVAudioPCMBufferCSo0A4TimeCIxxx_AbDIyByy_TR
+__T010AudioKitUI19AKRollingOutputPlotC9reconnectyyFTo
+__T010AudioKitUI19AKRollingOutputPlotCfDTo
+__T010AudioKitUI19AKRollingOutputPlotCACSC6CGRectV5frame_tcfcTo
+__T010AudioKitUI19AKRollingOutputPlotCACSgSo7NSCoderC5coder_tcfcTo
+__T0Sis10ComparablessAAP2geoiSbx_xtFZTW
+__T0Sis35_ExpressibleByBuiltinIntegerLiteralssAAPxBi2048_08_builtindE0_tcfCTW
+__T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_Tf4gng_n
+__T010AudioKitUI19AKRollingOutputPlotCACSgSo7NSCoderC5coder_tcfcTf4gn_n
+_swift_rt_swift_deallocObject
+_swift_rt_swift_allocObject
+__T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_TA
+_block_copy_helper
+_block_destroy_helper
+_swift_rt_swift_getExistentialTypeMetadata
+__T010AudioKitUI19AKRollingOutputPlotC10bufferSizes6UInt32VvWvd
+__T010AudioKitUI19AKRollingOutputPlotCML
+__T010AudioKitUI19AKRollingOutputPlotCMf
+__T010AudioKitUI19AKRollingOutputPlotCMF
+_block_descriptor
+__T0s23_ContiguousArrayStorageCyypGML
+__T0ypML
+/Users/megastep/src/ak/AudioKit/AudioKit/Common/User Interface/AKRollingOutputPlot.swift
+block_destroy_helper
+block_copy_helper
+_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_TA
+_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_
+objectdestroy
+get_field_types_AKRollingOutputPlot
+setupReconnection
+_T010AudioKitUI19AKRollingOutputPlotCMa
+_T010AudioKitUI19AKRollingOutputPlotC9setupNodeyyFySo16AVAudioPCMBufferC_So0I4TimeCtcfU_Tf4gng_n
+bufferSize.get
+AKLog
+_T0s23_ContiguousArrayStorageCyypGMa
+_T0ypMa
+_T0Sis35_ExpressibleByBuiltinIntegerLiteralssAAPxBi2048_08_builtindE0_tcfCTW
+_T0Sis10ComparablessAAP2geoiSbx_xtFZTW
+createView
 reconnect
 setupNode
 __T010AudioKitUI20AKOutputWaveformPlotC5pauseyyFTo
@@ -563,7 +589,6 @@ __T0s24_VariantDictionaryBufferO12nativeDeleteys07_NativebC0Vyxq_G_Si11idealBuck
 __T0s23_NativeDictionaryBufferVss8HashableRzr0_lE12unsafeAddNewyx3key_q_5valuetFTfq4ggn_n10AudioKitUI7AKThemeO_SaySo7UIColorCGTg5
 __T0s23_NativeDictionaryBufferVss8HashableRzr0_lE12unsafeAddNewyx3key_q_5valuetFTfq4ggn_n10AudioKitUI7AKThemeO_So7UIColorCTg5
 __T010AudioKitUI9AKStylistC7bgColorSo7UIColorCfgTf4n_g
-__T010AudioKitUI9AKStylistC9fontColorSo7UIColorCfgTf4n_g
 ___swift_memcpy1_1
 ___swift_memcpy_array1_1
 ___swift_memmove_array1_1
@@ -614,10 +639,9 @@ __swift_memcpy_array1_1
 __swift_memcpy1_1
 _T010AudioKitUI7AKThemeOs8HashableAAWa
 _T010AudioKitUI7AKThemeOs9EquatableAAWa
-fontColor.get
+bgColor.get
 __derived_enum_equals
 _T0s17_squeezeHashValueS2i_SitF
-bgColor.get
 _T0s23_NativeDictionaryBufferVss8HashableRzr0_lE12unsafeAddNewyx3key_q_5valuetFTfq4ggn_n10AudioKitUI7AKThemeO_So7UIColorCTg5
 _T0Sp10initializeyx2to_Si5counttFTfq4gnn_nSo7UIColorC_Tg5
 _T0Sp10initializeyx2to_Si5counttFTfq4gnn_n10AudioKitUI7AKThemeO_Tg5
@@ -2066,9 +2090,7 @@ yPosition.get
 yPosition.materialize
 spacing.get
 _T010AudioKitUI16AKPlaygroundViewCMa
-addLabel
 elementHeight.get
-addTitle
 setup
 spacing.materialize
 spacing.set
@@ -2179,6 +2201,7 @@ __T010AudioKitUI14AKKeyboardViewC12touchesMovedys3SetVySo7UITouchCG_So7UIEventCS
 __T010AudioKitUI14AKKeyboardViewC13oneOctaveSizeSC6CGSizeVvWvd
 __T010AudioKitUI14AKKeyboardViewC7xOffset12CoreGraphics7CGFloatVvWvd
 __T010AudioKitUI14AKKeyboardViewC6onKeyss3SetVys5UInt8VGvWvd
+__T010AudioKitUI14AKKeyboardViewC12baseMIDINoteSivWvd
 __T010AudioKitUI14AKKeyboardViewC12naturalNotesSaySSGvWvd
 __T010AudioKitUI14AKKeyboardViewC15notesWithSharpsSaySSGvWvd
 __T0s23_ContiguousArrayStorageCySiGML

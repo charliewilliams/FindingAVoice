@@ -214,9 +214,21 @@ SWIFT_CLASS("_TtC8AudioKit10AK3DPanner")
 @end
 
 
+/// Protocol for dictating that a node can be in a started or stopped state
+SWIFT_PROTOCOL("_TtP8AudioKit12AKToggleable_")
+@protocol AKToggleable
+/// Tells whether the node is processing (ie. started, playing, or active)
+@property (nonatomic, readonly) BOOL isStarted;
+/// Function to start, play, or activate the node, all do the same thing
+- (void)start;
+/// Function to stop or bypass the node, both are equivalent
+- (void)stop;
+@end
+
+
 /// Triggerable classic ADSR envelope
 SWIFT_CLASS("_TtC8AudioKit19AKAmplitudeEnvelope")
-@interface AKAmplitudeEnvelope : AKNode
+@interface AKAmplitudeEnvelope : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Attack time
@@ -240,7 +252,7 @@ SWIFT_CLASS("_TtC8AudioKit19AKAmplitudeEnvelope")
 /// Performs a “root-mean-square” on a signal to get overall amplitude of a
 /// signal. The output signal looks similar to that of a classic VU meter.
 SWIFT_CLASS("_TtC8AudioKit18AKAmplitudeTracker")
-@interface AKAmplitudeTracker : AKNode
+@interface AKAmplitudeTracker : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Detected amplitude
@@ -335,7 +347,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKAudioFile")
 
 /// Not so simple audio playback class
 SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
-@interface AKAudioPlayer : AKNode
+@interface AKAudioPlayer : AKNode <AKToggleable>
 /// Buffer to be palyed
 @property (nonatomic, strong) AVAudioPCMBuffer * _Nullable audioFileBuffer;
 /// Will be triggered when AKAudioPlayer has finished to play.
@@ -376,6 +388,26 @@ SWIFT_CLASS("_TtC8AudioKit13AKAudioPlayer")
 @property (nonatomic) double scheduledTime;
 /// Sheduled time
 @property (nonatomic, strong) AVAudioTime * _Nullable scheduledAVTime;
+/// Initialize the audio player
+/// Notice that completionCallBack will be triggered from a
+/// background thread. Any UI update should be made using:
+/// \code
+/// Dispatch.main.async {
+///    // UI updates...
+/// }
+///
+/// \endcode\param file the AKAudioFile to play
+///
+/// \param looping will loop play if set to true, or stop when play ends, so it can trig the
+/// completionHandler callback. Default is false (non looping)
+///
+/// \param completionHandler AKCallback that will be triggered when the player end playing (useful for refreshing
+/// UI so we’re not playing anymore, we stopped playing…)
+///
+///
+/// returns:
+/// an AKAudioPlayer if init succeeds, or nil if init fails. If fails, errors may be caught.
+- (nullable instancetype)initWithFile:(AKAudioFile * _Nonnull)file looping:(BOOL)looping deferBuffering:(BOOL)deferBuffering error:(NSError * _Nullable * _Nullable)error completionHandler:(void (^ _Nullable)(void))completionHandler OBJC_DESIGNATED_INITIALIZER;
 /// Start playback
 - (void)start;
 /// Stop playback
@@ -454,7 +486,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKAudioUnitManager")
 
 /// An automatic wah effect, ported from Guitarix via Faust.
 SWIFT_CLASS("_TtC8AudioKit9AKAutoWah")
-@interface AKAutoWah : AKNode
+@interface AKAutoWah : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Wah Amount
@@ -465,6 +497,16 @@ SWIFT_CLASS("_TtC8AudioKit9AKAutoWah")
 @property (nonatomic) double amplitude;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
+/// Initialize this autoWah node
+/// \param input Input node to process
+///
+/// \param wah Wah Amount (Default 0.0)
+///
+/// \param mix Dry/Wet Mix (Default 1.0)
+///
+/// \param amplitude Overall level (Default 0.1)
+///
+- (nonnull instancetype)init:(AKNode * _Nullable)input wah:(double)wah mix:(double)mix amplitude:(double)amplitude OBJC_DESIGNATED_INITIALIZER;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -480,7 +522,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKAutoWah")
 /// should be noted that this modifies amplitude only; output signal is not
 /// altered in any other respect.
 SWIFT_CLASS("_TtC8AudioKit10AKBalancer")
-@interface AKBalancer : AKNode
+@interface AKBalancer : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Function to start, play, or activate the node, all do the same thing
@@ -494,7 +536,7 @@ SWIFT_CLASS("_TtC8AudioKit10AKBalancer")
 /// These filters are Butterworth second-order IIR filters. They offer an almost
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit27AKBandPassButterworthFilter")
-@interface AKBandPassButterworthFilter : AKNode
+@interface AKBandPassButterworthFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Center frequency. (in Hertz)
@@ -514,7 +556,7 @@ SWIFT_CLASS("_TtC8AudioKit27AKBandPassButterworthFilter")
 /// These filters are Butterworth second-order IIR filters. They offer an almost
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit29AKBandRejectButterworthFilter")
-@interface AKBandRejectButterworthFilter : AKNode
+@interface AKBandRejectButterworthFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Center frequency. (in Hertz)
@@ -533,7 +575,7 @@ SWIFT_CLASS("_TtC8AudioKit29AKBandRejectButterworthFilter")
 
 /// This will digitally degrade a signal.
 SWIFT_CLASS("_TtC8AudioKit12AKBitCrusher")
-@interface AKBitCrusher : AKNode
+@interface AKBitCrusher : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// The bit depth of signal output. Typically in range (1-24). Non-integer values are OK.
@@ -565,7 +607,7 @@ SWIFT_CLASS("_TtC8AudioKit21AKBluetoothMIDIButton")
 
 /// Stereo Booster
 SWIFT_CLASS("_TtC8AudioKit9AKBooster")
-@interface AKBooster : AKNode
+@interface AKBooster : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Amplification Factor
@@ -588,7 +630,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKBooster")
 
 /// Faust-based pink noise generator
 SWIFT_CLASS("_TtC8AudioKit15AKBrownianNoise")
-@interface AKBrownianNoise : AKNode
+@interface AKBrownianNoise : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Amplitude. (Value between 0-1).
@@ -632,7 +674,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKCallbackInstrument")
 /// three series allpass units, followed by four parallel comb filters, and two
 /// decorrelation delay lines in parallel at the output.
 SWIFT_CLASS("_TtC8AudioKit16AKChowningReverb")
-@interface AKChowningReverb : AKNode
+@interface AKChowningReverb : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Function to start, play, or activate the node, all do the same thing
@@ -645,7 +687,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKChowningReverb")
 
 /// STK Clarinet
 SWIFT_CLASS("_TtC8AudioKit10AKClarinet")
-@interface AKClarinet : AKNode
+@interface AKClarinet : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.
@@ -745,7 +787,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKClipPlayer")
 /// Clips a signal to a predefined limit, in a “soft” manner, using one of three
 /// methods.
 SWIFT_CLASS("_TtC8AudioKit9AKClipper")
-@interface AKClipper : AKNode
+@interface AKClipper : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Threshold / limiting value.
@@ -766,7 +808,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKClipper")
 /// for a signal to decay to 1/1000, or 60dB down from its original amplitude).
 /// Output from a comb filter will appear only after loopDuration seconds.
 SWIFT_CLASS("_TtC8AudioKit18AKCombFilterReverb")
-@interface AKCombFilterReverb : AKNode
+@interface AKCombFilterReverb : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude. (aka RT-60).
@@ -783,7 +825,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKCombFilterReverb")
 
 /// AudioKit Compressor based on Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit12AKCompressor")
-@interface AKCompressor : AKNode
+@interface AKCompressor : AKNode <AKToggleable>
 /// Threshold (dB) ranges from -40 to 20 (Default: -20)
 @property (nonatomic) double threshold;
 /// Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)
@@ -817,7 +859,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKCompressor")
 /// This module will perform partitioned convolution on an input signal using an
 /// audio file as an impulse response.
 SWIFT_CLASS("_TtC8AudioKit13AKConvolution")
-@interface AKConvolution : AKNode
+@interface AKConvolution : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Function to start, play, or activate the node, all do the same thing
@@ -832,7 +874,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKConvolution")
 /// modeling scattering junction of 8 lossless waveguides of equal
 /// characteristic impedance.
 SWIFT_CLASS("_TtC8AudioKit16AKCostelloReverb")
-@interface AKCostelloReverb : AKNode
+@interface AKCostelloReverb : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Feedback level in the range 0 to 1. 0.6 gives a good small ‘live’ room sound, 0.8 a small hall, and 0.9 a
@@ -875,7 +917,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKCustomUgen")
 /// Implements the DC blocking filter Y[i] = X[i] - X[i-1] + (igain * Y[i-1])
 /// Based on work by Perry Cook.
 SWIFT_CLASS("_TtC8AudioKit9AKDCBlock")
-@interface AKDCBlock : AKNode
+@interface AKDCBlock : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Function to start, play, or activate the node, all do the same thing
@@ -888,7 +930,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKDCBlock")
 
 /// AudioKit version of Apple’s Decimator from the Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit11AKDecimator")
-@interface AKDecimator : AKNode
+@interface AKDecimator : AKNode <AKToggleable>
 /// Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)
 @property (nonatomic) double decimation;
 /// Rounding (Normalized Value) ranges from 0 to 1 (Default: 0)
@@ -909,7 +951,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKDecimator")
 
 /// AudioKit version of Apple’s Delay Audio Unit
 SWIFT_CLASS("_TtC8AudioKit7AKDelay")
-@interface AKDelay : AKNode
+@interface AKDelay : AKNode <AKToggleable>
 /// Delay time in seconds (Default: 1)
 @property (nonatomic) NSTimeInterval time;
 /// Feedback (Normalized Value) ranges from 0 to 1 (Default: 0.5)
@@ -920,6 +962,18 @@ SWIFT_CLASS("_TtC8AudioKit7AKDelay")
 @property (nonatomic) double dryWetMix;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic) BOOL isStarted;
+/// Initialize the delay node
+/// \param input Input audio AKNode to process
+///
+/// \param time Delay time in seconds (Default: 1)
+///
+/// \param feedback Amount of feedback, ranges from 0 to 1 (Default: 0.5)
+///
+/// \param lowPassCutoff Low-pass cutoff frequency in Hz (Default 15000)
+///
+/// \param dryWetMix Amount of unprocessed (dry) to delayed (wet) audio, ranges from 0 to 1 (Default: 0.5)
+///
+- (nonnull instancetype)init:(AKNode * _Nullable)input time:(double)time feedback:(double)feedback lowPassCutoff:(double)lowPassCutoff dryWetMix:(double)dryWetMix OBJC_DESIGNATED_INITIALIZER;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -941,7 +995,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKDevice")
 
 /// AudioKit version of Apple’s Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit12AKDistortion")
-@interface AKDistortion : AKNode
+@interface AKDistortion : AKNode <AKToggleable>
 /// Delay (Milliseconds) ranges from 0.1 to 500 (Default: 0.1)
 @property (nonatomic) double delay;
 /// Decay (Rate) ranges from 0.1 to 50 (Default: 1.0)
@@ -1034,7 +1088,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKDryWetMixer")
 /// DynaRage Tube Compressor | Based on DynaRage Tube Compressor RE for Reason
 /// by Devoloop Srls
 SWIFT_CLASS("_TtC8AudioKit20AKDynaRageCompressor")
-@interface AKDynaRageCompressor : AKNode
+@interface AKDynaRageCompressor : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Ratio to compress with, a value > 1 will compress
@@ -1061,7 +1115,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKDynaRageCompressor")
 
 /// Dynamic range compressor from Faust
 SWIFT_CLASS("_TtC8AudioKit24AKDynamicRangeCompressor")
-@interface AKDynamicRangeCompressor : AKNode
+@interface AKDynamicRangeCompressor : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Ratio to compress with, a value > 1 will compress
@@ -1084,7 +1138,7 @@ SWIFT_CLASS("_TtC8AudioKit24AKDynamicRangeCompressor")
 
 /// AudioKit version of Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit19AKDynamicsProcessor")
-@interface AKDynamicsProcessor : AKNode
+@interface AKDynamicsProcessor : AKNode <AKToggleable>
 /// Threshold (dB) ranges from -40 to 20 (Default: -20)
 @property (nonatomic) double threshold;
 /// Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)
@@ -1124,7 +1178,7 @@ SWIFT_CLASS("_TtC8AudioKit19AKDynamicsProcessor")
 /// a peak at the center frequency with a width dependent on bandwidth. If gain
 /// is less than 1, a notch is formed around the center frequency.
 SWIFT_CLASS("_TtC8AudioKit17AKEqualizerFilter")
-@interface AKEqualizerFilter : AKNode
+@interface AKEqualizerFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Center frequency. (in Hertz)
@@ -1145,7 +1199,7 @@ SWIFT_CLASS("_TtC8AudioKit17AKEqualizerFilter")
 
 /// AudioKit Expander based on Apple’s DynamicsProcessor Audio Unit
 SWIFT_CLASS("_TtC8AudioKit10AKExpander")
-@interface AKExpander : AKNode
+@interface AKExpander : AKNode <AKToggleable>
 /// Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)
 @property (nonatomic) double expansionRatio;
 /// Expansion Threshold (rate) ranges from 1 to 50.0 (Default: 2)
@@ -1188,7 +1242,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKFFTTap")
 
 /// Classic FM Synthesis audio generation.
 SWIFT_CLASS("_TtC8AudioKit14AKFMOscillator")
-@interface AKFMOscillator : AKNode
+@interface AKFMOscillator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies.
@@ -1317,7 +1371,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKFileClipSequence")
 /// 1/1000, or 60dB down from its original amplitude).  Output will begin to
 /// appear immediately.
 SWIFT_CLASS("_TtC8AudioKit29AKFlatFrequencyResponseReverb")
-@interface AKFlatFrequencyResponseReverb : AKNode
+@interface AKFlatFrequencyResponseReverb : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// The duration in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude.
@@ -1334,7 +1388,7 @@ SWIFT_CLASS("_TtC8AudioKit29AKFlatFrequencyResponseReverb")
 
 /// STK Flutee
 SWIFT_CLASS("_TtC8AudioKit7AKFlute")
-@interface AKFlute : AKNode
+@interface AKFlute : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.
@@ -1356,7 +1410,7 @@ SWIFT_CLASS("_TtC8AudioKit7AKFlute")
 /// grains. Overlapping will occur when 1/freq < dec, but there is no upper
 /// limit on the number of overlaps.
 SWIFT_CLASS("_TtC8AudioKit15AKFormantFilter")
-@interface AKFormantFilter : AKNode
+@interface AKFormantFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// x
@@ -1375,7 +1429,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKFormantFilter")
 
 /// This is based on an algorithm originally created by Miller Puckette.
 SWIFT_CLASS("_TtC8AudioKit18AKFrequencyTracker")
-@interface AKFrequencyTracker : AKNode
+@interface AKFrequencyTracker : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Detected Amplitude (Use AKAmplitude tracker if you don’t need frequency)
@@ -1393,7 +1447,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKFrequencyTracker")
 /// These filters are Butterworth second-order IIR filters. They offer an almost
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit27AKHighPassButterworthFilter")
-@interface AKHighPassButterworthFilter : AKNode
+@interface AKHighPassButterworthFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Cutoff frequency. (in Hertz)
@@ -1410,7 +1464,7 @@ SWIFT_CLASS("_TtC8AudioKit27AKHighPassButterworthFilter")
 
 /// AudioKit version of Apple’s HighPassFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit16AKHighPassFilter")
-@interface AKHighPassFilter : AKNode
+@interface AKHighPassFilter : AKNode <AKToggleable>
 /// Cutoff Frequency (Hz) ranges from 10 to 22050 (Default: 6900)
 @property (nonatomic) double cutoffFrequency;
 /// Resonance (dB) ranges from -20 to 40 (Default: 0)
@@ -1431,7 +1485,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKHighPassFilter")
 
 /// AudioKit version of Apple’s HighShelfFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit17AKHighShelfFilter")
-@interface AKHighShelfFilter : AKNode
+@interface AKHighShelfFilter : AKNode <AKToggleable>
 /// Cut Off Frequency (Hz) ranges from 10000 to 22050 (Default: 10000)
 @property (nonatomic) double cutoffFrequency;
 /// Gain (dB) ranges from -40 to 40 (Default: 0)
@@ -1452,7 +1506,7 @@ SWIFT_CLASS("_TtC8AudioKit17AKHighShelfFilter")
 
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit36AKHighShelfParametricEqualizerFilter")
-@interface AKHighShelfParametricEqualizerFilter : AKNode
+@interface AKHighShelfParametricEqualizerFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Corner frequency.
@@ -1471,6 +1525,7 @@ SWIFT_CLASS("_TtC8AudioKit36AKHighShelfParametricEqualizerFilter")
 @end
 
 
+/// A transitory used to pass connection information.
 SWIFT_CLASS("_TtC8AudioKit17AKInputConnection")
 @interface AKInputConnection : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1479,7 +1534,7 @@ SWIFT_CLASS("_TtC8AudioKit17AKInputConnection")
 
 /// Analog model of the Korg 35 Lowpass Filter
 SWIFT_CLASS("_TtC8AudioKit19AKKorgLowPassFilter")
-@interface AKKorgLowPassFilter : AKNode
+@interface AKKorgLowPassFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Filter cutoff
@@ -1501,7 +1556,7 @@ SWIFT_CLASS("_TtC8AudioKit19AKKorgLowPassFilter")
 /// These filters are Butterworth second-order IIR filters. They offer an almost
 /// flat passband and very good precision and stopband attenuation.
 SWIFT_CLASS("_TtC8AudioKit26AKLowPassButterworthFilter")
-@interface AKLowPassButterworthFilter : AKNode
+@interface AKLowPassButterworthFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Cutoff frequency. (in Hertz)
@@ -1518,7 +1573,7 @@ SWIFT_CLASS("_TtC8AudioKit26AKLowPassButterworthFilter")
 
 /// AudioKit version of Apple’s LowPassFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit15AKLowPassFilter")
-@interface AKLowPassFilter : AKNode
+@interface AKLowPassFilter : AKNode <AKToggleable>
 /// Cutoff Frequency (Hz) ranges from 10 to 22050 (Default: 6900)
 @property (nonatomic) double cutoffFrequency;
 /// Resonance (dB) ranges from -20 to 40 (Default: 0)
@@ -1539,7 +1594,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKLowPassFilter")
 
 /// AudioKit version of Apple’s LowShelfFilter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit16AKLowShelfFilter")
-@interface AKLowShelfFilter : AKNode
+@interface AKLowShelfFilter : AKNode <AKToggleable>
 /// Cutoff Frequency (Hz) ranges from 10 to 200 (Default: 80)
 @property (nonatomic) double cutoffFrequency;
 /// Gain (dB) ranges from -40 to 40 (Default: 0)
@@ -1560,7 +1615,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKLowShelfFilter")
 
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit35AKLowShelfParametricEqualizerFilter")
-@interface AKLowShelfParametricEqualizerFilter : AKNode
+@interface AKLowShelfParametricEqualizerFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Corner frequency.
@@ -1723,7 +1778,7 @@ SWIFT_CLASS("_TtC8AudioKit10AKMetalBar")
 
 /// Operation-based generator
 SWIFT_CLASS("_TtC8AudioKit20AKOperationGenerator")
-@interface AKOperationGenerator : AKNode
+@interface AKOperationGenerator : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Sporth language snippet
@@ -1746,7 +1801,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKMetronome")
 
 /// Audio from the standard input
 SWIFT_CLASS("_TtC8AudioKit12AKMicrophone")
-@interface AKMicrophone : AKNode
+@interface AKMicrophone : AKNode <AKToggleable>
 /// Output Volume (Default 1)
 @property (nonatomic) double volume;
 /// Determine if the microphone is currently on.
@@ -1762,7 +1817,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKMicrophone")
 
 /// AudioKit version of Apple’s Mixer Node
 SWIFT_CLASS("_TtC8AudioKit7AKMixer")
-@interface AKMixer : AKNode
+@interface AKMixer : AKNode <AKToggleable>
 /// Output Volume (Default 1)
 @property (nonatomic) double volume;
 /// Determine if the mixer is serving any output or if it is stopped.
@@ -1785,7 +1840,7 @@ SWIFT_CLASS("_TtC8AudioKit7AKMixer")
 /// can be created using  passing an impulse through a combination of modal
 /// filters.
 SWIFT_CLASS("_TtC8AudioKit22AKModalResonanceFilter")
-@interface AKModalResonanceFilter : AKNode
+@interface AKModalResonanceFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Resonant frequency of the filter.
@@ -1808,7 +1863,7 @@ SWIFT_CLASS("_TtC8AudioKit22AKModalResonanceFilter")
 /// Napoli). This implementation is probably a more accurate digital
 /// representation of the original analogue filter.
 SWIFT_CLASS("_TtC8AudioKit12AKMoogLadder")
-@interface AKMoogLadder : AKNode
+@interface AKMoogLadder : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Filter cutoff frequency.
@@ -1831,7 +1886,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKMoogLadder")
 /// This is an oscillator with linear interpolation that is capable of morphing
 /// between an arbitrary number of wavetables.
 SWIFT_CLASS("_TtC8AudioKit20AKMorphingOscillator")
-@interface AKMorphingOscillator : AKNode
+@interface AKMorphingOscillator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// In cycles per second, or Hz.
@@ -1889,7 +1944,19 @@ SWIFT_CLASS("_TtC8AudioKit24AKMorphingOscillatorBank")
 - (void)disconnect SWIFT_DEPRECATED_MSG("", "detach");
 @end
 
+@class AVAudioNode;
 
+/// Simplify making connections from a node.
+SWIFT_PROTOCOL("_TtP8AudioKit8AKOutput_")
+@protocol AKOutput
+/// The output of this node can be connected to the inputNode of an AKInput.
+@property (nonatomic, readonly, strong) AVAudioNode * _Nonnull outputNode;
+@end
+
+
+@interface AKNode (SWIFT_EXTENSION(AudioKit)) <AKOutput>
+@property (nonatomic, readonly, strong) AVAudioNode * _Nonnull outputNode;
+@end
 
 
 /// Simple audio recorder class
@@ -1897,6 +1964,16 @@ SWIFT_CLASS("_TtC8AudioKit14AKNodeRecorder")
 @interface AKNodeRecorder : NSObject
 /// True if we are recording.
 @property (nonatomic, readonly) BOOL isRecording;
+/// Initialize the node recorder
+/// Recording buffer size is defaulted to be AKSettings.bufferLength
+/// You can set a different value by setting an AKSettings.recordingBufferLength
+/// \param node Node to record from
+///
+/// \param file Audio file to record to
+///
+- (nullable instancetype)initWithNode:(AKNode * _Nullable)node file:(AKAudioFile * _Nullable)file error:(NSError * _Nullable * _Nullable)error OBJC_DESIGNATED_INITIALIZER;
+/// Start recording
+- (BOOL)recordAndReturnError:(NSError * _Nullable * _Nullable)error;
 /// Stop recording
 - (void)stop;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1911,7 +1988,7 @@ SWIFT_CLASS("_TtC8AudioKit19AKOfflineRenderNode")
 
 /// Operation-based effect
 SWIFT_CLASS("_TtC8AudioKit17AKOperationEffect")
-@interface AKOperationEffect : AKNode
+@interface AKOperationEffect : AKNode <AKToggleable>
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
 /// Parameters for changing internal operations
@@ -1928,7 +2005,7 @@ SWIFT_CLASS("_TtC8AudioKit17AKOperationEffect")
 /// Reads from the table sequentially and repeatedly at given frequency. Linear
 /// interpolation is applied for table look up from internal phase values.
 SWIFT_CLASS("_TtC8AudioKit12AKOscillator")
-@interface AKOscillator : AKNode
+@interface AKOscillator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// In cycles per second, or Hz.
@@ -1977,9 +2054,10 @@ SWIFT_CLASS("_TtC8AudioKit16AKOscillatorBank")
 @end
 
 
+
 /// Pulse-Width Modulating Oscillator
 SWIFT_CLASS("_TtC8AudioKit15AKPWMOscillator")
-@interface AKPWMOscillator : AKNode
+@interface AKPWMOscillator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// In cycles per second, or Hz.
@@ -2033,13 +2111,19 @@ SWIFT_CLASS("_TtC8AudioKit19AKPWMOscillatorBank")
 
 /// Stereo Panner
 SWIFT_CLASS("_TtC8AudioKit8AKPanner")
-@interface AKPanner : AKNode
+@interface AKPanner : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.
 @property (nonatomic) double pan;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic, readonly) BOOL isStarted;
+/// Initialize this panner node
+/// \param input Input node to process
+///
+/// \param pan Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.
+///
+- (nonnull instancetype)init:(AKNode * _Nullable)input pan:(double)pan OBJC_DESIGNATED_INITIALIZER;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -2050,7 +2134,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKPanner")
 
 /// AudioKit version of Apple’s PeakLimiter Audio Unit
 SWIFT_CLASS("_TtC8AudioKit13AKPeakLimiter")
-@interface AKPeakLimiter : AKNode
+@interface AKPeakLimiter : AKNode <AKToggleable>
 /// Attack Time (Secs) ranges from 0.001 to 0.03 (Default: 0.012)
 @property (nonatomic) double attackTime;
 /// Decay Time (Secs) ranges from 0.001 to 0.06 (Default: 0.024)
@@ -2073,7 +2157,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKPeakLimiter")
 
 /// This is an implementation of Zoelzer’s parametric equalizer filter.
 SWIFT_CLASS("_TtC8AudioKit34AKPeakingParametricEqualizerFilter")
-@interface AKPeakingParametricEqualizerFilter : AKNode
+@interface AKPeakingParametricEqualizerFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Center frequency.
@@ -2100,7 +2184,7 @@ SWIFT_CLASS("_TtC8AudioKit18AKPeriodicFunction")
 
 /// Phase Distortion Oscillator
 SWIFT_CLASS("_TtC8AudioKit27AKPhaseDistortionOscillator")
-@interface AKPhaseDistortionOscillator : AKNode
+@interface AKPhaseDistortionOscillator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// In cycles per second, or Hz.
@@ -2178,7 +2262,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKPhaseLockedVocoder")
 /// A stereo phaser This is a stereo phaser, generated from Faust code taken
 /// from the Guitarix project.
 SWIFT_CLASS("_TtC8AudioKit8AKPhaser")
-@interface AKPhaser : AKNode
+@interface AKPhaser : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Notch Minimum Frequency
@@ -2211,7 +2295,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKPhaser")
 
 /// Faust-based pink noise generator
 SWIFT_CLASS("_TtC8AudioKit11AKPinkNoise")
-@interface AKPinkNoise : AKNode
+@interface AKPinkNoise : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Amplitude. (Value between 0-1).
@@ -2228,7 +2312,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKPinkNoise")
 
 /// Faust-based pitch shifter
 SWIFT_CLASS("_TtC8AudioKit14AKPitchShifter")
-@interface AKPitchShifter : AKNode
+@interface AKPitchShifter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Pitch shift (in semitones)
@@ -2249,7 +2333,7 @@ SWIFT_CLASS("_TtC8AudioKit14AKPitchShifter")
 
 /// Karplus-Strong plucked string instrument.
 SWIFT_CLASS("_TtC8AudioKit15AKPluckedString")
-@interface AKPluckedString : AKNode
+@interface AKPluckedString : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.
@@ -2271,7 +2355,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKPluckedString")
 /// The output for reson appears to be very hot, so take caution when using this
 /// module.
 SWIFT_CLASS("_TtC8AudioKit16AKResonantFilter")
-@interface AKResonantFilter : AKNode
+@interface AKResonantFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Center frequency of the filter, or frequency position of the peak response.
@@ -2290,11 +2374,17 @@ SWIFT_CLASS("_TtC8AudioKit16AKResonantFilter")
 
 /// AudioKit version of Apple’s Reverb Audio Unit
 SWIFT_CLASS("_TtC8AudioKit8AKReverb")
-@interface AKReverb : AKNode
+@interface AKReverb : AKNode <AKToggleable>
 /// Dry/Wet Mix (Default 0.5)
 @property (nonatomic) double dryWetMix;
 /// Tells whether the node is processing (ie. started, playing, or active)
 @property (nonatomic) BOOL isStarted;
+/// Initialize the reverb node
+/// \param input AKNode to reverberate
+///
+/// \param dryWetMix Amount of processed signal (Default: 0.5, Range: 0 - 1)
+///
+- (nonnull instancetype)init:(AKNode * _Nullable)input dryWetMix:(double)dryWetMix OBJC_DESIGNATED_INITIALIZER;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -2305,7 +2395,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKReverb")
 
 /// AudioKit version of Apple’s Reverb2 Audio Unit
 SWIFT_CLASS("_TtC8AudioKit9AKReverb2")
-@interface AKReverb2 : AKNode
+@interface AKReverb2 : AKNode <AKToggleable>
 /// Dry Wet Mix (CrossFade) ranges from 0 to 1 (Default: 0.5)
 @property (nonatomic) double dryWetMix;
 /// Gain (Decibels) ranges from -20 to 20 (Default: 0)
@@ -2332,7 +2422,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKReverb2")
 
 /// Guitar head and cab simulator.
 SWIFT_CLASS("_TtC8AudioKit22AKRhinoGuitarProcessor")
-@interface AKRhinoGuitarProcessor : AKNode
+@interface AKRhinoGuitarProcessor : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Determines the amount of gain applied to the signal before processing.
@@ -2359,7 +2449,7 @@ SWIFT_CLASS("_TtC8AudioKit22AKRhinoGuitarProcessor")
 
 /// STK RhodesPiano
 SWIFT_CLASS("_TtC8AudioKit13AKRhodesPiano")
-@interface AKRhodesPiano : AKNode
+@interface AKRhodesPiano : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.
@@ -2379,7 +2469,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKRhodesPiano")
 
 /// AudioKit version of Apple’s Ring Modulator from the Distortion Audio Unit
 SWIFT_CLASS("_TtC8AudioKit15AKRingModulator")
-@interface AKRingModulator : AKNode
+@interface AKRingModulator : AKNode <AKToggleable>
 /// Frequency1 (Hertz) ranges from 0.5 to 8000 (Default: 100)
 @property (nonatomic) double frequency1;
 /// Frequency2 (Hertz) ranges from 0.5 to 8000 (Default: 100)
@@ -2402,7 +2492,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKRingModulator")
 
 /// Emulation of the Roland TB-303 filter
 SWIFT_CLASS("_TtC8AudioKit19AKRolandTB303Filter")
-@interface AKRolandTB303Filter : AKNode
+@interface AKRolandTB303Filter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Cutoff frequency. (in Hertz)
@@ -2643,7 +2733,7 @@ typedef SWIFT_ENUM(NSInteger, SessionCategory) {
 
 /// STK Shaker
 SWIFT_CLASS("_TtC8AudioKit8AKShaker")
-@interface AKShaker : AKNode
+@interface AKShaker : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Amplitude
@@ -2661,7 +2751,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKShaker")
 
 /// Stereo Field Limiter
 SWIFT_CLASS("_TtC8AudioKit20AKStereoFieldLimiter")
-@interface AKStereoFieldLimiter : AKNode
+@interface AKStereoFieldLimiter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Limiting Factor
@@ -2678,7 +2768,7 @@ SWIFT_CLASS("_TtC8AudioKit20AKStereoFieldLimiter")
 
 /// Audio from a standard stereo input (very useful for making filters that use Audiobus or IAA as their input source)
 SWIFT_CLASS("_TtC8AudioKit13AKStereoInput")
-@interface AKStereoInput : AKNode
+@interface AKStereoInput : AKNode <AKToggleable>
 /// Output Volume (Default 1)
 @property (nonatomic) double volume;
 /// Determine if the microphone is currently on.
@@ -2699,7 +2789,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKStereoInput")
 /// fundamentalFrequency.  This operation can be used to simulate sympathetic
 /// resonances to an input signal.
 SWIFT_CLASS("_TtC8AudioKit17AKStringResonator")
-@interface AKStringResonator : AKNode
+@interface AKStringResonator : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Fundamental frequency of string.
@@ -2771,7 +2861,7 @@ typedef SWIFT_ENUM(NSInteger, AKTableType) {
 
 /// Distortion using a modified hyperbolic tangent function.
 SWIFT_CLASS("_TtC8AudioKit16AKTanhDistortion")
-@interface AKTanhDistortion : AKNode
+@interface AKTanhDistortion : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Determines the amount of gain applied to the signal before waveshaping. A value of 1 gives slight distortion.
@@ -2794,7 +2884,9 @@ SWIFT_CLASS("_TtC8AudioKit16AKTanhDistortion")
 
 /// Testing node
 SWIFT_CLASS("_TtC8AudioKit8AKTester")
-@interface AKTester : AKNode
+@interface AKTester : AKNode <AKToggleable>
+/// Flag on whether or not the test is still in progress
+@property (nonatomic, readonly) BOOL isStarted;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -2805,7 +2897,7 @@ SWIFT_CLASS("_TtC8AudioKit8AKTester")
 
 /// 3-pole (18 db/oct slope) Low-Pass filter with resonance and tanh distortion.
 SWIFT_CLASS("_TtC8AudioKit24AKThreePoleLowpassFilter")
-@interface AKThreePoleLowpassFilter : AKNode
+@interface AKThreePoleLowpassFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Distortion amount.  Zero gives a clean output. Greater than zero adds tanh distortion controlled by the
@@ -2828,7 +2920,7 @@ SWIFT_CLASS("_TtC8AudioKit24AKThreePoleLowpassFilter")
 
 /// AudioKit version of Apple’s TimePitch Audio Unit
 SWIFT_CLASS("_TtC8AudioKit11AKTimePitch")
-@interface AKTimePitch : AKNode
+@interface AKTimePitch : AKNode <AKToggleable>
 /// Rate (rate) ranges from 0.03125 to 32.0 (Default: 1.0)
 @property (nonatomic) double rate;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -2837,6 +2929,16 @@ SWIFT_CLASS("_TtC8AudioKit11AKTimePitch")
 @property (nonatomic) double pitch;
 /// Overlap (generic) ranges from 3.0 to 32.0 (Default: 8.0)
 @property (nonatomic) double overlap;
+/// Initialize the time pitch node
+/// \param input Input node to process
+///
+/// \param rate Rate (rate) ranges from 0.03125 to 32.0 (Default: 1.0)
+///
+/// \param pitch Pitch (Cents) ranges from -2400 to 2400 (Default: 1.0)
+///
+/// \param overlap Overlap (generic) ranges from 3.0 to 32.0 (Default: 8.0)
+///
+- (nonnull instancetype)init:(AKNode * _Nullable)input rate:(double)rate pitch:(double)pitch overlap:(double)overlap OBJC_DESIGNATED_INITIALIZER;
 /// Function to start, play, or activate the node, all do the same thing
 - (void)start;
 /// Function to stop or bypass the node, both are equivalent
@@ -2845,9 +2947,10 @@ SWIFT_CLASS("_TtC8AudioKit11AKTimePitch")
 @end
 
 
+
 /// A complement to the AKLowPassFilter.
 SWIFT_CLASS("_TtC8AudioKit22AKToneComplementFilter")
-@interface AKToneComplementFilter : AKNode
+@interface AKToneComplementFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Half-Power Point in Hertz. Half power is defined as peak power / square root of 2.
@@ -2864,7 +2967,7 @@ SWIFT_CLASS("_TtC8AudioKit22AKToneComplementFilter")
 
 /// A first-order recursive low-pass filter with variable frequency response.
 SWIFT_CLASS("_TtC8AudioKit12AKToneFilter")
-@interface AKToneFilter : AKNode
+@interface AKToneFilter : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// The response curve’s half-power point, in Hertz. Half power is defined as peak power / root 2.
@@ -2881,7 +2984,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKToneFilter")
 
 /// Table-lookup tremolo with linear interpolation
 SWIFT_CLASS("_TtC8AudioKit9AKTremolo")
-@interface AKTremolo : AKNode
+@interface AKTremolo : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Frequency (Hz)
@@ -2900,7 +3003,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKTremolo")
 
 /// STK TubularBells
 SWIFT_CLASS("_TtC8AudioKit14AKTubularBells")
-@interface AKTubularBells : AKNode
+@interface AKTubularBells : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.
@@ -2942,7 +3045,7 @@ SWIFT_CLASS("_TtC8AudioKit13AKTuningTable")
 
 /// AudioKit version of Apple’s VariSpeed Audio Unit
 SWIFT_CLASS("_TtC8AudioKit11AKVariSpeed")
-@interface AKVariSpeed : AKNode
+@interface AKVariSpeed : AKNode <AKToggleable>
 /// Rate (rate) ranges form 0.25 to 4.0 (Default: 1.0)
 @property (nonatomic) double rate;
 /// Tells whether the node is processing (ie. started, playing, or active)
@@ -2957,7 +3060,7 @@ SWIFT_CLASS("_TtC8AudioKit11AKVariSpeed")
 
 /// A delay line with cubic interpolation.
 SWIFT_CLASS("_TtC8AudioKit15AKVariableDelay")
-@interface AKVariableDelay : AKNode
+@interface AKVariableDelay : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Delay time (in seconds) that can be changed at any point. This value must not exceed the maximum delay time.
@@ -2979,7 +3082,7 @@ SWIFT_CLASS("_TtC8AudioKit15AKVariableDelay")
 /// based on the classic Kelly-Lochbaum segmented cylindrical 1d waveguide
 /// model, and the glottal pulse wave is a LF glottal pulse model.
 SWIFT_CLASS("_TtC8AudioKit12AKVocalTract")
-@interface AKVocalTract : AKNode
+@interface AKVocalTract : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Glottal frequency.
@@ -3004,7 +3107,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKVocalTract")
 
 /// White noise generator
 SWIFT_CLASS("_TtC8AudioKit12AKWhiteNoise")
-@interface AKWhiteNoise : AKNode
+@interface AKWhiteNoise : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Amplitude. (Value between 0-1).
@@ -3021,7 +3124,7 @@ SWIFT_CLASS("_TtC8AudioKit12AKWhiteNoise")
 
 /// 8 FDN stereo zitareverb algorithm, imported from Faust.
 SWIFT_CLASS("_TtC8AudioKit12AKZitaReverb")
-@interface AKZitaReverb : AKNode
+@interface AKZitaReverb : AKNode <AKToggleable>
 /// Ramp Time represents the speed at which parameters are allowed to change
 @property (nonatomic) double rampTime;
 /// Delay in ms before reverberation begins.
@@ -3069,6 +3172,9 @@ SWIFT_CLASS("_TtC8AudioKit12AKZitaReverb")
 
 
 
+@interface AVAudioNode (SWIFT_EXTENSION(AudioKit))
+@property (nonatomic, readonly, strong) AVAudioNode * _Nonnull outputNode;
+@end
 
 
 
