@@ -18,6 +18,15 @@ class QuestionTests: XCTestCase {
         
         songs = SongLoader.songs
     }
+
+    func testDataDoesNotCauseCrash() {
+
+        for difficulty in [Difficulty.easy, .medium, .hard] {
+            for song in songs {
+                let _ = Question(song: song, difficulty: difficulty)
+            }
+        }
+    }
     
     func testFrostyTitle() {
         

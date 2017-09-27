@@ -19,16 +19,23 @@ class QuestionProvider {
         // Load info about what day of the test it is
     }
     
-    func nextQuestion() -> Question? {
+    func nextQuestion() -> Question {
         
         var songs = SongLoader.songs
         
         if let current = currentQuestion {
             songs = songs.filter { $0.id != current.song.id }
         }
-        
-        currentQuestion = Question(song: songs.randomItem(), difficulty: DifficultyProvider.currentDifficulty)
-        
-        return currentQuestion
+
+        return nextQuestion(song: songs.randomItem(), difficulty: DifficultyProvider.currentDifficulty)
+    }
+
+    func nextQuestion(song: Song, difficulty: Difficulty) -> Question {
+
+        while currentQuestion == nil {
+            currentQuestion = Question(song: song, difficulty: difficulty)
+        }
+
+        return currentQuestion!
     }
 }

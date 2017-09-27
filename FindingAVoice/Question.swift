@@ -38,18 +38,21 @@ struct Question {
         answer = Answer(rawValue: song.answers[info.startPoint][index])!
     }
     
-    init(song: Song, difficulty: Difficulty) {
-        
+    init?(song: Song, difficulty: Difficulty) {
+
+        let info = difficulty.info.randomItem()
+        let index = info.stepSizes.randomItem()
+        let raw = song.answers[info.startPoint][index].components(separatedBy: .whitespacesAndNewlines).joined()
+
+        guard let answer = Answer(rawValue: raw) else {
+            return nil
+        }
+
+        self.answer = answer
         self.song = song
         self.difficulty = difficulty
         
-        let info = difficulty.info.randomItem()
-        let index = info.stepSizes.randomItem()
-        
         firstHighlight = song.syllable(atIndex: info.startPoint)
         secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
-
-        let raw = song.answers[info.startPoint][index].components(separatedBy: .whitespacesAndNewlines).joined()
-        answer = Answer(rawValue: raw)!
     }
 }

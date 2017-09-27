@@ -94,6 +94,7 @@
 		C0AA1D8E1E1FC3DB005A7AA1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */; };
 		C0AA1D911E1FC3E2005A7AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
+		C0B16C0A1F7C0BAB00F79854 /* QuestionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B16C091F7C0BAB00F79854 /* QuestionProviderTests.swift */; };
 		C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = C0B7802B1E918A500015D2C8 /* SongInfo.json */; };
 		C0B780301E918C840015D2C8 /* SnippetPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */; };
 		C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B780311E918C930015D2C8 /* MusicPlayerCollectionViewController.swift */; };
@@ -253,6 +254,7 @@
 		C0AA1D8C1E1FC3DB005A7AA1 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionViewController.swift; path = FindingAVoice/QuestionViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FindingAVoice/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C0AA1D951E1FC40E005A7AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindingAVoice/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		C0B16C091F7C0BAB00F79854 /* QuestionProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionProviderTests.swift; sourceTree = "<group>"; };
 		C0B7802B1E918A500015D2C8 /* SongInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SongInfo.json; path = FindingAVoice/SongInfo.json; sourceTree = SOURCE_ROOT; };
 		C0B7802F1E918C840015D2C8 /* SnippetPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SnippetPlayer.storyboard; sourceTree = SOURCE_ROOT; };
 		C0B780311E918C930015D2C8 /* MusicPlayerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -388,6 +390,7 @@
 				C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */,
 				C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */,
 				C0B7803D1E91971E0015D2C8 /* QuestionTests.swift */,
+				C0B16C091F7C0BAB00F79854 /* QuestionProviderTests.swift */,
 				C0B7803F1E91974D0015D2C8 /* SongTests.swift */,
 				C06A3DED1E6DC5D400B8AE3D /* Info.plist */,
 			);
@@ -1220,6 +1223,7 @@
 				C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */,
 				C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */,
 				C0B780401E91974D0015D2C8 /* SongTests.swift in Sources */,
+				C0B16C0A1F7C0BAB00F79854 /* QuestionProviderTests.swift in Sources */,
 				C0B7803E1E91971E0015D2C8 /* QuestionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
