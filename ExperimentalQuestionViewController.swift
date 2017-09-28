@@ -96,6 +96,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         childSingingDetectorViewController = UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController
         childSingingDetectorViewController.willMove(toParentViewController: self)
         addChildViewController(childSingingDetectorViewController)
+        childSingingDetectorViewController.view.frame = view.bounds
         view.addSubview(childSingingDetectorViewController.view)
         childSingingDetectorViewController.didMove(toParentViewController: self)
         

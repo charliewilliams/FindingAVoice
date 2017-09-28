@@ -55,6 +55,11 @@ class SingingDetectorViewController: UIViewController {
         }
     }
     
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+
+        animateDetectionView(hidden: true)
+    }
+
     @IBAction func okButtonPressed(_ sender: UIButton) {
         
         animateDetectionView(hidden: true)
