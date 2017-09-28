@@ -19,7 +19,6 @@ struct Analytics {
         f.timeStyle = .medium
         return f
     }()
-    static private var overlayVC: AnalyticsDebugOverlayTableViewController?
     
     static func configure(withUser user: User) {
 
@@ -28,19 +27,6 @@ struct Analytics {
         let userID = user.email?.replacingOccurrences(of: "[@.#$\\[\\]]", with: "-", options: .regularExpression) ?? "email-missing-\(Date().timeIntervalSince1970)"
         db = Database.database().reference().child("user").child(userID)
         assert(db != nil, "Database connection nil")
-
-        // WARNING don't release with this overlay on!
-        addDebugOverlay()
-    }
-
-    static func addDebugOverlay() {
-
-        let window = UIApplication.shared.keyWindow!
-        let overlayVC = AnalyticsDebugOverlayTableViewController()
-        overlayVC.view.frame = window.bounds
-        window.addSubview(overlayVC.view)
-
-        self.overlayVC = overlayVC
     }
     
     static func logScreen(named name: String) {
@@ -94,7 +80,7 @@ struct Analytics {
         let key = "\(Int(Date().timeIntervalSince1970 * 1000))"
         db.child(key).setValue(blob)
 
-        if let overlayVC = overlayVC {
+        if let overlayVC = AnalyticsDebugOverlayTableViewController.instance {
 
             var string = ""
 

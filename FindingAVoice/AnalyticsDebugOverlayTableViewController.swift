@@ -14,6 +14,8 @@ extension IndexPath {
 
 class AnalyticsDebugOverlayTableViewController: UITableViewController {
 
+    static var instance: AnalyticsDebugOverlayTableViewController?
+
     var data = [String]() {
         didSet {
             tableView.insertRows(at: [.zero], with: .automatic)
@@ -24,10 +26,6 @@ class AnalyticsDebugOverlayTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .clear
-        view.alpha = 0.5
-        view.isUserInteractionEnabled = false
-        tableView.isUserInteractionEnabled = false
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
     }
 
@@ -49,10 +47,8 @@ class AnalyticsDebugOverlayTableViewController: UITableViewController {
         }
         cell.isUserInteractionEnabled = false
         cell.textLabel?.textColor = .red
-        cell.textLabel?.backgroundColor = .clear
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 12)
-        cell.backgroundColor = .clear
 
         return cell
     }
