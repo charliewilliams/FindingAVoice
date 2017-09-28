@@ -35,7 +35,7 @@ class QuestionTimer {
         if let timer = timer {
             timer.invalidate()
         }
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.timerFired()
         }
     }
@@ -45,7 +45,8 @@ class QuestionTimer {
         secondsElapsed += 1
         
         if secondsElapsed > maximumPerQuestionTime {
-            
+
+            timer?.invalidate()
             delegate?.questionDidTimeOut()
         }
     }
