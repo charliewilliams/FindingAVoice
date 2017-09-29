@@ -29,7 +29,9 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func getStartedButtonPressed(_ sender: UIButton) {
         
-        navigationController?.pushViewController(SecretSetupViewController(), animated: true)
+//        navigationController?.pushViewController(SecretSetupViewController(), animated: true)
+
+        navigationController?.pushViewController(QuestionViewController(), animated: true)
     }
 
 }

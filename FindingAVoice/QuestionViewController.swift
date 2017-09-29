@@ -56,21 +56,17 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         
         // Hide the question at the start so that you can read the rule first
         mainStringLabel.alpha = 0
-        
-        if ruleSet != nil {
-            updateQuestionText()
-            perQuestionTimer.reset()
+
+        if ruleSet == nil {
+            ruleSet = RuleSet()
         }
+
+        updateQuestionText()
+        perQuestionTimer.reset()
         
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

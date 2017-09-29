@@ -19,6 +19,23 @@ struct RuleSet {
     var debugFullHistory: String {
         return rules.map({ $0.debugFullHistory.print() }).joined(separator: "\n—\n")
     }
+
+    init() {
+
+        let count, maxFollowing, maxStride: Int
+
+        switch DifficultyProvider.currentDifficulty {
+
+        case .easy:
+            count = 1; maxFollowing = 1; maxStride = 1
+        case .medium:
+            count = 2; maxFollowing = 2; maxStride = 2
+        case .hard:
+            count = 2; maxFollowing = 3; maxStride = 4
+        }
+
+        self.init(count: count, maxPrecedingCount: 1, maxFollowingCount: maxFollowing, density: 0.15, maxStride: maxStride)
+    }
     
     init(count: Int, vocabulary: String = fullVocabulary, maxPrecedingCount: Int, maxFollowingCount: Int, density: Float, maxStride: Int) {
         
