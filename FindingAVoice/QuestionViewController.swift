@@ -18,13 +18,6 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         }
     }
     var difficulty = DifficultyProvider.currentDifficulty
-    var stringLength: Int {
-        switch difficulty {
-        case .easy: return 10
-        case .medium: return 15
-        case .hard: return 20
-        }
-    }
     @objc var numberOfQuestionsPerRound: Int = 3
     @objc var delayTimeBeforeShowingQuestion: TimeInterval = 5
     @objc var delayTimeBetweenQuestions: TimeInterval = 1
@@ -202,7 +195,7 @@ private extension QuestionViewController {
         
         do {
             
-            mainStringLabel.text = try ruleSet.string(length: stringLength, shouldBeValid: currentQuestionIsValid)
+            mainStringLabel.text = try ruleSet.string(shouldBeValid: currentQuestionIsValid)
             ruleLabel.text = ruleSet.userFacingDescription
             
         } catch let e {

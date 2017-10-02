@@ -62,7 +62,7 @@ class SecretSetupViewController: UIViewController {
         assert(density > 0 && density < 0.5)
         assert(preceding > 0 && following > 0)
 
-        let ruleSet = RuleSet(count: numberOfRules, maxPrecedingCount: preceding, maxFollowingCount: following, density: density, maxStride: stride)
+        let ruleSet = RuleSet(count: numberOfRules, stringLength: 10, maxPrecedingCount: preceding, maxFollowingCount: following, density: density, maxStride: stride)
         
         destination.ruleSet = ruleSet
         destination.difficulty = DifficultyProvider.currentDifficulty

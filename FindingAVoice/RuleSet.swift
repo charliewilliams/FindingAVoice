@@ -19,26 +19,30 @@ struct RuleSet {
     var debugFullHistory: String {
         return rules.map({ $0.debugFullHistory.print() }).joined(separator: "\n—\n")
     }
+    var stringLength: Int
 
     init() {
 
-        let count, maxFollowing, maxStride: Int
+        let count, stringLength, maxFollowing, maxStride: Int
+        let density: Float
+        let vocab: String
 
         switch DifficultyProvider.currentDifficulty {
 
         case .easy:
-            count = 1; maxFollowing = 1; maxStride = 1
+            count = 1; stringLength = 10; maxFollowing = 1; maxStride = 1; density = 0.05; vocab = String(fullVocabulary.prefix(30))
         case .medium:
-            count = 2; maxFollowing = 2; maxStride = 2
+            count = 2; stringLength = 15; maxFollowing = 2; maxStride = 2; density = 0.14; vocab = String(fullVocabulary.prefix(35))
         case .hard:
-            count = 2; maxFollowing = 3; maxStride = 4
+            count = 2; stringLength = 20; maxFollowing = 3; maxStride = 3; density = 0.20; vocab = String(fullVocabulary.prefix(40))
         }
 
-        self.init(count: count, maxPrecedingCount: 1, maxFollowingCount: maxFollowing, density: 0.15, maxStride: maxStride)
+        self.init(count: count, stringLength: stringLength, vocabulary: vocab, maxPrecedingCount: 1, maxFollowingCount: maxFollowing, density: density, maxStride: maxStride)
     }
     
-    init(count: Int, vocabulary: String = fullVocabulary, maxPrecedingCount: Int, maxFollowingCount: Int, density: Float, maxStride: Int) {
-        
+    init(count: Int, stringLength: Int = 20, vocabulary: String = fullVocabulary, maxPrecedingCount: Int, maxFollowingCount: Int, density: Float, maxStride: Int) {
+
+        self.stringLength = stringLength
         self.vocabulary = vocabulary
         self.maxPrecedingCount = maxPrecedingCount
         self.maxFollowingCount = maxFollowingCount
@@ -60,7 +64,7 @@ struct RuleSet {
         }
     }
     
-    func string(length: Int, shouldBeValid: Bool) throws -> String {
+    func string(shouldBeValid: Bool) throws -> String {
         
         let indexOfFailingRule = Int(shouldBeValid ? UInt32.max : arc4random_uniform(UInt32(rules.count)))
         let allActiveChars = rules.flatMap { $0.preceding + $0.following }
@@ -68,7 +72,7 @@ struct RuleSet {
         var string: String? = nil
         
         for (index, rule) in rules.enumerated() {
-            string = try rule.string(length: length, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: indexOfFailingRule != index)
+            string = try rule.string(length: stringLength, mutating: string, protectedCharacters: allActiveChars, shouldBeValid: indexOfFailingRule != index)
         }
         
         return string!
@@ -87,7 +91,7 @@ struct RuleSet {
     
     // Make another set using the same parameters
     func similarCopy() -> RuleSet {
-        return RuleSet(count: rules.count, vocabulary: vocabulary, maxPrecedingCount: maxPrecedingCount, maxFollowingCount: maxFollowingCount, density: rules.first!.density, maxStride: maxStride)
+        return RuleSet(count: rules.count, stringLength: stringLength, vocabulary: vocabulary, maxPrecedingCount: maxPrecedingCount, maxFollowingCount: maxFollowingCount, density: rules.first!.density, maxStride: maxStride)
     }
     
     // Private for similarCopy() only

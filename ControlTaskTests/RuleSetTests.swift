@@ -35,7 +35,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 1)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            let string = try! ruleSet.string(shouldBeValid: true)
             XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -45,7 +45,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 1)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            let string = try! ruleSet.string(shouldBeValid: false)
             XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -55,7 +55,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 1)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            let string = try! ruleSet.string(shouldBeValid: true)
             XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -65,7 +65,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 1)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            let string = try! ruleSet.string(shouldBeValid: false)
             XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -75,7 +75,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 4)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            let string = try! ruleSet.string(shouldBeValid: true)
             XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -85,7 +85,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 1, maxFollowingCount: 1, density: 0, maxStride: 4)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            let string = try! ruleSet.string(shouldBeValid: false)
             XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -95,7 +95,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 4)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            let string = try! ruleSet.string(shouldBeValid: true)
             XCTAssertTrue(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -105,7 +105,7 @@ class RuleSetTests: XCTestCase {
         let ruleSet = RuleSet(count: 4, maxPrecedingCount: 3, maxFollowingCount: 3, density: 0, maxStride: 4)
         
         for _ in 0..<100 {
-            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            let string = try! ruleSet.string(shouldBeValid: false)
             XCTAssertFalse(ruleSet.stringIsValid(string), ruleSet.debugFullHistory)
         }
     }
@@ -117,7 +117,7 @@ class RuleSetTests: XCTestCase {
         for _ in 0..<100 {
         
             var numberOfFails = 0
-            let string = try! ruleSet.string(length: 20, shouldBeValid: false)
+            let string = try! ruleSet.string(shouldBeValid: false)
             
             for rule in ruleSet.rules {
                 
@@ -137,7 +137,7 @@ class RuleSetTests: XCTestCase {
         for _ in 0..<100 {
             
             var numberOfFails = 0
-            let string = try! ruleSet.string(length: 20, shouldBeValid: true)
+            let string = try! ruleSet.string(shouldBeValid: true)
             
             for rule in ruleSet.rules {
                 
