@@ -32,9 +32,9 @@ class QuestionProvider {
 
     func nextQuestion(song: Song, difficulty: Difficulty) -> Question {
 
-        while currentQuestion == nil {
+        repeat {
             currentQuestion = Question(song: song, difficulty: difficulty)
-        }
+        } while currentQuestion == nil
 
         return currentQuestion!
     }
