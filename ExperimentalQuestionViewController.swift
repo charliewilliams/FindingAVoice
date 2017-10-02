@@ -236,8 +236,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             "first": question.firstHighlight,
             "second": question.secondHighlight,
             "knowledgeLevel": knowledgeLevel,
-            "difficulty": question.difficulty.rawValue,
-            "answer": question.answer.rawValue
+            "difficulty": question.difficulty.rawValue
             ])
     }
     
