@@ -85,6 +85,8 @@
 		C081296A1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */; };
 		C081296B1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
 		C081296C1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
+		C08899AC1F9006DB00554A10 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08899AB1F9006DB00554A10 /* Collection.swift */; };
+		C08899AD1F9006DB00554A10 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08899AB1F9006DB00554A10 /* Collection.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
 		C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D801E1FC3C2005A7AA1 /* AppDelegate.swift */; };
 		C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
@@ -240,6 +242,7 @@
 		C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyProviderTests.swift; sourceTree = "<group>"; };
 		C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDebugOverlayTableViewController.swift; sourceTree = "<group>"; };
 		C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsDebugOverlayTableViewController.xib; sourceTree = "<group>"; };
+		C08899AB1F9006DB00554A10 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -532,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AA1D821E1FC3CA005A7AA1 /* Array.swift */,
+				C08899AB1F9006DB00554A10 /* Collection.swift */,
 				C0AA1D831E1FC3CA005A7AA1 /* String.swift */,
 				C035CFA51E2A421000419532 /* Date.swift */,
 				C035CFA61E2A421000419532 /* Notification.swift */,
@@ -1180,6 +1184,7 @@
 				C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */,
 				C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */,
 				C0B780391E918C930015D2C8 /* SongCollectionViewCell.swift in Sources */,
+				C08899AD1F9006DB00554A10 /* Collection.swift in Sources */,
 				C06A3DB21E6DC1B500B8AE3D /* AnswerButton.swift in Sources */,
 				C0212D7B1F4348D300D65AAA /* ScreenReporting.swift in Sources */,
 				C06A3DB41E6DC1B500B8AE3D /* UserHandler.swift in Sources */,
@@ -1252,6 +1257,7 @@
 				C08129691F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
+				C08899AC1F9006DB00554A10 /* Collection.swift in Sources */,
 				C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */,
 				C035CFA71E2A421000419532 /* Date.swift in Sources */,
 				C0AA1D8B1E1FC3D4005A7AA1 /* Vocabulary.swift in Sources */,

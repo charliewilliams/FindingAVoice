@@ -53,6 +53,10 @@ struct Question {
         self.difficulty = difficulty
         
         firstHighlight = song.syllable(atIndex: info.startPoint)
-        secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
+
+        guard let syllableIndex = song.syllables[safe: info.startPoint]?[safe: index] else {
+            return nil
+        }
+        secondHighlight = song.syllable(atIndex: syllableIndex)
     }
 }
