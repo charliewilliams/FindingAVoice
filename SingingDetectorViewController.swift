@@ -52,6 +52,7 @@ class SingingDetectorViewController: UIViewController {
             
             // Show the view
             animateDetectionView(hidden: false)
+            Analytics.wasSingingDetected = true
         }
     }
     

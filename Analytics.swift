@@ -30,7 +30,8 @@ struct Analytics {
     }
     
     static func logScreen(named name: String) {
-        
+
+        clearEvent()
         log(eventName: "screen", eventValue: name)
     }
 
@@ -42,6 +43,23 @@ struct Analytics {
     static func userRelaunchedAfterTimeUp() {
         
         log(eventName: "userRelaunchedAfterTimeUp", eventValue: "launch")
+    }
+
+    static var loggedEventValue: String?
+    static var loggedEventDate: Date?
+    static var wasSingingDetected: Bool = false
+
+    static func logStartOfEvent(value eventValue: String) {
+
+        loggedEventValue = eventValue
+        loggedEventDate = Date()
+    }
+
+    static func clearEvent() {
+
+        loggedEventValue = nil
+        loggedEventDate = nil
+        wasSingingDetected = false
     }
     
     static func log(eventName: String, eventValue: String, responseName: String? = nil, responseValue: String? = nil, wasCorrect: Bool? = nil, measurement: Float? = nil, duration: TimeInterval? = nil, data: [String: String]? = nil) {
@@ -58,6 +76,10 @@ struct Analytics {
             "eventValue": eventValue
         ]
 
+        if let loggedEventDate = loggedEventDate, let loggedEventValue = loggedEventValue, loggedEventValue == eventValue {
+            print("eventValue \(eventValue.prefix(8)) timed: \(-loggedEventDate.timeIntervalSinceNow)")
+            blob["latency"] = -loggedEventDate.timeIntervalSinceNow
+        }
         if let measurement = measurement {
             blob["measurement"] = measurement
         }
@@ -76,6 +98,8 @@ struct Analytics {
         if let data = data {
             blob["data"] = data
         }
+        blob["singingDetected"] = wasSingingDetected ? 1 : 0
+
 
         let key = "\(Int(Date().timeIntervalSince1970 * 1000))"
         db.child(key).setValue(blob)

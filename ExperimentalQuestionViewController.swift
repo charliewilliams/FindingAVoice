@@ -128,7 +128,9 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     }
     
     private func setup(withQuestion question: Question) {
-        
+
+        Analytics.clearEvent()
+
         UIView.performWithoutAnimation {
             containerViewCenterXConstraint.constant = view.bounds.width
             view.layoutIfNeeded()   
@@ -224,6 +226,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             delay(0.5) {
                 self.question = QuestionProvider.shared.nextQuestion()
                 self.perQuestionTimer.reset()
+                Analytics.logStartOfEvent(value: self.question.song.id)
             }
         })
     }
@@ -253,6 +256,14 @@ extension ExperimentalQuestionViewController {
         
         setButtons(enabled: false)
         showPopover(type: .perQuestionTimeout)
+
+        let knowledgeLevel = "\(question.song.knowledgeLevel!.rawValue)"
+        Analytics.log(eventName: "no-response", eventValue: question.song.id, responseName: "timed-out", duration: perQuestionTimer.secondsElapsed, data: [
+            "first": question.firstHighlight,
+            "second": question.secondHighlight,
+            "knowledgeLevel": knowledgeLevel,
+            "difficulty": question.difficulty.rawValue
+        ])
     }
     
     @objc func dailyPlayTimeExceeded() {

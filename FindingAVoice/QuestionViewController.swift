@@ -217,6 +217,7 @@ private extension QuestionViewController {
         
             self.setButtons(enabled: true)
             self.perQuestionTimer.reset()
+            Analytics.logStartOfEvent(value: mainStringLabel.text)
         })
     }
     
