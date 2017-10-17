@@ -193,7 +193,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         } else {
             
             print("Boo")
-            log(correct: false, answer: question.answer.rawValue, correctAnswer: givenAnswer.rawValue)
+            log(correct: false, answer: givenAnswer.rawValue, correctAnswer: question.answer.rawValue)
             button.shake()
         }
         
