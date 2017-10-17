@@ -234,13 +234,19 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     private func log(correct: Bool, answer: String, correctAnswer: String? = nil) {
         
         let knowledgeLevel = "\(question.song.knowledgeLevel!.rawValue)"
-        
-        Analytics.log(eventName: "response", eventValue: question.song.id, responseName: "response", responseValue: answer, wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
+
+        var data = [
             "first": question.firstHighlight,
             "second": question.secondHighlight,
             "knowledgeLevel": knowledgeLevel,
             "difficulty": question.difficulty.rawValue
-            ])
+        ]
+
+        if let correctAnswer = correctAnswer {
+            data["correctAnswer"] = correctAnswer
+        }
+
+        Analytics.log(eventName: "response", eventValue: question.song.id, responseName: "response", responseValue: answer, wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: data)
     }
     
     @objc func popoverWillDismiss() {
