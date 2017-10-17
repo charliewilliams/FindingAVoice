@@ -142,7 +142,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="0.96758745369999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstItem="e9E-AA-WNY" firstAttribute="leading" secondItem="vDl-8z-5BT" secondAttribute="leading" constant="20" id="GgW-SD-sab"/>
                                 <constraint firstAttribute="bottom" secondItem="e9E-AA-WNY" secondAttribute="bottom" constant="20" id="INT-ZU-F0b"/>
@@ -151,7 +151,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.75312572720000004" green="0.94452053309999995" blue="0.99217897649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="vDl-8z-5BT" firstAttribute="centerY" secondItem="vRt-2x-h5X" secondAttribute="centerY" multiplier="1.2" constant="78.300000000000011" id="6Lf-V9-5y5"/>
                         <constraint firstItem="vDl-8z-5BT" firstAttribute="centerX" secondItem="vRt-2x-h5X" secondAttribute="centerX" id="CHS-NY-JCs"/>

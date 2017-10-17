@@ -49,7 +49,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.01130111298" green="0.83972668859999999" blue="1" alpha="0.30207416370000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.75312572717666626" green="0.94452053308486938" blue="0.99217897653579712" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="vb2-ja-UDf" firstAttribute="centerY" secondItem="qvh-IA-7cP" secondAttribute="centerY" id="SY4-XI-zuE"/>
                         <constraint firstItem="vb2-ja-UDf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qvh-IA-7cP" secondAttribute="leading" constant="20" id="ZSb-eg-VQO"/>
@@ -141,7 +141,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.66595914879999996" blue="0.0" alpha="0.34542803700000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.98237353563308716" green="0.8882630467414856" blue="0.68228375911712646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="sQY-CV-Yne" firstAttribute="centerY" secondItem="jsL-vS-eRU" secondAttribute="centerY" id="BrF-1M-SUt"/>
                         <constraint firstItem="sQY-CV-Yne" firstAttribute="centerX" secondItem="jsL-vS-eRU" secondAttribute="centerX" id="QYf-gy-yDz"/>
