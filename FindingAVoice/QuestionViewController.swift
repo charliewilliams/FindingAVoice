@@ -73,10 +73,10 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBAction func validButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
-            log(correct: true, wasValid: true)
+            log(correct: true)
             validButton.sparkle()
         } else {
-            log(correct: false, wasValid: false)
+            log(correct: false)
             validButton.shake()
         }
         
@@ -86,21 +86,22 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBAction func invalidButtonPressed(_ sender: UIButton) {
         
         if currentQuestionIsValid {
-            log(correct: false, wasValid: true)
+            log(correct: false)
             invalidButton.shake()
         } else {
-            log(correct: true, wasValid: false)
+            log(correct: true)
             invalidButton.sparkle()
         }
         
         handleAnyButtonPress()
     }
     
-    private func log(correct: Bool, wasValid: Bool) {
-        
-        Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: wasValid ? "valid" : "invalid", wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
-            "ruleSet": ruleSet.userFacingDescription,
-            "ruleSetHistory": ruleSet.debugFullHistory])
+    private func log(correct: Bool) {
+
+        Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: currentQuestionIsValid ? "yes" : "no", wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
+            "ruleSet": ruleSet.userFacingDescription
+//            , "ruleSetHistory": ruleSet.debugFullHistory
+            ])
     }
     
     @objc func popoverWillDismiss() {
