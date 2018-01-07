@@ -183,6 +183,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
         
         setButtons(enabled: false)
+        QuestionTimer.shared.clear()
         
         if givenAnswer == question.answer {
             
