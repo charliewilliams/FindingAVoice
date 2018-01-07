@@ -41,16 +41,8 @@ class UserHandler {
         set(newValue) { store.set(newValue, forKey: "email") }
     }
     
-    var password: String {
-        get {
-            if let stored = store.string(forKey: "password") {
-                return stored
-            } else {
-                let new = String.random(length: 32)
-                self.password = new
-                return new
-            }
-        }
+    var password: String? {
+        get { return store.string(forKey: "password") }
         set(newValue) { store.set(newValue, forKey: "password") }
     }
     
@@ -66,9 +58,10 @@ class UserHandler {
         }
     }
     
-    func createUser(email: String, completion: @escaping LoginCompletion) {
+    func createUser(email: String, password: String, completion: @escaping LoginCompletion) {
         
         self.email = email
+        self.password = password
         
         ServerCoordinator.shared.createUser(email: email, password: password) { (user, error) in
             
