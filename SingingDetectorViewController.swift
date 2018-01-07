@@ -21,6 +21,7 @@ class SingingDetectorViewController: UIViewController {
     @IBOutlet weak var detectionView: UIView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var bottomToBottomSpacingConstraint: NSLayoutConstraint!
+    var autodismissTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,12 @@ class SingingDetectorViewController: UIViewController {
         
         plotSubview.frame = audioInputPlot.bounds   
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        dismiss()
+    }
     
     @objc func gotNotification(note: Notification) {
         
@@ -58,11 +65,18 @@ class SingingDetectorViewController: UIViewController {
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
 
-        animateDetectionView(hidden: true)
+        dismiss()
     }
 
     @IBAction func okButtonPressed(_ sender: UIButton) {
         
+        dismiss()
+    }
+
+    func dismiss() {
+
+        autodismissTimer?.invalidate()
+        autodismissTimer = nil
         animateDetectionView(hidden: true)
     }
     
@@ -77,6 +91,13 @@ class SingingDetectorViewController: UIViewController {
         }, completion: { _ in
             
             self.view.isUserInteractionEnabled = !hidden
+
+            if !hidden {
+                self.autodismissTimer?.invalidate()
+                self.autodismissTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { [weak self] _ in
+                    self?.dismiss()
+                }
+            }
         })
     }
 }
