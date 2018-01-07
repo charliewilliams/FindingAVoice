@@ -11,7 +11,7 @@ import AudioKit
 import AudioKitUI
 
 class SingingDetectorViewController: UIViewController {
-    
+
     @IBOutlet weak var detectionLabel: UILabel!
     
     let detector = SingingDetector.shared
@@ -55,7 +55,8 @@ class SingingDetectorViewController: UIViewController {
     @objc func gotNotification(note: Notification) {
         
         if let state = SingingState(rawValue: note.name.rawValue),
-            state == .started {
+            state == .started,
+            !Analytics.wasSingingDetected {
             
             // Show the view
             animateDetectionView(hidden: false)
