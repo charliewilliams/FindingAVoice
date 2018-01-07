@@ -136,10 +136,10 @@ class RuleTests: XCTestCase {
         let rule = Rule()
         
         let testString = try! rule.string(length: 10, shouldBeValid: true)
-        XCTAssertEqual(10, testString.characters.count)
+        XCTAssertEqual(10, testString.count)
         
         let testString2 = try! rule.string(length: 4, shouldBeValid: false)
-        XCTAssertEqual(4, testString2.characters.count)
+        XCTAssertEqual(4, testString2.count)
     }
     
     func testCreatedStringIsValid() {
@@ -192,8 +192,8 @@ class RuleTests: XCTestCase {
         
         let testString = try! rule.string(length: 10, shouldBeValid: true)
         
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count, testString)
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count, testString)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").count, testString)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").count, testString)
     }
     
     func testInvalidStringWithOneOccurrenceContainsOnePrecedingAndOneFollowingChar() {
@@ -204,8 +204,8 @@ class RuleTests: XCTestCase {
         
         let testString = try! rule.string(length: 10, shouldBeValid: false)
         
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").characters.count)
-        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").characters.count)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "X", with: "").count)
+        XCTAssertEqual(9, testString.replacingOccurrences(of: "O", with: "").count)
     }
     
     func testLongInvalidStringContainsSomeValidPairs() {

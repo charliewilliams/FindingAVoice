@@ -22,7 +22,7 @@ struct Rule {
     var density: Float
     var vocabulary: String {
         didSet {
-            charactersArray = vocabulary.characters.map() { $0 }
+            charactersArray = vocabulary.map() { $0 }
         }
     }
     var charactersArray: [Character]
@@ -70,31 +70,31 @@ struct Rule {
         switch d {
         case .easy:
             
-            let vocab = Array(fullVocabulary.characters.prefix(30)).map({ String($0) }).joined()
+            let vocab = Array(fullVocabulary.prefix(30)).map({ String($0) }).joined()
             self.init(precedingCount: 1, followingCount: 1, vocabulary: vocab, density: 0.05, stride: 1, protectedCharacters: protectedCharacters)
             
         case .medium:
             
-            let vocab = Array(fullVocabulary.characters.prefix(35)).map({ String($0) }).joined()
+            let vocab = Array(fullVocabulary.prefix(35)).map({ String($0) }).joined()
             self.init(precedingCount: 1, followingCount: 2, vocabulary: vocab, density: 0.14, stride: 2, protectedCharacters: protectedCharacters)
             
         case .hard:
             
-            let vocab = Array(fullVocabulary.characters.prefix(40)).map({ String($0) }).joined()
+            let vocab = Array(fullVocabulary.prefix(40)).map({ String($0) }).joined()
             self.init(precedingCount: 1, followingCount: 3, vocabulary: vocab, density: 0.2, stride: 3, protectedCharacters: protectedCharacters)
         }
     }
     
     init(precedingCount: Int = 1, followingCount: Int = 1, vocabulary: String = fullVocabulary, density: Float = 0.2, stride: Int = 1, protectedCharacters: [Character] = []) {
         
-        precondition(vocabulary.characters.count > 1)
+        precondition(vocabulary.count > 1)
         precondition(precedingCount > 0)
         precondition(followingCount > 0)
-        precondition(vocabulary.characters.count - protectedCharacters.count >= precedingCount + followingCount, "Trying to make too complex of a ruleset with too small a vocabulary!")
+        precondition(vocabulary.count - protectedCharacters.count >= precedingCount + followingCount, "Trying to make too complex of a ruleset with too small a vocabulary!")
         self.stride = stride
         self.vocabulary = vocabulary
         self.density = density
-        charactersArray = vocabulary.characters.map() { $0 }
+        charactersArray = vocabulary.map() { $0 }
         
         var passiveCharacters = charactersArray.filter { character -> Bool in
             !protectedCharacters.contains(character)
@@ -114,12 +114,12 @@ struct Rule {
     
     func stringIsValid(_ string: String) -> Bool {
         
-        for (index, character) in string.characters.enumerated() {
+        for (index, character) in string.enumerated() {
             
             for precedent in preceding {
                 if character == precedent {
                     
-                    guard string.characters.count > index + stride else {
+                    guard string.count > index + stride else {
                         return false
                     }
                     
@@ -165,7 +165,7 @@ struct Rule {
         while numberOfOccurrencesRemaining > 0 {
             
             // All the indices that aren't currently part of a pair
-            var currentlyPassiveIndices = string.characters.enumerated().flatMap { c -> Int? in
+            var currentlyPassiveIndices = string.enumerated().flatMap { c -> Int? in
                 if passiveCharacters.contains(c.element) {
                     return c.offset
                 }
@@ -239,7 +239,7 @@ struct Rule {
         // THIS IS FOR THE FOLLOWING HALF OF A PAIR ONLY
         var followingIndicesMakingAnInvalidPair = [Int]()
         
-        for (index, character) in string.characters.enumerated() {
+        for (index, character) in string.enumerated() {
             
             // Make sure we're not replacing an active character
             guard passiveCharacters.contains(character) else {
