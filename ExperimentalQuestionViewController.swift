@@ -66,8 +66,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
         let location = isPractice ? 3 : 0
-        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.characters.count))
-        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: location, length: question.secondHighlight.characters.count))
+        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.count))
+        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: location, length: question.secondHighlight.count))
         
         return mutable
     }
@@ -76,8 +76,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         let string = isPractice ? "\(question.firstHighlight) ?" : question.firstHighlight
         let mutable = NSMutableAttributedString(string: string)
-        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.characters.count))
-        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: 0, length: question.firstHighlight.characters.count))
+        mutable.setAttributes([.foregroundColor: UIColor.black], range: NSRange(location: 0, length: string.count))
+        mutable.addAttributes(highlightedAttributesBigRed, range: NSRange(location: 0, length: question.firstHighlight.count))
         
         return mutable
     }
@@ -176,7 +176,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         guard let button = sender as? AnswerButton,
-            let rawAnswer = sender.titleLabel?.text?.characters.first,
+            let rawAnswer = sender.titleLabel?.text?.first,
             let givenAnswer = Answer(rawValue: "\(rawAnswer)") else {
                 assert(false, "Something went wrong")
                 return

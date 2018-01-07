@@ -11,7 +11,7 @@ import Foundation
 extension String { // Validation
     
     var isValidName: Bool {
-        return characters.count > 3 && containsOnlyLetters()
+        return count > 3 && containsOnlyLetters()
     }
     
     func containsOnlyLetters() -> Bool {
@@ -26,7 +26,7 @@ extension String { // Validation
 extension String { // Subscripting
     
     subscript(i: Int) -> Character {
-        guard i >= 0 && i < characters.count else { return Character("") }
+        guard i >= 0 && i < count else { return Character("") }
         return self[index(startIndex, offsetBy: i)]
     }
     
@@ -41,7 +41,7 @@ extension String { // Subscripting
     }
     
     mutating func replace(atIndex index: Int, with newChar: Character) {
-        var chars = Array(characters)
+        var chars = Array(self)
         chars[index] = newChar
         self = String(chars)
     }
@@ -51,7 +51,7 @@ extension String { // Random
     
     static func random(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        let randomLength = UInt32(letters.characters.count)
+        let randomLength = UInt32(letters.count)
         
         let randomString: String = (0 ..< length).reduce(String()) { accum, _ in
             let randomOffset = arc4random_uniform(randomLength)

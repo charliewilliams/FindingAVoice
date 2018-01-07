@@ -20,7 +20,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func confirmPressed(_ sender: UIButton) {
         
-        guard let email = emailTextField.text, email.characters.count > 3 else {
+        guard let email = emailTextField.text, email.count > 3 else {
             return
         }
         
