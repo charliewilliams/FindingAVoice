@@ -32,7 +32,6 @@
 		C035CFA71E2A421000419532 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA51E2A421000419532 /* Date.swift */; };
 		C035CFA81E2A421000419532 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA61E2A421000419532 /* Notification.swift */; };
 		C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFAB1E2A456200419532 /* RuleSet.swift */; };
-		C040B0531EBA6B7F000539AD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B780331E918C930015D2C8 /* Song.swift */; };
 		C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C04944451E282E7700A12E1B /* DailyTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944441E282E7700A12E1B /* DailyTimerTests.swift */; };
 		C04B97AF1EB79CAD00666472 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B97AE1EB79CAD00666472 /* Analytics.swift */; };
@@ -77,6 +76,8 @@
 		C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06A3E021E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib */; };
 		C06A3E0E1E6E126100B8AE3D /* ServerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3E0D1E6E126100B8AE3D /* ServerCoordinator.swift */; };
 		C06A3E0F1E6E126100B8AE3D /* ServerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06A3E0D1E6E126100B8AE3D /* ServerCoordinator.swift */; };
+		C070E9A620164B4D0056B2F4 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B780331E918C930015D2C8 /* Song.swift */; };
+		C070E9A720164B500056B2F4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B7803B1E918CBF0015D2C8 /* Question.swift */; };
 		C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE41E59CDC900570149 /* FabricTester.swift */; };
 		C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE61E59CF8E00570149 /* UserHandler.swift */; };
 		C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
@@ -1323,6 +1324,8 @@
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,
+				C070E9A620164B4D0056B2F4 /* Song.swift in Sources */,
+				C070E9A720164B500056B2F4 /* Question.swift in Sources */,
 				C027E5571E21A4910057B7B9 /* Shakeable.swift in Sources */,
 				C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */,
 				C04B97AF1EB79CAD00666472 /* Analytics.swift in Sources */,
@@ -1334,7 +1337,6 @@
 				C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */,
 				C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */,
 				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
-				C040B0531EBA6B7F000539AD /* Song.swift in Sources */,
 				C0DFE9021E466C7C0011E7DA /* InfoViewController.swift in Sources */,
 				C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */,
 				C035CFAC1E2A456200419532 /* RuleSet.swift in Sources */,
@@ -1520,7 +1522,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 40;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1578,7 +1580,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 40;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
