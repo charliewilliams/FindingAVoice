@@ -11,7 +11,7 @@ platform :ios do
     lane :exp do |values|
         # Fabric generated this lane for deployment to Crashlytics Beta
         # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
-        gym(scheme: values[:scheme] ? values[:scheme] : 'ExperimentalTask', export_method: 'ad-hoc')
+        gym(scheme: values[:scheme] ? values[:scheme] : 'ExperimentalTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
         increment_build_number
 
         emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu']
@@ -40,7 +40,7 @@ platform :ios do
   lane :control do |values|
     # Fabric generated this lane for deployment to Crashlytics Beta
     # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
-    gym(scheme: values[:scheme] ? values[:scheme] : 'ControlTask', export_method: 'ad-hoc')
+    gym(scheme: values[:scheme] ? values[:scheme] : 'ControlTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
 	increment_build_number
 
     emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu']
