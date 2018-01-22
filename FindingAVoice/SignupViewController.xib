@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,18 +29,17 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM1-PS-F2J">
-                    <rect key="frame" x="319.5" y="147" width="385" height="122"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for participating in this study! Please sign in below using your email address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM1-PS-F2J">
+                    <rect key="frame" x="319.5" y="147" width="385" height="41"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="385" id="7AR-U9-mLA"/>
                     </constraints>
-                    <string key="text">Thank you for participating in this study! Please sign in below using your email address.  (The app will not send you email for any reason,  except to reset your password if needed. All your data is protected.)</string>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEu-SU-ajb">
-                    <rect key="frame" x="342" y="324" width="340" height="120"/>
+                    <rect key="frame" x="342" y="228" width="340" height="120"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-Ia-VyU">
                             <rect key="frame" x="20" y="20" width="300" height="80"/>
@@ -81,8 +81,14 @@
                         <constraint firstItem="bE3-Ia-VyU" firstAttribute="top" secondItem="xEu-SU-ajb" secondAttribute="top" constant="20" id="ha0-lR-HzH"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(The app will not send you email for any reason,  except to reset your password if needed. All your data is protected.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-zl-hhl">
+                    <rect key="frame" x="320" y="408" width="385" height="54"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBW-fB-RSh">
-                    <rect key="frame" x="893" y="395" width="111" height="49"/>
+                    <rect key="frame" x="893" y="299" width="111" height="49"/>
                     <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                     <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -92,7 +98,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0j-qn-Qej">
-                    <rect key="frame" x="555" y="452" width="127" height="27"/>
+                    <rect key="frame" x="555" y="356" width="127" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="forgot your password?"/>
                     <connections>
@@ -102,13 +108,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xEu-SU-ajb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0yI-eL-YHV"/>
+                <constraint firstItem="xEu-SU-ajb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.75" id="0yI-eL-YHV"/>
                 <constraint firstItem="eM1-PS-F2J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5xd-Al-40v"/>
                 <constraint firstItem="xEu-SU-ajb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="72a-Op-GK3"/>
                 <constraint firstItem="8Gy-Oh-im5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A4c-gw-weF"/>
                 <constraint firstAttribute="trailing" secondItem="dBW-fB-RSh" secondAttribute="trailing" constant="20" id="HbP-nz-Zel"/>
+                <constraint firstItem="IpP-zl-hhl" firstAttribute="top" secondItem="xEu-SU-ajb" secondAttribute="bottom" constant="60" id="JGZ-l4-sYH"/>
+                <constraint firstItem="IpP-zl-hhl" firstAttribute="width" secondItem="eM1-PS-F2J" secondAttribute="width" id="O8I-Jw-4VM"/>
                 <constraint firstItem="Z0j-qn-Qej" firstAttribute="top" secondItem="xEu-SU-ajb" secondAttribute="bottom" constant="8" id="ViK-er-YGS"/>
                 <constraint firstItem="eM1-PS-F2J" firstAttribute="top" secondItem="8Gy-Oh-im5" secondAttribute="bottom" constant="20" id="Wb1-Up-0hc"/>
+                <constraint firstItem="IpP-zl-hhl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gVd-K8-6ek"/>
                 <constraint firstItem="8Gy-Oh-im5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="rPL-qW-j8i"/>
                 <constraint firstItem="Z0j-qn-Qej" firstAttribute="trailing" secondItem="xEu-SU-ajb" secondAttribute="trailing" id="tZF-vb-46g"/>
                 <constraint firstItem="dBW-fB-RSh" firstAttribute="bottom" secondItem="xEu-SU-ajb" secondAttribute="bottom" id="uRZ-2W-4Bd"/>
