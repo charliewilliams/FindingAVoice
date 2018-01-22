@@ -86,4 +86,8 @@ struct ServerCoordinator {
             }
         }
     }
+
+    func resetPassword(for email: String, completion: @escaping SendPasswordResetCallback) {
+        auth.sendPasswordReset(withEmail: email, completion: completion)
+    }
 }

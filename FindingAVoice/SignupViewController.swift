@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import Firebase
 
 class SignupViewController: UIViewController {
 
@@ -43,14 +44,46 @@ class SignupViewController: UIViewController {
         }
     }
 
-    func showAlert(text: String? = nil, error: Error? = nil) {
+    @IBAction func forgotPasswordButtonPressed(_ sender: UIButton) {
 
-        let alert = UIAlertController(title: "Error", message: error?.localizedDescription ?? text, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Try again", style: .default) { _ in
+        let alert = UIAlertController(title: "Reset Password", message: "Enter your email to receive a password reset link", preferredStyle: .alert)
+
+        alert.addTextField { textField in
+            textField.placeholder = "Enter email"
+            textField.text = self.emailTextField.text
+        }
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in })
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+
+            guard let email = alert.textFields?[0].text else {
+                self?.showAlert(text: "You must enter an email to reset your password", error: nil)
+                return
+            }
+
+            ServerCoordinator.shared.resetPassword(for: email) { error in
+
+                if let error = error {
+                    self?.showAlert(text: "Error", error: error)
+                } else {
+                    self?.showAlert(title: "Done!", text: "Password reset email sent, go check your email.", error: nil, buttonText: "OK")
+                }
+            }
+        })
+
+        present(alert, animated: true)
+    }
+
+
+    func showAlert(title: String = "Error", text: String? = nil, error: Error? = nil, buttonText: String = "Try again") {
+
+        let alert = UIAlertController(title: title, message: error?.localizedDescription ?? text, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonText, style: .default) { _ in
             self.confirmButton.isUserInteractionEnabled = true
         })
 
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 }
 
