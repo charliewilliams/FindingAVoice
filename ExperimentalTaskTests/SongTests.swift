@@ -64,4 +64,36 @@ class SongTests: XCTestCase {
         XCTAssertEqual(sixtyfour.syllable(atIndex: 0), "When")
         XCTAssertEqual(sixtyfour.syllable(atIndex: 1), "I")
     }
+
+    func testWhenHighlightingForSixtyFour() {
+
+        let sixtyfour = songs.filter({ $0.id == "sixtyfour" }).first!
+        var question = Question(song: sixtyfour, difficulty: .easy)!
+        question.firstHighlight = "When"
+        question.secondHighlight = "lo"
+
+        let attributedText = sixtyfour.attributedText(for: question)
+
+        let attributes = attributedText.attributes(at: 0, longestEffectiveRange: nil, in: NSRange(location: 0, length: 4))
+
+        guard let attribute = attributes[.backgroundColor] as? UIColor else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(attribute, UIColor.yellow)
+    }
+
+    func testIHighlightingForSixtyFour() {
+
+        let sixtyfour = songs.filter({ $0.id == "sixtyfour" }).first!
+        var question = Question(song: sixtyfour, difficulty: .easy)!
+        question.firstHighlight = "When"
+        question.secondHighlight = "lo"
+
+        let attributedText = sixtyfour.attributedText(for: question)
+
+        let attributes = attributedText.attributes(at: 4, longestEffectiveRange: nil, in: NSRange(location: 0, length: 5))
+
+        XCTAssertNil(attributes[.backgroundColor])
+    }
 }

@@ -94,4 +94,13 @@ class QuestionTests: XCTestCase {
         
         XCTAssertEqual(question.answer, Answer.lower)
     }
+
+    func testHighlightsSixtyFour() {
+
+        let sixtyfour = songs.filter({ $0.id == "sixtyfour" }).first!
+        let question = Question(song: sixtyfour, difficulty: .easy)!
+
+        XCTAssertTrue(["When", "I"].contains(question.firstHighlight))
+        XCTAssertTrue(["lo", "ol"].contains(question.secondHighlight))
+    }
 }
