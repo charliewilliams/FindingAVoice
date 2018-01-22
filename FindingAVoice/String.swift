@@ -66,7 +66,7 @@ extension String { // Random
 extension String {
     
     func toIntArray() -> [Int] {
-        return trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: ",").flatMap { Int($0) }
+        return toStringArray().flatMap { Int($0) }
     }
     
     func toStringArray() -> [String] {
