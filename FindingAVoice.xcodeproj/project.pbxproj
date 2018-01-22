@@ -17,6 +17,10 @@
 		C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
 		C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */; };
 		C002D4711E3554BD00FA2C15 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
+		C005EA7F20162DDD0086129D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005EA7E20162DDD0086129D /* ProgressViewController.swift */; };
+		C005EA8020162DDD0086129D /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005EA7E20162DDD0086129D /* ProgressViewController.swift */; };
+		C005EAA4201635180086129D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005EAA3201635180086129D /* UIViewController.swift */; };
+		C005EAA5201635180086129D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005EAA3201635180086129D /* UIViewController.swift */; };
 		C0212D7A1F4348D300D65AAA /* ScreenReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0212D791F4348D300D65AAA /* ScreenReporting.swift */; };
 		C0212D7B1F4348D300D65AAA /* ScreenReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0212D791F4348D300D65AAA /* ScreenReporting.swift */; };
 		C027E54F1E21A3B30057B7B9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027E54E1E21A3B30057B7B9 /* Helpers.swift */; };
@@ -203,6 +207,8 @@
 		C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverDisplaying.swift; path = FindingAVoice/PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverViewController.swift; path = FindingAVoice/PopoverViewController.swift; sourceTree = SOURCE_ROOT; };
 		C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopoverViewController.xib; path = FindingAVoice/PopoverViewController.xib; sourceTree = SOURCE_ROOT; };
+		C005EA7E20162DDD0086129D /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		C005EAA3201635180086129D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		C0212D791F4348D300D65AAA /* ScreenReporting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenReporting.swift; path = FindingAVoice/ScreenReporting.swift; sourceTree = SOURCE_ROOT; };
 		C027E54E1E21A3B30057B7B9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = FindingAVoice/Helpers.swift; sourceTree = SOURCE_ROOT; };
 		C027E5561E21A4910057B7B9 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shakeable.swift; path = FindingAVoice/Shakeable.swift; sourceTree = SOURCE_ROOT; };
@@ -560,6 +566,7 @@
 				C035CFA51E2A421000419532 /* Date.swift */,
 				C035CFA61E2A421000419532 /* Notification.swift */,
 				C035CF9F1E2A3EA200419532 /* DebugPrint.swift */,
+				C005EAA3201635180086129D /* UIViewController.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -587,6 +594,7 @@
 				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
 				C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */,
 				C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */,
+				C005EA7E20162DDD0086129D /* ProgressViewController.swift */,
 			);
 			name = "View Controllers (Shared)";
 			sourceTree = "<group>";
@@ -980,6 +988,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -988,6 +997,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -1131,6 +1141,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
@@ -1141,6 +1152,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
@@ -1220,6 +1232,7 @@
 				C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */,
 				C04D29D61EBDD84900C37F48 /* DifficultyProvider.swift in Sources */,
 				C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */,
+				C005EA8020162DDD0086129D /* ProgressViewController.swift in Sources */,
 				C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */,
 				C06A3DAE1E6DC1B500B8AE3D /* RootNavigationController.swift in Sources */,
 				C06A3DB01E6DC1B500B8AE3D /* Helpers.swift in Sources */,
@@ -1240,6 +1253,7 @@
 				C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
 				C06A3DBC1E6DC1B500B8AE3D /* Shakeable.swift in Sources */,
+				C005EAA5201635180086129D /* UIViewController.swift in Sources */,
 				C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */,
 				C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */,
 				C0C74C981E9429A100190187 /* QuestionProvider.swift in Sources */,
@@ -1296,6 +1310,7 @@
 				C0212D7A1F4348D300D65AAA /* ScreenReporting.swift in Sources */,
 				C08129691F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */,
 				C027E5591E21A4980057B7B9 /* AnswerButton.swift in Sources */,
+				C005EA7F20162DDD0086129D /* ProgressViewController.swift in Sources */,
 				C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */,
 				C08899AC1F9006DB00554A10 /* Collection.swift in Sources */,
 				C07B5AE71E59CF8E00570149 /* UserHandler.swift in Sources */,
@@ -1304,6 +1319,7 @@
 				C0AA1D811E1FC3C2005A7AA1 /* AppDelegate.swift in Sources */,
 				C0E4B5801EE6C7CF00273C00 /* Difficulty.swift in Sources */,
 				C07B5AE51E59CDC900570149 /* FabricTester.swift in Sources */,
+				C005EAA4201635180086129D /* UIViewController.swift in Sources */,
 				C027E55D1E21A50F0057B7B9 /* Sparkling.swift in Sources */,
 				C035CFA81E2A421000419532 /* Notification.swift in Sources */,
 				C07EDB1F1E4F51AA00790561 /* DebugHistory.swift in Sources */,

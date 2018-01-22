@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExperimentalQuestionViewController: UIViewController, SingingDetectable, QuestionTiming, PopoverDisplaying, LockScreenDisplaying {
+class ExperimentalQuestionViewController: UIViewController, SingingDetectable, QuestionTiming, PopoverDisplaying, LockScreenDisplaying, ProgressHosting {
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songLyricsLabel: UILabel!
@@ -21,6 +21,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     
     @IBOutlet weak var answersSectionStackView: UIStackView!
     @IBOutlet weak var practiceHelperWordsStackView: UIStackView!
+    @IBOutlet weak var progressContainerView: UIView!
     
     @objc var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
@@ -120,6 +121,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
+
+        addProgress()
     }
     
     @objc func setButtons(enabled: Bool) {
@@ -205,6 +208,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     }
     
     private func showNextQuestionOrRound() {
+
+        updateProgress()
         
         guard timeExceededForToday == false else {
             

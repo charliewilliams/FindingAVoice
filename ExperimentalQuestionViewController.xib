@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +17,7 @@
                 <outlet property="higherButton" destination="beq-dx-Xo3" id="E2w-70-XtP"/>
                 <outlet property="lowerButton" destination="kwW-eA-x5x" id="ouU-eC-aGK"/>
                 <outlet property="practiceHelperWordsStackView" destination="EV7-hi-vfN" id="W5Q-AO-f2x"/>
+                <outlet property="progressContainerView" destination="ggU-bf-eIG" id="aEr-lY-OpZ"/>
                 <outlet property="questionFirstHalfLabel" destination="pLX-n6-ySn" id="NYY-NF-1ED"/>
                 <outlet property="questionSecondHalfLabel" destination="i2W-0F-Afn" id="YEc-Tl-yG0"/>
                 <outlet property="sameButton" destination="ly2-jK-EjL" id="yvW-U6-VLS"/>
@@ -163,10 +164,20 @@
                         <constraint firstAttribute="height" constant="499.5" id="nX1-oP-Ye3"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-bf-eIG">
+                    <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="yb6-BL-qQS"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vRt-2x-h5X" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="83" id="11G-1J-gZa"/>
+                <constraint firstItem="ggU-bf-eIG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DdM-bc-xQk"/>
+                <constraint firstAttribute="trailing" secondItem="ggU-bf-eIG" secondAttribute="trailing" id="O7G-jI-KcJ"/>
+                <constraint firstItem="ggU-bf-eIG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="efd-fi-bpZ"/>
                 <constraint firstItem="vRt-2x-h5X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vBf-RO-6tB"/>
             </constraints>
         </view>

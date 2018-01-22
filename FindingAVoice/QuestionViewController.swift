@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying, ScreenReporting {
+class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplaying, LockScreenDisplaying, ScreenReporting, ProgressHosting {
     
     var ruleSet: RuleSet! {
         didSet {
@@ -37,6 +37,8 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     @IBOutlet weak var ruleLabelContainerView: UIView!
     
     @IBOutlet weak var mainStringLabel: UILabel!
+    @IBOutlet weak var progressContainerView: UIView!
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -58,6 +60,8 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         perQuestionTimer.reset()
         
         NotificationCenter.default.addObserver(self, selector: #selector(dailyPlayTimeExceeded), name: Notification.Name(.dailySessionTimeExceeded), object: nil)
+
+        addProgress()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -128,6 +132,8 @@ private extension QuestionViewController {
     }
     
     func showNextQuestionOrRound() {
+
+        updateProgress()
         
         guard timeExceededForToday == false else {
             

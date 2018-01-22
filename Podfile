@@ -9,6 +9,7 @@ def shared
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
     pod 'SVProgressHUD'
+    pod 'YLProgressBar'
     
 end
 
@@ -31,3 +32,4 @@ target 'ExperimentalTaskTests' do
     pod 'Firebase'
     pod 'AudioKit'
 end
+
