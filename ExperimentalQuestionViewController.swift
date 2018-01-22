@@ -55,13 +55,6 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         .font: UIFont.systemFont(ofSize: 36)
     ]
 
-    @objc let highlightedAttributesSmall: [NSAttributedStringKey: Any] = [
-        .backgroundColor: UIColor.yellow,
-        .foregroundColor: UIColor.blue,
-        .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
-        .font: UIFont.italicSystemFont(ofSize: 36)
-    ]
-
     @objc var firstText: NSAttributedString {
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
@@ -140,26 +133,8 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
         
         songTitleLabel.text = question.song.title
-        
-        //question.song.lyrics.replacingOccurrences(of: "-", with: "")
-        let mutable = NSMutableAttributedString(string: question.song.lyrics)
-        let displayLyrics = question.song.lyrics
-        
-        // Find the highlighted bit AS A WHOLE SYLLABLE
-        let range1a = (displayLyrics as NSString).range(of: question.firstHighlight + " ")
-        let range2a = (displayLyrics as NSString).range(of: question.secondHighlight + " ")
-        let range1b = (displayLyrics as NSString).range(of: question.firstHighlight + "-")
-        let range2b = (displayLyrics as NSString).range(of: question.secondHighlight + "-")
-        
-        var range1 = range1a.location != NSNotFound ? range1a : range1b
-        var range2 = range2a.location != NSNotFound ? range2a : range2b
-        range1.length -= 1 // remove the space or dash
-        range2.length -= 1 // remove the space or dash
-        
-        mutable.addAttributes(highlightedAttributesSmall, range: range1)
-        mutable.addAttributes(highlightedAttributesSmall, range: range2)
-        
-        songLyricsLabel.attributedText = mutable
+
+        songLyricsLabel.attributedText = question.song.attributedText(for: question)
         questionFirstHalfLabel.attributedText = firstText
         questionSecondHalfLabel.attributedText = secondText
         
