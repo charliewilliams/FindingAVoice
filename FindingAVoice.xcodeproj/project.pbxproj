@@ -126,6 +126,27 @@
 		C0DFE9071E466DE80011E7DA /* SecretSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9051E466DE80011E7DA /* SecretSetupViewController.xib */; };
 		C0DFE9091E466ED20011E7DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* Main.storyboard */; };
 		C0DFE90B1E466F2E0011E7DA /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE90A1E466F2E0011E7DA /* RootNavigationController.swift */; };
+		C0E0625820162BB100BE43E7 /* alphabet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F741C1F7935FC00112B53 /* alphabet.mp3 */; };
+		C0E0625920162BB100BE43E7 /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F741A1F7935FC00112B53 /* battle.mp3 */; };
+		C0E0625A20162BB100BE43E7 /* dream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74161F7935FB00112B53 /* dream.mp3 */; };
+		C0E0625B20162BB100BE43E7 /* favourite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74141F7935FB00112B53 /* favourite.mp3 */; };
+		C0E0625C20162BB100BE43E7 /* frosty.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F741D1F7935FC00112B53 /* frosty.mp3 */; };
+		C0E0625D20162BB100BE43E7 /* greensleeves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74181F7935FC00112B53 /* greensleeves.mp3 */; };
+		C0E0625E20162BB100BE43E7 /* hark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F741B1F7935FC00112B53 /* hark.mp3 */; };
+		C0E0625F20162BB100BE43E7 /* help.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74111F7935FB00112B53 /* help.mp3 */; };
+		C0E0626020162BB100BE43E7 /* horses.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74121F7935FB00112B53 /* horses.mp3 */; };
+		C0E0626120162BB100BE43E7 /* land.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74251F7935FD00112B53 /* land.mp3 */; };
+		C0E0626220162BB100BE43E7 /* loverly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74261F7935FD00112B53 /* loverly.mp3 */; };
+		C0E0626320162BB100BE43E7 /* puff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F741E1F7935FC00112B53 /* puff.mp3 */; };
+		C0E0626420162BB100BE43E7 /* rainbow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74151F7935FB00112B53 /* rainbow.mp3 */; };
+		C0E0626520162BB100BE43E7 /* raindrops.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74231F7935FC00112B53 /* raindrops.mp3 */; };
+		C0E0626620162BB100BE43E7 /* rudolph.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74171F7935FC00112B53 /* rudolph.mp3 */; };
+		C0E0626720162BB100BE43E7 /* sixpence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74201F7935FC00112B53 /* sixpence.mp3 */; };
+		C0E0626820162BB100BE43E7 /* sixtyfour.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74131F7935FB00112B53 /* sixtyfour.mp3 */; };
+		C0E0626920162BB100BE43E7 /* spangled.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74211F7935FC00112B53 /* spangled.mp3 */; };
+		C0E0626A20162BB100BE43E7 /* wish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74191F7935FC00112B53 /* wish.mp3 */; };
+		C0E0626B20162BB100BE43E7 /* withHelpFromFriends.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74241F7935FD00112B53 /* withHelpFromFriends.mp3 */; };
+		C0E0626C20162BB100BE43E7 /* wouldntItBeLoverly.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C04F74221F7935FC00112B53 /* wouldntItBeLoverly.mp3 */; };
 		C0E4B5801EE6C7CF00273C00 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E4B57F1EE6C7CF00273C00 /* Difficulty.swift */; };
 		C0EC349F1E51017800AC34B9 /* RuleSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EC349E1E51017800AC34B9 /* RuleSetTests.swift */; };
 		C1D8A5BB1AD07E2999FEAE6C /* Pods_ControlTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7971A35C0D9C54D1C6B374 /* Pods_ControlTaskTests.framework */; };
@@ -212,7 +233,6 @@
 		C04F741C1F7935FC00112B53 /* alphabet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alphabet.mp3; path = mp3/alphabet.mp3; sourceTree = SOURCE_ROOT; };
 		C04F741D1F7935FC00112B53 /* frosty.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = frosty.mp3; path = mp3/frosty.mp3; sourceTree = SOURCE_ROOT; };
 		C04F741E1F7935FC00112B53 /* puff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = puff.mp3; path = mp3/puff.mp3; sourceTree = SOURCE_ROOT; };
-		C04F741F1F7935FC00112B53 /* landOfHope.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = landOfHope.mp3; path = mp3/landOfHope.mp3; sourceTree = SOURCE_ROOT; };
 		C04F74201F7935FC00112B53 /* sixpence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sixpence.mp3; path = mp3/sixpence.mp3; sourceTree = SOURCE_ROOT; };
 		C04F74211F7935FC00112B53 /* spangled.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spangled.mp3; path = mp3/spangled.mp3; sourceTree = SOURCE_ROOT; };
 		C04F74221F7935FC00112B53 /* wouldntItBeLoverly.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wouldntItBeLoverly.mp3; path = mp3/wouldntItBeLoverly.mp3; sourceTree = SOURCE_ROOT; };
@@ -584,7 +604,6 @@
 				C04F74111F7935FB00112B53 /* help.mp3 */,
 				C04F74121F7935FB00112B53 /* horses.mp3 */,
 				C04F74251F7935FD00112B53 /* land.mp3 */,
-				C04F741F1F7935FC00112B53 /* landOfHope.mp3 */,
 				C04F74261F7935FD00112B53 /* loverly.mp3 */,
 				C04F741E1F7935FC00112B53 /* puff.mp3 */,
 				C04F74151F7935FB00112B53 /* rainbow.mp3 */,
@@ -843,18 +862,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04F742C1F793AA900112B53 /* GoogleService-Info.plist in Resources */,
+				C0E0626820162BB100BE43E7 /* sixtyfour.mp3 in Resources */,
 				C0C74C961E94248800190187 /* ExperimentalQuestionViewController.xib in Resources */,
+				C0E0625D20162BB100BE43E7 /* greensleeves.mp3 in Resources */,
 				C0B7802C1E918A500015D2C8 /* SongInfo.json in Resources */,
 				C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */,
+				C0E0626120162BB100BE43E7 /* land.mp3 in Resources */,
+				C0E0625920162BB100BE43E7 /* battle.mp3 in Resources */,
+				C0E0626A20162BB100BE43E7 /* wish.mp3 in Resources */,
+				C0E0626B20162BB100BE43E7 /* withHelpFromFriends.mp3 in Resources */,
+				C0E0626320162BB100BE43E7 /* puff.mp3 in Resources */,
+				C0E0626220162BB100BE43E7 /* loverly.mp3 in Resources */,
+				C0E0626520162BB100BE43E7 /* raindrops.mp3 in Resources */,
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
+				C0E0626C20162BB100BE43E7 /* wouldntItBeLoverly.mp3 in Resources */,
+				C0E0626020162BB100BE43E7 /* horses.mp3 in Resources */,
+				C0E0625B20162BB100BE43E7 /* favourite.mp3 in Resources */,
+				C0E0626620162BB100BE43E7 /* rudolph.mp3 in Resources */,
 				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
 				C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */,
 				C0B780301E918C840015D2C8 /* SnippetPlayer.storyboard in Resources */,
 				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
+				C0E0625A20162BB100BE43E7 /* dream.mp3 in Resources */,
+				C0E0625820162BB100BE43E7 /* alphabet.mp3 in Resources */,
+				C0E0626720162BB100BE43E7 /* sixpence.mp3 in Resources */,
+				C0E0625F20162BB100BE43E7 /* help.mp3 in Resources */,
+				C0E0626920162BB100BE43E7 /* spangled.mp3 in Resources */,
 				C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */,
+				C0E0625C20162BB100BE43E7 /* frosty.mp3 in Resources */,
+				C0E0625E20162BB100BE43E7 /* hark.mp3 in Resources */,
 				C081296C1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */,
 				C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */,
+				C0E0626420162BB100BE43E7 /* rainbow.mp3 in Resources */,
 				C0D7BD101EE825E8001BF3AB /* SingingDetector.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
