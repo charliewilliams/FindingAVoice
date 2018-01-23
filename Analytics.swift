@@ -32,7 +32,7 @@ struct Analytics {
     static func logScreen(named name: String) {
 
         clearEvent()
-        log(eventName: "screen", eventValue: name)
+//        log(eventName: "screen", eventValue: name)
     }
 
     static func songKnowledgeLevelMarked(_ song: Song, duration: TimeInterval) {
