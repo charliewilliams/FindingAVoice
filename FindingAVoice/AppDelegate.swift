@@ -58,7 +58,7 @@ private extension AppDelegate {
             
             Analytics.userRelaunchedAfterTimeUp()
             
-            window?.rootViewController?.present(TimesUpLockViewController(), animated: false, completion: nil)
+            window?.rootViewController?.present(EndOfDayCelebrateViewController(), animated: false, completion: nil)
         }
     }
 }

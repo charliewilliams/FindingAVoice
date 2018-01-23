@@ -11,8 +11,6 @@
 		7AE9790BF6B6D04E40B1C8D7 /* Pods_ExperimentalTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4FF4743E933E912B82F74B /* Pods_ExperimentalTaskTests.framework */; };
 		B97894765EA2A3677B4D22B1 /* Pods_ExperimentalTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A796BF8237484EE8CF5E921 /* Pods_ExperimentalTask.framework */; };
 		C002D4491E35440500FA2C15 /* QuestionViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */; };
-		C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */; };
-		C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
 		C002D4671E35515100FA2C15 /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
 		C002D4691E35515E00FA2C15 /* PopoverDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */; };
 		C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */; };
@@ -59,14 +57,12 @@
 		C06A3DC01E6DC1B500B8AE3D /* DailyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04944301E2822EB00A12E1B /* DailyTimer.swift */; };
 		C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CF9F1E2A3EA200419532 /* DebugPrint.swift */; };
 		C06A3DC21E6DC1B500B8AE3D /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */; };
-		C06A3DC31E6DC1B500B8AE3D /* TimesUpLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */; };
 		C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035CFA31E2A420200419532 /* QuestionTimer.swift */; };
 		C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */; };
 		C06A3DC61E6DC1B500B8AE3D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B5AE91E5A024900570149 /* SignupViewController.swift */; };
 		C06A3DCB1E6DC1B500B8AE3D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07B5AEA1E5A024900570149 /* SignupViewController.xib */; };
 		C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D941E1FC40E005A7AA1 /* LaunchScreen.storyboard */; };
 		C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */; };
-		C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */; };
 		C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0AA1D901E1FC3E2005A7AA1 /* Assets.xcassets */; };
 		C06A3DD31E6DC1B500B8AE3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */; };
 		C06A3DD51E6DC1B500B8AE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE9081E466ED20011E7DA /* Main.storyboard */; };
@@ -90,6 +86,10 @@
 		C081296A1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */; };
 		C081296B1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
 		C081296C1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */; };
+		C081D5C42017ACBE00DE005D /* EndOfDayCelebrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081D5C22017ACBE00DE005D /* EndOfDayCelebrateViewController.swift */; };
+		C081D5C52017ACBE00DE005D /* EndOfDayCelebrateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081D5C22017ACBE00DE005D /* EndOfDayCelebrateViewController.swift */; };
+		C081D5C62017ACBE00DE005D /* EndOfDayCelebrateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C081D5C32017ACBE00DE005D /* EndOfDayCelebrateViewController.xib */; };
+		C081D5C72017ACBE00DE005D /* EndOfDayCelebrateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C081D5C32017ACBE00DE005D /* EndOfDayCelebrateViewController.xib */; };
 		C08899AC1F9006DB00554A10 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08899AB1F9006DB00554A10 /* Collection.swift */; };
 		C08899AD1F9006DB00554A10 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08899AB1F9006DB00554A10 /* Collection.swift */; };
 		C0AA1D761E1E913B005A7AA1 /* RuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D751E1E913B005A7AA1 /* RuleTests.swift */; };
@@ -202,8 +202,6 @@
 		9F28C58CBD2B866AC891787F /* Pods-ControlTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask.debug.xcconfig"; sourceTree = "<group>"; };
 		A9F07E4B891765CCB35C5BE6 /* Pods-ExperimentalTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentalTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		C002D4481E35440500FA2C15 /* QuestionViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerUITests.swift; sourceTree = "<group>"; };
-		C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimesUpLockViewController.swift; path = FindingAVoice/TimesUpLockViewController.swift; sourceTree = SOURCE_ROOT; };
-		C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimesUpLockViewController.xib; path = FindingAVoice/TimesUpLockViewController.xib; sourceTree = SOURCE_ROOT; };
 		C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LockScreenDisplaying.swift; path = FindingAVoice/LockScreenDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C002D4681E35515E00FA2C15 /* PopoverDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverDisplaying.swift; path = FindingAVoice/PopoverDisplaying.swift; sourceTree = SOURCE_ROOT; };
 		C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopoverViewController.swift; path = FindingAVoice/PopoverViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -269,6 +267,8 @@
 		C08129601F79430A0018A9EA /* DifficultyProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyProviderTests.swift; sourceTree = "<group>"; };
 		C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDebugOverlayTableViewController.swift; sourceTree = "<group>"; };
 		C08129681F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsDebugOverlayTableViewController.xib; sourceTree = "<group>"; };
+		C081D5C22017ACBE00DE005D /* EndOfDayCelebrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfDayCelebrateViewController.swift; sourceTree = "<group>"; };
+		C081D5C32017ACBE00DE005D /* EndOfDayCelebrateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndOfDayCelebrateViewController.xib; sourceTree = "<group>"; };
 		C08899AB1F9006DB00554A10 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,8 +589,8 @@
 				C07B5AEA1E5A024900570149 /* SignupViewController.xib */,
 				C002D46E1E3554BD00FA2C15 /* PopoverViewController.swift */,
 				C002D46F1E3554BD00FA2C15 /* PopoverViewController.xib */,
-				C002D44A1E3548C400FA2C15 /* TimesUpLockViewController.swift */,
-				C002D44B1E3548C400FA2C15 /* TimesUpLockViewController.xib */,
+				C081D5C22017ACBE00DE005D /* EndOfDayCelebrateViewController.swift */,
+				C081D5C32017ACBE00DE005D /* EndOfDayCelebrateViewController.xib */,
 				C0DFE9001E466C7C0011E7DA /* InfoViewController.swift */,
 				C0DFE9011E466C7C0011E7DA /* InfoViewController.xib */,
 				C08129671F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.swift */,
@@ -886,12 +886,12 @@
 				C06A3DCC1E6DC1B500B8AE3D /* LaunchScreen.storyboard in Resources */,
 				C0E0626C20162BB100BE43E7 /* wouldntItBeLoverly.mp3 in Resources */,
 				C0E0626020162BB100BE43E7 /* horses.mp3 in Resources */,
+				C081D5C72017ACBE00DE005D /* EndOfDayCelebrateViewController.xib in Resources */,
 				C0E0625B20162BB100BE43E7 /* favourite.mp3 in Resources */,
 				C0E0626620162BB100BE43E7 /* rudolph.mp3 in Resources */,
 				C06A3E041E6DC69700B8AE3D /* ExperimentalWelcomeViewController.xib in Resources */,
 				C06A3DCD1E6DC1B500B8AE3D /* InfoViewController.xib in Resources */,
 				C0B780301E918C840015D2C8 /* SnippetPlayer.storyboard in Resources */,
-				C06A3DCE1E6DC1B500B8AE3D /* TimesUpLockViewController.xib in Resources */,
 				C06A3DD01E6DC1B500B8AE3D /* Assets.xcassets in Resources */,
 				C0E0625A20162BB100BE43E7 /* dream.mp3 in Resources */,
 				C0E0625820162BB100BE43E7 /* alphabet.mp3 in Resources */,
@@ -930,7 +930,7 @@
 				C0AA1D981E1FC40E005A7AA1 /* LaunchScreen.storyboard in Resources */,
 				C0DFE9031E466C7C0011E7DA /* InfoViewController.xib in Resources */,
 				C081296B1F7957E50018A9EA /* AnalyticsDebugOverlayTableViewController.xib in Resources */,
-				C002D44D1E3548C400FA2C15 /* TimesUpLockViewController.xib in Resources */,
+				C081D5C62017ACBE00DE005D /* EndOfDayCelebrateViewController.xib in Resources */,
 				C04D29D31EBDD08A00C37F48 /* ControlAdvancedInstructionsViewController copy.xib in Resources */,
 				C04D29D11EBDCF2F00C37F48 /* ControlIntermediateInstructionsViewController.xib in Resources */,
 				C0DFE8FF1E45E0000011E7DA /* QuestionViewController.xib in Resources */,
@@ -1250,6 +1250,7 @@
 				C06A3DB81E6DC1B500B8AE3D /* FabricTester.swift in Sources */,
 				C06A3DB91E6DC1B500B8AE3D /* Sparkling.swift in Sources */,
 				C06A3DBA1E6DC1B500B8AE3D /* Notification.swift in Sources */,
+				C081D5C52017ACBE00DE005D /* EndOfDayCelebrateViewController.swift in Sources */,
 				C0B7803C1E918CBF0015D2C8 /* Question.swift in Sources */,
 				C0B780361E918C930015D2C8 /* MusicPlayerCollectionViewController.swift in Sources */,
 				C06A3DBB1E6DC1B500B8AE3D /* DebugHistory.swift in Sources */,
@@ -1267,7 +1268,6 @@
 				C06A3DC11E6DC1B500B8AE3D /* DebugPrint.swift in Sources */,
 				C04B97B01EB79CAD00666472 /* Analytics.swift in Sources */,
 				C06A3DC21E6DC1B500B8AE3D /* PopoverViewController.swift in Sources */,
-				C06A3DC31E6DC1B500B8AE3D /* TimesUpLockViewController.swift in Sources */,
 				C06A3DC41E6DC1B500B8AE3D /* QuestionTimer.swift in Sources */,
 				C06A3E031E6DC69700B8AE3D /* ExperimentalWelcomeViewController.swift in Sources */,
 				C06A3DC51E6DC1B500B8AE3D /* InfoViewController.swift in Sources */,
@@ -1300,6 +1300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C081D5C42017ACBE00DE005D /* EndOfDayCelebrateViewController.swift in Sources */,
 				C0AA1D841E1FC3CA005A7AA1 /* Array.swift in Sources */,
 				C0AA1D851E1FC3CA005A7AA1 /* String.swift in Sources */,
 				C04D29D51EBDD84900C37F48 /* DifficultyProvider.swift in Sources */,
@@ -1335,7 +1336,6 @@
 				C04944311E2822EB00A12E1B /* DailyTimer.swift in Sources */,
 				C035CFA01E2A3EA200419532 /* DebugPrint.swift in Sources */,
 				C002D4701E3554BD00FA2C15 /* PopoverViewController.swift in Sources */,
-				C002D44C1E3548C400FA2C15 /* TimesUpLockViewController.swift in Sources */,
 				C035CFA41E2A420200419532 /* QuestionTimer.swift in Sources */,
 				C0DFE9021E466C7C0011E7DA /* InfoViewController.swift in Sources */,
 				C07B5AEB1E5A024900570149 /* SignupViewController.swift in Sources */,

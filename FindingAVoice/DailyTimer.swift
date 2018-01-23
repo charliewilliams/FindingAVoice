@@ -26,6 +26,11 @@ class DailyTimer {
         return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
     }
 
+    let numberOfDays = 14
+    var currentDayNumber: Int {
+        return 4
+    }
+
     var previouslyStoredPlayTimeFromToday: TimeInterval {
         
         var runningTotal: TimeInterval = 0

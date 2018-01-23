@@ -18,6 +18,6 @@ protocol LockScreenDisplaying {
 extension LockScreenDisplaying where Self: UIViewController {
     
     func showTimeExceededLockScreen() {
-        present(TimesUpLockViewController(), animated: true, completion: nil)
+        present(EndOfDayCelebrateViewController(), animated: true, completion: nil)
     }
 }
