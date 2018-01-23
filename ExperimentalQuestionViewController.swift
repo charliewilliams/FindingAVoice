@@ -263,6 +263,8 @@ extension ExperimentalQuestionViewController: ScreenReporting {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        setButtons(enabled: true)
         
         didViewScreen()
     }
