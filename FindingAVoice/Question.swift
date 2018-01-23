@@ -33,16 +33,17 @@ struct Question {
         
         let index = info.stepSizes.randomItem()
         
-        firstHighlight = song.syllable(atIndex: info.startPoint)
-        secondHighlight = song.syllable(atIndex: song.syllables[info.startPoint][index])
-        answer = Answer(rawValue: song.answers[info.startPoint][index])!
+        firstHighlight = song.syllable(atIndex: info.startPointIndex)
+        secondHighlight = song.syllable(atIndex: song.syllables[info.startPointIndex][index])
+        answer = Answer(rawValue: song.answers[info.startPointIndex][index])!
     }
     
     init?(song: Song, difficulty: Difficulty) {
 
         let info = difficulty.info.randomItem()
-        let index = info.stepSizes.randomItem()
-        let raw = song.answers[info.startPoint][index].components(separatedBy: .whitespacesAndNewlines).joined()
+
+        let strideToAnswer = info.stepSizes.randomItem()
+        let raw = song.answers[info.startPointIndex][strideToAnswer].components(separatedBy: .whitespacesAndNewlines).joined()
 
         guard let answer = Answer(rawValue: raw) else {
             return nil
@@ -51,10 +52,11 @@ struct Question {
         self.answer = answer
         self.song = song
         self.difficulty = difficulty
-        
-        firstHighlight = song.syllable(atIndex: info.startPoint)
 
-        guard let syllableIndex = song.syllables[safe: info.startPoint]?[safe: index] else {
+//        let startPoint = song.startPoints[info.startPointIndex]
+        firstHighlight = song.syllable(atIndex: info.startPointIndex)
+
+        guard let syllableIndex = song.syllables[safe: info.startPointIndex]?[safe: strideToAnswer] else {
             return nil
         }
         secondHighlight = song.syllable(atIndex: syllableIndex)

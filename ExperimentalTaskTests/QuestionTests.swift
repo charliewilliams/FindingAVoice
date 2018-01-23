@@ -43,7 +43,7 @@ class QuestionTests: XCTestCase {
     func testFrostyHighlightsFrostAndSnowWhenSpecified() {
         
         let frosty = songs.filter({ $0.id == "frosty" }).first!
-        let questionInfo = (startPoint: 0, stepSizes: [0])
+        let questionInfo = (startPointIndex: 0, stepSizes: [0])
         
         let question = Question(song: frosty, info: questionInfo)
         
