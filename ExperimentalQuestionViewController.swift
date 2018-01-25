@@ -23,15 +23,15 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
     @IBOutlet weak var practiceHelperWordsStackView: UIStackView!
     @IBOutlet weak var progressContainerView: UIView!
     
-    @objc var buttons: [AnswerButton] {
+    var buttons: [AnswerButton] {
         return [higherButton, sameButton, lowerButton]
     }
-    @objc var childSingingDetectorViewController: SingingDetectorViewController!
+    var childSingingDetectorViewController: SingingDetectorViewController!
     
     // Protocol conformance
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
-    @objc var timeExceededForToday = false
+    var timeExceededForToday = false
     
     var question: Question! {
         didSet {
@@ -40,8 +40,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             }
         }
     }
-    
-    @objc var isPractice: Bool = false {
+    var isPractice: Bool = false {
         didSet {
             if !isPractice {
                 answersSectionStackView.removeArrangedSubview(practiceHelperWordsStackView)
@@ -49,13 +48,13 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
     }
     
-    @objc let highlightedAttributesBigRed: [NSAttributedStringKey: Any] = [
+    let highlightedAttributesBigRed: [NSAttributedStringKey: Any] = [
         .backgroundColor: UIColor.clear,
         .foregroundColor: UIColor.red,
         .font: UIFont.systemFont(ofSize: 36)
     ]
 
-    @objc var firstText: NSAttributedString {
+    var firstText: NSAttributedString {
         
         let string = isPractice ? "Is \(question.secondHighlight)" : question.secondHighlight
         let mutable = NSMutableAttributedString(string: string)
@@ -66,7 +65,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         return mutable
     }
     
-    @objc var secondText: NSAttributedString {
+    var secondText: NSAttributedString {
         
         let string = isPractice ? "\(question.firstHighlight) ?" : question.firstHighlight
         let mutable = NSMutableAttributedString(string: string)
@@ -80,7 +79,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc init(forPractice isPractice: Bool) {
+    init(forPractice isPractice: Bool) {
         super.init(nibName: nil, bundle: nil)
         
         loadViewIfNeeded()
@@ -118,7 +117,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         addProgress()
     }
     
-    @objc func setButtons(enabled: Bool) {
+    func setButtons(enabled: Bool) {
         
         self.buttons.forEach { $0.isEnabled = enabled }
     }

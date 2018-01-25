@@ -18,7 +18,7 @@ class MusicPlayerCollectionViewController: UICollectionViewController {
         }
     }
     
-    @objc var backgroundImages = [#imageLiteral(resourceName: "notes_black")]
+    var backgroundImages = [#imageLiteral(resourceName: "notes_black")]
 
     // MARK: UICollectionViewDataSource
 

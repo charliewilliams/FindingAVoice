@@ -18,17 +18,17 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
         }
     }
     var difficulty = DifficultyProvider.currentDifficulty
-    @objc var numberOfQuestionsPerRound: Int = 3
-    @objc var delayTimeBeforeShowingQuestion: TimeInterval = 5
-    @objc var delayTimeBetweenQuestions: TimeInterval = 1
-    @objc var currentQuestionNumber: Int = 0
-    @objc var currentQuestionIsValid: Bool = false
+    var numberOfQuestionsPerRound: Int = 3
+    var delayTimeBeforeShowingQuestion: TimeInterval = 5
+    var delayTimeBetweenQuestions: TimeInterval = 1
+    var currentQuestionNumber: Int = 0
+    var currentQuestionIsValid: Bool = false
     fileprivate var ruleLabelYPosition: CGFloat = 0
     
     // Protocol conformance
     let perQuestionTimer = QuestionTimer.shared
     let dailyTimer = DailyTimer.shared
-    @objc var timeExceededForToday = false
+    var timeExceededForToday = false
     
     @IBOutlet weak var validButton: AnswerButton!
     @IBOutlet weak var invalidButton: AnswerButton!

@@ -16,7 +16,7 @@ class SingingDetectorViewController: UIViewController {
     
     let detector = SingingDetector.shared
     @IBOutlet var audioInputPlot: EZAudioPlot!
-    @objc var plotSubview: AKNodeOutputPlot!
+    var plotSubview: AKNodeOutputPlot!
     
     @IBOutlet weak var detectionView: UIView!
     @IBOutlet weak var overlayView: UIView!
