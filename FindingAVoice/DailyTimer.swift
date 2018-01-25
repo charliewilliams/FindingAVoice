@@ -21,14 +21,32 @@ class DailyTimer {
     static let maximumDailyPlayTime: TimeInterval = 10 * 60 // 10 min
     private var sessionTimer = Timer() // this is crap, this timer gets thrown away but needs to be set in init
     private var sessionStart = Date() // likewise
+    let calendar = Calendar.current
 
     var pastSessionPlayTimes: [String: TimeInterval] {
         return store.object(forKey: sessionsKey) as? [String: TimeInterval] ?? [String: TimeInterval]()
     }
 
-    let numberOfDays = 14
+    let numberOfDays = 12
     var currentDayNumber: Int {
-        return 4
+
+        var daysPlayed = Set<Date>()
+
+        for dict in pastSessionPlayTimes {
+
+            guard let interval = TimeInterval(dict.key) else {
+                assert(false)
+                continue
+            }
+
+            let date = Date(timeIntervalSince1970: interval)
+            let components = calendar.dateComponents([.month, .day], from: date)
+            if let midnightBasedDate = calendar.date(from: components) {
+                daysPlayed.insert(midnightBasedDate)
+            }
+        }
+
+        return daysPlayed.count
     }
 
     var previouslyStoredPlayTimeFromToday: TimeInterval {
@@ -52,6 +70,7 @@ class DailyTimer {
     }
 
     var hasPlayedMaxTimeToday: Bool {
+
         if disabled { return false }
         return previouslyStoredPlayTimeFromToday >= DailyTimer.maximumDailyPlayTime
     }
