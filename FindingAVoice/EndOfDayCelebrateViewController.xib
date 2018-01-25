@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0g-AZ-4oy">
-                    <rect key="frame" x="765" y="599" width="234" height="69"/>
+                    <rect key="frame" x="765" y="674" width="234" height="69"/>
                     <color key="backgroundColor" red="0.024990059166627551" green="0.53712155901996872" blue="0.99217897649999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
@@ -81,7 +81,7 @@
                 <constraint firstItem="ZJq-77-bzi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ubr-Yt-5PM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JMc-JY-YHD" secondAttribute="bottom" id="X4P-Zo-HCH"/>
                 <constraint firstItem="JMc-JY-YHD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="b7t-Rp-fDS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C0g-AZ-4oy" secondAttribute="bottom" constant="100" id="e1q-DM-R5u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C0g-AZ-4oy" secondAttribute="bottom" constant="25" id="e1q-DM-R5u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C0g-AZ-4oy" secondAttribute="trailing" constant="25" id="lx9-vu-GeO"/>
                 <constraint firstItem="ZJq-77-bzi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="n4e-K0-Pme"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JMc-JY-YHD" secondAttribute="trailing" id="qcT-Px-kro"/>
