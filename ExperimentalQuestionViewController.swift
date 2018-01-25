@@ -200,6 +200,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         if isPractice && practiceRoundNumber > numberOfPracticeRounds {
 
             let welcomeVC = WelcomeViewController(nibName: nil, bundle: nil)
+            welcomeVC.isImmediatelyPostPractice = true
             navigationController?.setViewControllers([welcomeVC], animated: true)
 
         } else {

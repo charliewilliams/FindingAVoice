@@ -11,6 +11,7 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var mainTitleLabel: UILabel!
     @IBOutlet weak var getStartedButton: UIButton!
 
     var isPractice: Bool = false {
@@ -18,6 +19,15 @@ class WelcomeViewController: UIViewController {
             if isPractice {
                 loadViewIfNeeded()
                 getStartedButton.setTitle("Let's practice", for: .normal)
+            }
+        }
+    }
+    var isImmediatelyPostPractice: Bool = false {
+        didSet {
+            if isImmediatelyPostPractice {
+                loadViewIfNeeded()
+                welcomeLabel.text = "Great! Let's play for real."
+                mainTitleLabel.text = "As a review, the rules are:"
             }
         }
     }

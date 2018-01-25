@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="ExperimentalTask" customModuleProvider="target">
             <connections>
                 <outlet property="getStartedButton" destination="aNh-ud-cla" id="Fym-hd-IFS"/>
+                <outlet property="mainTitleLabel" destination="4on-QP-6uc" id="r8O-i0-UDE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="cAC-aL-jer" id="zEH-Iv-CNf"/>
             </connections>
