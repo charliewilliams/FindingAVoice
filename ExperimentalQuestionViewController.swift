@@ -40,6 +40,9 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             }
         }
     }
+
+    let numberOfPracticeRounds = 3
+    var practiceRoundNumber: Int = 0
     var isPractice: Bool = false {
         didSet {
             if !isPractice {
@@ -160,6 +163,9 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
         
         setButtons(enabled: false)
+        if isPractice {
+            practiceRoundNumber += 1
+        }
         QuestionTimer.shared.clear()
         
         if givenAnswer == question.answer {
@@ -190,8 +196,16 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
             showTimeExceededLockScreen()
             return
         }
-        
-        _showNextQuestion()
+
+        if isPractice && practiceRoundNumber > numberOfPracticeRounds {
+
+            let welcomeVC = WelcomeViewController(nibName: nil, bundle: nil)
+            navigationController?.setViewControllers([welcomeVC], animated: true)
+
+        } else {
+
+            _showNextQuestion()
+        }
     }
     
     private func _showNextQuestion() {

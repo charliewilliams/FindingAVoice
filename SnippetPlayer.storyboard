@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,10 +36,10 @@
                                 <rect key="frame" x="20" y="579" width="984" height="169"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IrU-eg-7LL">
-                                        <rect key="frame" x="349.5" y="13" width="285" height="143"/>
+                                        <rect key="frame" x="355.5" y="13" width="273" height="143"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQA-JO-PvF">
-                                                <rect key="frame" x="0.0" y="0.0" width="285" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="273" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="Yes, I know it well"/>
                                                 <connections>
@@ -47,7 +47,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv2-h1-yni">
-                                                <rect key="frame" x="0.0" y="51" width="285" height="41"/>
+                                                <rect key="frame" x="0.0" y="51" width="273" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="Yes, I have heard this song"/>
                                                 <connections>
@@ -55,7 +55,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN3-jx-Bxs">
-                                                <rect key="frame" x="0.0" y="102" width="285" height="41"/>
+                                                <rect key="frame" x="0.0" y="102" width="273" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <state key="normal" title="No, I don't know this song"/>
                                                 <connections>
@@ -64,18 +64,32 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyF-UY-aln">
+                                        <rect key="frame" x="363.5" y="49.5" width="257" height="69"/>
+                                        <color key="backgroundColor" red="0.20357483625411987" green="0.47282731533050537" blue="0.96479350328445435" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                        <state key="normal" title="Let's review the rules">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneReviewRulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IY8-6s-3OP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="IrU-eg-7LL" firstAttribute="centerX" secondItem="IxR-Bc-tUS" secondAttribute="centerX" id="2ry-Sv-OYK"/>
                                     <constraint firstItem="IrU-eg-7LL" firstAttribute="centerY" secondItem="IxR-Bc-tUS" secondAttribute="centerY" id="UvP-nz-r7H"/>
+                                    <constraint firstItem="gyF-UY-aln" firstAttribute="centerX" secondItem="IxR-Bc-tUS" secondAttribute="centerX" id="WhN-Lp-cx9"/>
+                                    <constraint firstItem="gyF-UY-aln" firstAttribute="centerY" secondItem="IxR-Bc-tUS" secondAttribute="centerY" id="rFc-RG-7Mj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65m-9M-FTt">
                                 <rect key="frame" x="20" y="28" width="984" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you know this song?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgH-YP-hJx">
-                                        <rect key="frame" x="221" y="22" width="542" height="93"/>
+                                        <rect key="frame" x="231.5" y="22" width="521" height="93"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -117,7 +131,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneReviewRulesButton" destination="gyF-UY-aln" id="cBh-3u-wMV"/>
                         <outlet property="noDontKnowButton" destination="nN3-jx-Bxs" id="LGs-55-DEO"/>
+                        <outlet property="responseButtonsStackView" destination="IrU-eg-7LL" id="azZ-YG-5v7"/>
+                        <outlet property="topTitleLabel" destination="JgH-YP-hJx" id="0Qy-xA-k8t"/>
                         <outlet property="yesHaveHeardButton" destination="Tv2-h1-yni" id="fIL-Ru-BdS"/>
                         <outlet property="yesWellButton" destination="gQA-JO-PvF" id="pcX-Ws-0JB"/>
                     </connections>

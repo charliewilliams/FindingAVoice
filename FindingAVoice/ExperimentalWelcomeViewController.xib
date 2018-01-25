@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="ExperimentalTask" customModuleProvider="target">
             <connections>
+                <outlet property="getStartedButton" destination="aNh-ud-cla" id="Fym-hd-IFS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="cAC-aL-jer" id="zEH-Iv-CNf"/>
             </connections>
@@ -25,13 +26,13 @@
                     <rect key="frame" x="102.5" y="77" width="819" height="614"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-aL-jer">
-                            <rect key="frame" x="340" y="8" width="137" height="37"/>
+                            <rect key="frame" x="342" y="8" width="133.5" height="37"/>
                             <fontDescription key="fontDescription" type="system" pointSize="31"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Songs in my Head" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4on-QP-6uc">
-                            <rect key="frame" x="225.5" y="53" width="367.5" height="55"/>
+                            <rect key="frame" x="232.5" y="53" width="354" height="55"/>
                             <fontDescription key="fontDescription" type="system" pointSize="46"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -42,23 +43,23 @@
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2G-47-6o4">
                                     <rect key="frame" x="0.0" y="0.0" width="331" height="399"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text">Welcome to the Songs In My Head game. In this game, you will be trying compare two notes in familiar songs… but the songs will only be playing in your head! The idea is to “hear” the melody, and we will give you two lyrics, or a syllable of a lyric (if the word is more than one syllable).   Your job is to say whether the second lyric has a note that is higher, lower or is the same as the first lyric. So for instance, think of the first phrase of God Save the Queen: 
+                                    <string key="text">Welcome to the Songs In My Head game. In this game, you will be trying compare two notes in familiar songs… but the songs will only be playing in your head! The idea is to “hear” the melody, and we will give you two lyrics, or a syllable of a lyric (if the word is more than one syllable).   Your job is to say whether the second lyric has a note that is higher, lower or is the same as the first lyric. So for instance, think of the first phrase of God Save the Queen: 
 God save our gracious Queen,
-Long live our noble Queen…  Now... is SAVE higher, lower, or the same in pitch than GOD? Don’t sing it out loud, just think ...SAVE is in fact the same pitch as GOD.</mutableString>
+Long live our noble Queen…  Now... is SAVE higher, lower, or the same in pitch than GOD? Don’t sing it out loud, just think ...SAVE is in fact the same pitch as GOD.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
                                     <rect key="frame" x="406" y="0.0" width="331" height="399"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <mutableString key="text">Now how about OUR compared to GOD?...  OUR is higher in pitch than GOD.  If you didn’t get these answers, just think about the song again.  That’s all there is to it! We will be asking you about the first phrases of familiar songs (but you can let us know if there is a song on the list you don’t know). We’d like you to press the button that says Higher, Lower, or Same as quickly as you can, without making a mistake (time out language).   At first the questions will be sort of easy.  But as you get better at this, it will get a little harder. The first lyric might not be the first lyric of the tune, and the second lyric might be farther into the tune, like comparing NOble to GRAcious.</mutableString>
+                                    <string key="text">Now how about OUR compared to GOD?...  OUR is higher in pitch than GOD.  If you didn’t get these answers, just think about the song again.  That’s all there is to it! We will be asking you about the first phrases of familiar songs (but you can let us know if there is a song on the list you don’t know). We’d like you to press the button that says Higher, Lower, or Same as quickly as you can, without making a mistake (time out language).   At first the questions will be sort of easy.  But as you get better at this, it will get a little harder. The first lyric might not be the first lyric of the tune, and the second lyric might be farther into the tune, like comparing NOble to GRAcious.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNh-ud-cla">
-                            <rect key="frame" x="579" y="540" width="215" height="49"/>
+                            <rect key="frame" x="583" y="540" width="211" height="49"/>
                             <color key="backgroundColor" red="0.0" green="0.53504548279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                             <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>

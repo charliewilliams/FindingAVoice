@@ -11,7 +11,15 @@ import AVFoundation
 
 class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
 
-    @objc fileprivate(set) static var userHasAnsweredAllSongs: Bool {
+    @IBOutlet weak var topTitleLabel: UILabel!
+    @IBOutlet weak var doneReviewRulesButton: UIButton!
+    @IBOutlet weak var responseButtonsStackView: UIStackView!
+    @IBOutlet weak var yesWellButton: UIButton!
+    @IBOutlet weak var yesHaveHeardButton: UIButton!
+    @IBOutlet weak var noDontKnowButton: UIButton!
+    var songs = [Song]()
+    var currentSong: Song?
+    fileprivate(set) static var userHasAnsweredAllSongs: Bool {
         get {
             return UserDefaults.standard.bool(forKey: "userHasAnsweredAllSongs")
         }
@@ -19,11 +27,6 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
             UserDefaults.standard.set(newValue, forKey: "userHasAnsweredAllSongs")
         }
     }
-    @IBOutlet weak var yesWellButton: UIButton!
-    @IBOutlet weak var yesHaveHeardButton: UIButton!
-    @IBOutlet weak var noDontKnowButton: UIButton!
-    var songs = [Song]()
-    var currentSong: Song?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,8 +75,17 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         }
         finish()
     }
+
+    @IBAction func doneReviewRulesButtonPressed(_ sender: UIButton) {
+        // Move to next UI
+        navigationController?.popViewController(animated: true)
+
+        let instructionsVC = WelcomeViewController(nibName: nil, bundle: nil)
+        instructionsVC.isPractice = true
+        navigationController?.setViewControllers([instructionsVC], animated: true)
+    }
     
-    @objc var lastTime: TimeInterval = Date().timeIntervalSince1970
+    var lastTime: TimeInterval = Date().timeIntervalSince1970
     @objc func resetTimer() -> TimeInterval {
         
         let now = Date().timeIntervalSince1970
@@ -126,9 +138,11 @@ private extension MusicPlayerContainerViewController {
         
         // Reset so that the songloader loads songs afresh next time
         SongLoader.reset()
-        
-        // Move to next UI
-        navigationController?.popViewController(animated: true)
+
+        // Show finished UI
+        topTitleLabel.text = "Excellent! Now we're ready to start the game."
+        doneReviewRulesButton.isHidden = false
+        responseButtonsStackView.isHidden = true
     }
     
     func setButtonsEnabled(_ enabled: Bool) {

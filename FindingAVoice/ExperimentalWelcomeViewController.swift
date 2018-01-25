@@ -11,7 +11,17 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
-    
+    @IBOutlet weak var getStartedButton: UIButton!
+
+    var isPractice: Bool = false {
+        didSet {
+            if isPractice {
+                loadViewIfNeeded()
+                getStartedButton.setTitle("Let's practice", for: .normal)
+            }
+        }
+    }
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
         super.init(nibName: "ExperimentalWelcomeViewController", bundle: nil)
@@ -34,9 +44,7 @@ class WelcomeViewController: UIViewController {
             return
         }
         
-        // Todo figure out when to set isPractice to false
-        
-        let questionVC = ExperimentalQuestionViewController(forPractice: true)
+        let questionVC = ExperimentalQuestionViewController(forPractice: isPractice)
         
         // When to show the music player vs the questions
         if MusicPlayerContainerViewController.userHasAnsweredAllSongs {
