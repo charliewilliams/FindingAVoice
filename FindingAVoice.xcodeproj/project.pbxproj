@@ -248,7 +248,7 @@
 		C04F74281F79399000112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataControlTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C04F74291F79399900112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataExperimentalTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C04F742A1F7939AB00112B53 /* ControlTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControlTask-Info.plist"; sourceTree = "<group>"; };
-		C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06A3DDC1E6DC1B500B8AE3D /* Songs Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Songs Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
 		C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DEB1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalTaskTests.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		C081D5C22017ACBE00DE005D /* EndOfDayCelebrateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfDayCelebrateViewController.swift; sourceTree = "<group>"; };
 		C081D5C32017ACBE00DE005D /* EndOfDayCelebrateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndOfDayCelebrateViewController.xib; sourceTree = "<group>"; };
 		C08899AB1F9006DB00554A10 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AA1D351E1E8A42005A7AA1 /* Emoji Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA1D4F1E1E8A43005A7AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControlTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -497,10 +497,10 @@
 		C0AA1D361E1E8A42005A7AA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */,
+				C0AA1D351E1E8A42005A7AA1 /* Emoji Game.app */,
 				C0AA1D491E1E8A43005A7AA1 /* ControlTaskTests.xctest */,
 				C0AA1D541E1E8A43005A7AA1 /* ControlTaskUITests.xctest */,
-				C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */,
+				C06A3DDC1E6DC1B500B8AE3D /* Songs Game.app */,
 				C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */,
 				C06A3DF71E6DC5E300B8AE3D /* ExperimentalTaskUITests.xctest */,
 			);
@@ -691,7 +691,7 @@
 			);
 			name = ExperimentalTask;
 			productName = ControlTask;
-			productReference = C06A3DDC1E6DC1B500B8AE3D /* ExperimentalTask.app */;
+			productReference = C06A3DDC1E6DC1B500B8AE3D /* Songs Game.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C06A3DE81E6DC5D400B8AE3D /* ExperimentalTaskTests */ = {
@@ -751,7 +751,7 @@
 			);
 			name = ControlTask;
 			productName = ControlTask;
-			productReference = C0AA1D351E1E8A42005A7AA1 /* ControlTask.app */;
+			productReference = C0AA1D351E1E8A42005A7AA1 /* Emoji Game.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C0AA1D481E1E8A43005A7AA1 /* ControlTaskTests */ = {
@@ -1411,7 +1411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Songs Game";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1429,7 +1429,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Songs Game";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1522,7 +1522,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 43;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1580,7 +1580,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 43;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1614,7 +1614,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Emoji Game";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1632,7 +1632,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Emoji Game";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
