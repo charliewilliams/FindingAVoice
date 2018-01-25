@@ -110,7 +110,7 @@ class DailyTimer {
 private extension DailyTimer {
 
     var sessionPlayTime: TimeInterval {
-        return NSDate().timeIntervalSince(sessionStart)
+        return Date().timeIntervalSince(sessionStart)
     }
 
     func tick() {

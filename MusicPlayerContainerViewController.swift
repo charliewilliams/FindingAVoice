@@ -73,10 +73,10 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         finish()
     }
     
-    @objc var lastTime: TimeInterval = NSDate().timeIntervalSince1970
+    @objc var lastTime: TimeInterval = Date().timeIntervalSince1970
     @objc func resetTimer() -> TimeInterval {
         
-        let now = NSDate().timeIntervalSince1970
+        let now = Date().timeIntervalSince1970
         let elapsed = now - lastTime
         lastTime = now
         
