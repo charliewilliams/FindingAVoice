@@ -166,7 +166,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         if isPractice {
             practiceRoundNumber += 1
         }
-        QuestionTimer.shared.clear()
+        perQuestionTimer.clear()
         
         if givenAnswer == question.answer {
             
