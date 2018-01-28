@@ -201,7 +201,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
 
             let welcomeVC = WelcomeViewController(nibName: nil, bundle: nil)
             welcomeVC.isImmediatelyPostPractice = true
-            navigationController?.setViewControllers([welcomeVC], animated: true)
+            navigationController?.setViewControllers([welcomeVC], animated: false)
 
         } else {
 

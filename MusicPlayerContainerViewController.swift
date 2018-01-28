@@ -82,7 +82,7 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
 
         let instructionsVC = WelcomeViewController(nibName: nil, bundle: nil)
         instructionsVC.isPractice = true
-        navigationController?.setViewControllers([instructionsVC], animated: true)
+        navigationController?.setViewControllers([instructionsVC], animated: false)
     }
     
     var lastTime: TimeInterval = Date().timeIntervalSince1970
