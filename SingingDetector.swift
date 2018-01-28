@@ -8,6 +8,7 @@
 
 import Foundation
 import AudioKit
+import AudioKitUI
 
 enum SingingState: String {
     case started
@@ -24,28 +25,39 @@ class SingingDetector {
     
     var currentPitch: String?
     var pitchAge: Int = 0
+    var updateTimer: Timer?
     
     let mic = AKMicrophone()
     var tracker: AKFrequencyTracker!
+    lazy var outputPlot: AKNodeOutputPlot! = {
+        let plot = AKNodeOutputPlot(self.mic, frame: .zero)
+        plot.plotType = .rolling
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.color = .blue
+        return plot
+    }()
 
     static let shared = SingingDetector()
     
     private init() {
-        
+
         tracker = AKFrequencyTracker(mic)
         AudioKit.output = AKBooster(tracker, gain: 0)
         start()
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+    }
+    
+    func start() {
+
+        AudioKit.start()
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             self.tick()
         }
     }
     
-    func start() {
-       AudioKit.start()
-    }
-    
     func stop() {
+
+        updateTimer?.invalidate()
         AudioKit.stop()
     }
 }

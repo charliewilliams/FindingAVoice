@@ -15,18 +15,22 @@ class SingingDetectorViewController: UIViewController {
     @IBOutlet weak var detectionLabel: UILabel!
     
     let detector = SingingDetector.shared
-    @IBOutlet var audioInputPlot: EZAudioPlot!
-    var plotSubview: AKNodeOutputPlot!
-    
+
     @IBOutlet weak var detectionView: UIView!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var bottomToBottomSpacingConstraint: NSLayoutConstraint!
     var autodismissTimer: Timer?
+    @IBOutlet var audioInputPlot: EZAudioPlot!
+
+    deinit {
+        detector.stop()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupPlot()
+
+        detector.start()
+        audioInputPlot.addSubview(detector.outputPlot)
         
         NotificationCenter.default.addObserver(self, selector: #selector(gotNotification(note:)), name: NSNotification.Name(rawValue: SingingState.started.rawValue), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(gotNotification(note:)), name: NSNotification.Name(rawValue: SingingState.pitchChanged.rawValue), object: nil)
@@ -43,7 +47,7 @@ class SingingDetectorViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        plotSubview.frame = audioInputPlot.bounds   
+        detector.outputPlot.frame = audioInputPlot.bounds
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,18 +106,3 @@ class SingingDetectorViewController: UIViewController {
         })
     }
 }
-
-private extension SingingDetectorViewController {
-
-    func setupPlot() {
-        
-        let plot = AKNodeOutputPlot(detector.mic, frame: audioInputPlot.bounds)
-        plot.plotType = .rolling
-        plot.shouldFill = true
-        plot.shouldMirror = true
-        plot.color = .blue
-        plotSubview = plot
-        audioInputPlot.addSubview(plot)
-    }
-}
-
