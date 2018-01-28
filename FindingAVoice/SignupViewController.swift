@@ -93,5 +93,9 @@ extension SignupViewController: ScreenReporting {
         super.viewDidAppear(animated)
         
         didViewScreen()
+
+        if let nav = presentingViewController as? RootNavigationController, let welcomeVC = nav.viewControllers.filter( { $0 is WelcomeViewController }).first as? WelcomeViewController {
+            welcomeVC.isPractice = true
+        }
     }
 }

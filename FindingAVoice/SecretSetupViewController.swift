@@ -49,7 +49,7 @@ class SecretSetupViewController: UIViewController {
     
     @IBAction func goButtonPressed(_ sender: UIButton) {
         
-        let destination = QuestionViewController()
+        let destination = QuestionViewController(forPractice: false)
         
         let preceding = Int(numPrecedentsLabel.text!)!
         let following = Int(numConsequentsLabel.text!)!

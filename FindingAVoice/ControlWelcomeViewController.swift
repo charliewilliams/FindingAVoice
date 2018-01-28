@@ -11,6 +11,16 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    var isPractice: Bool = false
+
+    var isImmediatelyPostPractice: Bool = false {
+        didSet {
+            if isImmediatelyPostPractice {
+                loadViewIfNeeded()
+                welcomeLabel.text = "Great! Let's play for real."
+            }
+        }
+    }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
@@ -31,7 +41,7 @@ class WelcomeViewController: UIViewController {
         
 //        navigationController?.pushViewController(SecretSetupViewController(), animated: true)
 
-        navigationController?.pushViewController(QuestionViewController(), animated: true)
+        navigationController?.pushViewController(QuestionViewController(forPractice: isPractice), animated: true)
     }
 
 }

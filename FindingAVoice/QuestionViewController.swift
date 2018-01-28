@@ -38,10 +38,26 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     
     @IBOutlet weak var mainStringLabel: UILabel!
     @IBOutlet weak var progressContainerView: UIView!
-    
+
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+
+    let numberOfPracticeRounds = 3
+    var practiceRoundNumber: Int = 0
+    var isPractice: Bool = false
+
+    init(forPractice isPractice: Bool) {
+        super.init(nibName: nil, bundle: nil)
+
+        loadViewIfNeeded()
+
+        self.isPractice = isPractice
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
@@ -116,7 +132,10 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
 private extension QuestionViewController {
     
     func handleAnyButtonPress() {
-        
+
+        if isPractice {
+            practiceRoundNumber += 1
+        }
         perQuestionTimer.clear()
         setButtons(enabled: false)
         
@@ -142,8 +161,14 @@ private extension QuestionViewController {
         }
         
         currentQuestionNumber += 1
-        
-        if currentQuestionNumber >= numberOfQuestionsPerRound {
+
+        if isPractice && practiceRoundNumber >= numberOfPracticeRounds {
+
+            let welcomeVC = WelcomeViewController(nibName: nil, bundle: nil)
+            welcomeVC.isImmediatelyPostPractice = true
+            navigationController?.setViewControllers([welcomeVC], animated: false)
+
+        } else if currentQuestionNumber >= numberOfQuestionsPerRound {
             
             currentQuestionNumber = 0
             showNextRound()
