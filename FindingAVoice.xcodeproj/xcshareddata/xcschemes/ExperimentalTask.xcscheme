@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C06A3DA81E6DC1B500B8AE3D"
-               BuildableName = "ExperimentalTask.app"
+               BuildableName = "Songs Game.app"
                BlueprintName = "ExperimentalTask"
                ReferencedContainer = "container:FindingAVoice.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C06A3DA81E6DC1B500B8AE3D"
-            BuildableName = "ExperimentalTask.app"
+            BuildableName = "Songs Game.app"
             BlueprintName = "ExperimentalTask"
             ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C06A3DA81E6DC1B500B8AE3D"
-            BuildableName = "ExperimentalTask.app"
+            BuildableName = "Songs Game.app"
             BlueprintName = "ExperimentalTask"
             ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
@@ -103,7 +103,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C06A3DA81E6DC1B500B8AE3D"
-            BuildableName = "ExperimentalTask.app"
+            BuildableName = "Songs Game.app"
             BlueprintName = "ExperimentalTask"
             ReferencedContainer = "container:FindingAVoice.xcodeproj">
          </BuildableReference>
