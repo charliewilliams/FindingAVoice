@@ -24,6 +24,9 @@ class RootNavigationController: UINavigationController {
         button.setTitleColor(.red, for: .normal)
         button.frame = CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: 120, height: 44))
         button.addTarget(self, action: #selector(toggleDebugOverlay), for: .touchUpInside)
+
+        button.isHidden = true
+
         return button
     }()
 
@@ -34,6 +37,12 @@ class RootNavigationController: UINavigationController {
         view.addSubview(button)
 
         viewControllers = [WelcomeViewController(nibName: nil, bundle: nil)]
+
+        let secretTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(secretDebugTap))
+        secretTapRecognizer.numberOfTapsRequired = 2
+        secretTapRecognizer.numberOfTouchesRequired = 4
+
+        view.addGestureRecognizer(secretTapRecognizer)
     }
 
     override func popViewController(animated: Bool) -> UIViewController? {
@@ -58,5 +67,10 @@ class RootNavigationController: UINavigationController {
             pushViewController(overlayVC, animated: true)
             setNavigationBarHidden(false, animated: true)
         }
+    }
+
+    @objc private func secretDebugTap(_ sender: UIGestureRecognizer) {
+
+        button.isHidden = !button.isHidden
     }
 }
