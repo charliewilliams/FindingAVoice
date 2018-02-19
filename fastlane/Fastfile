@@ -25,7 +25,7 @@ platform :ios do
         emails: emails,
         groups: groups,
         notes: notes,
-        notifications: true) # Should this distribution notify your testers via email?
+        notifications: false) # Should this distribution notify your testers via email?
 
         # for all available options run `fastlane action crashlytics`
 
@@ -54,7 +54,7 @@ platform :ios do
                    emails: emails,
                    groups: groups,
                     notes: notes,
-            notifications: true) # Should this distribution notify your testers via email?
+            notifications: false) # Should this distribution notify your testers via email?
 
     # for all available options run `fastlane action crashlytics`
 
