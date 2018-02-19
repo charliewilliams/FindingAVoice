@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="ExperimentalTask" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Songs_Game" customModuleProvider="target">
             <connections>
                 <outlet property="getStartedButton" destination="aNh-ud-cla" id="Fym-hd-IFS"/>
                 <outlet property="mainTitleLabel" destination="4on-QP-6uc" id="r8O-i0-UDE"/>
@@ -53,7 +53,7 @@ Long live our noble Queen…  Now... is SAVE higher, lower, or the same in p
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvT-fl-kve">
                                     <rect key="frame" x="406" y="0.0" width="331" height="399"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Now how about OUR compared to GOD?...  OUR is higher in pitch than GOD.  If you didn’t get these answers, just think about the song again.  That’s all there is to it! We will be asking you about the first phrases of familiar songs (but you can let us know if there is a song on the list you don’t know). We’d like you to press the button that says Higher, Lower, or Same as quickly as you can, without making a mistake (time out language).   At first the questions will be sort of easy.  But as you get better at this, it will get a little harder. The first lyric might not be the first lyric of the tune, and the second lyric might be farther into the tune, like comparing NOble to GRAcious.</string>
+                                    <mutableString key="text">Now how about OUR compared to GOD?...  OUR is higher in pitch than GOD.  If you didn’t get these answers, just think about the song again.  That’s all there is to it! We will be asking you about the first phrases of familiar songs (but you can let us know if there is a song on the list you don’t know). We’d like you to press the button that says Higher, Lower, or Same as quickly as you can, without making a mistake. You have up to 15 seconds to respond before the question will time out.  At first the questions will be sort of easy.  But as you get better at this, it will get a little harder. The first lyric might not be the first lyric of the tune, and the second lyric might be farther into the tune, like comparing NOble to GRAcious.</mutableString>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>

@@ -18,7 +18,11 @@ class DailyTimer {
     let sessionsKey = "sessions"
     var disabled: Bool = false
     var store = UserDefaults.standard
-    static let maximumDailyPlayTime: TimeInterval = 10 * 60 // 10 min
+    var dailyPlayTime: TimeInterval {
+
+        let minutes: TimeInterval = currentDayNumber == 0 ? 15 : 10
+        return minutes * 60
+    }
     private var sessionTimer = Timer() // this is crap, this timer gets thrown away but needs to be set in init
     private var sessionStart = Date() // likewise
     let calendar = Calendar.current
@@ -72,7 +76,7 @@ class DailyTimer {
     var hasPlayedMaxTimeToday: Bool {
 
         if disabled { return false }
-        return previouslyStoredPlayTimeFromToday >= DailyTimer.maximumDailyPlayTime
+        return previouslyStoredPlayTimeFromToday >= dailyPlayTime
     }
 
     static let shared = DailyTimer()

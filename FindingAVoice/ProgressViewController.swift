@@ -62,7 +62,7 @@ class ProgressViewController: UIViewController {
     }
 
     func updateProgress() {
-        progress = CGFloat(DailyTimer.shared.previouslyStoredPlayTimeFromToday / DailyTimer.maximumDailyPlayTime)
+        progress = CGFloat(DailyTimer.shared.previouslyStoredPlayTimeFromToday / DailyTimer.shared.dailyPlayTime)
     }
 
     func setUp(in container: UIView) {
