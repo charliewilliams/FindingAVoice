@@ -11,31 +11,19 @@ import Foundation
 class QuestionProvider {
     
     static let shared = QuestionProvider()
-    
-    private var currentQuestion: Question?
-    
-    private init() {
-    
-        // Load info about what day of the test it is
+
+    private var _questions: [Question] = []
+    private var questions: [Question] {
+
+        if _questions.isEmpty {
+            _questions = SongLoader.songs.flatMap { Question(song: $0, difficulty: DifficultyProvider.currentDifficulty) }
+        }
+        return _questions
     }
+    
+    private init() { }
     
     func nextQuestion() -> Question {
-        
-        var songs = SongLoader.songs
-        
-        if let current = currentQuestion {
-            songs = songs.filter { $0.id != current.song.id }
-        }
-
-        return nextQuestion(song: songs.randomItem(), difficulty: DifficultyProvider.currentDifficulty)
-    }
-
-    func nextQuestion(song: Song, difficulty: Difficulty) -> Question {
-
-        repeat {
-            currentQuestion = Question(song: song, difficulty: difficulty)
-        } while currentQuestion == nil
-
-        return currentQuestion!
+        return questions.popRandomItem()
     }
 }
