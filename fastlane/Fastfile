@@ -14,7 +14,7 @@ platform :ios do
         gym(scheme: values[:scheme] ? values[:scheme] : 'ExperimentalTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
         increment_build_number
 
-        emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu']
+        emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu', 'beth.martin@gsmd.ac.uk', 'bethsuzannemarti@aol.com', 'bethsuzannemartin@hotmail.com']
 
         notes = changelog_from_git_commits ? changelog_from_git_commits : ""
 
@@ -25,7 +25,7 @@ platform :ios do
         emails: emails,
         groups: groups,
         notes: notes,
-        notifications: false) # Should this distribution notify your testers via email?
+        notifications: true) # Should this distribution notify your testers via email?
 
         # for all available options run `fastlane action crashlytics`
 
@@ -43,7 +43,7 @@ platform :ios do
     gym(scheme: values[:scheme] ? values[:scheme] : 'ControlTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
 	increment_build_number
 
-    emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu']
+    emails = values[:test_email] ? values[:test_email] : ['c@charliewilliams.org', 'ahalpern@bucknell.edu', 'Karen.Wise@gsmd.ac.uk', 'sms063@bucknell.edu', 'beth.martin@gsmd.ac.uk', 'bethsuzannemarti@aol.com', 'bethsuzannemartin@hotmail.com']
 
     notes = changelog_from_git_commits ? changelog_from_git_commits : ""
 
@@ -54,7 +54,7 @@ platform :ios do
                    emails: emails,
                    groups: groups,
                     notes: notes,
-            notifications: false) # Should this distribution notify your testers via email?
+            notifications: true) # Should this distribution notify your testers via email?
 
     # for all available options run `fastlane action crashlytics`
 
