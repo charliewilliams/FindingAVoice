@@ -15,10 +15,15 @@ class QuestionProvider {
     private var _questions: [Question] = []
     private var questions: [Question] {
 
-        if _questions.isEmpty {
-            _questions = SongLoader.songs.flatMap { Question(song: $0, difficulty: DifficultyProvider.currentDifficulty) }
+        get {
+            if _questions.isEmpty {
+                _questions = SongLoader.songs.flatMap { Question(song: $0, difficulty: DifficultyProvider.currentDifficulty) }
+            }
+            return _questions
         }
-        return _questions
+        set {
+            _questions = newValue
+        }
     }
     
     private init() { }
