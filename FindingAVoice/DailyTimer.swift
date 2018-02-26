@@ -91,6 +91,11 @@ class DailyTimer {
             return
         }
 
+        NotificationCenter.default.addObserver(forName: .UIApplicationSignificantTimeChange, object: nil, queue: .main) { (notification) in
+
+            self.sessionStart = Date()
+        }
+
         resume()
     }
 
