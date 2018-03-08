@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ExperimentalTask
+@testable import Songs_Game
 
 class QuestionTests: XCTestCase {
     
@@ -100,7 +100,7 @@ class QuestionTests: XCTestCase {
         let sixtyfour = songs.filter({ $0.id == "sixtyfour" }).first!
         let question = Question(song: sixtyfour, difficulty: .easy)!
 
-        XCTAssertTrue(["When", "I"].contains(question.firstHighlight))
-        XCTAssertTrue(["lo", "ol"].contains(question.secondHighlight))
+        XCTAssertTrue(["When", "I", "ol"].contains(question.firstHighlight), "Got \(question.firstHighlight)")
+        XCTAssertTrue(["lo", "ol"].contains(question.secondHighlight), "Got \(question.secondHighlight)")
     }
 }

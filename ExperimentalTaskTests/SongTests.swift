@@ -7,16 +7,40 @@
 //
 
 import XCTest
-@testable import ExperimentalTask
+@testable import Songs_Game
 
 class SongTests: XCTestCase {
     
     var songs: [Song]!
+
+    var song: Song!
+
+    let songJSON: [String: Any] = [
+        "id":"testID",
+        "Song":"test",
+        "Lyrics":"foo bar baz",
+        "Startpoints":"0, 1, 2",
+        "Syllables-sp1":"0, 1, 2",
+        "Syllables-sp3":"0, 1, 2",
+        "Syllables-sp5":"0, 1, 2",
+        "Answers-sp1":"0, 1, 2",
+        "Answers-sp3":"0, 1, 2",
+        "Answers-sp5":"0, 1, 2"
+    ]
     
     override func setUp() {
         super.setUp()
         
         songs = SongLoader.songs
+
+        UserDefaults.standard.removeObject(forKey: "testID-suppliedKnowledgeLevel")
+
+        guard let song = Song(json: songJSON) else {
+            XCTFail()
+            return
+        }
+
+        self.song = song
     }
     
     func testLoadsSongs() {
@@ -95,5 +119,66 @@ class SongTests: XCTestCase {
         let attributes = attributedText.attributes(at: 4, longestEffectiveRange: nil, in: NSRange(location: 0, length: 5))
 
         XCTAssertNil(attributes[.backgroundColor])
+    }
+
+    func testSettingKnowledgeLevelWritesToDefaults() {
+
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: "testID-suppliedKnowledgeLevel"), 0)
+
+        song.knowledgeLevel = .some
+
+        XCTAssertEqual(UserDefaults.standard.integer(forKey: "testID-suppliedKnowledgeLevel"), 1)
+    }
+
+    func testReadKnowledgeLevelReadsFromDefaults() {
+
+        UserDefaults.standard.set(-1, forKey: "testID-suppliedKnowledgeLevel")
+
+        guard let level = song.knowledgeLevel, level == .none else {
+            XCTFail()
+            return
+        }
+
+        UserDefaults.standard.set(0, forKey: "testID-suppliedKnowledgeLevel")
+
+        guard let level0 = song.knowledgeLevel, level0 == .unknown else {
+            XCTFail()
+            return
+        }
+
+        UserDefaults.standard.set(1, forKey: "testID-suppliedKnowledgeLevel")
+
+        guard let level1 = song.knowledgeLevel, level1 == .some else {
+            XCTFail()
+            return
+        }
+
+        UserDefaults.standard.set(2, forKey: "testID-suppliedKnowledgeLevel")
+
+        guard let level2 = song.knowledgeLevel, level2 == .well else {
+            XCTFail()
+            return
+        }
+    }
+
+    func testInitReturnsNilIfKnowledgeLevelNone() {
+
+        UserDefaults.standard.set(-1, forKey: "testID-suppliedKnowledgeLevel")
+        XCTAssertNil(Song(json: songJSON))
+    }
+
+    func testInitReturnsObjectIfNoKnowledgeLevelMarked() {
+
+        UserDefaults.standard.removeObject(forKey: "testID-suppliedKnowledgeLevel")
+        XCTAssertNotNil(Song(json: songJSON))
+    }
+
+    func testInitReturnsObjectIfKnowledgeLevelSomeOrWell() {
+
+        UserDefaults.standard.set(1, forKey: "testID-suppliedKnowledgeLevel")
+        XCTAssertNotNil(Song(json: songJSON))
+
+        UserDefaults.standard.set(2, forKey: "testID-suppliedKnowledgeLevel")
+        XCTAssertNotNil(Song(json: songJSON))
     }
 }

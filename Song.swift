@@ -49,7 +49,7 @@ struct Song {
         }
     }
     
-    init?(json: [String: AnyObject]) {
+    init?(json: [String: Any]) {
         
         self.title = json[Key.title.rawValue] as! String
         self.lyrics = json[Key.lyrics.rawValue] as! String

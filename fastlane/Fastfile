@@ -18,7 +18,7 @@ platform :ios do
 
         notes = changelog_from_git_commits ? changelog_from_git_commits : ""
 
-        groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
+        groups = nil
 
         crashlytics(api_token: '3bf576a7e0e1a634037b4c20ef79f63196a6eb0f',
         build_secret: 'cdb8002da5b7da3cfd6f90faa82a27e0d488250d853761f7c834a9200ca71c52',
@@ -47,7 +47,7 @@ platform :ios do
 
     notes = changelog_from_git_commits ? changelog_from_git_commits : ""
 
-    groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
+    groups = nil
 
     crashlytics(api_token: '3bf576a7e0e1a634037b4c20ef79f63196a6eb0f',
              build_secret: 'cdb8002da5b7da3cfd6f90faa82a27e0d488250d853761f7c834a9200ca71c52',

@@ -7,18 +7,13 @@
 //
 
 import XCTest
-@testable import ExperimentalTask
+@testable import Songs_Game
 
 class QuestionProviderTests: XCTestCase {
     
     func testNextQuestionDoesNotCrash() {
-
-        for difficulty in [Difficulty.easy, .medium, .hard] {
-            for song in SongLoader.songs {
-                for _ in 0..<1000 {
-                    _ = QuestionProvider.shared.nextQuestion(song: song, difficulty: difficulty)
-                }
-            }
+        for _ in 0..<1000 {
+            _ = QuestionProvider.shared.nextQuestion()
         }
     }
 }

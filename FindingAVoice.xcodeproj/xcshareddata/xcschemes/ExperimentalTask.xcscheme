@@ -39,16 +39,6 @@
                ReferencedContainer = "container:FindingAVoice.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C06A3DF61E6DC5E300B8AE3D"
-               BuildableName = "ExperimentalTaskUITests.xctest"
-               BlueprintName = "ExperimentalTaskUITests"
-               ReferencedContainer = "container:FindingAVoice.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

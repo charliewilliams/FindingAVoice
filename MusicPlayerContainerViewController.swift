@@ -57,12 +57,15 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         
         // figure out which button and mark the song as unavailable if they've said no
         guard var currentSong = currentSong,
-            let index = [noDontKnowButton, yesHaveHeardButton, yesWellButton].index(of: sender) else {
-                assertionFailure()
-                return
+            // Off-by-one error previously bc 'don't know' needs to be -1, not 0
+            let knowledgeLevel = [noDontKnowButton: Song.KnowledgeLevel.unknown,
+                                  yesHaveHeardButton: Song.KnowledgeLevel.some,
+                                  yesWellButton: Song.KnowledgeLevel.well][sender] else {
+                                    assertionFailure()
+                                    return
         }
         
-        currentSong.knowledgeLevel = Song.KnowledgeLevel(rawValue: index)
+        currentSong.knowledgeLevel = knowledgeLevel
         Analytics.songKnowledgeLevelMarked(currentSong, duration: resetTimer())
         
         playNextSongOrFinish()

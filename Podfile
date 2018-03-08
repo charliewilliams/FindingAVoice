@@ -1,4 +1,5 @@
 use_frameworks!
+inhibit_all_warnings!
 platform :ios, '10.0'
 
 def shared
@@ -19,7 +20,7 @@ end
 
 target 'ExperimentalTask' do
     shared
-    pod 'AudioKit'
+    pod 'AudioKit', '~> 4.0.0'
 end
 
 target 'ControlTaskTests' do
@@ -30,6 +31,6 @@ end
 target 'ExperimentalTaskTests' do
     inherit! :complete
     pod 'Firebase'
-    pod 'AudioKit'
+    pod 'AudioKit', '~> 4.0.0'
 end
 

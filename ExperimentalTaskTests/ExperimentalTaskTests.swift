@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ExperimentalTask
+@testable import Songs_Game
 
 class ExperimentalTaskTests: XCTestCase {
     
