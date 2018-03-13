@@ -49,7 +49,7 @@ class SingingDetector {
     
     func start() {
 
-        try? AudioKit.start()
+        AudioKit.start()
         updateTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             self.tick()
         }
@@ -58,7 +58,7 @@ class SingingDetector {
     func stop() {
 
         updateTimer?.invalidate()
-        try? AudioKit.stop()
+        AudioKit.stop()
     }
 }
 
