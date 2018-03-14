@@ -258,7 +258,7 @@ extension ExperimentalQuestionViewController {
         setButtons(enabled: false)
         showPopover(type: .perQuestionTimeout)
 
-        let knowledgeLevel = "\(question.song.knowledgeLevel!.rawValue)"
+        let knowledgeLevel = "\(question.song.knowledgeLevel?.rawValue ?? 0)"
         Analytics.log(eventName: "no-response", eventValue: question.song.id, responseName: "timed-out", duration: perQuestionTimer.secondsElapsed, data: [
             "first": question.firstHighlight,
             "second": question.secondHighlight,

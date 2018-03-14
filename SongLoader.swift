@@ -9,7 +9,9 @@
 import Foundation
 
 struct SongLoader {
-    
+
+    static var songsDidReloadNotificationName: NSNotification.Name = NSNotification.Name(rawValue: "reloadSongsNotificationName")
+
     private static var _songs: [Song]!
     static var songs: [Song] {
         
@@ -32,5 +34,6 @@ struct SongLoader {
     
     static func reset() {
         _songs = nil
+        NotificationCenter.default.post(name: songsDidReloadNotificationName, object: nil)
     }
 }

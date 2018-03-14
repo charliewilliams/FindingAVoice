@@ -26,7 +26,12 @@ class QuestionProvider {
         }
     }
     
-    private init() { }
+    private init() {
+
+        NotificationCenter.default.addObserver(forName: SongLoader.songsDidReloadNotificationName, object: nil, queue: .main) { _ in
+            self._questions.removeAll()
+        }
+    }
     
     func nextQuestion() -> Question {
         return questions.popRandomItem()
