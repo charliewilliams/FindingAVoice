@@ -5,15 +5,15 @@ PODS:
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.5)
-  - Firebase (4.10.0):
-    - Firebase/Core (= 4.10.0)
-  - Firebase/Auth (4.10.0):
+  - Firebase (4.10.1):
+    - Firebase/Core (= 4.10.1)
+  - Firebase/Auth (4.10.1):
     - Firebase/Core
     - FirebaseAuth (= 4.4.4)
-  - Firebase/Core (4.10.0):
+  - Firebase/Core (4.10.1):
     - FirebaseAnalytics (= 4.1.0)
-    - FirebaseCore (= 4.0.16)
-  - Firebase/Database (4.10.0):
+    - FirebaseCore (= 4.0.17)
+  - Firebase/Database (4.10.1):
     - Firebase/Core
     - FirebaseDatabase (= 4.1.5)
   - FirebaseAnalytics (4.1.0):
@@ -25,7 +25,7 @@ PODS:
     - FirebaseAnalytics (~> 4.1)
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (4.0.16):
+  - FirebaseCore (4.0.17):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseDatabase (4.1.5):
     - FirebaseAnalytics (~> 4.1)
@@ -54,7 +54,6 @@ PODS:
   - YLProgressBar (3.10.2)
 
 DEPENDENCIES:
-  - AudioKit
   - AudioKit (~> 4.0.0)
   - Crashlytics
   - Fabric
@@ -68,10 +67,10 @@ SPEC CHECKSUMS:
   AudioKit: 647145c0462dc9dc8a8582998cd6db5f2e1ea848
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
-  Firebase: c98c8b1fbcbdccd82539a36c2b17a9b1bb0ee798
+  Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: d040bb7a9db6dfc29d0e7ec82d48be51352b2581
-  FirebaseCore: eb9e1a56733ff1094ecf3e28af9069c344b25239
+  FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
@@ -81,6 +80,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YLProgressBar: 365b6c5e934be18b661f79413db33c993c8e8251
 
-PODFILE CHECKSUM: ff3ea41c3f4313c0e37751556ef66ce777404557
+PODFILE CHECKSUM: 973b705474afdd5566650afddd4a19eb9565e1ec
 
 COCOAPODS: 1.4.0

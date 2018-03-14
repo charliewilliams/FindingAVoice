@@ -26,11 +26,15 @@ end
 target 'ControlTaskTests' do
     inherit! :complete
     pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 end
 
 target 'ExperimentalTaskTests' do
     inherit! :complete
     pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
     pod 'AudioKit', '~> 4.0.0'
 end
 
