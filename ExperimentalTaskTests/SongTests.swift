@@ -140,13 +140,6 @@ class SongTests: XCTestCase {
             return
         }
 
-        UserDefaults.standard.set(0, forKey: "testID-suppliedKnowledgeLevel")
-
-        guard let level0 = song.knowledgeLevel, level0 == .unknown else {
-            XCTFail()
-            return
-        }
-
         UserDefaults.standard.set(1, forKey: "testID-suppliedKnowledgeLevel")
 
         guard let level1 = song.knowledgeLevel, level1 == .some else {

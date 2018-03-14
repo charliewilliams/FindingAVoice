@@ -50,6 +50,14 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         // play the first one
         playNextSong()
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        currentSong?.audioPlayer?.stop()
+        // Reset so that the songloader loads songs afresh next time
+        SongLoader.reset()
+    }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
@@ -58,7 +66,7 @@ class MusicPlayerContainerViewController: UIViewController, ScreenReporting {
         // figure out which button and mark the song as unavailable if they've said no
         guard var currentSong = currentSong,
             // Off-by-one error previously bc 'don't know' needs to be -1, not 0
-            let knowledgeLevel = [noDontKnowButton: Song.KnowledgeLevel.unknown,
+            let knowledgeLevel = [noDontKnowButton: Song.KnowledgeLevel.noKnowledge,
                                   yesHaveHeardButton: Song.KnowledgeLevel.some,
                                   yesWellButton: Song.KnowledgeLevel.well][sender] else {
                                     assertionFailure()

@@ -26,7 +26,6 @@ struct Song {
     
     enum KnowledgeLevel: Int {
         case noKnowledge = -1
-        case unknown = 0
         case some = 1
         case well = 2
     }
