@@ -120,6 +120,7 @@
 		C0D7BD131EE825F0001BF3AB /* SingingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */; };
 		C0D7BD141EE825F0001BF3AB /* SingingDetectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */; };
 		C0D7BD161EE826DB001BF3AB /* SingingDetectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BD151EE826DB001BF3AB /* SingingDetectable.swift */; };
+		C0DA7585205962C200D4DA4A /* SongProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA7584205962C200D4DA4A /* SongProviderTests.swift */; };
 		C0DFE8F61E45DFC50011E7DA /* ControlWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */; };
 		C0DFE8F71E45DFC50011E7DA /* ControlWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */; };
 		C0DFE8FA1E45DFD90011E7DA /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */; };
@@ -303,6 +304,7 @@
 		C0D7BD111EE825F0001BF3AB /* SingingDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetector.swift; sourceTree = SOURCE_ROOT; };
 		C0D7BD121EE825F0001BF3AB /* SingingDetectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingDetectorViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0D7BD151EE826DB001BF3AB /* SingingDetectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingingDetectable.swift; path = FindingAVoice/SingingDetectable.swift; sourceTree = SOURCE_ROOT; };
+		C0DA7584205962C200D4DA4A /* SongProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongProviderTests.swift; sourceTree = "<group>"; };
 		C0DFE8F41E45DFC50011E7DA /* ControlWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlWelcomeViewController.swift; path = FindingAVoice/ControlWelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0DFE8F51E45DFC50011E7DA /* ControlWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ControlWelcomeViewController.xib; path = FindingAVoice/ControlWelcomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		C0DFE8F81E45DFD90011E7DA /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesViewController.swift; path = FindingAVoice/RulesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -422,6 +424,7 @@
 				C0B7803D1E91971E0015D2C8 /* QuestionTests.swift */,
 				C0B16C091F7C0BAB00F79854 /* QuestionProviderTests.swift */,
 				C0B7803F1E91974D0015D2C8 /* SongTests.swift */,
+				C0DA7584205962C200D4DA4A /* SongProviderTests.swift */,
 				C06A3DED1E6DC5D400B8AE3D /* Info.plist */,
 			);
 			path = ExperimentalTaskTests;
@@ -1282,6 +1285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06A3DEC1E6DC5D400B8AE3D /* ExperimentalTaskTests.swift in Sources */,
+				C0DA7585205962C200D4DA4A /* SongProviderTests.swift in Sources */,
 				C08129621F79430A0018A9EA /* DifficultyProviderTests.swift in Sources */,
 				C0B780401E91974D0015D2C8 /* SongTests.swift in Sources */,
 				C0B16C0A1F7C0BAB00F79854 /* QuestionProviderTests.swift in Sources */,
@@ -1529,7 +1533,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 78;
+				CURRENT_PROJECT_VERSION = 80;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1587,7 +1591,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 78;
+				CURRENT_PROJECT_VERSION = 80;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1656,16 +1660,32 @@
 			baseConfigurationReference = 7DE541CF0EE41F18CA8F11B1 /* Pods-ControlTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ControlTask.app/ControlTask";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Emoji Game.app/Emoji Game";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AudioKit\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"${PODS_ROOT}/Firebase/Core/Sources/**",
+				);
 				INFOPLIST_FILE = ControlTaskTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(TEST_HOST)";
 			};
 			name = Debug;
 		};
@@ -1674,15 +1694,31 @@
 			baseConfigurationReference = 6649FD466FAA13514C7A9D52 /* Pods-ControlTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ControlTask.app/ControlTask";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Emoji Game.app/Emoji Game";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Core/Sources",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AudioKit\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuth\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseDatabase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"${PODS_ROOT}/Firebase/Core/Sources/**",
+				);
 				INFOPLIST_FILE = ControlTaskTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(TEST_HOST)";
 			};
 			name = Release;
 		};

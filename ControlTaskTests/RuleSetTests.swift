@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ControlTask
+@testable import Emoji_Game
 
 class RuleSetTests: XCTestCase {
     

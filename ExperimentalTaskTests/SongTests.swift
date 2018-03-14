@@ -30,7 +30,8 @@ class SongTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
+
+        SongLoader.reset()
         songs = SongLoader.songs
 
         UserDefaults.standard.removeObject(forKey: "testID-suppliedKnowledgeLevel")
@@ -134,7 +135,7 @@ class SongTests: XCTestCase {
 
         UserDefaults.standard.set(-1, forKey: "testID-suppliedKnowledgeLevel")
 
-        guard let level = song.knowledgeLevel, level == .none else {
+        guard let level = song.knowledgeLevel, level == Song.KnowledgeLevel.noKnowledge else {
             XCTFail()
             return
         }

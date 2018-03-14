@@ -25,7 +25,7 @@ enum Key: String {
 struct Song {
     
     enum KnowledgeLevel: Int {
-        case none = -1
+        case noKnowledge = -1
         case unknown = 0
         case some = 1
         case well = 2
@@ -77,7 +77,7 @@ struct Song {
         }
         
         // return nil if the user has marked this song as unknown
-        if let knowledgeLevel = knowledgeLevel, knowledgeLevel == .none {
+        if let knowledgeLevel = knowledgeLevel, knowledgeLevel == Song.KnowledgeLevel.noKnowledge {
             return nil
         }
     }
