@@ -63,10 +63,10 @@ extension String { // Random
     } 
 }
 
-extension String {
+extension String { // To typed array
     
     func toIntArray() -> [Int] {
-        return toStringArray().flatMap { Int($0) }
+        return toStringArray().compactMap { Int($0) }
     }
     
     func toStringArray() -> [String] {

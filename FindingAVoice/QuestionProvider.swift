@@ -17,7 +17,7 @@ class QuestionProvider {
 
         get {
             if _questions.isEmpty {
-                _questions = SongLoader.songs.flatMap { Question(song: $0, difficulty: DifficultyProvider.currentDifficulty) }
+                _questions = SongLoader.songs.compactMap { Question(song: $0, difficulty: DifficultyProvider.currentDifficulty) }
             }
             return _questions
         }

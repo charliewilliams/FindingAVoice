@@ -29,7 +29,7 @@ struct SongLoader {
         
         let dict = json as! [[String: AnyObject]]
         
-        return dict.flatMap { songDict -> Song? in Song(json: songDict) }
+        return dict.compactMap { songDict -> Song? in Song(json: songDict) }
     }
     
     static func reset() {

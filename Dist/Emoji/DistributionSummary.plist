@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ControlTask.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+				<key>dateExpires</key>
+				<string>28/03/2021</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GTMSessionFetcher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleToolboxForMac.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>SVProgressHUD.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>YLProgressBar.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>leveldb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>A4547829A5204D4E0133B5DCE3C54FA37F73345E</string>
+						<key>dateExpires</key>
+						<string>28/03/2021</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>nanopb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>B2KHP92H7C</string>
+						<key>name</key>
+						<string>Guildhall School of Music and Drama</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>B2KHP92H7C.B2KHP92H7C.com.guildhall.EmojiGame</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>B2KHP92H7C</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>B2KHP92H7C.B2KHP92H7C.com.guildhall.EmojiGame</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Emoji Game.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>4daf3d19-ba74-4b58-8dfa-050796b28f84</string>
+				<key>name</key>
+				<string>iOS Team Inhouse Provisioning Profile: B2KHP92H7C.com.guildhall.EmojiGame</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>B2KHP92H7C</string>
+				<key>name</key>
+				<string>Guildhall School of Music and Drama</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
