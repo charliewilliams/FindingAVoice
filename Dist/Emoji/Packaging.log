@@ -1,0 +1,696 @@
+2018-04-09 09:21:45 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f9df5500b70; archive(resolved)='<IDEArchive: 0x7f9e14b7ac50>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team(resolved)='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f9df5500b70; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7f9dfb0a42a0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9e1506e0e0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9e1488f550; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9df8979940; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9df5a2d660; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9e15107fd0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9df91f28b0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9df8f3ff90; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='<IDEProvisioningBasicTeam: 0x7f9df9144f70; teamID='B2KHP92H7C', teamName='Guildhall School of Music and Drama'>'>
+	<IDEDistributionContext: 0x7f9dfb076df0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f9e07160190>', team='(null)'>
+	<IDEDistributionContext: 0x7f9e0c0ae6c0; archive = '<IDEArchive: 0x7f9e14b7ac50>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7f9df5500b70>
+2018-04-09 09:21:45 +0000  Processing step: IDEDistributionCreateDestRootStep
+2018-04-09 09:21:45 +0000  Processing step: IDEDistributionCopyItemStep
+2018-04-09 09:21:45 +0000  Running /usr/bin/ditto '-V' '/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app'
+2018-04-09 09:21:45 +0000  >>> Copying /Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app 
+2018-04-09 09:21:45 +0000  copying file ./_CodeSignature/CodeResources ... 
+2018-04-09 09:21:45 +0000  26855 bytes for ./_CodeSignature/CodeResources
+2018-04-09 09:21:45 +0000  copying file ./Emoji Game ... 
+2018-04-09 09:21:45 +0000  35639824 bytes for ./Emoji Game
+copying file ./ControlAdvancedInstructionsViewController copy.nib ... 
+2018-04-09 09:21:45 +0000  7732 bytes for ./ControlAdvancedInstructionsViewController copy.nib
+copying file ./ControlIntermediateInstructionsViewController.nib ... 
+2018-04-09 09:21:45 +0000  7748 bytes for ./ControlIntermediateInstructionsViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./QuestionViewController.nib ... 
+2018-04-09 09:21:45 +0000  8601 bytes for ./QuestionViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./AppIcon60x60@2x.png ... 
+2018-04-09 09:21:45 +0000  9528 bytes for ./AppIcon60x60@2x.png
+copying file ./PopoverViewController.nib ... 
+2018-04-09 09:21:45 +0000  4879 bytes for ./PopoverViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./SecretSetupViewController.nib ... 
+2018-04-09 09:21:45 +0000  9610 bytes for ./SecretSetupViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./GoogleService-Info.plist ... 
+2018-04-09 09:21:45 +0000  892 bytes for ./GoogleService-Info.plist
+copying file ./AppIcon60x60@3x.png ... 
+2018-04-09 09:21:45 +0000  18869 bytes for ./AppIcon60x60@3x.png
+2018-04-09 09:21:45 +0000  copying file ./AnalyticsDebugOverlayTableViewController.nib ... 
+2018-04-09 09:21:45 +0000  1443 bytes for ./AnalyticsDebugOverlayTableViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2018-04-09 09:21:45 +0000  1792 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+2018-04-09 09:21:45 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2018-04-09 09:21:45 +0000  832 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+2018-04-09 09:21:45 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2018-04-09 09:21:45 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2018-04-09 09:21:45 +0000  copying file ./Main.storyboardc/UINavigationController-IT0-mP-edf.nib ... 
+2018-04-09 09:21:45 +0000  1188 bytes for ./Main.storyboardc/UINavigationController-IT0-mP-edf.nib
+2018-04-09 09:21:45 +0000  copying file ./Main.storyboardc/Info.plist ... 
+2018-04-09 09:21:45 +0000  276 bytes for ./Main.storyboardc/Info.plist
+copying file ./ControlWelcomeViewController.nib ... 
+2018-04-09 09:21:45 +0000  9740 bytes for ./ControlWelcomeViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./Assets.car ... 
+2018-04-09 09:21:45 +0000  42177768 bytes for ./Assets.car
+2018-04-09 09:21:45 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+13710 bytes for ./AppIcon76x76@2x~ipad.png
+copying file ./AppIcon83.5x83.5@2x~ipad.png ... 
+16648 bytes for ./AppIcon83.5x83.5@2x~ipad.png
+copying file ./RulesViewController.nib ... 
+974 bytes for ./RulesViewController.nib
+copying file ./EndOfDayCelebrateViewController.nib/objects-11.0+.nib ... 
+2018-04-09 09:21:45 +0000  5640 bytes for ./EndOfDayCelebrateViewController.nib/objects-11.0+.nib
+copying file ./EndOfDayCelebrateViewController.nib/runtime.nib ... 
+2018-04-09 09:21:45 +0000  4978 bytes for ./EndOfDayCelebrateViewController.nib/runtime.nib
+2018-04-09 09:21:45 +0000  copying file ./InfoViewController.nib ... 
+2018-04-09 09:21:45 +0000  8283 bytes for ./InfoViewController.nib
+2018-04-09 09:21:45 +0000  copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2018-04-09 09:21:45 +0000  307632 bytes for ./Frameworks/libswiftCoreImage.dylib
+2018-04-09 09:21:45 +0000  copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2018-04-09 09:21:45 +0000  554096 bytes for ./Frameworks/libswiftObjectiveC.dylib
+2018-04-09 09:21:45 +0000  copying file ./Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:45 +0000  2202 bytes for ./Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:45 +0000  copying file ./Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher ... 
+2018-04-09 09:21:45 +0000  2542400 bytes for ./Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher
+2018-04-09 09:21:45 +0000  copying file ./Frameworks/GTMSessionFetcher.framework/Info.plist ... 
+759 bytes for ./Frameworks/GTMSessionFetcher.framework/Info.plist
+copying file ./Frameworks/libswiftCore.dylib ... 
+2018-04-09 09:21:46 +0000  66629568 bytes for ./Frameworks/libswiftCore.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+1628560 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftUIKit.dylib ... 
+1043024 bytes for ./Frameworks/libswiftUIKit.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:46 +0000  6110 bytes for ./Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2018-04-09 09:21:46 +0000  1207856 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+2018-04-09 09:21:46 +0000  365 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2018-04-09 09:21:46 +0000  398 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+2018-04-09 09:21:46 +0000  8319 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2018-04-09 09:21:46 +0000  4893 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+2018-04-09 09:21:46 +0000  306 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+2018-04-09 09:21:46 +0000  1200 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+2018-04-09 09:21:46 +0000  462 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+2018-04-09 09:21:46 +0000  714 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2018-04-09 09:21:46 +0000  816 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+2018-04-09 09:21:46 +0000  184 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+2018-04-09 09:21:46 +0000  262 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2018-04-09 09:21:46 +0000  1845 bytes for ./Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+copying file ./Frameworks/SVProgressHUD.framework/Info.plist ... 
+2018-04-09 09:21:46 +0000  748 bytes for ./Frameworks/SVProgressHUD.framework/Info.plist
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/libswiftMetal.dylib ... 
+2018-04-09 09:21:46 +0000  448896 bytes for ./Frameworks/libswiftMetal.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/libswiftDispatch.dylib ... 
+2018-04-09 09:21:46 +0000  2722288 bytes for ./Frameworks/libswiftDispatch.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/libswiftos.dylib ... 
+497152 bytes for ./Frameworks/libswiftos.dylib
+copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+2018-04-09 09:21:46 +0000  257744 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/libswiftDarwin.dylib ... 
+2018-04-09 09:21:46 +0000  838720 bytes for ./Frameworks/libswiftDarwin.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:46 +0000  2202 bytes for ./Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac ... 
+2018-04-09 09:21:46 +0000  515984 bytes for ./Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/GoogleToolboxForMac.framework/Info.plist ... 
+2018-04-09 09:21:46 +0000  762 bytes for ./Frameworks/GoogleToolboxForMac.framework/Info.plist
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/nanopb.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:46 +0000  2202 bytes for ./Frameworks/nanopb.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/nanopb.framework/nanopb ... 
+2018-04-09 09:21:46 +0000  495440 bytes for ./Frameworks/nanopb.framework/nanopb
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/nanopb.framework/Info.plist ... 
+2018-04-09 09:21:46 +0000  734 bytes for ./Frameworks/nanopb.framework/Info.plist
+copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+2018-04-09 09:21:46 +0000  310608 bytes for ./Frameworks/libswiftQuartzCore.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/leveldb.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:46 +0000  2202 bytes for ./Frameworks/leveldb.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/leveldb.framework/leveldb ... 
+2018-04-09 09:21:46 +0000  4734160 bytes for ./Frameworks/leveldb.framework/leveldb
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/leveldb.framework/Info.plist ... 
+737 bytes for ./Frameworks/leveldb.framework/Info.plist
+copying file ./Frameworks/libswiftCoreAudio.dylib ... 
+659920 bytes for ./Frameworks/libswiftCoreAudio.dylib
+copying file ./Frameworks/libswiftAVFoundation.dylib ... 
+2018-04-09 09:21:46 +0000  1310608 bytes for ./Frameworks/libswiftAVFoundation.dylib
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/YLProgressBar.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:46 +0000  2202 bytes for ./Frameworks/YLProgressBar.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/YLProgressBar.framework/YLProgressBar ... 
+2018-04-09 09:21:46 +0000  606688 bytes for ./Frameworks/YLProgressBar.framework/YLProgressBar
+2018-04-09 09:21:46 +0000  copying file ./Frameworks/YLProgressBar.framework/Info.plist ... 
+2018-04-09 09:21:46 +0000  749 bytes for ./Frameworks/YLProgressBar.framework/Info.plist
+copying file ./Frameworks/libswiftFoundation.dylib ... 
+2018-04-09 09:21:46 +0000  30131392 bytes for ./Frameworks/libswiftFoundation.dylib
+copying file ./Frameworks/libswiftCoreMedia.dylib ... 
+2018-04-09 09:21:46 +0000  483632 bytes for ./Frameworks/libswiftCoreMedia.dylib
+copying file ./Frameworks/libswiftsimd.dylib ... 
+2018-04-09 09:21:46 +0000  5579984 bytes for ./Frameworks/libswiftsimd.dylib
+2018-04-09 09:21:46 +0000  copying file ./embedded.mobileprovision ... 
+7657 bytes for ./embedded.mobileprovision
+copying file ./Info.plist ... 
+1431 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+8 bytes for ./PkgInfo
+copying file ./SignupViewController.nib ... 
+2018-04-09 09:21:46 +0000  6655 bytes for ./SignupViewController.nib
+copying file ./AppIcon76x76~ipad.png ... 
+2018-04-09 09:21:46 +0000  4794 bytes for ./AppIcon76x76~ipad.png
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  
+
+2018-04-09 09:21:46 +0000  /usr/bin/ditto exited with 0
+2018-04-09 09:21:46 +0000  
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  Processing step: IDEDistributionEmbedProfileStep
+
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df91fa550 'org.cocoapods.GTMSessionFetcher' '<DVTFilePath:0x7f9df8e14e80:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GTMSessionFetcher.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfaea31b0 'org.cocoapods.GoogleToolboxForMac' '<DVTFilePath:0x7f9df5742090:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df9475770 'org.cocoapods.SVProgressHUD' '<DVTFilePath:0x7f9df57ef1c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/SVProgressHUD.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfb040340 'org.cocoapods.YLProgressBar' '<DVTFilePath:0x7f9df975d810:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/YLProgressBar.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfb109ac0 'org.cocoapods.leveldb' '<DVTFilePath:0x7f9e1488b640:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/leveldb.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfa91ef30 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f9dfa98d8b0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9e151d0a90 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f9df8ef26e0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCore.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df5a66c90 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f9df5743290:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df975b610 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f9df8efbaf0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df8e676c0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f9dfb111a60:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfb02d0a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f9df8ea04f0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df944ee20 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f9e0c70dbb0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df978caf0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f9df579d600:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df974f070 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f9df5a66620:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfb050bb0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f9e14d03f90:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df978f750 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f9dfa9a9020:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftMetal.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfabe3d30 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f9df8bea5c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9e14dc6290 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f9dfa9ab7d0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9df90a18f0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f9e0fee7680:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfb102fc0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f9df5739120:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftos.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfac5e460 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f9e1538c890:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftsimd.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f9dfa9d3540 'org.cocoapods.nanopb' '<DVTFilePath:0x7f9df8ec68a0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/nanopb.framework'>'>
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionSymbolsStep
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionAppThinningStep
+2018-04-09 09:21:46 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionODRStep
+2018-04-09 09:21:46 +0000  Processing step: IDEDistributionStripXattrsStep
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df91fa550 'org.cocoapods.GTMSessionFetcher' '<DVTFilePath:0x7f9df8e14e80:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GTMSessionFetcher.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfaea31b0 'org.cocoapods.GoogleToolboxForMac' '<DVTFilePath:0x7f9df5742090:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df9475770 'org.cocoapods.SVProgressHUD' '<DVTFilePath:0x7f9df57ef1c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/SVProgressHUD.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfb040340 'org.cocoapods.YLProgressBar' '<DVTFilePath:0x7f9df975d810:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/YLProgressBar.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfb109ac0 'org.cocoapods.leveldb' '<DVTFilePath:0x7f9e1488b640:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/leveldb.framework'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfa91ef30 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f9dfa98d8b0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9e151d0a90 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f9df8ef26e0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCore.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df5a66c90 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f9df5743290:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df975b610 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f9df8efbaf0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df8e676c0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f9dfb111a60:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfb02d0a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f9df8ea04f0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreImage.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df944ee20 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f9e0c70dbb0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df978caf0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f9df579d600:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDarwin.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df974f070 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f9df5a66620:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDispatch.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfb050bb0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f9e14d03f90:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftFoundation.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df978f750 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f9dfa9a9020:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftMetal.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfabe3d30 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f9df8bea5c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9e14dc6290 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f9dfa9ab7d0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9df90a18f0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f9e0fee7680:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftUIKit.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfb102fc0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f9df5739120:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftos.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfac5e460 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f9e1538c890:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftsimd.dylib'>'>
+2018-04-09 09:21:46 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f9dfa9d3540 'org.cocoapods.nanopb' '<DVTFilePath:0x7f9df8ec68a0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/nanopb.framework'>'>
+2018-04-09 09:21:46 +0000  Running /usr/bin/xattr '-crs' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app'
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  
+
+2018-04-09 09:21:46 +0000  /usr/bin/xattr exited with 0
+2018-04-09 09:21:46 +0000  
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  Processing step: IDEDistributionCodesignStep
+
+2018-04-09 09:21:46 +0000  Entitlements for <IDEDistributionItem: 0x7f9df91fa550 'org.cocoapods.GTMSessionFetcher' '<DVTFilePath:0x7f9df8e14e80:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GTMSessionFetcher.framework'>'>: {
+}
+2018-04-09 09:21:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df91fa550 'org.cocoapods.GTMSessionFetcher' '<DVTFilePath:0x7f9df8e14e80:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GTMSessionFetcher.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsEjjdGK
+2018-04-09 09:21:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsEjjdGK' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework'
+2018-04-09 09:21:46 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.GTMSessionFetcher]
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  
+
+2018-04-09 09:21:46 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:46 +0000  
+2018-04-09 09:21:46 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfaea31b0 'org.cocoapods.GoogleToolboxForMac' '<DVTFilePath:0x7f9df5742090:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework'>'>: {
+}
+2018-04-09 09:21:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfaea31b0 'org.cocoapods.GoogleToolboxForMac' '<DVTFilePath:0x7f9df5742090:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsqgRTW6
+2018-04-09 09:21:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsqgRTW6' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework'
+2018-04-09 09:21:46 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.GoogleToolboxForMac]
+2018-04-09 09:21:46 +0000  
+2018-04-09 09:21:46 +0000  2018-04-09 09:21:46 +0000  /usr/bin/codesign exited with 0
+
+2018-04-09 09:21:46 +0000  
+2018-04-09 09:21:46 +0000  Entitlements for <IDEDistributionItem: 0x7f9df9475770 'org.cocoapods.SVProgressHUD' '<DVTFilePath:0x7f9df57ef1c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/SVProgressHUD.framework'>'>: {
+}
+2018-04-09 09:21:46 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df9475770 'org.cocoapods.SVProgressHUD' '<DVTFilePath:0x7f9df57ef1c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/SVProgressHUD.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsCFwToJ
+2018-04-09 09:21:46 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsCFwToJ' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework'
+2018-04-09 09:21:47 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.SVProgressHUD]
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfb040340 'org.cocoapods.YLProgressBar' '<DVTFilePath:0x7f9df975d810:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/YLProgressBar.framework'>'>: {
+}
+2018-04-09 09:21:47 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfb040340 'org.cocoapods.YLProgressBar' '<DVTFilePath:0x7f9df975d810:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/YLProgressBar.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsl672Hr
+2018-04-09 09:21:47 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsl672Hr' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/YLProgressBar.framework'
+2018-04-09 09:21:47 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/YLProgressBar.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.YLProgressBar]
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfb109ac0 'org.cocoapods.leveldb' '<DVTFilePath:0x7f9e1488b640:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/leveldb.framework'>'>: {
+}
+2018-04-09 09:21:47 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfb109ac0 'org.cocoapods.leveldb' '<DVTFilePath:0x7f9e1488b640:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/leveldb.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsOIXoRN
+2018-04-09 09:21:47 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsOIXoRN' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/leveldb.framework'
+2018-04-09 09:21:47 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/leveldb.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.leveldb]
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfa91ef30 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f9dfa98d8b0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib'>'>: {
+}
+2018-04-09 09:21:47 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfa91ef30 'com.apple.dt.runtime.swiftAVFoundation' '<DVTFilePath:0x7f9dfa98d8b0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementspfwXnU
+2018-04-09 09:21:47 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementspfwXnU' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib'
+2018-04-09 09:21:47 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftAVFoundation]
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  Entitlements for <IDEDistributionItem: 0x7f9e151d0a90 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f9df8ef26e0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCore.dylib'>'>: {
+}
+2018-04-09 09:21:47 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9e151d0a90 'com.apple.dt.runtime.swiftCore' '<DVTFilePath:0x7f9df8ef26e0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCore.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlements0shpUX
+2018-04-09 09:21:47 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlements0shpUX' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCore.dylib'
+2018-04-09 09:21:47 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2018-04-09 09:21:47 +0000  2018-04-09 09:21:47 +0000  
+
+2018-04-09 09:21:47 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:47 +0000  
+2018-04-09 09:21:47 +0000  Entitlements for <IDEDistributionItem: 0x7f9df5a66c90 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f9df5743290:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib'>'>: {
+}
+2018-04-09 09:21:47 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df5a66c90 'com.apple.dt.runtime.swiftCoreAudio' '<DVTFilePath:0x7f9df5743290:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsXoEn7E
+2018-04-09 09:21:47 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsXoEn7E' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreAudio]
+2018-04-09 09:21:48 +0000  2018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 02018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9df975b610 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f9df8efbaf0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df975b610 'com.apple.dt.runtime.swiftCoreFoundation' '<DVTFilePath:0x7f9df8efbaf0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsQBZYlE
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsQBZYlE' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9df8e676c0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f9dfb111a60:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df8e676c0 'com.apple.dt.runtime.swiftCoreGraphics' '<DVTFilePath:0x7f9dfb111a60:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsOpO2H1
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsOpO2H1' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfb02d0a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f9df8ea04f0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreImage.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfb02d0a0 'com.apple.dt.runtime.swiftCoreImage' '<DVTFilePath:0x7f9df8ea04f0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreImage.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsjJYkOn
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsjJYkOn' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreImage.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2018-04-09 09:21:48 +0000  2018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9df944ee20 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f9e0c70dbb0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df944ee20 'com.apple.dt.runtime.swiftCoreMedia' '<DVTFilePath:0x7f9e0c70dbb0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsK8TZZm
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsK8TZZm' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreMedia]
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9df978caf0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f9df579d600:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDarwin.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df978caf0 'com.apple.dt.runtime.swiftDarwin' '<DVTFilePath:0x7f9df579d600:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDarwin.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsSYJ23q
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsSYJ23q' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftDarwin.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2018-04-09 09:21:48 +0000  2018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9df974f070 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f9df5a66620:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDispatch.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df974f070 'com.apple.dt.runtime.swiftDispatch' '<DVTFilePath:0x7f9df5a66620:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftDispatch.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsRTdYud
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsRTdYud' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftDispatch.dylib'
+2018-04-09 09:21:48 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2018-04-09 09:21:48 +0000  2018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  /usr/bin/codesign exited with 02018-04-09 09:21:48 +0000  
+
+2018-04-09 09:21:48 +0000  
+2018-04-09 09:21:48 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfb050bb0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f9e14d03f90:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftFoundation.dylib'>'>: {
+}
+2018-04-09 09:21:48 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfb050bb0 'com.apple.dt.runtime.swiftFoundation' '<DVTFilePath:0x7f9e14d03f90:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftFoundation.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsnb3kLA
+2018-04-09 09:21:48 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsnb3kLA' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftFoundation.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9df978f750 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f9dfa9a9020:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftMetal.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df978f750 'com.apple.dt.runtime.swiftMetal' '<DVTFilePath:0x7f9dfa9a9020:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftMetal.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsMHOb8F
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsMHOb8F' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftMetal.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfabe3d30 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f9df8bea5c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfabe3d30 'com.apple.dt.runtime.swiftObjectiveC' '<DVTFilePath:0x7f9df8bea5c0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsb3htoP
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsb3htoP' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9e14dc6290 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f9dfa9ab7d0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9e14dc6290 'com.apple.dt.runtime.swiftQuartzCore' '<DVTFilePath:0x7f9dfa9ab7d0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsFT7Aai
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsFT7Aai' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9df90a18f0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f9e0fee7680:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftUIKit.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9df90a18f0 'com.apple.dt.runtime.swiftUIKit' '<DVTFilePath:0x7f9e0fee7680:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftUIKit.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsYN9yrR
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsYN9yrR' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftUIKit.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfb102fc0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f9df5739120:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftos.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfb102fc0 'com.apple.dt.runtime.swiftos' '<DVTFilePath:0x7f9df5739120:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftos.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsQ1FCHL
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsQ1FCHL' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftos.dylib'
+2018-04-09 09:21:49 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:49 +0000  2018-04-09 09:21:49 +0000  
+
+2018-04-09 09:21:49 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfac5e460 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f9e1538c890:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftsimd.dylib'>'>: {
+}
+2018-04-09 09:21:49 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfac5e460 'com.apple.dt.runtime.swiftsimd' '<DVTFilePath:0x7f9e1538c890:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/libswiftsimd.dylib'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsSABC1D
+2018-04-09 09:21:49 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsSABC1D' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftsimd.dylib'
+2018-04-09 09:21:50 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/libswiftsimd.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftsimd]
+2018-04-09 09:21:50 +0000  2018-04-09 09:21:50 +0000  
+
+2018-04-09 09:21:50 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfa9d3540 'org.cocoapods.nanopb' '<DVTFilePath:0x7f9df8ec68a0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/nanopb.framework'>'>: {
+}
+2018-04-09 09:21:50 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfa9d3540 'org.cocoapods.nanopb' '<DVTFilePath:0x7f9df8ec68a0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app/Frameworks/nanopb.framework'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsDDQdYu
+2018-04-09 09:21:50 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsDDQdYu' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/nanopb.framework'
+2018-04-09 09:21:50 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app/Frameworks/nanopb.framework: signed bundle with Mach-O universal (armv7 arm64) [org.cocoapods.nanopb]
+2018-04-09 09:21:50 +0000  2018-04-09 09:21:50 +0000  
+
+2018-04-09 09:21:50 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  Entitlements for <IDEDistributionItem: 0x7f9dfab7abb0 'B2KHP92H7C.com.guildhall.EmojiGame' '<DVTFilePath:0x7f9df554cde0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app'>'>: {
+    "application-identifier" = "B2KHP92H7C.B2KHP92H7C.com.guildhall.EmojiGame";
+    "com.apple.developer.team-identifier" = B2KHP92H7C;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "B2KHP92H7C.B2KHP92H7C.com.guildhall.EmojiGame"
+    );
+}
+2018-04-09 09:21:50 +0000  Writing entitlements for <IDEDistributionItem: 0x7f9dfab7abb0 'B2KHP92H7C.com.guildhall.EmojiGame' '<DVTFilePath:0x7f9df554cde0:'/Users/cw/Library/Developer/Xcode/Archives/2018-04-09/ControlTask 09-04-2018, 10.21.xcarchive/Products/Applications/Emoji Game.app'>'> to: /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsTIvHwN
+2018-04-09 09:21:50 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' 'A4547829A5204D4E0133B5DCE3C54FA37F73345E' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/entitlementsTIvHwN' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app'
+2018-04-09 09:21:50 +0000  /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root/Payload/Emoji Game.app: signed app bundle with Mach-O universal (armv7 arm64) [B2KHP92H7C.com.guildhall.EmojiGame]
+2018-04-09 09:21:50 +0000  2018-04-09 09:21:50 +0000  
+
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  /usr/bin/codesign exited with 0
+2018-04-09 09:21:50 +0000  
+2018-04-09 09:21:50 +0000  Processing step: IDEDistributionStreamingZipItemStep
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-04-09 09:21:50 +0000  Processing step: IDEDistributionCreateIPAStep
+2018-04-09 09:21:50 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root' '/var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Packages/ControlTask.ipa'
+2018-04-09 09:21:50 +0000  >>> Copying /var/folders/cs/hwlgrgs97ys95p17myp66cbh0000gn/T/XcodeDistPipeline.Nvp/Root 
+2018-04-09 09:21:50 +0000  copying file ./Payload/Emoji Game.app/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:50 +0000  26855 bytes for ./Payload/Emoji Game.app/_CodeSignature/CodeResources
+2018-04-09 09:21:50 +0000  copying file ./Payload/Emoji Game.app/Emoji Game ... 
+2018-04-09 09:21:51 +0000  5516560 bytes for ./Payload/Emoji Game.app/Emoji Game
+copying file ./Payload/Emoji Game.app/ControlAdvancedInstructionsViewController copy.nib ... 
+2018-04-09 09:21:51 +0000  7732 bytes for ./Payload/Emoji Game.app/ControlAdvancedInstructionsViewController copy.nib
+copying file ./Payload/Emoji Game.app/ControlIntermediateInstructionsViewController.nib ... 
+7748 bytes for ./Payload/Emoji Game.app/ControlIntermediateInstructionsViewController.nib
+copying file ./Payload/Emoji Game.app/QuestionViewController.nib ... 
+8601 bytes for ./Payload/Emoji Game.app/QuestionViewController.nib
+copying file ./Payload/Emoji Game.app/AppIcon60x60@2x.png ... 
+9528 bytes for ./Payload/Emoji Game.app/AppIcon60x60@2x.png
+copying file ./Payload/Emoji Game.app/PopoverViewController.nib ... 
+4879 bytes for ./Payload/Emoji Game.app/PopoverViewController.nib
+copying file ./Payload/Emoji Game.app/SecretSetupViewController.nib ... 
+9610 bytes for ./Payload/Emoji Game.app/SecretSetupViewController.nib
+copying file ./Payload/Emoji Game.app/GoogleService-Info.plist ... 
+892 bytes for ./Payload/Emoji Game.app/GoogleService-Info.plist
+copying file ./Payload/Emoji Game.app/AppIcon60x60@3x.png ... 
+18869 bytes for ./Payload/Emoji Game.app/AppIcon60x60@3x.png
+copying file ./Payload/Emoji Game.app/AnalyticsDebugOverlayTableViewController.nib ... 
+1443 bytes for ./Payload/Emoji Game.app/AnalyticsDebugOverlayTableViewController.nib
+copying file ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+1792 bytes for ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+832 bytes for ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/Emoji Game.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/Emoji Game.app/Main.storyboardc/UINavigationController-IT0-mP-edf.nib ... 
+1188 bytes for ./Payload/Emoji Game.app/Main.storyboardc/UINavigationController-IT0-mP-edf.nib
+copying file ./Payload/Emoji Game.app/Main.storyboardc/Info.plist ... 
+276 bytes for ./Payload/Emoji Game.app/Main.storyboardc/Info.plist
+copying file ./Payload/Emoji Game.app/ControlWelcomeViewController.nib ... 
+9740 bytes for ./Payload/Emoji Game.app/ControlWelcomeViewController.nib
+copying file ./Payload/Emoji Game.app/Assets.car ... 
+2018-04-09 09:21:52 +0000  42177768 bytes for ./Payload/Emoji Game.app/Assets.car
+copying file ./Payload/Emoji Game.app/AppIcon76x76@2x~ipad.png ... 
+2018-04-09 09:21:52 +0000  13710 bytes for ./Payload/Emoji Game.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/Emoji Game.app/AppIcon83.5x83.5@2x~ipad.png ... 
+16648 bytes for ./Payload/Emoji Game.app/AppIcon83.5x83.5@2x~ipad.png
+copying file ./Payload/Emoji Game.app/RulesViewController.nib ... 
+974 bytes for ./Payload/Emoji Game.app/RulesViewController.nib
+copying file ./Payload/Emoji Game.app/EndOfDayCelebrateViewController.nib/objects-11.0+.nib ... 
+5640 bytes for ./Payload/Emoji Game.app/EndOfDayCelebrateViewController.nib/objects-11.0+.nib
+copying file ./Payload/Emoji Game.app/EndOfDayCelebrateViewController.nib/runtime.nib ... 
+4978 bytes for ./Payload/Emoji Game.app/EndOfDayCelebrateViewController.nib/runtime.nib
+copying file ./Payload/Emoji Game.app/InfoViewController.nib ... 
+8283 bytes for ./Payload/Emoji Game.app/InfoViewController.nib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCoreImage.dylib ... 
+2018-04-09 09:21:52 +0000  209264 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCoreImage.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib ... 
+2018-04-09 09:21:52 +0000  258304 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftObjectiveC.dylib
+2018-04-09 09:21:52 +0000  copying file ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/_CodeSignature/CodeResources
+copying file ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher ... 
+2018-04-09 09:21:52 +0000  844544 bytes for ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher
+copying file ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/Info.plist ... 
+2018-04-09 09:21:52 +0000  759 bytes for ./Payload/Emoji Game.app/Frameworks/GTMSessionFetcher.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCore.dylib ... 
+2018-04-09 09:21:53 +0000  18063856 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2018-04-09 09:21:53 +0000  608944 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftUIKit.dylib ... 
+2018-04-09 09:21:53 +0000  451056 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftUIKit.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources ... 
+6110 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/_CodeSignature/CodeResources
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD ... 
+2018-04-09 09:21:53 +0000  400352 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png ... 
+365 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png ... 
+2018-04-09 09:21:53 +0000  398 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@3x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png ... 
+8319 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@3x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png ... 
+2018-04-09 09:21:53 +0000  4893 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask@2x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png ... 
+2018-04-09 09:21:53 +0000  306 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error@2x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png ... 
+1200 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@3x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png ... 
+2018-04-09 09:21:53 +0000  462 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@2x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png ... 
+714 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success@3x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png ... 
+2018-04-09 09:21:53 +0000  816 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/info@2x.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png ... 
+184 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/error.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png ... 
+262 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/success.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png ... 
+2018-04-09 09:21:53 +0000  1845 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png
+copying file ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/Info.plist ... 
+748 bytes for ./Payload/Emoji Game.app/Frameworks/SVProgressHUD.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftMetal.dylib ... 
+2018-04-09 09:21:53 +0000  251808 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftDispatch.dylib ... 
+2018-04-09 09:21:53 +0000  978464 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftos.dylib ... 
+2018-04-09 09:21:53 +0000  250720 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftos.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2018-04-09 09:21:53 +0000  208736 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftDarwin.dylib ... 
+2018-04-09 09:21:53 +0000  362080 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftDarwin.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/_CodeSignature/CodeResources
+copying file ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac ... 
+2018-04-09 09:21:53 +0000  236112 bytes for ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac
+copying file ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/Info.plist ... 
+2018-04-09 09:21:53 +0000  762 bytes for ./Payload/Emoji Game.app/Frameworks/GoogleToolboxForMac.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/nanopb.framework/_CodeSignature/CodeResources ... 
+2018-04-09 09:21:53 +0000  2202 bytes for ./Payload/Emoji Game.app/Frameworks/nanopb.framework/_CodeSignature/CodeResources
+copying file ./Payload/Emoji Game.app/Frameworks/nanopb.framework/nanopb ... 
+2018-04-09 09:21:53 +0000  232160 bytes for ./Payload/Emoji Game.app/Frameworks/nanopb.framework/nanopb
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/nanopb.framework/Info.plist ... 
+734 bytes for ./Payload/Emoji Game.app/Frameworks/nanopb.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib ... 
+2018-04-09 09:21:53 +0000  212256 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftQuartzCore.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/leveldb.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/Emoji Game.app/Frameworks/leveldb.framework/_CodeSignature/CodeResources
+copying file ./Payload/Emoji Game.app/Frameworks/leveldb.framework/leveldb ... 
+2018-04-09 09:21:53 +0000  1058160 bytes for ./Payload/Emoji Game.app/Frameworks/leveldb.framework/leveldb
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/leveldb.framework/Info.plist ... 
+737 bytes for ./Payload/Emoji Game.app/Frameworks/leveldb.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib ... 
+2018-04-09 09:21:53 +0000  331360 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCoreAudio.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib ... 
+2018-04-09 09:21:53 +0000  504624 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftAVFoundation.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/_CodeSignature/CodeResources ... 
+2202 bytes for ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/_CodeSignature/CodeResources
+copying file ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/YLProgressBar ... 
+2018-04-09 09:21:53 +0000  260848 bytes for ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/YLProgressBar
+copying file ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/Info.plist ... 
+2018-04-09 09:21:53 +0000  749 bytes for ./Payload/Emoji Game.app/Frameworks/YLProgressBar.framework/Info.plist
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftFoundation.dylib ... 
+2018-04-09 09:21:53 +0000  8561008 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftFoundation.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib ... 
+2018-04-09 09:21:53 +0000  253776 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftCoreMedia.dylib
+copying file ./Payload/Emoji Game.app/Frameworks/libswiftsimd.dylib ... 
+2018-04-09 09:21:53 +0000  1879184 bytes for ./Payload/Emoji Game.app/Frameworks/libswiftsimd.dylib
+2018-04-09 09:21:53 +0000  copying file ./Payload/Emoji Game.app/embedded.mobileprovision ... 
+7590 bytes for ./Payload/Emoji Game.app/embedded.mobileprovision
+copying file ./Payload/Emoji Game.app/Info.plist ... 
+1431 bytes for ./Payload/Emoji Game.app/Info.plist
+copying file ./Payload/Emoji Game.app/PkgInfo ... 
+8 bytes for ./Payload/Emoji Game.app/PkgInfo
+copying file ./Payload/Emoji Game.app/SignupViewController.nib ... 
+6655 bytes for ./Payload/Emoji Game.app/SignupViewController.nib
+copying file ./Payload/Emoji Game.app/AppIcon76x76~ipad.png ... 
+4794 bytes for ./Payload/Emoji Game.app/AppIcon76x76~ipad.png
+2018-04-09 09:21:53 +0000  2018-04-09 09:21:53 +0000  /usr/bin/ditto exited with 0
+
+2018-04-09 09:21:53 +0000  
+2018-04-09 09:21:53 +0000  Processing step: IDEDistributionCreateManifestStep
