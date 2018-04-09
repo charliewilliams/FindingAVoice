@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProgressHosting {
-    weak var progressContainerView: UIView! { get }
+    var progressContainerView: UIView! { get }
 }
 
 extension ProgressHosting where Self: UIViewController {

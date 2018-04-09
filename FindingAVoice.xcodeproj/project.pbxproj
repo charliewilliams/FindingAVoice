@@ -685,7 +685,6 @@
 				C06A3DC81E6DC1B500B8AE3D /* Frameworks */,
 				C06A3DCA1E6DC1B500B8AE3D /* Resources */,
 				C06A3DD61E6DC1B500B8AE3D /* [CP] Embed Pods Frameworks */,
-				C06A3DD71E6DC1B500B8AE3D /* [CP] Copy Pods Resources */,
 				C06A3DD81E6DC1B500B8AE3D /* ShellScript */,
 			);
 			buildRules = (
@@ -706,7 +705,6 @@
 				C06A3DE61E6DC5D400B8AE3D /* Frameworks */,
 				C06A3DE71E6DC5D400B8AE3D /* Resources */,
 				612568C415A3D60FCADFC98F /* [CP] Embed Pods Frameworks */,
-				549EDABC163F1C4ECD33C8B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -745,7 +743,6 @@
 				C0AA1D321E1E8A42005A7AA1 /* Frameworks */,
 				C0AA1D331E1E8A42005A7AA1 /* Resources */,
 				15A1E141B3C952EFDCC2C892 /* [CP] Embed Pods Frameworks */,
-				715099AC317139276CBE96B3 /* [CP] Copy Pods Resources */,
 				C0AA1D9A1E1FC862005A7AA1 /* ShellScript */,
 			);
 			buildRules = (
@@ -766,7 +763,6 @@
 				C0AA1D461E1E8A43005A7AA1 /* Frameworks */,
 				C0AA1D471E1E8A43005A7AA1 /* Resources */,
 				8B1A3EB2920B0DA85A91DBCB /* [CP] Embed Pods Frameworks */,
-				49A871C998FA58DD85A48F7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -803,11 +799,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Charlie Williams";
 				TargetAttributes = {
 					C06A3DA81E6DC1B500B8AE3D = {
-						DevelopmentTeam = N2WM6EN8GQ;
+						DevelopmentTeam = B2KHP92H7C;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -827,7 +823,7 @@
 					};
 					C0AA1D341E1E8A42005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = N2WM6EN8GQ;
+						DevelopmentTeam = B2KHP92H7C;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -1011,36 +1007,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49A871C998FA58DD85A48F7E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControlTaskTests/Pods-ControlTaskTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		549EDABC163F1C4ECD33C8B6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		612568C415A3D60FCADFC98F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1052,8 +1018,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1061,27 +1025,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		715099AC317139276CBE96B3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B1A3EB2920B0DA85A91DBCB /* [CP] Embed Pods Frameworks */ = {
@@ -1157,8 +1104,6 @@
 				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
-				"${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1168,27 +1113,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C06A3DD71E6DC1B500B8AE3D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C06A3DD81E6DC1B500B8AE3D /* ShellScript */ = {
@@ -1420,12 +1348,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				DEVELOPMENT_TEAM = B2KHP92H7C;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
+				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1441,12 +1369,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				DEVELOPMENT_TEAM = B2KHP92H7C;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
+				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1525,6 +1453,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1532,6 +1461,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1541,7 +1471,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 83;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1583,6 +1513,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1590,6 +1521,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1599,7 +1531,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 83;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1629,12 +1561,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				DEVELOPMENT_TEAM = B2KHP92H7C;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
+				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1650,12 +1582,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = N2WM6EN8GQ;
+				DEVELOPMENT_TEAM = B2KHP92H7C;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = N2WM6EN8GQ.com.charliewilliams.ControlTask;
+				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

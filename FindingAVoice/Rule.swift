@@ -165,7 +165,7 @@ struct Rule {
         while numberOfOccurrencesRemaining > 0 {
             
             // All the indices that aren't currently part of a pair
-            var currentlyPassiveIndices = string.enumerated().flatMap { c -> Int? in
+            var currentlyPassiveIndices = string.enumerated().compactMap { c -> Int? in
                 if passiveCharacters.contains(c.element) {
                     return c.offset
                 }
