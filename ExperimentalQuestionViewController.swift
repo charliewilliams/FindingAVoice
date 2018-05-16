@@ -129,6 +129,9 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
 
         Analytics.clearEvent()
 
+        // We need to log the start here so that the first question has a latency, even though it doesn't animate onscreen.
+        Analytics.logStartOfEvent(value: self.question.song.id)
+
         UIView.performWithoutAnimation {
             containerViewCenterXConstraint.constant = view.bounds.width
             view.layoutIfNeeded()   

@@ -229,6 +229,9 @@ private extension QuestionViewController {
             
             mainStringLabel.text = try ruleSet.string(shouldBeValid: currentQuestionIsValid)
             ruleLabel.text = ruleSet.userFacingDescription
+
+            // We need to log the start here so that the first question has a latency, even though it doesn't animate onscreen.
+            Analytics.logStartOfEvent(value: self.mainStringLabel.text ?? "")
             
         } catch let e {
             
