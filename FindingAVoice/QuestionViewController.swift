@@ -119,8 +119,8 @@ class QuestionViewController: UIViewController, QuestionTiming, PopoverDisplayin
     private func log(correct: Bool) {
 
         Analytics.log(eventName: "response", eventValue: mainStringLabel.text ?? "", responseName: "valid", responseValue: currentQuestionIsValid ? "yes" : "no", wasCorrect: correct, duration: perQuestionTimer.secondsElapsed, data: [
-            "ruleSet": ruleSet.userFacingDescription
-//            , "ruleSetHistory": ruleSet.debugFullHistory
+            "ruleSet": ruleSet.userFacingDescription,
+            "difficulty": difficulty.rawValue
             ])
     }
     
