@@ -17,8 +17,8 @@ public:
     enum {
         ratioAddress = 0,
         thresholdAddress = 1,
-        attackTimeAddress = 2,
-        releaseTimeAddress = 3,
+        attackDurationAddress = 2,
+        releaseDurationAddress = 3,
         rageAddress = 4
     };
 
@@ -27,7 +27,7 @@ public:
     AKDynaRageCompressorDSPKernel();
     ~AKDynaRageCompressorDSPKernel();
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
     void start() {
         started = true;
@@ -45,9 +45,9 @@ public:
 
     void setThreshold(float value);
 
-    void setAttackTime(float value);
+    void setAttackDuration(float value);
 
-    void setReleaseTime(float value);
+    void setReleaseDuration(float value);
 
     void setRage(float value) ;
 
@@ -64,16 +64,16 @@ public:
     // MARK: Member Variables
 
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
 
 public:
     bool started = true;
     bool resetted = false;
     ParameterRamper ratioRamper = 1;
     ParameterRamper thresholdRamper = 0.0;
-    ParameterRamper attackTimeRamper = 0.1;
-    ParameterRamper releaseTimeRamper = 0.1;
+    ParameterRamper attackDurationRamper = 0.1;
+    ParameterRamper releaseDurationRamper = 0.1;
     ParameterRamper rageRamper = 0.1;
 };
 

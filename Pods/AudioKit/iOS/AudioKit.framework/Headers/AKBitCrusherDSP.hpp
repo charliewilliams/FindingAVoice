@@ -13,12 +13,12 @@
 typedef NS_ENUM(AUParameterAddress, AKBitCrusherParameter) {
     AKBitCrusherParameterBitDepth,
     AKBitCrusherParameterSampleRate,
-    AKBitCrusherParameterRampTime
+    AKBitCrusherParameterRampDuration
 };
 
 #ifndef __cplusplus
 
-void* createBitCrusherDSP(int nChannels, double sampleRate);
+AKDSPRef createBitCrusherDSP(int channelCount, double sampleRate);
 
 #else
 
@@ -26,12 +26,11 @@ void* createBitCrusherDSP(int nChannels, double sampleRate);
 
 class AKBitCrusherDSP : public AKSoundpipeDSPBase {
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
  
 public:
     AKBitCrusherDSP();
-    ~AKBitCrusherDSP();
 
     float bitDepthLowerBound = 1;
     float bitDepthUpperBound = 24;
@@ -41,7 +40,7 @@ public:
     float defaultBitDepth = 8;
     float defaultSampleRate = 10000;
 
-    int defaultRampTimeSamples = 10000;
+    int defaultRampDurationSamples = 10000;
 
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value, bool immediate) override;
@@ -49,9 +48,9 @@ public:
     // Uses the ParameterAddress as a key
     float getParameter(AUParameterAddress address) override;
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
-    void destroy();
+    void deinit() override;
 
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
 };

@@ -14,12 +14,12 @@ typedef NS_ENUM(AUParameterAddress, AKHighShelfParametricEqualizerFilterParamete
     AKHighShelfParametricEqualizerFilterParameterCenterFrequency,
     AKHighShelfParametricEqualizerFilterParameterGain,
     AKHighShelfParametricEqualizerFilterParameterQ,
-    AKHighShelfParametricEqualizerFilterParameterRampTime
+    AKHighShelfParametricEqualizerFilterParameterRampDuration
 };
 
 #ifndef __cplusplus
 
-void* createHighShelfParametricEqualizerFilterDSP(int nChannels, double sampleRate);
+AKDSPRef createHighShelfParametricEqualizerFilterDSP(int channelCount, double sampleRate);
 
 #else
 
@@ -27,12 +27,11 @@ void* createHighShelfParametricEqualizerFilterDSP(int nChannels, double sampleRa
 
 class AKHighShelfParametricEqualizerFilterDSP : public AKSoundpipeDSPBase {
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
  
 public:
     AKHighShelfParametricEqualizerFilterDSP();
-    ~AKHighShelfParametricEqualizerFilterDSP();
 
     float centerFrequencyLowerBound = 12.0;
     float centerFrequencyUpperBound = 20000.0;
@@ -45,7 +44,7 @@ public:
     float defaultGain = 1.0;
     float defaultQ = 0.707;
 
-    int defaultRampTimeSamples = 10000;
+    int defaultRampDurationSamples = 10000;
 
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value, bool immediate) override;
@@ -53,9 +52,9 @@ public:
     // Uses the ParameterAddress as a key
     float getParameter(AUParameterAddress address) override;
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
-    void destroy();
+    void deinit() override;
 
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
 };

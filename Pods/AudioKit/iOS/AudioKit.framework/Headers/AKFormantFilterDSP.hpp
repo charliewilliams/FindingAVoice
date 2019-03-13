@@ -14,12 +14,12 @@ typedef NS_ENUM(AUParameterAddress, AKFormantFilterParameter) {
     AKFormantFilterParameterCenterFrequency,
     AKFormantFilterParameterAttackDuration,
     AKFormantFilterParameterDecayDuration,
-    AKFormantFilterParameterRampTime
+    AKFormantFilterParameterRampDuration
 };
 
 #ifndef __cplusplus
 
-void* createFormantFilterDSP(int nChannels, double sampleRate);
+AKDSPRef createFormantFilterDSP(int channelCount, double sampleRate);
 
 #else
 
@@ -27,12 +27,11 @@ void* createFormantFilterDSP(int nChannels, double sampleRate);
 
 class AKFormantFilterDSP : public AKSoundpipeDSPBase {
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
  
 public:
     AKFormantFilterDSP();
-    ~AKFormantFilterDSP();
 
     float centerFrequencyLowerBound = 12.0;
     float centerFrequencyUpperBound = 20000.0;
@@ -45,7 +44,7 @@ public:
     float defaultAttackDuration = 0.007;
     float defaultDecayDuration = 0.04;
 
-    int defaultRampTimeSamples = 10000;
+    int defaultRampDurationSamples = 10000;
 
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value, bool immediate) override;
@@ -53,9 +52,9 @@ public:
     // Uses the ParameterAddress as a key
     float getParameter(AUParameterAddress address) override;
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
-    void destroy();
+    void deinit() override;
 
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
 };

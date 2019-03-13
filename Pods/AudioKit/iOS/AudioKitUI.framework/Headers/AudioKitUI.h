@@ -24,7 +24,7 @@ FOUNDATION_EXPORT const unsigned char AudioKitUIVersionString[];
 //------------------------------------------------------------------------------
 #pragma mark - EZAudio Interface Components
 //------------------------------------------------------------------------------
-
+//#import "EZAudioUtilities.h"
 #import "EZPlot.h"
 #import "EZAudioDisplayLink.h"
 #import "EZAudioPlot.h"

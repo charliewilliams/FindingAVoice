@@ -89,7 +89,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         
         self.isPractice = isPractice
         
-        childSingingDetectorViewController = UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController
+        childSingingDetectorViewController = (UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController)
         childSingingDetectorViewController.willMove(toParentViewController: self)
         addChildViewController(childSingingDetectorViewController)
         childSingingDetectorViewController.view.frame = view.bounds

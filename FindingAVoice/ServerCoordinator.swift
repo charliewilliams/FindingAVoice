@@ -37,7 +37,7 @@ struct ServerCoordinator {
         
         SVProgressHUD.show(withStatus: "Signing up…")
         
-        auth.createUser(withEmail: email, password: password) { (user, error) in
+        auth.createUser(withEmail: email, password: password) { (result, error) in
             
             if let error = error {
                 
@@ -49,13 +49,13 @@ struct ServerCoordinator {
                 } else {
                     
                     SVProgressHUD.showError(withStatus: "Error creating user: \(error.localizedDescription)")
-                    completion(user, error)
+                    completion(result?.user, error)
                 }
                 
             } else {
                 
                 SVProgressHUD.showSuccess(withStatus: "Success!")
-                completion(user, error)
+                completion(result?.user, error)
             }
         }
     }
@@ -64,7 +64,7 @@ struct ServerCoordinator {
         
         SVProgressHUD.show(withStatus: "Logging in…")
         
-        auth.signIn(withEmail: email, password: password) { (user, error) in
+        auth.signIn(withEmail: email, password: password) { (result, error) in
             
             if let error = error {
                 
@@ -76,13 +76,13 @@ struct ServerCoordinator {
                 } else {
                     
                     SVProgressHUD.showError(withStatus: "Error logging in: \(error.localizedDescription)")
-                    completion(user, error)
+                    completion(result?.user, error)
                 }
                 
             } else {
                 
                 SVProgressHUD.showSuccess(withStatus: "Logged in!")
-                completion(user, error)
+                completion(result?.user, error)
             }
         }
     }

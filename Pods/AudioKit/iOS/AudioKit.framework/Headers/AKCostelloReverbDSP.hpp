@@ -13,12 +13,12 @@
 typedef NS_ENUM(AUParameterAddress, AKCostelloReverbParameter) {
     AKCostelloReverbParameterFeedback,
     AKCostelloReverbParameterCutoffFrequency,
-    AKCostelloReverbParameterRampTime
+    AKCostelloReverbParameterRampDuration
 };
 
 #ifndef __cplusplus
 
-void* createCostelloReverbDSP(int nChannels, double sampleRate);
+AKDSPRef createCostelloReverbDSP(int channelCount, double sampleRate);
 
 #else
 
@@ -26,12 +26,11 @@ void* createCostelloReverbDSP(int nChannels, double sampleRate);
 
 class AKCostelloReverbDSP : public AKSoundpipeDSPBase {
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
  
 public:
     AKCostelloReverbDSP();
-    ~AKCostelloReverbDSP();
 
     float feedbackLowerBound = 0.0;
     float feedbackUpperBound = 1.0;
@@ -41,7 +40,7 @@ public:
     float defaultFeedback = 0.6;
     float defaultCutoffFrequency = 4000.0;
 
-    int defaultRampTimeSamples = 10000;
+    int defaultRampDurationSamples = 10000;
 
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value, bool immediate) override;
@@ -49,9 +48,9 @@ public:
     // Uses the ParameterAddress as a key
     float getParameter(AUParameterAddress address) override;
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
-    void destroy();
+    void deinit() override;
 
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
 };

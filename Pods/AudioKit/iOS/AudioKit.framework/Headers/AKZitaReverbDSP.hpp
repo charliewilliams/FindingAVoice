@@ -21,12 +21,12 @@ typedef NS_ENUM(AUParameterAddress, AKZitaReverbParameter) {
     AKZitaReverbParameterEqualizerFrequency2,
     AKZitaReverbParameterEqualizerLevel2,
     AKZitaReverbParameterDryWetMix,
-    AKZitaReverbParameterRampTime
+    AKZitaReverbParameterRampDuration
 };
 
 #ifndef __cplusplus
 
-void* createZitaReverbDSP(int nChannels, double sampleRate);
+AKDSPRef createZitaReverbDSP(int channelCount, double sampleRate);
 
 #else
 
@@ -34,12 +34,11 @@ void* createZitaReverbDSP(int nChannels, double sampleRate);
 
 class AKZitaReverbDSP : public AKSoundpipeDSPBase {
 private:
-    struct _Internal;
-    std::unique_ptr<_Internal> _private;
+    struct InternalData;
+    std::unique_ptr<InternalData> data;
  
 public:
     AKZitaReverbDSP();
-    ~AKZitaReverbDSP();
 
     float predelayLowerBound = 0.0;
     float predelayUpperBound = 200.0;
@@ -73,7 +72,7 @@ public:
     float defaultEqualizerLevel2 = 0.0;
     float defaultDryWetMix = 1.0;
 
-    int defaultRampTimeSamples = 10000;
+    int defaultRampDurationSamples = 10000;
 
     // Uses the ParameterAddress as a key
     void setParameter(AUParameterAddress address, float value, bool immediate) override;
@@ -81,9 +80,9 @@ public:
     // Uses the ParameterAddress as a key
     float getParameter(AUParameterAddress address) override;
     
-    void init(int _channels, double _sampleRate) override;
+    void init(int channelCount, double sampleRate) override;
 
-    void destroy();
+    void deinit() override;
 
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override;
 };
