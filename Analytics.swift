@@ -64,9 +64,8 @@ struct Analytics {
     
     static func log(eventName: String, eventValue: String, responseName: String? = nil, responseValue: String? = nil, wasCorrect: Bool? = nil, measurement: Float? = nil, duration: TimeInterval? = nil, data: [String: String]? = nil) {
 
-        guard let db = db else {
-            print("No user, can't store data")
-            return
+        if queue.isNotEmpty, db != nil {
+            sendQueuedBlobs()
         }
 
         var blob: Dictionary<String, Any> = [
@@ -100,8 +99,14 @@ struct Analytics {
         }
         blob["singingDetected"] = wasSingingDetected ? 1 : 0
 
-
         let key = "\(Int(Date().timeIntervalSince1970 * 1000))"
+
+        guard let db = db else {
+            print("No user, can't store data. Queuing…")
+            queueBlob([key:blob]);
+            return
+        }
+
         db.child(key).setValue(blob)
 
         if let overlayVC = AnalyticsDebugOverlayTableViewController.instance {
@@ -114,6 +119,26 @@ struct Analytics {
 
             string = string.trimmingCharacters(in: CharacterSet(charactersIn: "| "))
             overlayVC.data.insert(string, at: 0)
+        }
+    }
+
+    static var queue = [Dictionary<String, Any>]()
+
+    static func queueBlob(_ blob: Dictionary<String, Any>) {
+        queue.append(blob);
+    }
+
+    static func sendQueuedBlobs() {
+
+        guard let db = db else { return }
+
+        while queue.isNotEmpty {
+            let blob = queue.removeFirst()
+            guard let key = blob.keys.first, let value = blob.values.first else {
+                continue
+            }
+
+            db.child(key).setValue(value)
         }
     }
 }
