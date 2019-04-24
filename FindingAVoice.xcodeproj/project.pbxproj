@@ -799,11 +799,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Charlie Williams";
 				TargetAttributes = {
 					C06A3DA81E6DC1B500B8AE3D = {
-						DevelopmentTeam = B2KHP92H7C;
+						DevelopmentTeam = YRZ9JVL87B;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -823,7 +823,7 @@
 					};
 					C0AA1D341E1E8A42005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = B2KHP92H7C;
+						DevelopmentTeam = YRZ9JVL87B;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -844,7 +844,7 @@
 			};
 			buildConfigurationList = C0AA1D301E1E8A42005A7AA1 /* Build configuration list for PBXProject "FindingAVoice" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1348,7 +1348,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B2KHP92H7C;
+				DEVELOPMENT_TEAM = YRZ9JVL87B;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1369,7 +1369,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B2KHP92H7C;
+				DEVELOPMENT_TEAM = YRZ9JVL87B;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1444,6 +1444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1504,6 +1505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1561,7 +1563,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B2KHP92H7C;
+				DEVELOPMENT_TEAM = YRZ9JVL87B;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1582,7 +1584,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B2KHP92H7C;
+				DEVELOPMENT_TEAM = YRZ9JVL87B;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
