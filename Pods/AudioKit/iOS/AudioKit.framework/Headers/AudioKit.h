@@ -18,7 +18,6 @@ FOUNDATION_EXPORT double AudioKitVersionNumber;
 
 //! Project version string for AudioKit.
 FOUNDATION_EXPORT const unsigned char AudioKitVersionString[];
-#import "AKCoreSynth.hpp"
 
 #import "AKAudioUnitBase.h"
 #import "AKGeneratorAudioUnitBase.h"
@@ -150,6 +149,7 @@ FOUNDATION_EXPORT const unsigned char AudioKitVersionString[];
 #import "AKPresetManager.h"
 #import "AKSampler_Typedefs.h"
 #import "AKCoreSampler.hpp"
+#import "AKCoreSynth.hpp"
 #import "AKSamplerDSP.hpp"
 
 #if !TARGET_OS_TV

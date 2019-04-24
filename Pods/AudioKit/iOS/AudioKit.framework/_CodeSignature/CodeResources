@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/AKAutoPannerDSP.hpp</key>
 		<data>
-		CqQv5SgR/yg/AOMx7Ohqz5lkjWM=
+		UZwPpbxP3xZ0runrrGDPidTS+cc=
 		</data>
 		<key>Headers/AKAutoWahDSP.hpp</key>
 		<data>
@@ -358,7 +358,7 @@
 		</data>
 		<key>Headers/AKSoundpipeKernel.hpp</key>
 		<data>
-		H9zodhchJtK419F9Jy5c/avOgdY=
+		EM6XN4Ickq3A8ETdxU3Vvb7pbfs=
 		</data>
 		<key>Headers/AKSporthStack.h</key>
 		<data>
@@ -422,7 +422,7 @@
 		</data>
 		<key>Headers/AKVocalTractDSP.hpp</key>
 		<data>
-		meJEZft6glhhRqjBoxIBVeaBDrs=
+		OoPny48ayXd1qyRA9qZFFY7r4qI=
 		</data>
 		<key>Headers/AKWaveTableAudioUnit.h</key>
 		<data>
@@ -442,11 +442,11 @@
 		</data>
 		<key>Headers/AudioKit-Swift.h</key>
 		<data>
-		v+NShxUrJuAHBGd9lu0hyAyHyLY=
+		7JqXH0lxmmWIapwHALwCH82C1oU=
 		</data>
 		<key>Headers/AudioKit.h</key>
 		<data>
-		xMLJRsVWJWx8fR5e/vce18ppJO8=
+		rYrmTGWtiP/XHMwEhMaZcJ3el9c=
 		</data>
 		<key>Headers/BufferedAudioBus.hpp</key>
 		<data>
@@ -494,7 +494,7 @@
 		</data>
 		<key>Headers/EZAudioUtilities.h</key>
 		<data>
-		HQNbw5FjMTTANpnSdtFSi5NPjFE=
+		bcU/eNxNgc8kgRKRShIQhSyVQKw=
 		</data>
 		<key>Headers/EZMicrophone.h</key>
 		<data>
@@ -542,23 +542,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JItw5p41nac3SRQRnMuy0cneGXg=
+		rnN2upG2jT6xOL70K+2txg+7q4E=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftdoc</key>
 		<data>
-		Xw/FZmYdTGCMAVaTigv1M2TJkDs=
+		IqKASsOJ+IujpyRQL1DbYco+atA=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftmodule</key>
 		<data>
-		sZOn+QizqlZvkZDcCnUzGfrLlZo=
+		EMimN2Ju4W4CmFLL3lKojmPPiMY=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		h21rm/BuXUiuUGNWbkY54NWjXy0=
+		Kw8rUoXcoxSficB4Ct4d/z448VQ=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		qrgPgVLkDHAfKPzMG5cRiqoqJ/A=
+		cbf3M+6V4tk+MRPQ1pmxV3GPEuo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -615,11 +615,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CqQv5SgR/yg/AOMx7Ohqz5lkjWM=
+			UZwPpbxP3xZ0runrrGDPidTS+cc=
 			</data>
 			<key>hash2</key>
 			<data>
-			EDL3q16wsFVwJfedEalFo7I4KHmZU8NWuxJFRtYsPoc=
+			34GefccY0RXC0jVKqMNhkFnVri7eMXC+deHKL6w84nw=
 			</data>
 		</dict>
 		<key>Headers/AKAutoWahDSP.hpp</key>
@@ -1539,11 +1539,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H9zodhchJtK419F9Jy5c/avOgdY=
+			EM6XN4Ickq3A8ETdxU3Vvb7pbfs=
 			</data>
 			<key>hash2</key>
 			<data>
-			nHQ+2OX0D/THzqpPDVDi10Ghhfg8Qi2dXE1RseGNpwc=
+			Epf/XUB5ovOkv/8TiN81BdG9W8o6yGFDk1r09xjBPrc=
 			</data>
 		</dict>
 		<key>Headers/AKSporthStack.h</key>
@@ -1715,11 +1715,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			meJEZft6glhhRqjBoxIBVeaBDrs=
+			OoPny48ayXd1qyRA9qZFFY7r4qI=
 			</data>
 			<key>hash2</key>
 			<data>
-			kp157ELnU3DZPCSCI0L2IPZDypf9Xo3P1cKAzmLMjeo=
+			XWd/gZa7l7E92kvHXhwmpGYJbuBrtIvfCzufvJHsQVM=
 			</data>
 		</dict>
 		<key>Headers/AKWaveTableAudioUnit.h</key>
@@ -1770,22 +1770,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			v+NShxUrJuAHBGd9lu0hyAyHyLY=
+			7JqXH0lxmmWIapwHALwCH82C1oU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3wMO0R8MshXS/ubESzo/fsUDUvCx9iRAkcMRG0Udzeo=
+			gSJklCaTu0mRIl3/QWTQpSjpHIBbv02K8wN56qMdiGI=
 			</data>
 		</dict>
 		<key>Headers/AudioKit.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xMLJRsVWJWx8fR5e/vce18ppJO8=
+			rYrmTGWtiP/XHMwEhMaZcJ3el9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			aJkvXxORqxYkn/geCM8lq7dzfxru/wR1655u2RdEseU=
+			atst/Zr2HmBodSjhzaVl8uZJCO1LoitaWZbwKKrQwGg=
 			</data>
 		</dict>
 		<key>Headers/BufferedAudioBus.hpp</key>
@@ -1913,11 +1913,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HQNbw5FjMTTANpnSdtFSi5NPjFE=
+			bcU/eNxNgc8kgRKRShIQhSyVQKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			TevHRv8+KYw+61lJb28mVcXjOxwNcH7ycW2+dBFRjAk=
+			a+y0TdWHuAKwpnP5rONRl66hqqm+dBIfQ5zD7QeC30w=
 			</data>
 		</dict>
 		<key>Headers/EZMicrophone.h</key>
@@ -2045,44 +2045,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xw/FZmYdTGCMAVaTigv1M2TJkDs=
+			IqKASsOJ+IujpyRQL1DbYco+atA=
 			</data>
 			<key>hash2</key>
 			<data>
-			5wNpnxgchJPFSQoIwsmBKUEuOuA1+hYNc4Gl3pJS4O4=
+			a7s1v6L8Pf95xJlgXAZTzQHHwp6AyoAPXqcHY1AReyE=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sZOn+QizqlZvkZDcCnUzGfrLlZo=
+			EMimN2Ju4W4CmFLL3lKojmPPiMY=
 			</data>
 			<key>hash2</key>
 			<data>
-			HkRYCq+eEEwaSDDOxVGJTU0ys8QKJWAvqeEYgHJKdbM=
+			qzAVR6hcOd7OewlhEt1PojKXHK5ixn1EhxdZU2Hbv+A=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h21rm/BuXUiuUGNWbkY54NWjXy0=
+			Kw8rUoXcoxSficB4Ct4d/z448VQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			jcyUBwcfNUIQkdPuk/cCl/+UkTT4SAtZfH/G7BxzZG0=
+			QkrrQyjRbQ0OofiJ6ctWpKd4snR0envxkJRbE9YTtGc=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qrgPgVLkDHAfKPzMG5cRiqoqJ/A=
+			cbf3M+6V4tk+MRPQ1pmxV3GPEuo=
 			</data>
 			<key>hash2</key>
 			<data>
-			efapSWn268odfYOjecOAMaEIMqOmEbvhJWLP44CyCmg=
+			oVwUKoFspn3Vnr24xpnu3o8bIUgIUZvlTqgLZf3JiX4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2099,7 +2099,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -2130,24 +2130,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -2183,13 +2171,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
