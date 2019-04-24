@@ -804,13 +804,13 @@
 				TargetAttributes = {
 					C06A3DA81E6DC1B500B8AE3D = {
 						DevelopmentTeam = YRZ9JVL87B;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					C06A3DE81E6DC5D400B8AE3D = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = N2WM6EN8GQ;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C06A3DA81E6DC1B500B8AE3D;
 					};
@@ -1356,7 +1356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1377,7 +1377,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1393,7 +1393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Songs Game.app/Songs Game";
 			};
 			name = Debug;
@@ -1408,7 +1408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Songs Game.app/Songs Game";
 			};
 			name = Release;
@@ -1422,7 +1422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ExperimentalTask;
 			};
 			name = Debug;
@@ -1435,7 +1435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ExperimentalTask;
 			};
 			name = Release;
@@ -1571,7 +1571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1592,7 +1592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1624,7 +1624,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(TEST_HOST)";
 			};
 			name = Debug;
@@ -1655,7 +1655,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(TEST_HOST)";
 			};
 			name = Release;
@@ -1669,7 +1669,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ControlTask;
 			};
 			name = Debug;
@@ -1683,7 +1683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ControlTask;
 			};
 			name = Release;

@@ -51,7 +51,7 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         }
     }
     
-    let highlightedAttributesBigRed: [NSAttributedStringKey: Any] = [
+    let highlightedAttributesBigRed: [NSAttributedString.Key: Any] = [
         .backgroundColor: UIColor.clear,
         .foregroundColor: UIColor.red,
         .font: UIFont.systemFont(ofSize: 36)
@@ -90,11 +90,11 @@ class ExperimentalQuestionViewController: UIViewController, SingingDetectable, Q
         self.isPractice = isPractice
         
         childSingingDetectorViewController = (UIStoryboard(name: "SingingDetector", bundle: nil).instantiateInitialViewController() as! SingingDetectorViewController)
-        childSingingDetectorViewController.willMove(toParentViewController: self)
-        addChildViewController(childSingingDetectorViewController)
+        childSingingDetectorViewController.willMove(toParent: self)
+        addChild(childSingingDetectorViewController)
         childSingingDetectorViewController.view.frame = view.bounds
         view.addSubview(childSingingDetectorViewController.view)
-        childSingingDetectorViewController.didMove(toParentViewController: self)
+        childSingingDetectorViewController.didMove(toParent: self)
         
         question = QuestionProvider.shared.nextQuestion()
         setup(withQuestion: question)

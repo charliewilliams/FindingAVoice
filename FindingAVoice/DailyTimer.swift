@@ -6,7 +6,7 @@
 //  Copyright © 2017 Charlie Williams. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // 1. Time the current session
 // 2. Add it to any other sessions we've written down since yesterday
@@ -91,7 +91,7 @@ class DailyTimer {
             return
         }
 
-        NotificationCenter.default.addObserver(forName: .UIApplicationSignificantTimeChange, object: nil, queue: .main) { (notification) in
+        NotificationCenter.default.addObserver(forName: UIApplication.significantTimeChangeNotification, object: nil, queue: .main) { (notification) in
 
             self.sessionStart = Date()
         }

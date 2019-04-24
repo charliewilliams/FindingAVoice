@@ -96,10 +96,10 @@ struct Song {
 
     func attributedText(for question: Question) -> NSAttributedString {
 
-        let highlightedAttributesSmall: [NSAttributedStringKey: Any] = [
+        let highlightedAttributesSmall: [NSAttributedString.Key: Any] = [
             .backgroundColor: UIColor.yellow,
             .foregroundColor: UIColor.blue,
-            .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
+            .underlineStyle: NSUnderlineStyle.single.rawValue,
             .font: UIFont.italicSystemFont(ofSize: 36)
         ]
 

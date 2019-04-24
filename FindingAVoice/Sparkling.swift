@@ -20,7 +20,7 @@ extension Sparkling where Self: UIView {
         let layer = CAEmitterLayer()
         layer.emitterSize = CGSize(width: 25, height: 25)
         layer.emitterPosition = CGPoint(x: center.x, y: center.y - frame.origin.y)
-        layer.renderMode = kCAEmitterLayerAdditive
+        layer.renderMode = CAEmitterLayerRenderMode.additive
         
         let cell = CAEmitterCell()
         cell.birthRate = 20

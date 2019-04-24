@@ -187,7 +187,7 @@ struct Rule {
             
             let firstIndex = validThisRound ? possibleValidFirstIndices.randomItem() : currentlyPassiveIndices.randomItem()
             
-            currentlyPassiveIndices.remove(at: currentlyPassiveIndices.index(of: firstIndex)!)
+            currentlyPassiveIndices.remove(at: currentlyPassiveIndices.firstIndex(of: firstIndex)!)
             debugFullHistory.append("Index of preceding: \(firstIndex)")
             
             defer {

@@ -186,7 +186,7 @@ private extension MusicPlayerContainerViewController {
     
     var playerViewController: MusicPlayerCollectionViewController {
         
-        for child in childViewControllers {
+        for child in children {
             if let child = child as? MusicPlayerCollectionViewController {
                 return child
             }

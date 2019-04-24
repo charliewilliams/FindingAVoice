@@ -22,13 +22,13 @@ extension ProgressHosting where Self: UIViewController {
         progressContainerView.addSubview(progressVC.view)
         progressVC.view.frame = progressContainerView.bounds
         progressVC.setUp(in: progressContainerView)
-        addChildViewController(progressVC)
-        progressVC.didMove(toParentViewController: self)
+        addChild(progressVC)
+        progressVC.didMove(toParent: self)
     }
 
     func updateProgress() {
 
-        if let progressVC = childViewControllers.filter({ $0 is ProgressViewController }).first as? ProgressViewController {
+        if let progressVC = children.filter({ $0 is ProgressViewController }).first as? ProgressViewController {
             progressVC.updateProgress()
         }
     }

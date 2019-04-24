@@ -42,12 +42,12 @@ class PopoverViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
-    override func willMove(toParentViewController parent: UIViewController?) {
-        super.willMove(toParentViewController: parent)
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
     }
     
-    override func didMove(toParentViewController parent: UIViewController?) {
-        super.didMove(toParentViewController: parent)
+    override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
         
         if parent != nil {
             animate(in: true)
@@ -113,10 +113,10 @@ private extension PopoverViewController {
     func cleanUp() {
         
         delegate?.popoverWillDismiss()
-        willMove(toParentViewController: nil)
-        removeFromParentViewController()
+        willMove(toParent: nil)
+        removeFromParent()
         view.removeFromSuperview()
-        didMove(toParentViewController: nil)
+        didMove(toParent: nil)
     }
 }
 

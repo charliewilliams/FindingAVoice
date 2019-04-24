@@ -25,10 +25,10 @@ extension PopoverDisplaying where Self: UIViewController {
         let popover = PopoverViewController(type: type)
         popover.delegate = self
         
-        popover.willMove(toParentViewController: self)
-        addChildViewController(popover)
+        popover.willMove(toParent: self)
+        addChild(popover)
         popover.view.frame = view.bounds
         view.addSubview(popover.view)
-        popover.didMove(toParentViewController: self)
+        popover.didMove(toParent: self)
     }
 }

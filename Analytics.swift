@@ -64,7 +64,7 @@ struct Analytics {
     
     static func log(eventName: String, eventValue: String, responseName: String? = nil, responseValue: String? = nil, wasCorrect: Bool? = nil, measurement: Float? = nil, duration: TimeInterval? = nil, data: [String: String]? = nil) {
 
-        if queue.isNotEmpty, db != nil {
+        if !queue.isEmpty, db != nil {
             sendQueuedBlobs()
         }
 
@@ -132,7 +132,7 @@ struct Analytics {
 
         guard let db = db else { return }
 
-        while queue.isNotEmpty {
+        while !queue.isEmpty {
             let blob = queue.removeFirst()
             guard let key = blob.keys.first, let value = blob.values.first else {
                 continue
