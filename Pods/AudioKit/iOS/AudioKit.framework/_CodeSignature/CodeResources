@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AKAmplitudeEnvelopeDSP.hpp</key>
 		<data>
-		zpLreQkAhY2W9H6uonXxoB2pyfg=
+		mqqpgC15/iMeQgctUbPUXOyzJsA=
 		</data>
 		<key>Headers/AKAmplitudeTrackerAudioUnit.h</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Headers/AKDiskStreamerAudioUnit.h</key>
 		<data>
-		maDndevi04I74NEi4zzAknDsyVU=
+		X8RRZUHPlTWvzwuBL8CbwpvkRNQ=
 		</data>
 		<key>Headers/AKDripDSP.hpp</key>
 		<data>
@@ -322,11 +322,11 @@
 		</data>
 		<key>Headers/AKRhinoGuitarProcessorAudioUnit.h</key>
 		<data>
-		OJvKK+TaiwRDcBa1KcvR5USQvk0=
+		isv0vR7Uas2cYWG4UO2F+SVa0jg=
 		</data>
 		<key>Headers/AKRhinoGuitarProcessorDSPKernel.hpp</key>
 		<data>
-		LxDO1950Lh7RQXzmOTVAphrMKNk=
+		ECh6BSnTcklMVm5EnYCEhAA2oto=
 		</data>
 		<key>Headers/AKRhodesPianoDSP.hpp</key>
 		<data>
@@ -442,7 +442,7 @@
 		</data>
 		<key>Headers/AudioKit-Swift.h</key>
 		<data>
-		7JqXH0lxmmWIapwHALwCH82C1oU=
+		Byd2gJRPuKlNbN4bEVQ7gf4bL/k=
 		</data>
 		<key>Headers/AudioKit.h</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Headers/BufferedAudioUnit.h</key>
 		<data>
-		P/m2frMma0x5dhcp/1yG4IfHoDc=
+		NBnXW2bj4ebKv3YAjonEXwFHlok=
 		</data>
 		<key>Headers/DSPKernel.hpp</key>
 		<data>
@@ -530,11 +530,11 @@
 		</data>
 		<key>Headers/dr_wav.h</key>
 		<data>
-		twpIMPy1BQSaRmftBuVT7a1/gh4=
+		oVmu402phxPXYR0v1VVky9ellNI=
 		</data>
 		<key>Headers/soundpipe.h</key>
 		<data>
-		ZNukSJgA9OwBGZAlD0vCxDUnF98=
+		S3VlL4yogzNO3QHM9lgEOpJD4uo=
 		</data>
 		<key>Headers/vocwrapper.h</key>
 		<data>
@@ -542,23 +542,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rnN2upG2jT6xOL70K+2txg+7q4E=
+		ol+PmgnGcO5vzdTckmuP1bIxVf4=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftdoc</key>
 		<data>
-		IqKASsOJ+IujpyRQL1DbYco+atA=
+		JddwymtzuP2E6cimU29k3jku34s=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftmodule</key>
 		<data>
-		EMimN2Ju4W4CmFLL3lKojmPPiMY=
+		aYZEMdof33JiMs0W5Ac+wMwN8Cs=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		Kw8rUoXcoxSficB4Ct4d/z448VQ=
+		g52G9kqQqZBpVTVUIKszxSaCJxQ=
 		</data>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		cbf3M+6V4tk+MRPQ1pmxV3GPEuo=
+		1fFYPgUGHp2z6ZwId2wHX7lGx0w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -571,11 +571,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zpLreQkAhY2W9H6uonXxoB2pyfg=
+			mqqpgC15/iMeQgctUbPUXOyzJsA=
 			</data>
 			<key>hash2</key>
 			<data>
-			wbuT4zjtySeo7ouf2r2pbJ92idd2yhDGAMygHGJ1coc=
+			uWPwYYJFfmuLG7gUZDtDlwns3fRRLNTTQg8Zf36aZkw=
 			</data>
 		</dict>
 		<key>Headers/AKAmplitudeTrackerAudioUnit.h</key>
@@ -857,11 +857,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			maDndevi04I74NEi4zzAknDsyVU=
+			X8RRZUHPlTWvzwuBL8CbwpvkRNQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Agzt1LAfr0MWsJNkMtw7ZwLMWMjLV2U3Ud2HgAusNHM=
+			XdSd6PhuDshLbGIdhMlEgplEzlRjRGeAN0NW1LxaPjY=
 			</data>
 		</dict>
 		<key>Headers/AKDripDSP.hpp</key>
@@ -1440,22 +1440,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OJvKK+TaiwRDcBa1KcvR5USQvk0=
+			isv0vR7Uas2cYWG4UO2F+SVa0jg=
 			</data>
 			<key>hash2</key>
 			<data>
-			hH8CrbArSFDL4O7IquoIK5McQDsoWW6Pe+nyWraBAJM=
+			1tJPvFm11Um9ogoHRyWnpFUzjQH+UkJAp7/uaSD4C/E=
 			</data>
 		</dict>
 		<key>Headers/AKRhinoGuitarProcessorDSPKernel.hpp</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LxDO1950Lh7RQXzmOTVAphrMKNk=
+			ECh6BSnTcklMVm5EnYCEhAA2oto=
 			</data>
 			<key>hash2</key>
 			<data>
-			cBWsQzdHCeL4KtVmBI88YiEki8+JnZGrUhBJLuWLNfs=
+			qeiWDiLtrFvWc1l2eIrySP/W5IjCJUxHs/qAI7WO0wA=
 			</data>
 		</dict>
 		<key>Headers/AKRhodesPianoDSP.hpp</key>
@@ -1770,11 +1770,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7JqXH0lxmmWIapwHALwCH82C1oU=
+			Byd2gJRPuKlNbN4bEVQ7gf4bL/k=
 			</data>
 			<key>hash2</key>
 			<data>
-			gSJklCaTu0mRIl3/QWTQpSjpHIBbv02K8wN56qMdiGI=
+			FvaiQsFF4UpxQiR8/+Bj0Hh+mKD98bUKomYp7u09vRU=
 			</data>
 		</dict>
 		<key>Headers/AudioKit.h</key>
@@ -1803,11 +1803,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			P/m2frMma0x5dhcp/1yG4IfHoDc=
+			NBnXW2bj4ebKv3YAjonEXwFHlok=
 			</data>
 			<key>hash2</key>
 			<data>
-			8qcc48EeEIhlBKcmfVwkEXcb0Moymo0n71qw/NLWQG0=
+			Y9DZSYo3oC4l5dRhimg+cwsCNcACzbwdeMJCvc+XVCc=
 			</data>
 		</dict>
 		<key>Headers/DSPKernel.hpp</key>
@@ -2012,22 +2012,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			twpIMPy1BQSaRmftBuVT7a1/gh4=
+			oVmu402phxPXYR0v1VVky9ellNI=
 			</data>
 			<key>hash2</key>
 			<data>
-			qm5d+9y/oIQ7/9X7NeGKmZ0alCaIGqnMLlo44QIrIBE=
+			AYn1cYR90wDEdJgw9mwhADqx1e4X8MZKtWZZw8U1HtI=
 			</data>
 		</dict>
 		<key>Headers/soundpipe.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZNukSJgA9OwBGZAlD0vCxDUnF98=
+			S3VlL4yogzNO3QHM9lgEOpJD4uo=
 			</data>
 			<key>hash2</key>
 			<data>
-			YJS869KPmt7QBXu/fOGflNCtm9jsLTYyZOq3J8zWaRU=
+			86hwJ0ksMNc8XYfZZAEPMEIiDbzUNlVsC0fIIRl4E4Y=
 			</data>
 		</dict>
 		<key>Headers/vocwrapper.h</key>
@@ -2045,44 +2045,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IqKASsOJ+IujpyRQL1DbYco+atA=
+			JddwymtzuP2E6cimU29k3jku34s=
 			</data>
 			<key>hash2</key>
 			<data>
-			a7s1v6L8Pf95xJlgXAZTzQHHwp6AyoAPXqcHY1AReyE=
+			IsnNN8vcQY9zl6MtCetrAb65hfmAwisreRPcxgw7R5g=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EMimN2Ju4W4CmFLL3lKojmPPiMY=
+			aYZEMdof33JiMs0W5Ac+wMwN8Cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qzAVR6hcOd7OewlhEt1PojKXHK5ixn1EhxdZU2Hbv+A=
+			FeSRUE+0uszl3LnV/qF+qBMEsQwf1Byth2/1MDUWPJE=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Kw8rUoXcoxSficB4Ct4d/z448VQ=
+			g52G9kqQqZBpVTVUIKszxSaCJxQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			QkrrQyjRbQ0OofiJ6ctWpKd4snR0envxkJRbE9YTtGc=
+			8suIiWmDtNKBcuYIUF6FE4DkORRb24eXPekUITneWXw=
 			</data>
 		</dict>
 		<key>Modules/AudioKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cbf3M+6V4tk+MRPQ1pmxV3GPEuo=
+			1fFYPgUGHp2z6ZwId2wHX7lGx0w=
 			</data>
 			<key>hash2</key>
 			<data>
-			oVwUKoFspn3Vnr24xpnu3o8bIUgIUZvlTqgLZf3JiX4=
+			Ab0xDaQcV0AV2+xwhuu61UohPIuryUAzHmxaASjl7AY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

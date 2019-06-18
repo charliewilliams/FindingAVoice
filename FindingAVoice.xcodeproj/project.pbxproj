@@ -1000,7 +1000,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -1019,7 +1019,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		29391387F878AB8E88F12369 /* [CP] Embed Pods Frameworks */ = {
@@ -1028,7 +1028,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ControlTaskTests/Pods-ControlTaskTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ControlTaskTests/Pods-ControlTaskTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -1043,7 +1043,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControlTaskTests/Pods-ControlTaskTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ControlTaskTests/Pods-ControlTaskTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D91AD67B182EBE42C8FDC6B /* [CP] Check Pods Manifest.lock */ = {
@@ -1070,7 +1070,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -1085,7 +1085,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B2D6D8F3292DF1A65A5CA41 /* [CP] Check Pods Manifest.lock */ = {
@@ -1148,7 +1148,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ControlTask/Pods-ControlTask-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -1167,7 +1167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ControlTask/Pods-ControlTask-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ControlTask/Pods-ControlTask-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C06A3DD81E6DC1B500B8AE3D /* ShellScript */ = {

@@ -27,7 +27,7 @@ class SingingDetector {
     var pitchAge: Int = 0
     var updateTimer: Timer?
     
-    let mic = AKMicrophone()
+    let mic: AKMicrophone
     var tracker: AKFrequencyTracker!
     lazy var outputPlot: AKNodeOutputPlot! = {
         let plot = AKNodeOutputPlot(self.mic, frame: .zero)
@@ -41,6 +41,13 @@ class SingingDetector {
     static let shared = SingingDetector()
     
     private init() {
+
+        guard let mic = AKMicrophone() else {
+
+            // TODO handle this
+            fatalError("Couldn't get mic")
+        }
+        self.mic = mic
 
         tracker = AKFrequencyTracker(mic)
         AudioKit.output = AKBooster(tracker, gain: 0)

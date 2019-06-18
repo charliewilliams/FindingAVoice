@@ -25,7 +25,7 @@ struct Analytics {
         Database.database().isPersistenceEnabled = true
 
         let userID = user.email?.replacingOccurrences(of: "[@.#$\\[\\]]", with: "-", options: .regularExpression) ?? "email-missing-\(Date().timeIntervalSince1970)"
-        db = Database.database().reference().child("user").child(userID)
+        db = Database.database().reference().child("user").child(user.uid).child(userID)
         assert(db != nil, "Database connection nil")
     }
     
