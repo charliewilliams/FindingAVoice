@@ -40,6 +40,10 @@
 		C04D29D51EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
 		C04D29D61EBDD84900C37F48 /* DifficultyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04D29D41EBDD84900C37F48 /* DifficultyProvider.swift */; };
 		C04F742C1F793AA900112B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C04F74291F79399900112B53 /* GoogleService-Info.plist */; };
+		C05F795C22807B9C00F0B041 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F795B22807B9C00F0B041 /* GameKit.framework */; };
+		C05F795E22807BA500F0B041 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F795D22807BA500F0B041 /* StoreKit.framework */; };
+		C05F795F22807E8C00F0B041 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F795D22807BA500F0B041 /* StoreKit.framework */; };
+		C05F796022807E8F00F0B041 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05F795B22807B9C00F0B041 /* GameKit.framework */; };
 		C06A3DAB1E6DC1B500B8AE3D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D821E1FC3CA005A7AA1 /* Array.swift */; };
 		C06A3DAC1E6DC1B500B8AE3D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1D831E1FC3CA005A7AA1 /* String.swift */; };
 		C06A3DAD1E6DC1B500B8AE3D /* LockScreenDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C002D4661E35515100FA2C15 /* LockScreenDisplaying.swift */; };
@@ -244,6 +248,9 @@
 		C04F74281F79399000112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataControlTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C04F74291F79399900112B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "DataExperimentalTask/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C04F742A1F7939AB00112B53 /* ControlTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ControlTask-Info.plist"; sourceTree = "<group>"; };
+		C05F795A22807B3E00F0B041 /* Emoji Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Emoji Game.entitlements"; sourceTree = "<group>"; };
+		C05F795B22807B9C00F0B041 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		C05F795D22807BA500F0B041 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C06A3DDC1E6DC1B500B8AE3D /* Songs Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Songs Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06A3DE41E6DC4A000B8AE3D /* ExperimentalTask-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExperimentalTask-Info.plist"; sourceTree = "<group>"; };
 		C06A3DE91E6DC5D400B8AE3D /* ExperimentalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,7 +332,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05F796022807E8F00F0B041 /* GameKit.framework in Frameworks */,
 				13AC8C26E3A46A27BA41C69E /* Pods_ExperimentalTask.framework in Frameworks */,
+				C05F795F22807E8C00F0B041 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +357,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05F795E22807BA500F0B041 /* StoreKit.framework in Frameworks */,
 				B5587EC5FE5E25CE697FD53E /* Pods_ControlTask.framework in Frameworks */,
+				C05F795C22807B9C00F0B041 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +399,8 @@
 		A2FE4B54E5F69226B1EA9FD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C05F795D22807BA500F0B041 /* StoreKit.framework */,
+				C05F795B22807B9C00F0B041 /* GameKit.framework */,
 				7271F25A5C0DCFAB72A39EF5 /* Pods_ControlTask.framework */,
 				97619F579B3F8CFE83A19BD0 /* Pods_ControlTaskTests.framework */,
 				D2091FE6637FB2276F6AC2C2 /* Pods_ExperimentalTask.framework */,
@@ -486,6 +499,7 @@
 		C0AA1D2C1E1E8A42005A7AA1 = {
 			isa = PBXGroup;
 			children = (
+				C05F795A22807B3E00F0B041 /* Emoji Game.entitlements */,
 				C0AA1D371E1E8A42005A7AA1 /* FindingAVoice */,
 				C0AA1D4C1E1E8A43005A7AA1 /* ControlTaskTests */,
 				C0AA1D571E1E8A43005A7AA1 /* ControlTaskUITests */,
@@ -803,9 +817,17 @@
 				ORGANIZATIONNAME = "Charlie Williams";
 				TargetAttributes = {
 					C06A3DA81E6DC1B500B8AE3D = {
-						DevelopmentTeam = YRZ9JVL87B;
+						DevelopmentTeam = N2WM6EN8GQ;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					C06A3DE81E6DC5D400B8AE3D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -823,9 +845,20 @@
 					};
 					C0AA1D341E1E8A42005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = YRZ9JVL87B;
+						DevelopmentTeam = N2WM6EN8GQ;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					C0AA1D481E1E8A43005A7AA1 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1348,12 +1381,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YRZ9JVL87B;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1369,12 +1402,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YRZ9JVL87B;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/FindingAVoice/ExperimentalTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.SongsGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ExperimentalTask;
 				PRODUCT_NAME = "Songs Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1472,7 +1505,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 89;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1533,7 +1566,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 83;
+				CURRENT_PROJECT_VERSION = 89;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1563,12 +1596,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YRZ9JVL87B;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTask;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1584,12 +1617,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YRZ9JVL87B;
+				DEVELOPMENT_TEAM = N2WM6EN8GQ;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "FindingAVoice/ControlTask-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = B2KHP92H7C.com.guildhall.EmojiGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.charliewilliams.ControlTask;
 				PRODUCT_NAME = "Emoji Game";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -11,6 +11,8 @@ platform :ios do
     lane :exp do |values|
         # Fabric generated this lane for deployment to Crashlytics Beta
         # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+        # match
+        sigh(username: 'c@harl.ie', app_identifier: 'com.charliewilliams.ExperimentalTask', adhoc: true)
         gym(scheme: values[:scheme] ? values[:scheme] : 'ExperimentalTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
         increment_build_number
 
@@ -40,6 +42,8 @@ platform :ios do
   lane :control do |values|
     # Fabric generated this lane for deployment to Crashlytics Beta
     # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+    # match
+    sigh(username: 'c@harl.ie', app_identifier: 'com.charliewilliams.ControlTask', adhoc: true)
     gym(scheme: values[:scheme] ? values[:scheme] : 'ControlTask', export_method: 'ad-hoc', export_xcargs: "-allowProvisioningUpdates")
 	  increment_build_number
 
