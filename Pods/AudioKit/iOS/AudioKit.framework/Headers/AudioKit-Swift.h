@@ -174,6 +174,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Accelerate;
 @import AudioToolbox;
 @import CoreGraphics;
+@import CoreMIDI;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -440,6 +441,16 @@ SWIFT_CLASS("_TtC8AudioKit14AKAppleSampler")
 
 
 
+/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
+SWIFT_CLASS("_TtC8AudioKit16AKAppleSequencer")
+@interface AKAppleSequencer : NSObject
+/// Sequencer Initialization
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Stop the sequence
+- (void)stop;
+@end
+
+
 /// Audio file, inherits from AVAudioFile and adds functionality
 SWIFT_CLASS("_TtC8AudioKit11AKAudioFile")
 @interface AKAudioFile : AVAudioFile
@@ -636,7 +647,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive single note based aftertouch event
 /// \param noteNumber Note number of touched note
 ///
@@ -644,19 +655,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive global aftertouch
 /// \param pressure Pressure applied (0-127)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive pitch wheel value
 /// \param pitchWheelValue MIDI Pitch Wheel Value (0-16383)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Start a note
 /// \param noteNumber Note number to play
 ///
@@ -664,13 +675,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel Channel on which to play the note
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Stop a note
 /// \param noteNumber Note number to stop
 ///
 /// \param channel Channel on which to stop the note
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+/// Receive program change
+/// \param program MIDI Program Value (0-127)
+///
+/// \param channel MIDI Channel (1-16)
+///
+- (void)receivedMIDIProgramChange:(uint8_t)program channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
@@ -714,11 +731,11 @@ SWIFT_CLASS("_TtC8AudioKit21AKAudioUnitInstrument")
 ///   </li>
 /// </ul>
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -2936,17 +2953,17 @@ SWIFT_CLASS("_TtC8AudioKit24AKMIDICallbackInstrument")
 ///
 /// \param channel MIDI Channel
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Will trigger in response to any noteOff Message
 /// \param noteNumber MIDI Note Number being stopped
 ///
 /// \param channel MIDI Channel
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -4630,7 +4647,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKSampler")
 - (void)buildSimpleKeyMap;
 - (void)buildKeyMap;
 - (void)setLoopWithThruRelease:(BOOL)thruRelease;
-- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity frequency:(double)frequency channel:(uint8_t)channel;
+- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
 - (void)silenceWithNoteNumber:(uint8_t)noteNumber;
 - (void)sustainPedalWithPedalDown:(BOOL)pedalDown;
@@ -4652,13 +4669,17 @@ SWIFT_CLASS("_TtC8AudioKit18AKSamplerAudioUnit")
 @end
 
 
-/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
-SWIFT_CLASS("_TtC8AudioKit11AKSequencer")
-@interface AKSequencer : NSObject
-/// Sequencer Initialization
+/// Audio player that loads a sample into memory
+SWIFT_CLASS("_TtC8AudioKit16AKSequencerTrack")
+@interface AKSequencerTrack : AKNode
+/// Ramp Duration represents the speed at which parameters are allowed to change
+@property (nonatomic) double rampDuration;
+/// Initialize the track
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Stop the sequence
-- (void)stop;
+/// Initialize the track with a target node
+- (nonnull instancetype)initWithTargetNode:(AKNode * _Nonnull)targetNode;
+- (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
 @end
 
 enum BufferLength : NSInteger;
@@ -4709,7 +4730,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) double rampDuration;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL notificationsEnabled;)
 + (BOOL)notificationsEnabled SWIFT_WARN_UNUSED_RESULT;
 + (void)setNotificationsEnabled:(BOOL)value;
-/// AudioKit buffer length is set using AKSettings.BufferLength
+/// AudioKit buffer length is set using AKSettings.bufferLength
 /// default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum BufferLength bufferLength;)
 + (enum BufferLength)bufferLength SWIFT_WARN_UNUSED_RESULT;
@@ -5519,6 +5540,11 @@ SWIFT_CLASS("_TtC8AudioKit13AKTuningTable")
 /// \param inputMasterSet An array of frequencies, i.e., the “masterSet”
 ///
 - (NSInteger)tuningTableFromFrequencies:(NSArray<NSNumber *> * _Nonnull)inputMasterSet;
+/// Create the tuning based on deviations from 12ET by an array of cents
+/// \param centsArray An array of 12 Cents.
+/// 12ET will be modified by the centsArray, including deviations which result in a root less than 1.0
+///
+- (void)tuning12ETDeviationWithCentsArray:(NSArray<NSNumber *> * _Nonnull)centsArray;
 /// Renders and returns the masterSet values as an array of cents
 - (NSArray<NSNumber *> * _Nonnull)masterSetInCents SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -6065,7 +6091,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTester * _Nullable t
 + (void)connect:(AVAudioNode * _Nonnull)node1 to:(AVAudioNode * _Nonnull)node2 format:(AVAudioFormat * _Nullable)format;
 + (void)detachWithNodes:(NSArray<AVAudioNode *> * _Nonnull)nodes;
 /// Render output to an AVAudioFile for a duration.
-/// NOTE: This will NOT render AKSequencer content;
+/// NOTE: This will NOT render sequencer content;
 /// MIDI content will need to be recorded in real time
 /// \code
 /// - Parameters:
@@ -6267,6 +6293,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Accelerate;
 @import AudioToolbox;
 @import CoreGraphics;
+@import CoreMIDI;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -6533,6 +6560,16 @@ SWIFT_CLASS("_TtC8AudioKit14AKAppleSampler")
 
 
 
+/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
+SWIFT_CLASS("_TtC8AudioKit16AKAppleSequencer")
+@interface AKAppleSequencer : NSObject
+/// Sequencer Initialization
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Stop the sequence
+- (void)stop;
+@end
+
+
 /// Audio file, inherits from AVAudioFile and adds functionality
 SWIFT_CLASS("_TtC8AudioKit11AKAudioFile")
 @interface AKAudioFile : AVAudioFile
@@ -6729,7 +6766,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive single note based aftertouch event
 /// \param noteNumber Note number of touched note
 ///
@@ -6737,19 +6774,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive global aftertouch
 /// \param pressure Pressure applied (0-127)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive pitch wheel value
 /// \param pitchWheelValue MIDI Pitch Wheel Value (0-16383)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Start a note
 /// \param noteNumber Note number to play
 ///
@@ -6757,13 +6794,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel Channel on which to play the note
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Stop a note
 /// \param noteNumber Note number to stop
 ///
 /// \param channel Channel on which to stop the note
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+/// Receive program change
+/// \param program MIDI Program Value (0-127)
+///
+/// \param channel MIDI Channel (1-16)
+///
+- (void)receivedMIDIProgramChange:(uint8_t)program channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
@@ -6807,11 +6850,11 @@ SWIFT_CLASS("_TtC8AudioKit21AKAudioUnitInstrument")
 ///   </li>
 /// </ul>
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -9029,17 +9072,17 @@ SWIFT_CLASS("_TtC8AudioKit24AKMIDICallbackInstrument")
 ///
 /// \param channel MIDI Channel
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Will trigger in response to any noteOff Message
 /// \param noteNumber MIDI Note Number being stopped
 ///
 /// \param channel MIDI Channel
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -10723,7 +10766,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKSampler")
 - (void)buildSimpleKeyMap;
 - (void)buildKeyMap;
 - (void)setLoopWithThruRelease:(BOOL)thruRelease;
-- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity frequency:(double)frequency channel:(uint8_t)channel;
+- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
 - (void)silenceWithNoteNumber:(uint8_t)noteNumber;
 - (void)sustainPedalWithPedalDown:(BOOL)pedalDown;
@@ -10745,13 +10788,17 @@ SWIFT_CLASS("_TtC8AudioKit18AKSamplerAudioUnit")
 @end
 
 
-/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
-SWIFT_CLASS("_TtC8AudioKit11AKSequencer")
-@interface AKSequencer : NSObject
-/// Sequencer Initialization
+/// Audio player that loads a sample into memory
+SWIFT_CLASS("_TtC8AudioKit16AKSequencerTrack")
+@interface AKSequencerTrack : AKNode
+/// Ramp Duration represents the speed at which parameters are allowed to change
+@property (nonatomic) double rampDuration;
+/// Initialize the track
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Stop the sequence
-- (void)stop;
+/// Initialize the track with a target node
+- (nonnull instancetype)initWithTargetNode:(AKNode * _Nonnull)targetNode;
+- (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
 @end
 
 enum BufferLength : NSInteger;
@@ -10802,7 +10849,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) double rampDuration;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL notificationsEnabled;)
 + (BOOL)notificationsEnabled SWIFT_WARN_UNUSED_RESULT;
 + (void)setNotificationsEnabled:(BOOL)value;
-/// AudioKit buffer length is set using AKSettings.BufferLength
+/// AudioKit buffer length is set using AKSettings.bufferLength
 /// default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum BufferLength bufferLength;)
 + (enum BufferLength)bufferLength SWIFT_WARN_UNUSED_RESULT;
@@ -11612,6 +11659,11 @@ SWIFT_CLASS("_TtC8AudioKit13AKTuningTable")
 /// \param inputMasterSet An array of frequencies, i.e., the “masterSet”
 ///
 - (NSInteger)tuningTableFromFrequencies:(NSArray<NSNumber *> * _Nonnull)inputMasterSet;
+/// Create the tuning based on deviations from 12ET by an array of cents
+/// \param centsArray An array of 12 Cents.
+/// 12ET will be modified by the centsArray, including deviations which result in a root less than 1.0
+///
+- (void)tuning12ETDeviationWithCentsArray:(NSArray<NSNumber *> * _Nonnull)centsArray;
 /// Renders and returns the masterSet values as an array of cents
 - (NSArray<NSNumber *> * _Nonnull)masterSetInCents SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -12158,7 +12210,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTester * _Nullable t
 + (void)connect:(AVAudioNode * _Nonnull)node1 to:(AVAudioNode * _Nonnull)node2 format:(AVAudioFormat * _Nullable)format;
 + (void)detachWithNodes:(NSArray<AVAudioNode *> * _Nonnull)nodes;
 /// Render output to an AVAudioFile for a duration.
-/// NOTE: This will NOT render AKSequencer content;
+/// NOTE: This will NOT render sequencer content;
 /// MIDI content will need to be recorded in real time
 /// \code
 /// - Parameters:
@@ -12363,6 +12415,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Accelerate;
 @import AudioToolbox;
 @import CoreGraphics;
+@import CoreMIDI;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -12629,6 +12682,16 @@ SWIFT_CLASS("_TtC8AudioKit14AKAppleSampler")
 
 
 
+/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
+SWIFT_CLASS("_TtC8AudioKit16AKAppleSequencer")
+@interface AKAppleSequencer : NSObject
+/// Sequencer Initialization
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Stop the sequence
+- (void)stop;
+@end
+
+
 /// Audio file, inherits from AVAudioFile and adds functionality
 SWIFT_CLASS("_TtC8AudioKit11AKAudioFile")
 @interface AKAudioFile : AVAudioFile
@@ -12825,7 +12888,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive single note based aftertouch event
 /// \param noteNumber Note number of touched note
 ///
@@ -12833,19 +12896,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive global aftertouch
 /// \param pressure Pressure applied (0-127)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive pitch wheel value
 /// \param pitchWheelValue MIDI Pitch Wheel Value (0-16383)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Start a note
 /// \param noteNumber Note number to play
 ///
@@ -12853,13 +12916,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel Channel on which to play the note
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Stop a note
 /// \param noteNumber Note number to stop
 ///
 /// \param channel Channel on which to stop the note
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+/// Receive program change
+/// \param program MIDI Program Value (0-127)
+///
+/// \param channel MIDI Channel (1-16)
+///
+- (void)receivedMIDIProgramChange:(uint8_t)program channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
@@ -12903,11 +12972,11 @@ SWIFT_CLASS("_TtC8AudioKit21AKAudioUnitInstrument")
 ///   </li>
 /// </ul>
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -15125,17 +15194,17 @@ SWIFT_CLASS("_TtC8AudioKit24AKMIDICallbackInstrument")
 ///
 /// \param channel MIDI Channel
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Will trigger in response to any noteOff Message
 /// \param noteNumber MIDI Note Number being stopped
 ///
 /// \param channel MIDI Channel
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -16819,7 +16888,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKSampler")
 - (void)buildSimpleKeyMap;
 - (void)buildKeyMap;
 - (void)setLoopWithThruRelease:(BOOL)thruRelease;
-- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity frequency:(double)frequency channel:(uint8_t)channel;
+- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
 - (void)silenceWithNoteNumber:(uint8_t)noteNumber;
 - (void)sustainPedalWithPedalDown:(BOOL)pedalDown;
@@ -16841,13 +16910,17 @@ SWIFT_CLASS("_TtC8AudioKit18AKSamplerAudioUnit")
 @end
 
 
-/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
-SWIFT_CLASS("_TtC8AudioKit11AKSequencer")
-@interface AKSequencer : NSObject
-/// Sequencer Initialization
+/// Audio player that loads a sample into memory
+SWIFT_CLASS("_TtC8AudioKit16AKSequencerTrack")
+@interface AKSequencerTrack : AKNode
+/// Ramp Duration represents the speed at which parameters are allowed to change
+@property (nonatomic) double rampDuration;
+/// Initialize the track
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Stop the sequence
-- (void)stop;
+/// Initialize the track with a target node
+- (nonnull instancetype)initWithTargetNode:(AKNode * _Nonnull)targetNode;
+- (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
 @end
 
 enum BufferLength : NSInteger;
@@ -16898,7 +16971,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) double rampDuration;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL notificationsEnabled;)
 + (BOOL)notificationsEnabled SWIFT_WARN_UNUSED_RESULT;
 + (void)setNotificationsEnabled:(BOOL)value;
-/// AudioKit buffer length is set using AKSettings.BufferLength
+/// AudioKit buffer length is set using AKSettings.bufferLength
 /// default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum BufferLength bufferLength;)
 + (enum BufferLength)bufferLength SWIFT_WARN_UNUSED_RESULT;
@@ -17708,6 +17781,11 @@ SWIFT_CLASS("_TtC8AudioKit13AKTuningTable")
 /// \param inputMasterSet An array of frequencies, i.e., the “masterSet”
 ///
 - (NSInteger)tuningTableFromFrequencies:(NSArray<NSNumber *> * _Nonnull)inputMasterSet;
+/// Create the tuning based on deviations from 12ET by an array of cents
+/// \param centsArray An array of 12 Cents.
+/// 12ET will be modified by the centsArray, including deviations which result in a root less than 1.0
+///
+- (void)tuning12ETDeviationWithCentsArray:(NSArray<NSNumber *> * _Nonnull)centsArray;
 /// Renders and returns the masterSet values as an array of cents
 - (NSArray<NSNumber *> * _Nonnull)masterSetInCents SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -18254,7 +18332,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTester * _Nullable t
 + (void)connect:(AVAudioNode * _Nonnull)node1 to:(AVAudioNode * _Nonnull)node2 format:(AVAudioFormat * _Nullable)format;
 + (void)detachWithNodes:(NSArray<AVAudioNode *> * _Nonnull)nodes;
 /// Render output to an AVAudioFile for a duration.
-/// NOTE: This will NOT render AKSequencer content;
+/// NOTE: This will NOT render sequencer content;
 /// MIDI content will need to be recorded in real time
 /// \code
 /// - Parameters:
@@ -18456,6 +18534,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Accelerate;
 @import AudioToolbox;
 @import CoreGraphics;
+@import CoreMIDI;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
@@ -18722,6 +18801,16 @@ SWIFT_CLASS("_TtC8AudioKit14AKAppleSampler")
 
 
 
+/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
+SWIFT_CLASS("_TtC8AudioKit16AKAppleSequencer")
+@interface AKAppleSequencer : NSObject
+/// Sequencer Initialization
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Stop the sequence
+- (void)stop;
+@end
+
+
 /// Audio file, inherits from AVAudioFile and adds functionality
 SWIFT_CLASS("_TtC8AudioKit11AKAudioFile")
 @interface AKAudioFile : AVAudioFile
@@ -18918,7 +19007,7 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive single note based aftertouch event
 /// \param noteNumber Note number of touched note
 ///
@@ -18926,19 +19015,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive global aftertouch
 /// \param pressure Pressure applied (0-127)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Receive pitch wheel value
 /// \param pitchWheelValue MIDI Pitch Wheel Value (0-16383)
 ///
 /// \param channel MIDI Channel (1-16)
 ///
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Start a note
 /// \param noteNumber Note number to play
 ///
@@ -18946,13 +19035,19 @@ SWIFT_CLASS("_TtC8AudioKit16AKMIDIInstrument")
 ///
 /// \param channel Channel on which to play the note
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Stop a note
 /// \param noteNumber Note number to stop
 ///
 /// \param channel Channel on which to stop the note
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+/// Receive program change
+/// \param program MIDI Program Value (0-127)
+///
+/// \param channel MIDI Channel (1-16)
+///
+- (void)receivedMIDIProgramChange:(uint8_t)program channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
@@ -18996,11 +19091,11 @@ SWIFT_CLASS("_TtC8AudioKit21AKAudioUnitInstrument")
 ///   </li>
 /// </ul>
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -21218,17 +21313,17 @@ SWIFT_CLASS("_TtC8AudioKit24AKMIDICallbackInstrument")
 ///
 /// \param channel MIDI Channel
 ///
-- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
+- (void)startWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 /// Will trigger in response to any noteOff Message
 /// \param noteNumber MIDI Note Number being stopped
 ///
 /// \param channel MIDI Channel
 ///
-- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel;
-- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel;
-- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel;
-- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel;
+- (void)stopWithNoteNumber:(uint8_t)noteNumber channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIController:(uint8_t)controller value:(uint8_t)value channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAftertouchWithNoteNumber:(uint8_t)noteNumber pressure:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIAfterTouch:(uint8_t)pressure channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
+- (void)receivedMIDIPitchWheel:(uint16_t)pitchWheelValue channel:(uint8_t)channel offset:(MIDITimeStamp)offset;
 @end
 
 
@@ -22912,7 +23007,7 @@ SWIFT_CLASS("_TtC8AudioKit9AKSampler")
 - (void)buildSimpleKeyMap;
 - (void)buildKeyMap;
 - (void)setLoopWithThruRelease:(BOOL)thruRelease;
-- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity frequency:(double)frequency channel:(uint8_t)channel;
+- (void)playWithNoteNumber:(uint8_t)noteNumber velocity:(uint8_t)velocity channel:(uint8_t)channel;
 - (void)stopWithNoteNumber:(uint8_t)noteNumber;
 - (void)silenceWithNoteNumber:(uint8_t)noteNumber;
 - (void)sustainPedalWithPedalDown:(BOOL)pedalDown;
@@ -22934,13 +23029,17 @@ SWIFT_CLASS("_TtC8AudioKit18AKSamplerAudioUnit")
 @end
 
 
-/// Sequencer based on tried-and-true CoreAudio/MIDI Sequencing
-SWIFT_CLASS("_TtC8AudioKit11AKSequencer")
-@interface AKSequencer : NSObject
-/// Sequencer Initialization
+/// Audio player that loads a sample into memory
+SWIFT_CLASS("_TtC8AudioKit16AKSequencerTrack")
+@interface AKSequencerTrack : AKNode
+/// Ramp Duration represents the speed at which parameters are allowed to change
+@property (nonatomic) double rampDuration;
+/// Initialize the track
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Stop the sequence
-- (void)stop;
+/// Initialize the track with a target node
+- (nonnull instancetype)initWithTargetNode:(AKNode * _Nonnull)targetNode;
+- (nonnull instancetype)initWithAvAudioUnit:(AVAudioUnit * _Nonnull)avAudioUnit attach:(BOOL)attach SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithAvAudioNode:(AVAudioNode * _Nonnull)avAudioNode attach:(BOOL)attach SWIFT_UNAVAILABLE;
 @end
 
 enum BufferLength : NSInteger;
@@ -22991,7 +23090,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) double rampDuration;)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL notificationsEnabled;)
 + (BOOL)notificationsEnabled SWIFT_WARN_UNUSED_RESULT;
 + (void)setNotificationsEnabled:(BOOL)value;
-/// AudioKit buffer length is set using AKSettings.BufferLength
+/// AudioKit buffer length is set using AKSettings.bufferLength
 /// default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum BufferLength bufferLength;)
 + (enum BufferLength)bufferLength SWIFT_WARN_UNUSED_RESULT;
@@ -23801,6 +23900,11 @@ SWIFT_CLASS("_TtC8AudioKit13AKTuningTable")
 /// \param inputMasterSet An array of frequencies, i.e., the “masterSet”
 ///
 - (NSInteger)tuningTableFromFrequencies:(NSArray<NSNumber *> * _Nonnull)inputMasterSet;
+/// Create the tuning based on deviations from 12ET by an array of cents
+/// \param centsArray An array of 12 Cents.
+/// 12ET will be modified by the centsArray, including deviations which result in a root less than 1.0
+///
+- (void)tuning12ETDeviationWithCentsArray:(NSArray<NSNumber *> * _Nonnull)centsArray;
 /// Renders and returns the masterSet values as an array of cents
 - (NSArray<NSNumber *> * _Nonnull)masterSetInCents SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -24347,7 +24451,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) AKTester * _Nullable t
 + (void)connect:(AVAudioNode * _Nonnull)node1 to:(AVAudioNode * _Nonnull)node2 format:(AVAudioFormat * _Nullable)format;
 + (void)detachWithNodes:(NSArray<AVAudioNode *> * _Nonnull)nodes;
 /// Render output to an AVAudioFile for a duration.
-/// NOTE: This will NOT render AKSequencer content;
+/// NOTE: This will NOT render sequencer content;
 /// MIDI content will need to be recorded in real time
 /// \code
 /// - Parameters:

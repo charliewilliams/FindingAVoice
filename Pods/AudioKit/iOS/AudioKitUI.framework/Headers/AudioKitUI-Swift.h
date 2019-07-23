@@ -409,11 +409,13 @@ SWIFT_CLASS("_TtC10AudioKitUI13AKNodeFFTPlot")
 
 
 /// Plot the output from any node in an signal processing graph
+/// By default this plots the output of AudioKit.output
 SWIFT_CLASS("_TtC10AudioKitUI16AKNodeOutputPlot")
 @interface AKNodeOutputPlot : EZAudioPlot
 - (void)pause;
 - (void)resume;
 /// The node whose output to graph
+/// Defaults to AudioKit.output
 @property (nonatomic, strong) AKNode * _Nullable node;
 /// Required coder-based initialization (for use with Interface Builder)
 /// \param coder NSCoder
@@ -1150,11 +1152,13 @@ SWIFT_CLASS("_TtC10AudioKitUI13AKNodeFFTPlot")
 
 
 /// Plot the output from any node in an signal processing graph
+/// By default this plots the output of AudioKit.output
 SWIFT_CLASS("_TtC10AudioKitUI16AKNodeOutputPlot")
 @interface AKNodeOutputPlot : EZAudioPlot
 - (void)pause;
 - (void)resume;
 /// The node whose output to graph
+/// Defaults to AudioKit.output
 @property (nonatomic, strong) AKNode * _Nullable node;
 /// Required coder-based initialization (for use with Interface Builder)
 /// \param coder NSCoder
@@ -1894,11 +1898,13 @@ SWIFT_CLASS("_TtC10AudioKitUI13AKNodeFFTPlot")
 
 
 /// Plot the output from any node in an signal processing graph
+/// By default this plots the output of AudioKit.output
 SWIFT_CLASS("_TtC10AudioKitUI16AKNodeOutputPlot")
 @interface AKNodeOutputPlot : EZAudioPlot
 - (void)pause;
 - (void)resume;
 /// The node whose output to graph
+/// Defaults to AudioKit.output
 @property (nonatomic, strong) AKNode * _Nullable node;
 /// Required coder-based initialization (for use with Interface Builder)
 /// \param coder NSCoder
@@ -2635,11 +2641,13 @@ SWIFT_CLASS("_TtC10AudioKitUI13AKNodeFFTPlot")
 
 
 /// Plot the output from any node in an signal processing graph
+/// By default this plots the output of AudioKit.output
 SWIFT_CLASS("_TtC10AudioKitUI16AKNodeOutputPlot")
 @interface AKNodeOutputPlot : EZAudioPlot
 - (void)pause;
 - (void)resume;
 /// The node whose output to graph
+/// Defaults to AudioKit.output
 @property (nonatomic, strong) AKNode * _Nullable node;
 /// Required coder-based initialization (for use with Interface Builder)
 /// \param coder NSCoder
