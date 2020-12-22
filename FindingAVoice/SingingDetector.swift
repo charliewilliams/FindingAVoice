@@ -50,13 +50,13 @@ class SingingDetector {
         self.mic = mic
 
         tracker = AKFrequencyTracker(mic)
-        AudioKit.output = AKBooster(tracker, gain: 0)
+        AKManager.output = AKBooster(tracker, gain: 0)
         start()
     }
     
     func start() {
 
-        try? AudioKit.start()
+        try? AKManager.start()
         updateTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             self.tick()
         }
@@ -65,7 +65,7 @@ class SingingDetector {
     func stop() {
 
         updateTimer?.invalidate()
-        try? AudioKit.stop()
+        try? AKManager.stop()
     }
 }
 

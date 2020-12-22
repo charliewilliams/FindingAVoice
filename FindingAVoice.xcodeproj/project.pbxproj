@@ -653,7 +653,6 @@
 			buildConfigurationList = C06A3DF01E6DC5D400B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskTests" */;
 			buildPhases = (
 				2D91AD67B182EBE42C8FDC6B /* [CP] Check Pods Manifest.lock */,
-				9BF1E404AE34E897689B0959 /* [CP] Prepare Artifacts */,
 				C06A3DE51E6DC5D400B8AE3D /* Sources */,
 				C06A3DE61E6DC5D400B8AE3D /* Frameworks */,
 				C06A3DE71E6DC5D400B8AE3D /* Resources */,
@@ -1059,25 +1058,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9BF1E404AE34E897689B0959 /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-artifacts.sh",
-				"${PODS_ROOT}/AudioKit/AudioKit.xcframework",
-				"${PODS_ROOT}/AudioKit/AudioKitUI.xcframework",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A9910FE38E07B3C7F26AC3B0 /* [CP] Embed Pods Frameworks */ = {

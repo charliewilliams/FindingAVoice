@@ -94,7 +94,7 @@ PODS:
   - YLProgressBar (3.11.0)
 
 DEPENDENCIES:
-  - AudioKit
+  - AudioKit (~> 4.0)
   - Firebase
   - Firebase/Auth
   - Firebase/Database
@@ -146,6 +146,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YLProgressBar: 0c0796a6e9b5e5d5040d15c8911e802b67ccb939
 
-PODFILE CHECKSUM: d9b94a567f33d5e8c06865d98191f659e93bdedc
+PODFILE CHECKSUM: 4df282a55ef0e37c68b5ef79847546f4edfbd444
 
 COCOAPODS: 1.10.0

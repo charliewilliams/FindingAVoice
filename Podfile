@@ -20,7 +20,7 @@ end
 
 target 'ExperimentalTask' do
     shared
-    pod 'AudioKit'
+    pod 'AudioKit', '~> 4.0'
 end
 
 target 'ControlTaskTests' do
@@ -35,6 +35,6 @@ target 'ExperimentalTaskTests' do
     pod 'Firebase'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
-    pod 'AudioKit'
+    pod 'AudioKit', '~> 4.0'
 end
 
