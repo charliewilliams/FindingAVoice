@@ -4,11 +4,10 @@ platform :ios, '10.0'
 
 def shared
     
-    pod 'Fabric'
-    pod 'Crashlytics'
-    pod 'Firebase'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Database'
+#    pod 'Firebase'
+    pod 'FirebaseAuth'
+    pod 'FirebaseCrashlytics'
+    pod 'FirebaseDatabase'
     pod 'SVProgressHUD'
     pod 'YLProgressBar'
     
