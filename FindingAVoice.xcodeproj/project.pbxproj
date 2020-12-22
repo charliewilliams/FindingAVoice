@@ -633,6 +633,7 @@
 			buildConfigurationList = C06A3DD91E6DC1B500B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTask" */;
 			buildPhases = (
 				4B2D6D8F3292DF1A65A5CA41 /* [CP] Check Pods Manifest.lock */,
+				04B265BF3034E6EF7463A969 /* [CP] Prepare Artifacts */,
 				C06A3DAA1E6DC1B500B8AE3D /* Sources */,
 				C06A3DC81E6DC1B500B8AE3D /* Frameworks */,
 				C06A3DCA1E6DC1B500B8AE3D /* Resources */,
@@ -653,6 +654,7 @@
 			buildConfigurationList = C06A3DF01E6DC5D400B8AE3D /* Build configuration list for PBXNativeTarget "ExperimentalTaskTests" */;
 			buildPhases = (
 				2D91AD67B182EBE42C8FDC6B /* [CP] Check Pods Manifest.lock */,
+				28113FDF5A057AF00880A00C /* [CP] Prepare Artifacts */,
 				C06A3DE51E6DC5D400B8AE3D /* Sources */,
 				C06A3DE61E6DC5D400B8AE3D /* Frameworks */,
 				C06A3DE71E6DC5D400B8AE3D /* Resources */,
@@ -866,6 +868,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04B265BF3034E6EF7463A969 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-artifacts.sh",
+				"${PODS_ROOT}/AudioKit/AudioKit.xcframework",
+				"${PODS_ROOT}/AudioKit/AudioKitUI.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1AB985755DFA4308732A8F63 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -909,6 +930,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTask/Pods-ExperimentalTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28113FDF5A057AF00880A00C /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-artifacts.sh",
+				"${PODS_ROOT}/AudioKit/AudioKit.xcframework",
+				"${PODS_ROOT}/AudioKit/AudioKitUI.xcframework",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExperimentalTaskTests/Pods-ExperimentalTaskTests-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		29391387F878AB8E88F12369 /* [CP] Embed Pods Frameworks */ = {
