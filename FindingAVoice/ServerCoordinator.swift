@@ -21,7 +21,6 @@ struct ServerCoordinator {
     
     private init() {
         
-        FirebaseApp.configure()
         auth = Auth.auth()
     }
     
