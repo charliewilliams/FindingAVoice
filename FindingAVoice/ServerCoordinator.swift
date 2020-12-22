@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
 import SVProgressHUD
 
 struct ServerCoordinator {
