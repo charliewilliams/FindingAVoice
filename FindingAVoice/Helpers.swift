@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseCore
+import FirebaseAuth
 
 typealias Completion = () -> ()
 typealias LoginCompletion = (User?, Error?) -> ()

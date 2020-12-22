@@ -1,11 +1,12 @@
 	use_frameworks!
 inhibit_all_warnings!
-platform :ios, '10.0'
+platform :ios, '12.0'
 
 def shared
     
 #    pod 'Firebase'
     pod 'FirebaseAuth'
+    pod 'FirebaseAnalytics'
     pod 'FirebaseCrashlytics'
     pod 'FirebaseDatabase'
     pod 'SVProgressHUD'

@@ -157,7 +157,7 @@ struct Rule {
         debugFullHistory.append("Starting with: \(string).")
         debugFullHistory.append("Making a\(shouldBeValid ? " valid" : "n invalid") \(length)-char string with \(numberOfOccurrencesRemaining) active pair(s).")
         
-        let lastAllowablePrecedentIndex = length - stride - 1
+//        let lastAllowablePrecedentIndex = length - stride - 1
         var hasFailed: Bool = false // only used if shouldBeValid == false
         
         // add as many "rule" occurrences as required

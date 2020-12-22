@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Fabric
-import Crashlytics
+import FirebaseCore
 import FirebaseDatabase
 
 @UIApplicationMain
@@ -18,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        Fabric.with([Crashlytics.self, Answers.self])
+        FirebaseApp.configure()
         
         UserHandler.instance.handleSessionStart()
         DailyTimer.shared.resume()

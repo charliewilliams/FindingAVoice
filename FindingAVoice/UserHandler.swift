@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Crashlytics
-import Fabric
-import FirebaseCore
+import FirebaseCrashlytics
+import FirebaseAuth
+import FirebaseAnalytics
 
 /*
  Check if we have a local user. 
@@ -72,7 +72,7 @@ class UserHandler {
             completion(user, error)
         }
         
-        Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["email": email])
+        Analytics.log(eventName: "UserSignup", eventValue: email)
     }
 }
 
@@ -83,7 +83,7 @@ private extension UserHandler {
     }
     
     var logger: Crashlytics {
-        return Crashlytics.sharedInstance()
+        return Crashlytics.crashlytics()
     }
     
     func showSignupScreen() {
@@ -101,7 +101,7 @@ private extension UserHandler {
     func presentViewController(_ viewController: UIViewController) {
         
         delay(1) {
-            UIApplication.shared.keyWindow!.rootViewController!.present(viewController, animated: true, completion: nil)
+            UIApplication.shared.windows.first!.rootViewController!.present(viewController, animated: true, completion: nil)
         }
     }
 }
