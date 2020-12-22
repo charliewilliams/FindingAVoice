@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
 
 typealias Completion = () -> ()
 typealias LoginCompletion = (User?, Error?) -> ()
