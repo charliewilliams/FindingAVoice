@@ -7,9 +7,14 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import Crashlytics
 import Fabric
 import FirebaseCore
+=======
+import FirebaseCrashlytics
+import Firebase
+>>>>>>> 5c40da4 (WIP dust off mothballs)
 
 /*
  Check if we have a local user. 
@@ -72,7 +77,7 @@ class UserHandler {
             completion(user, error)
         }
         
-        Answers.logCustomEvent(withName: "UserSignup", customAttributes: ["email": email])
+        Analytics.logEvent(eventName: "UserSignup", customAttributes: ["email": email])
     }
 }
 

@@ -5,4 +5,9 @@ Breakpoints_v2.xcbkptlist
 report.xml
 Pods
 Dist
+<<<<<<< HEAD
 *.xcuserstate
+=======
+FindingAVoice.xcworkspace/xcuserdata
+FindingAVoice.xcodeproj/xcuserdata
+>>>>>>> 5c40da4 (WIP dust off mothballs)

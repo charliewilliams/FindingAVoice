@@ -1,13 +1,12 @@
-	use_frameworks!
+use_frameworks!
 inhibit_all_warnings!
-platform :ios, '10.0'
+platform :ios, '15.0'
 
 def shared
     
-    pod 'Fabric'
-    pod 'Crashlytics'
     pod 'Firebase'
     pod 'Firebase/Auth'
+    pod 'Firebase/Crashlytics'
     pod 'Firebase/Database'
     pod 'SVProgressHUD'
     pod 'YLProgressBar'

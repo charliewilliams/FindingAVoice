@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Fabric
-import Crashlytics
+import FirebaseCrashlytics
 import FirebaseDatabase
 
 @UIApplicationMain
